@@ -1,10 +1,13 @@
 import { ArrowDown, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-bg.jpg";
+import gsap from "gsap";
 
 export const Hero = () => {
   const [time, setTime] = useState("");
+  const heroRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const updateTime = () => {
@@ -20,8 +23,38 @@ export const Hero = () => {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(".hero-title", {
+        opacity: 0,
+        y: 100,
+        stagger: 0.2,
+        duration: 1.2,
+        ease: "power3.out",
+      });
+
+      gsap.from(".hero-subtitle", {
+        opacity: 0,
+        y: 30,
+        duration: 1,
+        delay: 0.8,
+        ease: "power3.out",
+      });
+
+      gsap.from(".hero-cta", {
+        opacity: 0,
+        scale: 0.8,
+        duration: 0.8,
+        delay: 1.2,
+        ease: "back.out(1.7)",
+      });
+    }, heroRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section className="relative min-h-screen flex flex-col">
+    <section ref={heroRef} className="relative min-h-screen flex flex-col">
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-40"
         style={{ backgroundImage: `url(${heroImage})` }}
@@ -30,31 +63,33 @@ export const Hero = () => {
       <div className="relative flex-1 flex flex-col items-center justify-center px-6 pt-24">
         <div className="max-w-7xl w-full">
           <div className="mb-12">
-            <h1 className="text-7xl md:text-8xl lg:text-9xl font-light tracking-tight mb-4">
+            <h1 className="hero-title text-7xl md:text-8xl lg:text-9xl font-light tracking-tight mb-4">
               FULL-SERVICE
             </h1>
-            <h1 className="text-7xl md:text-8xl lg:text-9xl font-light tracking-tight mb-4 relative">
+            <h1 className="hero-title text-7xl md:text-8xl lg:text-9xl font-light tracking-tight mb-4 relative">
               <span className="inline-block relative">
                 DIGITAL
                 <div className="absolute -bottom-2 left-0 w-64 h-px bg-foreground/30" />
               </span>
             </h1>
-            <h1 className="text-7xl md:text-8xl lg:text-9xl font-light tracking-tight">
+            <h1 className="hero-title text-7xl md:text-8xl lg:text-9xl font-light tracking-tight">
               AGENCY
             </h1>
           </div>
 
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 max-w-5xl">
             <div>
-              <p className="text-xl md:text-2xl text-muted-foreground max-w-md">
+              <p className="hero-subtitle text-xl md:text-2xl text-muted-foreground max-w-md">
                 Transforming your digital presence with innovative web design
               </p>
             </div>
             
-            <Button variant="outline" className="rounded-full px-8 py-6 text-base border-foreground hover:bg-foreground hover:text-background group">
-              <ArrowDown className="w-5 h-5 mr-2 group-hover:translate-y-1 transition-transform" />
-              Contact Us
-            </Button>
+            <Link to="/contact">
+              <Button variant="outline" className="hero-cta rounded-full px-8 py-6 text-base border-foreground hover:bg-foreground hover:text-background group">
+                <ArrowDown className="w-5 h-5 mr-2 group-hover:translate-y-1 transition-transform" />
+                Contact Us
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
