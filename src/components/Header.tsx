@@ -15,6 +15,7 @@ export const Header = () => {
           <Link to="/" className="text-sm hover:text-accent transition-colors">Home</Link>
           <Link to="/about" className="text-sm hover:text-accent transition-colors">About</Link>
           <ServiceDropdown />
+          <Link to="/portfolio" className="text-sm hover:text-accent transition-colors">Portfolio</Link>
           <Link to="/contact" className="text-sm hover:text-accent transition-colors">Contact</Link>
         </nav>
 

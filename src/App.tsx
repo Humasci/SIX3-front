@@ -11,6 +11,8 @@ import WebDesign from "./pages/services/WebDesign";
 import Development from "./pages/services/Development";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Portfolio from "./pages/Portfolio";
+import PortfolioDetail from "./pages/portfolio/PortfolioDetail";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +26,8 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/portfolio/:id" element={<PortfolioDetail />} />
           <Route path="/services/branding" element={<Branding />} />
           <Route path="/services/app-design" element={<AppDesign />} />
           <Route path="/services/web-design" element={<WebDesign />} />
