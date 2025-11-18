@@ -66,6 +66,13 @@ export const MobileMenu = () => {
               </div>
             </div>
             <Link
+              to="/portfolio"
+              onClick={() => setIsOpen(false)}
+              className="text-lg hover:text-accent transition-colors"
+            >
+              Portfolio
+            </Link>
+            <Link
               to="/contact"
               onClick={() => setIsOpen(false)}
               className="text-lg hover:text-accent transition-colors"
