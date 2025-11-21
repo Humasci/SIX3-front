@@ -5,11 +5,11 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Palette, Video, Edit3, Sparkles } from "lucide-react";
+import { Brain, Workflow, Code2, Rocket } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const ContentCreation = () => {
+const AIDevAutomation = () => {
   const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -56,12 +56,12 @@ const ContentCreation = () => {
         <div className="max-w-7xl mx-auto">
           <div className="hero-content mb-12">
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-light mb-8">
-              Content Creation
+              AI Dev / Automation
             </h1>
             <div className="aspect-video w-full bg-secondary mb-8 overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=1200&h=675&fit=crop"
-                alt="Content Creation"
+                src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=675&fit=crop"
+                alt="AI Development"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -76,11 +76,11 @@ const ContentCreation = () => {
               </div>
               <div>
                 <p className="text-muted-foreground mb-1">Lead</p>
-                <p>Creative Team</p>
+                <p>AI Team</p>
               </div>
               <div>
                 <p className="text-muted-foreground mb-1">Category</p>
-                <p>Design</p>
+                <p>Development</p>
               </div>
             </div>
           </div>
@@ -99,38 +99,38 @@ const ContentCreation = () => {
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="step-card border border-border p-8 bg-background">
-              <Palette className="w-12 h-12 mb-6 text-accent" />
+              <Brain className="w-12 h-12 mb-6 text-accent" />
               <p className="text-sm text-muted-foreground mb-4">Step -01</p>
-              <h3 className="text-2xl font-light mb-4">Creative Strategy</h3>
+              <h3 className="text-2xl font-light mb-4">Discovery & Analysis</h3>
               <p className="text-muted-foreground">
-                We dive deep into your brand identity, audience insights, and market trends to craft a content strategy that resonates and drives engagement.
+                We analyze your workflows, identify automation opportunities, and map out AI solutions that will maximize efficiency and scale your operations.
               </p>
             </div>
 
             <div className="step-card border border-border p-8 bg-background">
-              <Video className="w-12 h-12 mb-6 text-accent" />
+              <Code2 className="w-12 h-12 mb-6 text-accent" />
               <p className="text-sm text-muted-foreground mb-4">Step -02</p>
-              <h3 className="text-2xl font-light mb-4">Content Production</h3>
+              <h3 className="text-2xl font-light mb-4">Custom Development</h3>
               <p className="text-muted-foreground">
-                Our creative team brings your vision to life through stunning visuals, compelling copy, and high-quality video production that captivates audiences.
+                Our expert developers build tailored AI solutions using cutting-edge technologies, ensuring seamless integration with your existing systems.
               </p>
             </div>
 
             <div className="step-card border border-border p-8 bg-background">
-              <Edit3 className="w-12 h-12 mb-6 text-accent" />
+              <Workflow className="w-12 h-12 mb-6 text-accent" />
               <p className="text-sm text-muted-foreground mb-4">Step -03</p>
-              <h3 className="text-2xl font-light mb-4">Refinement & Polish</h3>
+              <h3 className="text-2xl font-light mb-4">Testing & Optimization</h3>
               <p className="text-muted-foreground">
-                Meticulous editing and refinement ensure every piece of content meets the highest standards of quality and aligns perfectly with your brand voice.
+                Rigorous testing ensures accuracy and reliability. We refine algorithms and workflows until every automation performs flawlessly in real-world scenarios.
               </p>
             </div>
 
             <div className="step-card border border-border p-8 bg-background">
-              <Sparkles className="w-12 h-12 mb-6 text-accent" />
+              <Rocket className="w-12 h-12 mb-6 text-accent" />
               <p className="text-sm text-muted-foreground mb-4">Step -04</p>
-              <h3 className="text-2xl font-light mb-4">Distribution & Optimization</h3>
+              <h3 className="text-2xl font-light mb-4">Deployment & Support</h3>
               <p className="text-muted-foreground">
-                Strategic distribution across channels with continuous performance tracking and optimization to maximize reach, engagement, and conversions.
+                Smooth deployment with comprehensive training and ongoing support. We ensure your team maximizes the value of AI automation from day one.
               </p>
             </div>
           </div>
@@ -144,15 +144,15 @@ const ContentCreation = () => {
             Overview -
           </p>
           <h2 className="text-4xl md:text-5xl font-light mb-8 max-w-3xl">
-            Transforming Ideas Into Compelling Stories That Convert
+            Intelligent Solutions That Scale Your Business Operations
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mb-8">
-            Elevate your brand with professional content creation that captures attention and drives action. From stunning visuals to engaging copy, we craft multi-format content that tells your story, builds trust, and converts audiences across all digital touchpoints.
+            Transform your business with custom AI development and intelligent automation. We design and build AI-powered solutions that streamline workflows, enhance decision-making, and unlock new capabilities — from chatbots and process automation to predictive analytics and custom machine learning applications.
           </p>
           <ul className="space-y-4 text-lg text-muted-foreground max-w-3xl">
-            <li>• Create scroll-stopping visuals that demand attention</li>
-            <li>• Craft compelling narratives that build brand loyalty</li>
-            <li>• Optimize content for maximum engagement and reach</li>
+            <li>• Automate repetitive tasks and free up valuable resources</li>
+            <li>• Leverage AI for smarter, faster decision-making</li>
+            <li>• Scale operations without proportional cost increases</li>
           </ul>
         </div>
       </section>
@@ -161,12 +161,12 @@ const ContentCreation = () => {
       <section className="py-16 px-6 bg-secondary/30">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
           <div>
-            <div className="text-7xl md:text-8xl font-light mb-4">500+</div>
-            <p className="text-xl text-muted-foreground">Content Pieces Created</p>
+            <div className="text-7xl md:text-8xl font-light mb-4">85+</div>
+            <p className="text-xl text-muted-foreground">AI Solutions Deployed</p>
           </div>
           <div>
-            <div className="text-7xl md:text-8xl font-light mb-4">3.5x</div>
-            <p className="text-xl text-muted-foreground">Engagement Rate Boost</p>
+            <div className="text-7xl md:text-8xl font-light mb-4">60%</div>
+            <p className="text-xl text-muted-foreground">Average Time Saved</p>
           </div>
         </div>
       </section>
@@ -178,31 +178,31 @@ const ContentCreation = () => {
             Our Advantage -
           </p>
           <h2 className="text-5xl md:text-6xl font-light mb-16 max-w-2xl">
-            Where Creativity<br />Meets Strategy
+            Where Innovation<br />Meets Practical Solutions
           </h2>
 
           <div className="space-y-12">
             <div className="advantage-card border-t border-border pt-8">
               <div className="text-5xl font-light text-muted-foreground/50 mb-4">01</div>
-              <h3 className="text-3xl font-light mb-4">Multi-Format Expertise</h3>
+              <h3 className="text-3xl font-light mb-4">Custom AI Solutions</h3>
               <p className="text-lg text-muted-foreground max-w-2xl">
-                From video production to graphic design, copywriting to social media content — we're masters of every format. Your brand gets cohesive, high-quality content across all channels.
+                No generic templates — every solution is built specifically for your unique business needs, workflows, and goals. We create AI that fits your operation perfectly.
               </p>
             </div>
 
             <div className="advantage-card border-t border-border pt-8">
               <div className="text-5xl font-light text-muted-foreground/50 mb-4">02</div>
-              <h3 className="text-3xl font-light mb-4">Brand Consistency</h3>
+              <h3 className="text-3xl font-light mb-4">Seamless Integration</h3>
               <p className="text-lg text-muted-foreground max-w-2xl">
-                We ensure every piece of content reinforces your brand identity, maintaining a consistent voice, style, and message that builds recognition and trust.
+                Our AI solutions integrate smoothly with your existing tech stack, preserving your current workflows while enhancing them with intelligent automation.
               </p>
             </div>
 
             <div className="advantage-card border-t border-border pt-8">
               <div className="text-5xl font-light text-muted-foreground/50 mb-4">03</div>
-              <h3 className="text-3xl font-light mb-4">Performance-Driven</h3>
+              <h3 className="text-3xl font-light mb-4">Continuous Evolution</h3>
               <p className="text-lg text-muted-foreground max-w-2xl">
-                Beautiful content that performs. We combine creative excellence with data insights to create content that not only looks great but drives real business results.
+                AI that learns and improves over time. We provide ongoing optimization and updates to ensure your automation stays cutting-edge and delivers maximum value.
               </p>
             </div>
           </div>
@@ -217,7 +217,7 @@ const ContentCreation = () => {
           </h2>
           <Link to="/contact">
             <Button variant="outline" className="rounded-full px-12 py-6 text-lg border-foreground hover:bg-foreground hover:text-background">
-              Create Amazing Content
+              Automate with AI
             </Button>
           </Link>
         </div>
@@ -228,4 +228,4 @@ const ContentCreation = () => {
   );
 };
 
-export default ContentCreation;
+export default AIDevAutomation;

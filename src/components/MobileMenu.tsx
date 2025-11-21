@@ -50,11 +50,11 @@ export const MobileMenu = () => {
                   Content Creation
                 </Link>
                 <Link
-                  to="/services/ai-automation-dev"
+                  to="/services/ai-dev-automation"
                   onClick={() => setIsOpen(false)}
                   className="block hover:text-accent transition-colors"
                 >
-                  AI Automation / Dev
+                  AI Dev / Automation
                 </Link>
                 <Link
                   to="/services/ml-fine-tuning"

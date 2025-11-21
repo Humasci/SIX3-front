@@ -22,7 +22,7 @@ export const Footer = () => {
                 <Link to="/services/content-creation">Content Creation</Link>
               </li>
               <li className="hover:text-foreground transition-colors cursor-pointer">
-                <Link to="/services/ai-automation-dev">AI Automation / Dev</Link>
+                <Link to="/services/ai-dev-automation">AI Dev / Automation</Link>
               </li>
               <li className="hover:text-foreground transition-colors cursor-pointer">
                 <Link to="/services/ml-fine-tuning">ML Fine Tuning</Link>

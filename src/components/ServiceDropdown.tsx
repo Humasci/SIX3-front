@@ -5,7 +5,7 @@ import { useState } from "react";
 const services = [
   { name: "Search Marketing / PPC", path: "/services/search-marketing-ppc" },
   { name: "Content Creation", path: "/services/content-creation" },
-  { name: "AI Automation / Dev", path: "/services/ai-automation-dev" },
+  { name: "AI Dev / Automation", path: "/services/ai-dev-automation" },
   { name: "ML Fine Tuning", path: "/services/ml-fine-tuning" },
 ];
 

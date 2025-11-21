@@ -21,9 +21,9 @@ const services = [
   },
   {
     number: "03",
-    title: "AI Automation / Dev",
+    title: "AI Dev / Automation",
     description: "Streamline operations and boost efficiency with custom AI solutions that automate workflows and enhance business processes.",
-    path: "/services/ai-automation-dev",
+    path: "/services/ai-dev-automation",
   },
   {
     number: "04",
