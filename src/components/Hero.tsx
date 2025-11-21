@@ -2,7 +2,6 @@ import { ArrowDown, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/hero-bg.jpg";
 import gsap from "gsap";
 
 export const Hero = () => {
@@ -55,10 +54,18 @@ export const Hero = () => {
 
   return (
     <section ref={heroRef} className="relative min-h-screen flex flex-col">
-      <div 
-        className="absolute inset-0 bg-cover bg-center opacity-40"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      />
+      <div className="absolute inset-0 z-0">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover opacity-30"
+        >
+          <source src="/hero-video.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
+      </div>
       
       <div className="relative flex-1 flex flex-col items-center justify-center px-6 pt-24">
         <div className="max-w-7xl w-full">

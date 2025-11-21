@@ -9,27 +9,27 @@ gsap.registerPlugin(ScrollTrigger);
 const services = [
   {
     number: "01",
-    title: "Branding",
-    description: "We master the art of shaping a unique identity that resonates with audiences and sets a business apart.",
-    path: "/services/branding",
+    title: "Search Marketing / PPC",
+    description: "Drive targeted traffic and maximize ROI with data-driven paid advertising campaigns across Google, social media, and display networks.",
+    path: "/services/search-marketing-ppc",
   },
   {
     number: "02",
-    title: "App Design",
-    description: "We focus on creating user-friendly interfaces and seamless experiences for mobile and desktop applications.",
-    path: "/services/app-design",
+    title: "Content Creation",
+    description: "Craft compelling content that engages your audience and elevates your brand through strategic storytelling and visual design.",
+    path: "/services/content-creation",
   },
   {
     number: "03",
-    title: "Web Design",
-    description: "Creating stunning, user-friendly websites that captivate and convert.",
-    path: "/services/web-design",
+    title: "AI Automation / Dev",
+    description: "Streamline operations and boost efficiency with custom AI solutions that automate workflows and enhance business processes.",
+    path: "/services/ai-automation-dev",
   },
   {
     number: "04",
-    title: "Development",
-    description: "Turning design concepts into functional software through coding. It includes front-end, back-end, and full-stack development.",
-    path: "/services/development",
+    title: "ML Fine Tuning",
+    description: "Optimize machine learning models for peak performance with specialized fine-tuning techniques tailored to your specific use cases.",
+    path: "/services/ml-fine-tuning",
   },
 ];
 

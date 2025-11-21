@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const services = [
-  { name: "Branding", path: "/services/branding" },
-  { name: "App Design", path: "/services/app-design" },
-  { name: "Web Design", path: "/services/web-design" },
-  { name: "Development", path: "/services/development" },
+  { name: "Search Marketing / PPC", path: "/services/search-marketing-ppc" },
+  { name: "Content Creation", path: "/services/content-creation" },
+  { name: "AI Automation / Dev", path: "/services/ai-automation-dev" },
+  { name: "ML Fine Tuning", path: "/services/ml-fine-tuning" },
 ];
 
 export const ServiceDropdown = () => {
