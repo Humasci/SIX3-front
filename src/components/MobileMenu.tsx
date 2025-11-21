@@ -36,32 +36,32 @@ export const MobileMenu = () => {
               <p className="text-lg text-muted-foreground">Services</p>
               <div className="pl-4 space-y-2">
                 <Link
-                  to="/services/branding"
+                  to="/services/search-marketing-ppc"
                   onClick={() => setIsOpen(false)}
                   className="block hover:text-accent transition-colors"
                 >
-                  Branding
+                  Search Marketing / PPC
                 </Link>
                 <Link
-                  to="/services/app-design"
+                  to="/services/content-creation"
                   onClick={() => setIsOpen(false)}
                   className="block hover:text-accent transition-colors"
                 >
-                  App Design
+                  Content Creation
                 </Link>
                 <Link
-                  to="/services/web-design"
+                  to="/services/ai-automation-dev"
                   onClick={() => setIsOpen(false)}
                   className="block hover:text-accent transition-colors"
                 >
-                  Web Design
+                  AI Automation / Dev
                 </Link>
                 <Link
-                  to="/services/development"
+                  to="/services/ml-fine-tuning"
                   onClick={() => setIsOpen(false)}
                   className="block hover:text-accent transition-colors"
                 >
-                  Development
+                  ML Fine Tuning
                 </Link>
               </div>
             </div>

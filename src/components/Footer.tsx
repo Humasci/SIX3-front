@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const Footer = () => {
   return (
     <footer className="py-12 px-6 border-t border-border">
@@ -13,20 +15,33 @@ export const Footer = () => {
           <div>
             <h4 className="text-sm font-medium mb-4 tracking-wider">Services</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li className="hover:text-foreground transition-colors cursor-pointer">Web Design</li>
-              <li className="hover:text-foreground transition-colors cursor-pointer">Brand Identity</li>
-              <li className="hover:text-foreground transition-colors cursor-pointer">Digital Marketing</li>
-              <li className="hover:text-foreground transition-colors cursor-pointer">UI/UX Design</li>
+              <li className="hover:text-foreground transition-colors cursor-pointer">
+                <Link to="/services/search-marketing-ppc">Search Marketing / PPC</Link>
+              </li>
+              <li className="hover:text-foreground transition-colors cursor-pointer">
+                <Link to="/services/content-creation">Content Creation</Link>
+              </li>
+              <li className="hover:text-foreground transition-colors cursor-pointer">
+                <Link to="/services/ai-automation-dev">AI Automation / Dev</Link>
+              </li>
+              <li className="hover:text-foreground transition-colors cursor-pointer">
+                <Link to="/services/ml-fine-tuning">ML Fine Tuning</Link>
+              </li>
             </ul>
           </div>
           
           <div>
             <h4 className="text-sm font-medium mb-4 tracking-wider">Company</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li className="hover:text-foreground transition-colors cursor-pointer">About Us</li>
-              <li className="hover:text-foreground transition-colors cursor-pointer">Projects</li>
-              <li className="hover:text-foreground transition-colors cursor-pointer">Blog</li>
-              <li className="hover:text-foreground transition-colors cursor-pointer">Contact</li>
+              <li className="hover:text-foreground transition-colors cursor-pointer">
+                <Link to="/about">About Us</Link>
+              </li>
+              <li className="hover:text-foreground transition-colors cursor-pointer">
+                <Link to="/portfolio">Portfolio</Link>
+              </li>
+              <li className="hover:text-foreground transition-colors cursor-pointer">
+                <Link to="/contact">Contact</Link>
+              </li>
             </ul>
           </div>
           
