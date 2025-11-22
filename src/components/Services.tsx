@@ -1,10 +1,52 @@
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
+
+const AnimatedCounter = ({ end }: { end: number }) => {
+  const [count, setCount] = useState(0);
+  const counterRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          let start = 0;
+          const duration = 2000;
+          const increment = end / (duration / 16);
+          
+          const timer = setInterval(() => {
+            start += increment;
+            if (start >= end) {
+              setCount(end);
+              clearInterval(timer);
+            } else {
+              setCount(Math.floor(start));
+            }
+          }, 16);
+          
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (counterRef.current) {
+      observer.observe(counterRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [end]);
+
+  return (
+    <div ref={counterRef} className="text-6xl md:text-7xl font-light text-muted-foreground/30">
+      {count.toLocaleString()}
+    </div>
+  );
+};
 
 const services = [
   {
@@ -54,9 +96,31 @@ export const Services = () => {
           start: "top 85%",
         },
         opacity: 0,
-        y: 50,
-        stagger: 0.15,
-        duration: 0.8,
+        y: 100,
+        scale: 0.9,
+        stagger: 0.2,
+        duration: 1,
+        ease: "power3.out",
+      });
+
+      // Hover animation for cards
+      const cards = document.querySelectorAll(".service-card");
+      cards.forEach((card) => {
+        card.addEventListener("mouseenter", () => {
+          gsap.to(card, {
+            y: -10,
+            duration: 0.3,
+            ease: "power2.out",
+          });
+        });
+        
+        card.addEventListener("mouseleave", () => {
+          gsap.to(card, {
+            y: 0,
+            duration: 0.3,
+            ease: "power2.out",
+          });
+        });
       });
     }, sectionRef);
 
@@ -73,24 +137,25 @@ export const Services = () => {
               Expert Services<br />
               to Drive Success
             </h2>
-            <div className="text-6xl md:text-7xl font-light text-muted-foreground/30">
-              67890
-            </div>
+          <AnimatedCounter end={654321} />
           </div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
           {services.map((service) => (
             <Link key={service.number} to={service.path}>
-              <div className="service-card group border border-border p-8 hover:bg-card transition-all duration-300 cursor-pointer">
-                <div className="flex items-start justify-between mb-6">
-                  <span className="text-6xl font-light text-muted-foreground/50">
-                    {service.number}
-                  </span>
-                  <ArrowUpRight className="w-6 h-6 text-muted-foreground group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+              <div className="service-card group relative border border-border p-8 bg-background overflow-hidden cursor-pointer">
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="relative z-10">
+                  <div className="flex items-start justify-between mb-6">
+                    <span className="text-6xl font-light text-muted-foreground/50 group-hover:text-accent/70 transition-colors duration-300">
+                      {service.number}
+                    </span>
+                    <ArrowUpRight className="w-6 h-6 text-muted-foreground group-hover:text-accent group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
+                  </div>
+                  <h3 className="text-2xl font-light mb-4 group-hover:text-accent transition-colors duration-300">{service.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{service.description}</p>
                 </div>
-                <h3 className="text-2xl font-light mb-4">{service.title}</h3>
-                <p className="text-muted-foreground">{service.description}</p>
               </div>
             </Link>
           ))}
