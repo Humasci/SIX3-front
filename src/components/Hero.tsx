@@ -70,16 +70,16 @@ export const Hero = () => {
       <div className="relative flex-1 flex flex-col items-center justify-center px-6 pt-24">
         <div className="max-w-7xl w-full">
           <div className="mb-12">
-            <h1 className="hero-title text-7xl md:text-8xl lg:text-9xl font-light tracking-tight mb-4">
+            <h1 className="hero-title text-6xl md:text-7xl lg:text-8xl font-light tracking-tight mb-4">
               FULL-SERVICE
             </h1>
-            <h1 className="hero-title text-7xl md:text-8xl lg:text-9xl font-light tracking-tight mb-4 relative">
+            <h1 className="hero-title text-6xl md:text-7xl lg:text-8xl font-light tracking-tight mb-4 relative">
               <span className="inline-block relative">
                 DIGITAL
                 <div className="absolute -bottom-2 left-0 w-64 h-px bg-foreground/30" />
               </span>
             </h1>
-            <h1 className="hero-title text-7xl md:text-8xl lg:text-9xl font-light tracking-tight">
+            <h1 className="hero-title text-6xl md:text-7xl lg:text-8xl font-light tracking-tight">
               AGENCY
             </h1>
           </div>
