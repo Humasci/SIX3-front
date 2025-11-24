@@ -16,23 +16,35 @@ export const Header = () => {
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Initial load animation - slide down + fade in
-      gsap.from(headerRef.current, {
-        opacity: 0,
-        y: -20,
-        duration: 0.6,
-        delay: 0.2,
-        ease: "power2.out",
-      });
+      gsap.fromTo(headerRef.current, 
+        {
+          opacity: 0,
+          y: -20,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          delay: 0.2,
+          ease: "power2.out",
+        }
+      );
 
       // Stagger menu items
-      gsap.from(".nav-item", {
-        opacity: 0,
-        y: -10,
-        duration: 0.4,
-        stagger: 0.05,
-        delay: 0.4,
-        ease: "power2.out",
-      });
+      gsap.fromTo(".nav-item",
+        {
+          opacity: 0,
+          y: -10,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.4,
+          stagger: 0.05,
+          delay: 0.4,
+          ease: "power2.out",
+        }
+      );
     }, headerRef);
 
     // Scroll behavior - shrink header when scrolled
