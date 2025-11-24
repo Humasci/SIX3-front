@@ -9,7 +9,7 @@ export const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border">
       <div className="flex items-center justify-between px-6 py-4">
         <Link to="/" className="flex items-center">
-          <img src={logo} alt="SIX3 Agency" className="h-8" />
+          <img src={logo} alt="SIX3 Agency" className="h-12 md:h-16" />
         </Link>
         
         <nav className="hidden md:flex items-center gap-8">
