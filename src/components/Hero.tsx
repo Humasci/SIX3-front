@@ -24,28 +24,41 @@ export const Hero = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
+      // Main headline - split text reveal with proper timing from brief
       gsap.from(".hero-title", {
         opacity: 0,
-        y: 100,
-        stagger: 0.2,
-        duration: 1.2,
+        y: 50,
+        stagger: 0.15,
+        duration: 0.8,
+        delay: 0.3,
         ease: "power3.out",
       });
 
+      // Subheadline - fade in + slide up
       gsap.from(".hero-subtitle", {
         opacity: 0,
         y: 30,
-        duration: 1,
+        duration: 0.6,
         delay: 0.8,
         ease: "power3.out",
       });
 
+      // CTA button - scale + fade in
       gsap.from(".hero-cta", {
         opacity: 0,
-        scale: 0.8,
-        duration: 0.8,
+        scale: 0.9,
+        duration: 0.5,
         delay: 1.2,
-        ease: "back.out(1.7)",
+        ease: "power3.out",
+      });
+
+      // Time and scroll indicator
+      gsap.from(".hero-footer", {
+        opacity: 0,
+        y: 20,
+        duration: 0.6,
+        delay: 1.4,
+        ease: "power2.out",
       });
     }, heroRef);
 
@@ -101,7 +114,7 @@ export const Hero = () => {
         </div>
       </div>
 
-      <div className="relative flex items-center justify-between px-6 pb-8">
+      <div className="hero-footer relative flex items-center justify-between px-6 pb-8">
         <div className="flex items-center gap-2">
           <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
           <span className="text-sm text-muted-foreground">New York, {time}</span>
