@@ -114,7 +114,7 @@ export const Portfolio = () => {
         </div>
 
         <div className="portfolio-grid grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
+          {projects.slice(0, 3).map((project) => (
             <Link
               key={project.id}
               to={`/portfolio/${project.id}`}

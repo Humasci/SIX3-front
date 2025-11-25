@@ -137,7 +137,7 @@ export const Services = () => {
               Expert Services<br />
               to Drive Success
             </h2>
-          <AnimatedCounter end={654321} />
+          <AnimatedCounter end={72} />
           </div>
         </div>
 
