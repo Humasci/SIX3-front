@@ -73,7 +73,7 @@ export const Header = () => {
             src={logo} 
             alt="SIX3 Agency" 
             className={`transition-all duration-400 ${
-              isScrolled ? "h-[3.85rem] md:h-[5.5rem]" : "h-[3.85rem] md:h-[5.5rem]"
+              isScrolled ? "h-[4.05rem] md:h-[5.8rem]" : "h-[4.05rem] md:h-[5.8rem]"
             }`}
           />
         </Link>
