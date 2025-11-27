@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ServiceDropdown } from "./ServiceDropdown";
 import { IndustryDropdown } from "./IndustryDropdown";
 import { MobileMenu } from "./MobileMenu";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/SIX3Agency-AI-marketing-logo.png";
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -68,7 +68,7 @@ export const Header = () => {
         isScrolled ? "py-2 shadow-lg" : "py-4"
       }`}
     >
-      <div className="flex items-center justify-between px-6">
+      <div className="relative flex items-center justify-between px-6">
         <Link to="/" className="flex items-center nav-item">
           <img 
             src={logo} 

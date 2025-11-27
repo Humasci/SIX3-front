@@ -16,8 +16,8 @@ export const MobileMenu = () => {
       </button>
 
       {isOpen && (
-        <div className="absolute top-full left-0 right-0 bg-background border-t border-border z-50">
-          <nav className="flex flex-col p-6 space-y-4">
+        <div className="absolute top-full left-0 right-0 w-screen bg-background/95 backdrop-blur-sm border-t border-border shadow-lg z-40 -ml-6">
+          <nav className="flex flex-col p-6 space-y-4 max-h-[70vh] overflow-y-auto">
             <Link
               to="/"
               onClick={() => setIsOpen(false)}
@@ -36,7 +36,7 @@ export const MobileMenu = () => {
               <Link
                 to="/services"
                 onClick={() => setIsOpen(false)}
-                className="text-lg hover:text-accent transition-colors"
+                className="text-lg font-medium hover:text-accent transition-colors"
               >
                 Services
               </Link>
@@ -72,7 +72,7 @@ export const MobileMenu = () => {
               </div>
             </div>
             <div className="space-y-2">
-              <p className="text-lg text-muted-foreground">Industries</p>
+              <p className="text-lg font-medium">Industries</p>
               <div className="pl-4 space-y-2">
                 <Link
                   to="/industries/legal"

@@ -21,6 +21,8 @@ import ProfessionalServices from "./pages/industries/ProfessionalServices";
 import LocalBusiness from "./pages/industries/LocalBusiness";
 import LawFirmAutomation from "./pages/use-cases/LawFirmAutomation";
 import RealEstateLeadSystem from "./pages/use-cases/RealEstateLeadSystem";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Terms from "./pages/Terms";
 
 const queryClient = new QueryClient();
 
@@ -48,6 +50,8 @@ const App = () => (
           <Route path="/industries/local-business" element={<LocalBusiness />} />
           <Route path="/use-cases/law-firm-automation" element={<LawFirmAutomation />} />
           <Route path="/use-cases/real-estate-lead-system" element={<RealEstateLeadSystem />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<Terms />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

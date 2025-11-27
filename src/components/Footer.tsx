@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Linkedin, Instagram, Dribbble, Mail } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -47,22 +48,35 @@ export const Footer = () => {
           
           <div>
             <h4 className="text-sm font-medium mb-4 tracking-wider">Connect</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li className="hover:text-foreground transition-colors cursor-pointer">Twitter</li>
-              <li className="hover:text-foreground transition-colors cursor-pointer">LinkedIn</li>
-              <li className="hover:text-foreground transition-colors cursor-pointer">Instagram</li>
-              <li className="hover:text-foreground transition-colors cursor-pointer">Dribbble</li>
-            </ul>
+            <div className="space-y-4">
+              <div className="flex gap-4">
+                <a href="https://linkedin.com/company/six3-agency" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="LinkedIn">
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a href="https://instagram.com/six3agency" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="Instagram">
+                  <Instagram className="w-5 h-5" />
+                </a>
+                <a href="https://dribbble.com/six3agency" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="Dribbble">
+                  <Dribbble className="w-5 h-5" />
+                </a>
+              </div>
+              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                <Mail className="w-4 h-4" />
+                <a href="mailto:hello@six3.agency" className="hover:text-foreground transition-colors">
+                  hello@six3.agency
+                </a>
+              </div>
+            </div>
           </div>
         </div>
         
         <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © 2024 SIX3 Agency. All rights reserved.
+            © 2018 - 2025 FKA WEB Limited Registered in England and Wales No. 11642660. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm text-muted-foreground">
-            <a href="#" className="hover:text-foreground transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-foreground transition-colors">Terms of Service</a>
+            <Link to="/privacy-policy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
+            <Link to="/terms" className="hover:text-foreground transition-colors">Terms</Link>
           </div>
         </div>
       </div>

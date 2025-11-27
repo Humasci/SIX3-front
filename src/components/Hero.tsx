@@ -153,22 +153,22 @@ export const Hero = () => {
           <div className="mb-12">
             <h1 
               ref={(el) => (titleRefs.current[0] = el)}
-              className="hero-title text-6xl md:text-7xl lg:text-8xl font-light tracking-tight mb-4"
+              className="hero-title text-4xl md:text-7xl lg:text-8xl font-light tracking-tight mb-4"
             >
               AI-POWERED
             </h1>
             <h1 
               ref={(el) => (titleRefs.current[1] = el)}
-              className="hero-title text-6xl md:text-7xl lg:text-8xl font-light tracking-tight mb-4 relative"
+              className="hero-title text-4xl md:text-7xl lg:text-8xl font-light tracking-tight mb-4 relative"
             >
               <span className="inline-block relative">
                 MARKETING
-                <div className="absolute -bottom-2 left-0 w-64 h-px bg-foreground/30" />
+                <div className="absolute -bottom-2 left-0 w-32 md:w-64 h-px bg-foreground/30" />
               </span>
             </h1>
             <h1 
               ref={(el) => (titleRefs.current[2] = el)}
-              className="hero-title text-6xl md:text-7xl lg:text-8xl font-light tracking-tight"
+              className="hero-title text-4xl md:text-7xl lg:text-8xl font-light tracking-tight"
             >
               AGENCY
             </h1>
