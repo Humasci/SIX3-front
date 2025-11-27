@@ -1,0 +1,208 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "ourWork": "Our Work",
+    "contact": "Contact",
+    "blog": "Blog"
+  },
+  "hero": {
+    "title1": "AI-POWERED",
+    "title2": "MARKETING",
+    "title3": "AGENCY",
+    "subtitle": "AI-driven search marketing, generative content creation, and custom automation solutions",
+    "cta": "Contact Us",
+    "location": "London",
+    "scrollDown": "Scroll Down"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive AI-powered solutions that transform your business operations, maximize ROI, and drive sustainable growth through intelligent automation.",
+    "searchMarketing": {
+      "title": "Search Marketing & Paid Media",
+      "subtitle": "AI-driven search marketing with advanced algorithm optimization",
+      "description": "Multi-platform campaign management across Google Ads, Meta, LinkedIn, and TikTok with real-time AI bid optimization, advanced audience segmentation, and competitor analysis.",
+      "features": [
+        "Real-time AI bid optimization for maximum ROAS",
+        "Multi-platform management (Google, Meta, LinkedIn, TikTok)",
+        "Advanced audience segmentation and targeting",
+        "Custom attribution modeling and automated alerts"
+      ],
+      "investment": "£1K-5K management fees + ad spend"
+    },
+    "contentCreation": {
+      "title": "Generative AI Video & Audio",
+      "subtitle": "AI avatars and generative models for unique multimedia content",
+      "description": "AI avatar creation and animation, voice cloning and synthesis, custom video content generation, UGC campaign automation, and brand-aligned content production.",
+      "features": [
+        "AI avatar creation and realistic animation",
+        "Voice cloning and synthesis technology",
+        "UGC campaign automation and video ads",
+        "Multi-language content localization"
+      ],
+      "investment": "£200-7K+ packages"
+    },
+    "mlFineTuning": {
+      "title": "Fine-Tuning ML Models",
+      "subtitle": "Custom AI models tailored to client data and objectives",
+      "description": "Large Language Model fine-tuning, computer vision model adaptation, recommendation system optimization, predictive analytics development, and custom chatbot training.",
+      "features": [
+        "Large Language Model fine-tuning and adaptation",
+        "Computer vision and image recognition models",
+        "Recommendation systems and predictive analytics",
+        "Custom chatbot training and NLP solutions"
+      ],
+      "investment": "$5K-50K+ with ongoing support"
+    },
+    "aiAutomation": {
+      "title": "AI Agent Creation & Workflow Automation",
+      "subtitle": "Custom AI systems and automated workflows for business processes",
+      "description": "Custom AI agent development for call screening, lead qualification, customer support, business process automation, and workflow orchestration with legacy system integration.",
+      "features": [
+        "Call center automation and AI phone screening",
+        "Lead management and automated follow-up workflows",
+        "Customer service automation with 24/7 support",
+        "Industry-specific solutions (legal, healthcare, real estate)"
+      ],
+      "investment": "$5K-100K+ with ongoing support"
+    },
+    "stats": {
+      "averageROI": "Average ROI",
+      "timeSavings": "Time Savings",
+      "fasterResponse": "Faster Response",
+      "leadIncrease": "Lead Increase"
+    },
+    "learnMore": "Learn More",
+    "investmentRange": "Investment Range",
+    "keyFeatures": "Key Features"
+  },
+  "industries": {
+    "title": "Industries We Specialize In",
+    "subtitle": "We cater to all SMEs, with specialized expertise in these key industries",
+    "legal": {
+      "title": "Legal & Law Firms",
+      "description": "Client intake automation, case management, and compliance tracking"
+    },
+    "realEstate": {
+      "title": "Real Estate",
+      "description": "Lead nurturing, property marketing, and client communication"
+    },
+    "healthcare": {
+      "title": "Healthcare",
+      "description": "Patient scheduling, automated follow-ups, and communication"
+    },
+    "professional": {
+      "title": "Professional Services",
+      "description": "Consultation booking, client management, and service delivery"
+    },
+    "local": {
+      "title": "Local Businesses",
+      "description": "Customer engagement, appointment booking, and local marketing"
+    },
+    "ecommerce": {
+      "title": "Ecommerce",
+      "description": "Product marketing automation, customer retention, and sales optimization"
+    }
+  },
+  "contact": {
+    "steps": {
+      "step1": {
+        "title": "Let's Work Together",
+        "subtitle": "Tell us about yourself"
+      },
+      "step2": {
+        "title": "What services do you need?",
+        "subtitle": "Select all that apply"
+      },
+      "step3": {
+        "title": "What are your main challenges?",
+        "subtitle": "Help us understand your pain points"
+      },
+      "step4": {
+        "title": "What are your goals?",
+        "subtitle": "Where do you want to be in 6 months?"
+      }
+    },
+    "form": {
+      "name": "Your name*",
+      "email": "Email address*",
+      "company": "Company name",
+      "phone": "Phone number",
+      "website": "Website (optional)",
+      "painPoints": "Tell us about your main challenges and pain points...",
+      "goals": "What are your main goals and where do you want to be in 6 months?",
+      "back": "Back",
+      "next": "Next",
+      "sendMessage": "Send Message",
+      "sending": "Sending..."
+    },
+    "services": [
+      "Search Marketing & PPC",
+      "Content Creation",
+      "AI Development & Automation",
+      "ML Fine Tuning",
+      "Lead Generation",
+      "Website Development"
+    ],
+    "success": "✅ Thank you! Your message has been sent successfully. We'll get back to you soon.",
+    "error": "❌ Sorry, there was an error sending your message. Please try again or email us directly at form@six3.agency",
+    "emailValidation": "Please enter a valid email address"
+  },
+  "footer": {
+    "description": "AI-powered marketing and automation agency.",
+    "services": "Services",
+    "company": "Company",
+    "legal": "Legal",
+    "connect": "Connect",
+    "aboutUs": "About Us",
+    "ourWork": "Our Work",
+    "blog": "Blog",
+    "contact": "Contact",
+    "privacyPolicy": "Privacy Policy",
+    "terms": "Terms",
+    "cookiePolicy": "Cookie Policy",
+    "copyright": "© 2018 - 2025 FKA WEB Limited Registered in England and Wales No. 11642660. All rights reserved."
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Insights, strategies, and the latest trends in AI-powered marketing, automation, and business transformation.",
+    "featured": "Featured",
+    "readFullArticle": "Read Full Article",
+    "categories": {
+      "all": "All",
+      "aiMarketing": "AI Marketing",
+      "contentCreation": "Content Creation",
+      "automation": "Automation",
+      "leadGeneration": "Lead Generation",
+      "machineLearning": "Machine Learning",
+      "healthcareAI": "Healthcare AI"
+    },
+    "newsletter": {
+      "title": "Stay Updated",
+      "subtitle": "Get the latest insights on AI marketing and automation delivered to your inbox.",
+      "placeholder": "Enter your email",
+      "subscribe": "Subscribe",
+      "disclaimer": "No spam. Unsubscribe anytime."
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "We are SIX3 Agency, a cutting-edge AI-powered marketing and automation agency."
+  },
+  "cta": {
+    "letsWorkTogether": "Let's work Together",
+    "getStartedToday": "Get Started Today",
+    "startAIAutomation": "Start AI Automation",
+    "readyToTransform": "Ready to Transform Your Business?",
+    "readyToTransformSubtitle": "Let's discuss how our AI-powered solutions can drive measurable results for your organization."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "close": "Close",
+    "open": "Open",
+    "menu": "Menu"
+  }
+}

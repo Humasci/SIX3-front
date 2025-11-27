@@ -2,10 +2,12 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import gsap from "gsap";
 import { ArrowRight, ArrowLeft, Check } from "lucide-react";
 
 const Contact = () => {
+  const { t } = useTranslation();
   const formRef = useRef<HTMLFormElement>(null);
   const [currentStep, setCurrentStep] = useState(0);
   const [formData, setFormData] = useState({
@@ -19,14 +21,7 @@ const Contact = () => {
     goals: "",
   });
 
-  const services = [
-    "Search Marketing & PPC",
-    "Content Creation",
-    "AI Development & Automation",
-    "ML Fine Tuning",
-    "Lead Generation",
-    "Website Development"
-  ];
+  const services = t('contact.services', { returnObjects: true }) as string[];
 
   // Validation functions
   const isValidEmail = (email: string) => {
@@ -36,20 +31,20 @@ const Contact = () => {
 
   const steps = [
     {
-      title: "Let's get to know you",
-      subtitle: "Tell us about yourself",
+      title: t('contact.steps.step1.title'),
+      subtitle: t('contact.steps.step1.subtitle'),
     },
     {
-      title: "What services do you need?",
-      subtitle: "Select all that apply",
+      title: t('contact.steps.step2.title'),
+      subtitle: t('contact.steps.step2.subtitle'),
     },
     {
-      title: "What are your main challenges?",
-      subtitle: "Help us understand your pain points",
+      title: t('contact.steps.step3.title'),
+      subtitle: t('contact.steps.step3.subtitle'),
     },
     {
-      title: "What are your goals?",
-      subtitle: "Where do you want to be in 6 months?",
+      title: t('contact.steps.step4.title'),
+      subtitle: t('contact.steps.step4.subtitle'),
     }
   ];
 
@@ -175,7 +170,7 @@ const Contact = () => {
     <div className="min-h-screen bg-background text-foreground">
       <Header />
       
-      <section className="pt-32 pb-24 px-6">
+      <section className="pt-32 pb-24 px-6 mt-5">
         <div className="max-w-4xl mx-auto">
           <div className="contact-title mb-16">
             <div className="flex items-center gap-2 mb-4">

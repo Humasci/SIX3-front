@@ -86,7 +86,7 @@ const Legal = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-6">
+      <section className="pt-32 pb-16 px-6 mt-5">
         <div className="max-w-7xl mx-auto">
           <div className="legal-hero grid lg:grid-cols-2 gap-12 items-center">
             <div>

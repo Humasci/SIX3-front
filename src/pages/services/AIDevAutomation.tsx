@@ -55,7 +55,7 @@ const AIDevAutomation = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-40 pb-16 px-6">
+      <section className="pt-40 pb-16 px-6 mt-5">
         <div className="max-w-7xl mx-auto">
           <div className="hero-content mb-12">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-light mb-8">
@@ -170,8 +170,8 @@ const AIDevAutomation = () => {
             <p className="text-xl text-muted-foreground">Investment Range</p>
           </div>
           <div>
-            <div className="text-7xl md:text-8xl font-light mb-4">200-500%</div>
-            <p className="text-xl text-muted-foreground">ROI Within 12 Months</p>
+            <div className="text-7xl md:text-8xl font-light mb-4">Ongoing</div>
+            <p className="text-xl text-muted-foreground">Support Available</p>
           </div>
         </div>
       </section>

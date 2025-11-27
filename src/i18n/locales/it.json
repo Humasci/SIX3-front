@@ -1,0 +1,208 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "Chi Siamo",
+    "services": "Servizi",
+    "ourWork": "I Nostri Lavori",
+    "contact": "Contatti",
+    "blog": "Blog"
+  },
+  "hero": {
+    "title1": "AGENZIA",
+    "title2": "MARKETING",
+    "title3": "ALIMENTATA DA AI",
+    "subtitle": "Marketing di ricerca guidato da AI, creazione di contenuti generativi e soluzioni di automazione personalizzate",
+    "cta": "Contattaci",
+    "location": "Londra",
+    "scrollDown": "Scorri Giù"
+  },
+  "services": {
+    "title": "I Nostri Servizi",
+    "subtitle": "Soluzioni complete alimentate da AI che trasformano le operazioni aziendali, massimizzano il ROI e guidano la crescita sostenibile attraverso l'automazione intelligente.",
+    "searchMarketing": {
+      "title": "Search Marketing & Paid Media",
+      "subtitle": "Marketing di ricerca guidato da AI con ottimizzazione avanzata degli algoritmi",
+      "description": "Gestione di campagne multi-piattaforma su Google Ads, Meta, LinkedIn e TikTok con ottimizzazione delle offerte AI in tempo reale, segmentazione avanzata del pubblico e analisi della concorrenza.",
+      "features": [
+        "Ottimizzazione delle offerte AI in tempo reale per il massimo ROAS",
+        "Gestione multi-piattaforma (Google, Meta, LinkedIn, TikTok)",
+        "Segmentazione e targeting avanzato del pubblico",
+        "Modellazione dell'attribuzione personalizzata e avvisi automatizzati"
+      ],
+      "investment": "€1K-5K commissioni di gestione + spesa pubblicitaria"
+    },
+    "contentCreation": {
+      "title": "Video e Audio AI Generativi",
+      "subtitle": "Avatar AI e modelli generativi per contenuti multimediali unici",
+      "description": "Creazione e animazione di avatar AI, clonazione e sintesi vocale, generazione di contenuti video personalizzati, automazione di campagne UGC e produzione di contenuti allineati al brand.",
+      "features": [
+        "Creazione di avatar AI e animazione realistica",
+        "Tecnologia di clonazione e sintesi vocale",
+        "Automazione di campagne UGC e annunci video",
+        "Localizzazione di contenuti multilingue"
+      ],
+      "investment": "€200-7K+ pacchetti"
+    },
+    "mlFineTuning": {
+      "title": "Fine-Tuning di Modelli ML",
+      "subtitle": "Modelli AI personalizzati adattati ai dati e agli obiettivi del cliente",
+      "description": "Fine-tuning di Large Language Model, adattamento di modelli di computer vision, ottimizzazione di sistemi di raccomandazione, sviluppo di analisi predittive e training di chatbot personalizzati.",
+      "features": [
+        "Fine-tuning e adattamento di Large Language Model",
+        "Modelli di computer vision e riconoscimento immagini",
+        "Sistemi di raccomandazione e analisi predittive",
+        "Training di chatbot personalizzati e soluzioni NLP"
+      ],
+      "investment": "$5K-50K+ con supporto continuo"
+    },
+    "aiAutomation": {
+      "title": "Creazione di Agenti AI e Automazione Workflow",
+      "subtitle": "Sistemi AI personalizzati e flussi di lavoro automatizzati per processi aziendali",
+      "description": "Sviluppo di agenti AI personalizzati per screening delle chiamate, qualificazione dei lead, supporto clienti, automazione dei processi aziendali e orchestrazione dei flussi di lavoro con integrazione di sistemi legacy.",
+      "features": [
+        "Automazione del call center e screening telefonico AI",
+        "Gestione lead e flussi di lavoro di follow-up automatizzati",
+        "Automazione del servizio clienti con supporto 24/7",
+        "Soluzioni specifiche per settore (legale, sanitario, immobiliare)"
+      ],
+      "investment": "$5K-100K+ con supporto continuo"
+    },
+    "stats": {
+      "averageROI": "ROI Medio",
+      "timeSavings": "Risparmio di Tempo",
+      "fasterResponse": "Risposta Più Veloce",
+      "leadIncrease": "Aumento Lead"
+    },
+    "learnMore": "Scopri di Più",
+    "investmentRange": "Range di Investimento",
+    "keyFeatures": "Caratteristiche Principali"
+  },
+  "industries": {
+    "title": "Settori in cui Siamo Specializzati",
+    "subtitle": "Serviamo tutte le PMI, con competenze specializzate in questi settori chiave",
+    "legal": {
+      "title": "Legale e Studi Legali",
+      "description": "Automazione dell'acquisizione clienti, gestione dei casi e monitoraggio della conformità"
+    },
+    "realEstate": {
+      "title": "Immobiliare",
+      "description": "Coltivazione di lead, marketing immobiliare e comunicazione con i clienti"
+    },
+    "healthcare": {
+      "title": "Sanità",
+      "description": "Programmazione pazienti, follow-up automatizzati e comunicazione"
+    },
+    "professional": {
+      "title": "Servizi Professionali",
+      "description": "Prenotazione consulenze, gestione clienti e erogazione servizi"
+    },
+    "local": {
+      "title": "Attività Locali",
+      "description": "Coinvolgimento clienti, prenotazione appuntamenti e marketing locale"
+    },
+    "ecommerce": {
+      "title": "Ecommerce",
+      "description": "Automazione del marketing prodotti, retention clienti e ottimizzazione vendite"
+    }
+  },
+  "contact": {
+    "steps": {
+      "step1": {
+        "title": "Lavoriamo Insieme",
+        "subtitle": "Parlaci di te"
+      },
+      "step2": {
+        "title": "Di quali servizi hai bisogno?",
+        "subtitle": "Seleziona tutti quelli applicabili"
+      },
+      "step3": {
+        "title": "Quali sono le tue principali sfide?",
+        "subtitle": "Aiutaci a comprendere i tuoi punti dolenti"
+      },
+      "step4": {
+        "title": "Quali sono i tuoi obiettivi?",
+        "subtitle": "Dove vuoi essere tra 6 mesi?"
+      }
+    },
+    "form": {
+      "name": "Il tuo nome*",
+      "email": "Indirizzo email*",
+      "company": "Nome azienda",
+      "phone": "Numero di telefono",
+      "website": "Sito web (opzionale)",
+      "painPoints": "Parlaci delle tue principali sfide e punti dolenti...",
+      "goals": "Quali sono i tuoi obiettivi principali e dove vuoi essere tra 6 mesi?",
+      "back": "Indietro",
+      "next": "Avanti",
+      "sendMessage": "Invia Messaggio",
+      "sending": "Invio in corso..."
+    },
+    "services": [
+      "Search Marketing & PPC",
+      "Creazione Contenuti",
+      "Sviluppo AI & Automazione",
+      "Fine Tuning ML",
+      "Generazione Lead",
+      "Sviluppo Siti Web"
+    ],
+    "success": "✅ Grazie! Il tuo messaggio è stato inviato con successo. Ti ricontatteremo presto.",
+    "error": "❌ Spiacenti, si è verificato un errore nell'invio del messaggio. Riprova o scrivici direttamente a form@six3.agency",
+    "emailValidation": "Inserisci un indirizzo email valido"
+  },
+  "footer": {
+    "description": "Agenzia di marketing e automazione alimentata da AI.",
+    "services": "Servizi",
+    "company": "Azienda",
+    "legal": "Legale",
+    "connect": "Connettiti",
+    "aboutUs": "Chi Siamo",
+    "ourWork": "I Nostri Lavori",
+    "blog": "Blog",
+    "contact": "Contatti",
+    "privacyPolicy": "Privacy Policy",
+    "terms": "Termini",
+    "cookiePolicy": "Cookie Policy",
+    "copyright": "© 2018 - 2025 FKA WEB Limited Registrata in Inghilterra e Galles N. 11642660. Tutti i diritti riservati."
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Insights, strategie e le ultime tendenze nel marketing alimentato da AI, automazione e trasformazione aziendale.",
+    "featured": "In Evidenza",
+    "readFullArticle": "Leggi l'Articolo Completo",
+    "categories": {
+      "all": "Tutti",
+      "aiMarketing": "Marketing AI",
+      "contentCreation": "Creazione Contenuti",
+      "automation": "Automazione",
+      "leadGeneration": "Generazione Lead",
+      "machineLearning": "Machine Learning",
+      "healthcareAI": "AI Sanitaria"
+    },
+    "newsletter": {
+      "title": "Rimani Aggiornato",
+      "subtitle": "Ricevi gli ultimi insights su marketing AI e automazione direttamente nella tua casella di posta.",
+      "placeholder": "Inserisci la tua email",
+      "subscribe": "Iscriviti",
+      "disclaimer": "Niente spam. Cancellati quando vuoi."
+    }
+  },
+  "about": {
+    "title": "Chi Siamo",
+    "subtitle": "Siamo SIX3 Agency, un'agenzia di marketing e automazione all'avanguardia alimentata da AI."
+  },
+  "cta": {
+    "letsWorkTogether": "Lavoriamo Insieme",
+    "getStartedToday": "Inizia Oggi",
+    "startAIAutomation": "Inizia Automazione AI",
+    "readyToTransform": "Pronto a Trasformare la Tua Azienda?",
+    "readyToTransformSubtitle": "Discutiamo come le nostre soluzioni alimentate da AI possono generare risultati misurabili per la tua organizzazione."
+  },
+  "common": {
+    "loading": "Caricamento...",
+    "error": "Errore",
+    "success": "Successo",
+    "close": "Chiudi",
+    "open": "Apri",
+    "menu": "Menu"
+  }
+}

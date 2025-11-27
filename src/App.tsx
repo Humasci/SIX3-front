@@ -3,6 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./i18n";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import SearchMarketingPPC from "./pages/services/SearchMarketingPPC";
@@ -23,6 +24,8 @@ import LawFirmAutomation from "./pages/use-cases/LawFirmAutomation";
 import RealEstateLeadSystem from "./pages/use-cases/RealEstateLeadSystem";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Terms from "./pages/Terms";
+import CookiePolicy from "./pages/CookiePolicy";
+import Blog from "./pages/Blog";
 
 const queryClient = new QueryClient();
 
@@ -52,6 +55,8 @@ const App = () => (
           <Route path="/use-cases/real-estate-lead-system" element={<RealEstateLeadSystem />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
+          <Route path="/cookie-policy" element={<CookiePolicy />} />
+          <Route path="/blog" element={<Blog />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

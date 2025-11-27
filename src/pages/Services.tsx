@@ -36,7 +36,7 @@ const services = [
       "UGC campaign automation and video ads",
       "Multi-language content localization"
     ],
-    investment: "$1.5K-7K+ packages",
+    investment: "£200-7K+ packages",
     icon: Video,
     path: "/services/content-creation"
   },
@@ -105,7 +105,7 @@ const Services = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-6">
+      <section className="pt-32 pb-16 px-6 mt-5">
         <div className="max-w-7xl mx-auto">
           <div className="services-hero text-center mb-16">
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-light mb-8">
@@ -115,21 +115,21 @@ const Services = () => {
               Comprehensive AI-powered solutions that transform your business operations, 
               maximize ROI, and drive sustainable growth through intelligent automation.
             </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-light mb-2">200-500%</div>
+                <div className="text-3xl md:text-4xl font-light mb-2">200-500%</div>
                 <p className="text-sm text-muted-foreground">Average ROI</p>
               </div>
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-light mb-2">30-60%</div>
+                <div className="text-3xl md:text-4xl font-light mb-2">30-60%</div>
                 <p className="text-sm text-muted-foreground">Time Savings</p>
               </div>
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-light mb-2">40-80%</div>
+                <div className="text-3xl md:text-4xl font-light mb-2">40-80%</div>
                 <p className="text-sm text-muted-foreground">Faster Response</p>
               </div>
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-light mb-2">25-50%</div>
+                <div className="text-3xl md:text-4xl font-light mb-2">25-50%</div>
                 <p className="text-sm text-muted-foreground">Lead Increase</p>
               </div>
             </div>

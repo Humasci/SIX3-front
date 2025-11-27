@@ -17,7 +17,7 @@ const Terms = () => {
     <div className="min-h-screen bg-background text-foreground">
       <Header />
       
-      <section className="pt-32 pb-24 px-6">
+      <section className="pt-32 pb-24 px-6 mt-5">
         <div className="max-w-4xl mx-auto terms-content">
           <h1 className="text-4xl md:text-5xl font-light mb-8">Terms of Service</h1>
           <p className="text-muted-foreground mb-12">Last updated: November 27, 2025</p>

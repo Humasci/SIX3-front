@@ -39,16 +39,38 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       return res.status(400).json({ error: 'Missing required fields' });
     }
 
-    // Send email via Mailgun
-    await sendEmailViMailgun(formData);
+    // Check environment variables
+    const mailgunApiKey = process.env.MAILGUN_API_KEY;
+    const mailgunDomain = process.env.MAILGUN_DOMAIN;
+    const attioApiKey = process.env.ATTIO_API_KEY;
 
-    // Create contact in Attio CRM
-    await createAttioContact(formData);
+    console.log('Environment check:', {
+      hasMailgunKey: !!mailgunApiKey,
+      hasMailgunDomain: !!mailgunDomain,
+      hasAttioKey: !!attioApiKey
+    });
+
+    // Try to send email via Mailgun (optional)
+    try {
+      await sendEmailViMailgun(formData);
+    } catch (mailgunError) {
+      console.warn('Mailgun error (continuing):', mailgunError);
+    }
+
+    // Try to create contact in Attio CRM (optional)
+    try {
+      await createAttioContact(formData);
+    } catch (attioError) {
+      console.warn('Attio error (continuing):', attioError);
+    }
 
     res.status(200).json({ success: true, message: 'Form submitted successfully' });
   } catch (error) {
     console.error('Error processing form submission:', error);
-    res.status(500).json({ error: 'Internal server error' });
+    res.status(500).json({ 
+      error: 'Internal server error', 
+      message: error instanceof Error ? error.message : 'Unknown error'
+    });
   }
 }
 

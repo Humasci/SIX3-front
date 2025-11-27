@@ -71,52 +71,12 @@ export const MobileMenu = () => {
                 </Link>
               </div>
             </div>
-            <div className="space-y-2">
-              <p className="text-lg font-medium">Industries</p>
-              <div className="pl-4 space-y-2">
-                <Link
-                  to="/industries/legal"
-                  onClick={() => setIsOpen(false)}
-                  className="block hover:text-accent transition-colors"
-                >
-                  Legal & Law Firms
-                </Link>
-                <Link
-                  to="/industries/real-estate"
-                  onClick={() => setIsOpen(false)}
-                  className="block hover:text-accent transition-colors"
-                >
-                  Real Estate
-                </Link>
-                <Link
-                  to="/industries/healthcare"
-                  onClick={() => setIsOpen(false)}
-                  className="block hover:text-accent transition-colors"
-                >
-                  Healthcare
-                </Link>
-                <Link
-                  to="/industries/professional-services"
-                  onClick={() => setIsOpen(false)}
-                  className="block hover:text-accent transition-colors"
-                >
-                  Professional Services
-                </Link>
-                <Link
-                  to="/industries/local-business"
-                  onClick={() => setIsOpen(false)}
-                  className="block hover:text-accent transition-colors"
-                >
-                  Local Businesses
-                </Link>
-              </div>
-            </div>
             <Link
               to="/portfolio"
               onClick={() => setIsOpen(false)}
               className="text-lg hover:text-accent transition-colors"
             >
-              Portfolio
+              Our Work
             </Link>
             <Link
               to="/contact"
