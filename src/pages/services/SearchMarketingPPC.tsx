@@ -13,6 +13,9 @@ const SearchMarketingPPC = () => {
   const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // Scroll to top when component mounts
+    window.scrollTo(0, 0);
+
     const ctx = gsap.context(() => {
       gsap.from(".hero-content", {
         opacity: 0,
@@ -52,11 +55,11 @@ const SearchMarketingPPC = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-6">
+      <section className="pt-40 pb-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="hero-content mb-12">
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-light mb-8">
-              Search Marketing / PPC
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-light mb-8">
+              Search Marketing & Paid Media
             </h1>
             <div className="aspect-video w-full bg-secondary mb-8 overflow-hidden">
               <img
@@ -68,7 +71,7 @@ const SearchMarketingPPC = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
               <div>
                 <p className="text-muted-foreground mb-1">Location</p>
-                <p>New York</p>
+                <p>London</p>
               </div>
               <div>
                 <p className="text-muted-foreground mb-1">Year</p>
@@ -76,11 +79,11 @@ const SearchMarketingPPC = () => {
               </div>
               <div>
                 <p className="text-muted-foreground mb-1">Lead</p>
-                <p>Marketing Team</p>
+                <p>AI Team</p>
               </div>
               <div>
                 <p className="text-muted-foreground mb-1">Category</p>
-                <p>Marketing</p>
+                <p>AI-Powered Marketing</p>
               </div>
             </div>
           </div>
@@ -101,36 +104,36 @@ const SearchMarketingPPC = () => {
             <div className="step-card border border-border p-8 bg-background">
               <TrendingUp className="w-12 h-12 mb-6 text-accent" />
               <p className="text-sm text-muted-foreground mb-4">Step -01</p>
-              <h3 className="text-2xl font-light mb-4">Strategy Development</h3>
+              <h3 className="text-2xl font-light mb-4">Discovery & Strategy</h3>
               <p className="text-muted-foreground">
-                We dive deep into market research to uncover opportunities, analyze competitors, and create data-driven PPC strategies that deliver results.
+                Client onboarding and requirements gathering with market and competitor analysis, audience research and segmentation, plus campaign architecture design.
               </p>
             </div>
 
             <div className="step-card border border-border p-8 bg-background">
               <Target className="w-12 h-12 mb-6 text-accent" />
               <p className="text-sm text-muted-foreground mb-4">Step -02</p>
-              <h3 className="text-2xl font-light mb-4">Campaign Setup & Launch</h3>
+              <h3 className="text-2xl font-light mb-4">Setup & Launch</h3>
               <p className="text-muted-foreground">
-                Precise targeting, compelling ad copy, and optimized bidding strategies ensure your campaigns reach the right audience at the right time.
+                Account setup across platforms, campaign creation and configuration, tracking implementation, and creative development with testing.
               </p>
             </div>
 
             <div className="step-card border border-border p-8 bg-background">
               <BarChart3 className="w-12 h-12 mb-6 text-accent" />
               <p className="text-sm text-muted-foreground mb-4">Step -03</p>
-              <h3 className="text-2xl font-light mb-4">Continuous Optimization</h3>
+              <h3 className="text-2xl font-light mb-4">Optimization & Scaling</h3>
               <p className="text-muted-foreground">
-                Real-time monitoring and A/B testing refine campaigns for maximum ROI, adjusting bids, keywords, and creatives based on performance data.
+                Daily performance monitoring, weekly optimization cycles, A/B testing execution, and budget reallocation based on AI-driven performance analysis.
               </p>
             </div>
 
             <div className="step-card border border-border p-8 bg-background">
               <Zap className="w-12 h-12 mb-6 text-accent" />
               <p className="text-sm text-muted-foreground mb-4">Step -04</p>
-              <h3 className="text-2xl font-light mb-4">Performance Reporting</h3>
+              <h3 className="text-2xl font-light mb-4">Ongoing Management</h3>
               <p className="text-muted-foreground">
-                Transparent reporting with actionable insights keeps you informed of campaign performance, ROI metrics, and growth opportunities.
+                Continuous AI-driven optimization with monthly strategy reviews, quarterly campaign expansions, and annual strategic planning.
               </p>
             </div>
           </div>
@@ -144,15 +147,16 @@ const SearchMarketingPPC = () => {
             Overview -
           </p>
           <h2 className="text-4xl md:text-5xl font-light mb-8 max-w-3xl">
-            Driving Growth Through Data-Driven Paid Search Campaigns
+            AI-Driven Search Marketing with Advanced Algorithm Optimization
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mb-8">
-            Transform your digital advertising with strategic PPC campaigns that maximize ROI and drive qualified traffic. Our expert team leverages advanced analytics, platform optimization, and creative excellence to deliver measurable results across Google Ads, social media, and display networks.
+            Multi-platform campaign management across Google Ads, Meta, LinkedIn, and TikTok with real-time AI bid optimization, advanced audience segmentation, and competitor analysis. Our custom attribution modeling and automated reporting deliver superior results.
           </p>
           <ul className="space-y-4 text-lg text-muted-foreground max-w-3xl">
-            <li>• Maximize return on ad spend with precision targeting</li>
-            <li>• Scale campaigns efficiently across multiple platforms</li>
-            <li>• Convert high-intent traffic into valuable customers</li>
+            <li>• Real-time AI bid optimization for maximum ROAS</li>
+            <li>• Advanced audience segmentation and targeting</li>
+            <li>• Custom attribution modeling and automated alerts</li>
+            <li>• Multi-platform management (Google, Meta, LinkedIn, TikTok)</li>
           </ul>
         </div>
       </section>
@@ -161,12 +165,12 @@ const SearchMarketingPPC = () => {
       <section className="py-16 px-6 bg-secondary/30">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
           <div>
-            <div className="text-7xl md:text-8xl font-light mb-4">250+</div>
-            <p className="text-xl text-muted-foreground">Successful Campaigns</p>
+            <div className="text-7xl md:text-8xl font-light mb-4">$50K+</div>
+            <p className="text-xl text-muted-foreground">Minimum Monthly Ad Spend</p>
           </div>
           <div>
-            <div className="text-7xl md:text-8xl font-light mb-4">4.2x</div>
-            <p className="text-xl text-muted-foreground">Average ROI Increase</p>
+            <div className="text-7xl md:text-8xl font-light mb-4">£1-5K</div>
+            <p className="text-xl text-muted-foreground">Management Fees</p>
           </div>
         </div>
       </section>
@@ -184,25 +188,25 @@ const SearchMarketingPPC = () => {
           <div className="space-y-12">
             <div className="advantage-card border-t border-border pt-8">
               <div className="text-5xl font-light text-muted-foreground/50 mb-4">01</div>
-              <h3 className="text-3xl font-light mb-4">Data-Driven Decisions</h3>
+              <h3 className="text-3xl font-light mb-4">Multi-Platform Expertise</h3>
               <p className="text-lg text-muted-foreground max-w-2xl">
-                Every campaign decision is backed by comprehensive analytics and market insights. We don't guess — we analyze, test, and optimize for measurable success.
+                Certified management across Google Ads, Meta, LinkedIn, and TikTok platforms with real-time AI optimization algorithms that maximize performance and ROI.
               </p>
             </div>
 
             <div className="advantage-card border-t border-border pt-8">
               <div className="text-5xl font-light text-muted-foreground/50 mb-4">02</div>
-              <h3 className="text-3xl font-light mb-4">Platform Expertise</h3>
+              <h3 className="text-3xl font-light mb-4">Advanced AI Optimization</h3>
               <p className="text-lg text-muted-foreground max-w-2xl">
-                Certified experts in Google Ads, Facebook Ads, and all major advertising platforms. We stay ahead of platform updates and leverage cutting-edge features.
+                Real-time AI bid optimization with advanced audience segmentation, competitor analysis, and custom attribution modeling for superior campaign performance.
               </p>
             </div>
 
             <div className="advantage-card border-t border-border pt-8">
               <div className="text-5xl font-light text-muted-foreground/50 mb-4">03</div>
-              <h3 className="text-3xl font-light mb-4">Transparent Reporting</h3>
+              <h3 className="text-3xl font-light mb-4">Automated Intelligence</h3>
               <p className="text-lg text-muted-foreground max-w-2xl">
-                Real-time access to campaign performance with clear ROI metrics. You'll always know exactly how your budget is being spent and what results you're getting.
+                Automated reporting and alerts with continuous AI-driven optimization, delivering superior results through data-driven decision making and strategic scaling.
               </p>
             </div>
           </div>

@@ -13,6 +13,14 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Portfolio from "./pages/Portfolio";
 import PortfolioDetail from "./pages/portfolio/PortfolioDetail";
+import Services from "./pages/Services";
+import Legal from "./pages/industries/Legal";
+import RealEstate from "./pages/industries/RealEstate";
+import Healthcare from "./pages/industries/Healthcare";
+import ProfessionalServices from "./pages/industries/ProfessionalServices";
+import LocalBusiness from "./pages/industries/LocalBusiness";
+import LawFirmAutomation from "./pages/use-cases/LawFirmAutomation";
+import RealEstateLeadSystem from "./pages/use-cases/RealEstateLeadSystem";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +33,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/portfolio/:id" element={<PortfolioDetail />} />
@@ -32,6 +41,13 @@ const App = () => (
           <Route path="/services/content-creation" element={<ContentCreation />} />
           <Route path="/services/ai-dev-automation" element={<AIDevAutomation />} />
           <Route path="/services/ml-fine-tuning" element={<MLFineTuning />} />
+          <Route path="/industries/legal" element={<Legal />} />
+          <Route path="/industries/real-estate" element={<RealEstate />} />
+          <Route path="/industries/healthcare" element={<Healthcare />} />
+          <Route path="/industries/professional-services" element={<ProfessionalServices />} />
+          <Route path="/industries/local-business" element={<LocalBusiness />} />
+          <Route path="/use-cases/law-firm-automation" element={<LawFirmAutomation />} />
+          <Route path="/use-cases/real-estate-lead-system" element={<RealEstateLeadSystem />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

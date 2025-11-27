@@ -51,27 +51,27 @@ const AnimatedCounter = ({ end }: { end: number }) => {
 const services = [
   {
     number: "01",
-    title: "Search Marketing / PPC",
-    description: "Drive targeted traffic and maximize ROI with data-driven paid advertising campaigns across Google, social media, and display networks.",
+    title: "Search Marketing & Paid Media",
+    description: "AI-driven search marketing with advanced algorithm optimization across Google Ads, Meta, LinkedIn, TikTok with real-time bid optimization and competitor analysis.",
     path: "/services/search-marketing-ppc",
   },
   {
     number: "02",
-    title: "Content Creation",
-    description: "Craft compelling content that engages your audience and elevates your brand through strategic storytelling and visual design.",
+    title: "Generative AI Video & Audio",
+    description: "AI avatars and generative models for unique multimedia content including UGC campaigns, voice cloning, and brand-aligned video production.",
     path: "/services/content-creation",
   },
   {
     number: "03",
-    title: "AI Dev / Automation",
-    description: "Streamline operations and boost efficiency with custom AI solutions that automate workflows and enhance business processes.",
-    path: "/services/ai-dev-automation",
+    title: "Fine-Tuning ML Models",
+    description: "Custom AI models tailored to client data with large language model fine-tuning, computer vision adaptation, and predictive analytics development.",
+    path: "/services/ml-fine-tuning",
   },
   {
     number: "04",
-    title: "ML Fine Tuning",
-    description: "Optimize machine learning models for peak performance with specialized fine-tuning techniques tailored to your specific use cases.",
-    path: "/services/ml-fine-tuning",
+    title: "AI Agent Creation & Workflow Automation",
+    description: "Custom AI systems and automated workflows for call screening, lead qualification, customer support, and business process automation.",
+    path: "/services/ai-dev-automation",
   },
 ];
 
@@ -90,36 +90,117 @@ export const Services = () => {
         duration: 1,
       });
 
-      gsap.from(".service-card", {
-        scrollTrigger: {
-          trigger: ".service-card",
-          start: "top 85%",
-        },
-        opacity: 0,
-        y: 100,
-        scale: 0.9,
-        stagger: 0.2,
-        duration: 1,
-        ease: "power3.out",
-      });
+      // Simple animation without complex triggers
+      gsap.fromTo(".service-card", 
+        { opacity: 0, y: 50 },
+        { 
+          opacity: 1, 
+          y: 0, 
+          stagger: 0.2,
+          duration: 0.8,
+          ease: "power2.out",
+          delay: 0.5
+        }
+      );
 
-      // Hover animation for cards
+      // Enhanced hover animations for cards
       const cards = document.querySelectorAll(".service-card");
-      cards.forEach((card) => {
+      cards.forEach((card, index) => {
+        const number = card.querySelector(".service-number");
+        const arrow = card.querySelector(".service-arrow");
+        const title = card.querySelector(".service-title");
+        const description = card.querySelector(".service-description");
+        
         card.addEventListener("mouseenter", () => {
+          // Card lift with rotation
           gsap.to(card, {
-            y: -10,
-            duration: 0.3,
-            ease: "power2.out",
+            y: -15,
+            rotateX: 5,
+            rotateY: 5,
+            scale: 1.02,
+            duration: 0.6,
+            ease: "power3.out",
+          });
+
+          // Number scaling and color change
+          gsap.to(number, {
+            scale: 1.1,
+            duration: 0.4,
+            ease: "power2.out"
+          });
+
+          // Arrow movement
+          gsap.to(arrow, {
+            x: 5,
+            y: -5,
+            scale: 1.2,
+            rotation: 45,
+            duration: 0.4,
+            ease: "back.out(1.7)"
+          });
+
+          // Title slide effect
+          gsap.to(title, {
+            x: 10,
+            duration: 0.4,
+            ease: "power2.out"
+          });
+
+          // Description fade and slight movement
+          gsap.to(description, {
+            opacity: 0.8,
+            x: 5,
+            duration: 0.4,
+            ease: "power2.out"
+          });
+
+          // Background gradient animation
+          gsap.to(card.querySelector(".card-bg"), {
+            opacity: 1,
+            scale: 1.1,
+            duration: 0.6,
+            ease: "power2.out"
           });
         });
         
         card.addEventListener("mouseleave", () => {
+          // Reset all animations
           gsap.to(card, {
             y: 0,
-            duration: 0.3,
-            ease: "power2.out",
+            rotateX: 0,
+            rotateY: 0,
+            scale: 1,
+            duration: 0.8,
+            ease: "elastic.out(1, 0.3)",
           });
+
+          gsap.to([number, arrow, title, description], {
+            scale: 1,
+            x: 0,
+            y: 0,
+            rotation: 0,
+            opacity: 1,
+            duration: 0.6,
+            ease: "power2.out"
+          });
+
+          gsap.to(card.querySelector(".card-bg"), {
+            opacity: 0,
+            scale: 1,
+            duration: 0.8,
+            ease: "power2.out"
+          });
+        });
+
+        // Staggered parallax effect on scroll
+        gsap.to(card, {
+          yPercent: -20 * (index % 2 === 0 ? 1 : -1),
+          scrollTrigger: {
+            trigger: card,
+            start: "bottom bottom",
+            end: "top top",
+            scrub: 1
+          }
         });
       });
     }, sectionRef);
@@ -141,20 +222,22 @@ export const Services = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="services-grid grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {services.map((service) => (
             <Link key={service.number} to={service.path}>
-              <div className="service-card group relative border border-border p-8 bg-background overflow-hidden cursor-pointer">
-                <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="service-card group relative border border-border/50 p-8 bg-background overflow-hidden cursor-pointer perspective-1000 rounded-lg hover:border-accent/30 transition-all duration-500">
+                <div className="card-bg absolute inset-0 bg-gradient-to-br from-accent/10 via-accent/5 to-transparent opacity-0" />
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/8 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,hsl(var(--accent)/0.1),transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                 <div className="relative z-10">
                   <div className="flex items-start justify-between mb-6">
-                    <span className="text-6xl font-light text-muted-foreground/50 group-hover:text-accent/70 transition-colors duration-300">
+                    <span className="service-number text-6xl font-light text-muted-foreground/40 transition-all duration-300 group-hover:text-muted-foreground/70">
                       {service.number}
                     </span>
-                    <ArrowUpRight className="w-6 h-6 text-muted-foreground group-hover:text-accent group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
+                    <ArrowUpRight className="service-arrow w-6 h-6 text-muted-foreground/60 transition-all duration-300 group-hover:text-accent" />
                   </div>
-                  <h3 className="text-2xl font-light mb-4 group-hover:text-accent transition-colors duration-300">{service.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+                  <h3 className="service-title text-2xl font-light mb-4 transition-colors duration-300 group-hover:text-foreground">{service.title}</h3>
+                  <p className="service-description text-muted-foreground/80 leading-relaxed group-hover:text-muted-foreground transition-colors duration-300">{service.description}</p>
                 </div>
               </div>
             </Link>

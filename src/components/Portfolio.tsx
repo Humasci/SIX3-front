@@ -7,58 +7,64 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
-    id: "brand-refresh-2024",
+    id: "law-firm-automation",
     number: "01",
-    title: "Brand Refresh 2024",
-    category: "Branding",
+    title: "Legal Firm AI Automation",
+    category: "AI Agent Development",
     year: "2024",
-    description: "Complete brand identity redesign for a leading tech startup",
-    image: "https://images.unsplash.com/photo-1634942537034-2531766767d1?w=800&h=600&fit=crop",
+    description: "60% reduction in intake administration time, 40% increase in qualified leads, $150K annual savings",
+    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&h=600&fit=crop",
+    metrics: "60% time reduction, $150K savings"
   },
   {
-    id: "mobile-banking-app",
-    number: "02",
-    title: "Mobile Banking App",
-    category: "App Design",
+    id: "real-estate-lead-system",
+    number: "02", 
+    title: "Real Estate Lead Management",
+    category: "Workflow Automation",
     year: "2024",
-    description: "Revolutionary fintech app with seamless user experience",
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop",
+    description: "45% increase in lead conversion, 70% reduction in manual follow-up, $200K revenue increase",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop",
+    metrics: "45% conversion increase, $200K revenue boost"
   },
   {
-    id: "ecommerce-platform",
+    id: "ecommerce-ai-campaign",
     number: "03",
-    title: "E-Commerce Platform",
-    category: "Web Design",
-    year: "2023",
-    description: "Modern e-commerce solution with advanced features",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+    title: "E-commerce AI Marketing Campaign", 
+    category: "Search Marketing & Paid Media",
+    year: "2024",
+    description: "Multi-platform campaign with AI optimization delivering 300% ROAS improvement",
+    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
+    metrics: "300% ROAS improvement"
   },
   {
-    id: "ai-saas-platform",
+    id: "healthcare-patient-system",
     number: "04",
-    title: "AI SaaS Platform",
-    category: "Development",
-    year: "2024",
-    description: "Full-stack AI-powered business intelligence platform",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+    title: "Healthcare Patient Management",
+    category: "AI Agent Creation",
+    year: "2024", 
+    description: "24/7 AI scheduling system with 40% faster patient processing and improved satisfaction",
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=600&fit=crop",
+    metrics: "40% faster processing, 24/7 availability"
   },
   {
-    id: "fitness-tracking-app",
+    id: "fintech-ai-video-content",
     number: "05",
-    title: "Fitness Tracking App",
-    category: "App Design",
-    year: "2023",
-    description: "Health and wellness app with personalized insights",
-    image: "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=800&h=600&fit=crop",
+    title: "FinTech AI Video Campaign",
+    category: "Generative AI Video & Audio",
+    year: "2024",
+    description: "AI avatars and voice cloning for personalized customer onboarding videos",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop", 
+    metrics: "75% engagement increase"
   },
   {
-    id: "corporate-website",
+    id: "manufacturing-ml-optimization",
     number: "06",
-    title: "Corporate Website",
-    category: "Web Design",
+    title: "Manufacturing ML Optimization",
+    category: "Fine-Tuning ML Models",
     year: "2024",
-    description: "Professional corporate presence with modern design",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop",
+    description: "Custom predictive analytics model for supply chain optimization and quality control",
+    image: "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=800&h=600&fit=crop",
+    metrics: "30% cost reduction, 95% accuracy"
   },
 ];
 
@@ -67,25 +73,117 @@ export const Portfolio = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from(".portfolio-header", {
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 80%",
-        },
-        opacity: 0,
-        y: 50,
-        duration: 1,
-      });
+      // Ensure elements are visible initially
+      gsap.set([".portfolio-header h2", ".portfolio-item"], { opacity: 1, rotateX: 0, scale: 1 });
+      
+      // Simple header animation
+      gsap.fromTo(".portfolio-header h2", 
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0, duration: 1, delay: 0.2, ease: "power3.out" }
+      );
 
-      gsap.from(".portfolio-item", {
-        scrollTrigger: {
-          trigger: ".portfolio-grid",
-          start: "top 80%",
-        },
-        opacity: 0,
-        y: 60,
-        stagger: 0.15,
-        duration: 0.8,
+      // Simple portfolio items animation
+      gsap.fromTo(".portfolio-item", 
+        { opacity: 0, y: 80 },
+        { opacity: 1, y: 0, stagger: 0.2, duration: 1, delay: 0.5, ease: "power3.out" }
+      );
+
+      // Enhanced hover effects for portfolio items
+      const portfolioItems = document.querySelectorAll(".portfolio-item");
+      portfolioItems.forEach((item, index) => {
+        const image = item.querySelector(".portfolio-image");
+        const overlay = item.querySelector(".portfolio-overlay");
+        const number = item.querySelector(".project-number");
+        const title = item.querySelector(".project-title");
+        const metrics = item.querySelector(".project-metrics");
+        
+        item.addEventListener("mouseenter", () => {
+          // 3D tilt effect
+          gsap.to(item, {
+            rotateX: -5,
+            rotateY: 10,
+            z: 50,
+            duration: 0.6,
+            ease: "power3.out",
+            transformOrigin: "center center -100px"
+          });
+
+          // Image parallax
+          gsap.to(image, {
+            scale: 1.15,
+            duration: 0.8,
+            ease: "power2.out"
+          });
+
+          // Overlay reveal
+          gsap.to(overlay, {
+            opacity: 1,
+            duration: 0.4,
+            ease: "power2.out"
+          });
+
+          // Number glow effect
+          gsap.to(number, {
+            scale: 1.1,
+            duration: 0.4,
+            ease: "power2.out"
+          });
+
+          // Title slide
+          gsap.to(title, {
+            x: 10,
+            duration: 0.4,
+            ease: "power2.out"
+          });
+
+          // Metrics highlight
+          gsap.to(metrics, {
+            scale: 1.05,
+            duration: 0.4,
+            ease: "power2.out"
+          });
+        });
+
+        item.addEventListener("mouseleave", () => {
+          gsap.to(item, {
+            rotateX: 0,
+            rotateY: 0,
+            z: 0,
+            duration: 0.8,
+            ease: "elastic.out(1, 0.3)"
+          });
+
+          gsap.to(image, {
+            scale: 1,
+            duration: 0.8,
+            ease: "power2.out"
+          });
+
+          gsap.to(overlay, {
+            opacity: 0,
+            duration: 0.4,
+            ease: "power2.out"
+          });
+
+          gsap.to([number, title, metrics], {
+            x: 0,
+            scale: 1,
+            textShadow: "none",
+            duration: 0.6,
+            ease: "power2.out"
+          });
+        });
+
+        // Parallax on scroll
+        gsap.to(item, {
+          yPercent: -10 * (index % 2 === 0 ? 1 : -1),
+          scrollTrigger: {
+            trigger: item,
+            start: "bottom bottom",
+            end: "top top",
+            scrub: 1
+          }
+        });
       });
     }, sectionRef);
 
@@ -113,34 +211,37 @@ export const Portfolio = () => {
           </div>
         </div>
 
-        <div className="portfolio-grid grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="portfolio-grid grid md:grid-cols-2 lg:grid-cols-3 gap-8 perspective-1000">
           {projects.slice(0, 3).map((project) => (
             <Link
               key={project.id}
               to={`/portfolio/${project.id}`}
-              className="portfolio-item group"
+              className="portfolio-item group block transform-gpu"
             >
-              <div className="relative overflow-hidden mb-4 aspect-[4/3] bg-secondary">
+              <div className="relative overflow-hidden mb-4 aspect-[4/3] bg-secondary rounded-lg">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="portfolio-image w-full h-full object-cover transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <div className="portfolio-overlay absolute inset-0 bg-background/90 opacity-0 flex items-center justify-center backdrop-blur-sm">
                   <span className="text-2xl font-light">View Project</span>
                 </div>
               </div>
               <div className="flex items-start justify-between mb-2">
-                <span className="text-4xl font-light text-muted-foreground/50">
+                <span className="project-number text-4xl font-light text-muted-foreground/50 transition-all duration-300">
                   {project.number}
                 </span>
                 <span className="text-sm text-muted-foreground">
                   {project.year}
                 </span>
               </div>
-              <h3 className="text-2xl font-light mb-2">{project.title}</h3>
-              <p className="text-sm text-accent mb-2">{project.category}</p>
-              <p className="text-muted-foreground">{project.description}</p>
+              <h3 className="project-title text-2xl font-light mb-2 transition-all duration-300">{project.title}</h3>
+              <p className="text-sm text-accent mb-2 transition-colors duration-300">{project.category}</p>
+              <p className="text-muted-foreground text-sm mb-3 leading-relaxed">{project.description}</p>
+              <div className="project-metrics bg-accent/10 border border-accent/20 rounded-full px-4 py-2 transition-all duration-300 hover:bg-accent/20 hover:border-accent/40">
+                <p className="text-xs font-medium text-accent">{project.metrics}</p>
+              </div>
             </Link>
           ))}
         </div>

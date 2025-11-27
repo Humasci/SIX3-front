@@ -58,37 +58,24 @@ export const About = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from(".about-label", {
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 80%",
-        },
-        opacity: 0,
-        x: -30,
-        duration: 0.8,
-      });
+      // Ensure elements are visible initially
+      gsap.set([".about-label", ".about-title", ".about-description"], { opacity: 1 });
+      
+      // Simple animations without complex triggers
+      gsap.fromTo(".about-label", 
+        { opacity: 0, x: -30 },
+        { opacity: 1, x: 0, duration: 0.8, delay: 0.3, ease: "power2.out" }
+      );
 
-      gsap.from(".about-title", {
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 80%",
-        },
-        opacity: 0,
-        y: 50,
-        duration: 1,
-        delay: 0.2,
-      });
+      gsap.fromTo(".about-title", 
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0, duration: 1, delay: 0.5, ease: "power2.out" }
+      );
 
-      gsap.from(".about-description", {
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 80%",
-        },
-        opacity: 0,
-        y: 30,
-        duration: 1,
-        delay: 0.4,
-      });
+      gsap.fromTo(".about-description", 
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, duration: 1, delay: 0.7, ease: "power2.out" }
+      );
     }, sectionRef);
 
     return () => ctx.revert();
@@ -100,11 +87,11 @@ export const About = () => {
         <div className="mb-16">
           <p className="about-label text-sm text-muted-foreground mb-8 tracking-wider">Who we are -</p>
           <h2 className="about-title text-4xl md:text-5xl font-light mb-8 max-w-3xl">
-            Transforming your digital Brand with an impactful design branding to drive success.
+            SIX3 Agency delivers AI-powered marketing solutions that drive measurable results.
           </h2>
           <p className="about-description text-lg text-muted-foreground max-w-2xl mb-12">
-            We specialize in transforming your digital brand through impactful design and strategic branding. 
-            Our creative approach ensures your brand stands out, connects, and converts.
+            We specialize in AI-driven search marketing, generative content creation, ML model fine-tuning, and custom AI agent development. 
+            Our advanced automation solutions maximize ROI and scale your business operations efficiently.
           </p>
           <Link to="/about">
             <Button variant="outline" className="about-description rounded-full px-8 py-6 text-base border-foreground hover:bg-foreground hover:text-background group">
@@ -116,11 +103,11 @@ export const About = () => {
 
         <div className="border-t border-border pt-16">
           <p className="text-lg text-muted-foreground mb-12">
-            Successfully built brands experience that drives real success.
+            Successfully deployed AI solutions across industries with proven ROI and operational efficiency gains.
           </p>
           <div className="flex flex-col items-start gap-4">
-            <AnimatedCounter end={654321} />
-            <p className="text-xl text-muted-foreground">Successful Project</p>
+            <AnimatedCounter end={200} />
+            <p className="text-xl text-muted-foreground">% Average ROI Increase</p>
           </div>
         </div>
       </div>

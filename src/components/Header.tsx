@@ -1,6 +1,7 @@
 import { ShoppingBag } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ServiceDropdown } from "./ServiceDropdown";
+import { IndustryDropdown } from "./IndustryDropdown";
 import { MobileMenu } from "./MobileMenu";
 import logo from "@/assets/logo.png";
 import { useEffect, useRef, useState } from "react";
@@ -73,28 +74,31 @@ export const Header = () => {
             src={logo} 
             alt="SIX3 Agency" 
             className={`transition-all duration-400 ${
-              isScrolled ? "h-[4.05rem] md:h-[5.8rem]" : "h-[4.05rem] md:h-[5.8rem]"
+              isScrolled ? "h-[4.91rem] md:h-[7.02rem]" : "h-[4.91rem] md:h-[7.02rem]"
             }`}
           />
         </Link>
         
         <nav className="hidden md:flex items-center gap-8">
-          <Link to="/" className="nav-item text-sm hover:text-accent transition-colors relative group">
+          <Link to="/" className="nav-item text-base hover:text-accent transition-colors relative group">
             Home
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full" />
           </Link>
-          <Link to="/about" className="nav-item text-sm hover:text-accent transition-colors relative group">
+          <Link to="/about" className="nav-item text-base hover:text-accent transition-colors relative group">
             About
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full" />
           </Link>
           <div className="nav-item">
             <ServiceDropdown />
           </div>
-          <Link to="/portfolio" className="nav-item text-sm hover:text-accent transition-colors relative group">
+          <div className="nav-item">
+            <IndustryDropdown />
+          </div>
+          <Link to="/portfolio" className="nav-item text-base hover:text-accent transition-colors relative group">
             Portfolio
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full" />
           </Link>
-          <Link to="/contact" className="nav-item text-sm hover:text-accent transition-colors relative group">
+          <Link to="/contact" className="nav-item text-base hover:text-accent transition-colors relative group">
             Contact
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full" />
           </Link>

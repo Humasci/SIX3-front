@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Palette, Video, Edit3, Sparkles } from "lucide-react";
+import { User, Video, Bot, Mic } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,6 +13,9 @@ const ContentCreation = () => {
   const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // Scroll to top when component mounts
+    window.scrollTo(0, 0);
+
     const ctx = gsap.context(() => {
       gsap.from(".hero-content", {
         opacity: 0,
@@ -52,23 +55,23 @@ const ContentCreation = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-6">
+      <section className="pt-40 pb-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="hero-content mb-12">
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-light mb-8">
-              Content Creation
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-light mb-8">
+              Generative AI Video & Audio
             </h1>
             <div className="aspect-video w-full bg-secondary mb-8 overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=1200&h=675&fit=crop"
-                alt="Content Creation"
+                src="https://images.unsplash.com/photo-1677756119517-756a188d2d94?w=1200&h=675&fit=crop"
+                alt="AI Generated Content"
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
               <div>
                 <p className="text-muted-foreground mb-1">Location</p>
-                <p>New York</p>
+                <p>London</p>
               </div>
               <div>
                 <p className="text-muted-foreground mb-1">Year</p>
@@ -76,11 +79,11 @@ const ContentCreation = () => {
               </div>
               <div>
                 <p className="text-muted-foreground mb-1">Lead</p>
-                <p>Creative Team</p>
+                <p>AI Production Team</p>
               </div>
               <div>
                 <p className="text-muted-foreground mb-1">Category</p>
-                <p>Design</p>
+                <p>AI Content Generation</p>
               </div>
             </div>
           </div>
@@ -99,38 +102,38 @@ const ContentCreation = () => {
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="step-card border border-border p-8 bg-background">
-              <Palette className="w-12 h-12 mb-6 text-accent" />
+              <User className="w-12 h-12 mb-6 text-accent" />
               <p className="text-sm text-muted-foreground mb-4">Step -01</p>
-              <h3 className="text-2xl font-light mb-4">Creative Strategy</h3>
+              <h3 className="text-2xl font-light mb-4">Creative Brief & Planning</h3>
               <p className="text-muted-foreground">
-                We dive deep into your brand identity, audience insights, and market trends to craft a content strategy that resonates and drives engagement.
+                Content strategy development with brand analysis and compliance, script development and approval, plus visual design and storyboarding.
+              </p>
+            </div>
+
+            <div className="step-card border border-border p-8 bg-background">
+              <Bot className="w-12 h-12 mb-6 text-accent" />
+              <p className="text-sm text-muted-foreground mb-4">Step -02</p>
+              <h3 className="text-2xl font-light mb-4">AI Model Configuration</h3>
+              <p className="text-muted-foreground">
+                Avatar appearance customization, voice profile optimization, brand alignment verification, and technical setup completion for AI content generation.
               </p>
             </div>
 
             <div className="step-card border border-border p-8 bg-background">
               <Video className="w-12 h-12 mb-6 text-accent" />
-              <p className="text-sm text-muted-foreground mb-4">Step -02</p>
-              <h3 className="text-2xl font-light mb-4">Content Production</h3>
-              <p className="text-muted-foreground">
-                Our creative team brings your vision to life through stunning visuals, compelling copy, and high-quality video production that captivates audiences.
-              </p>
-            </div>
-
-            <div className="step-card border border-border p-8 bg-background">
-              <Edit3 className="w-12 h-12 mb-6 text-accent" />
               <p className="text-sm text-muted-foreground mb-4">Step -03</p>
-              <h3 className="text-2xl font-light mb-4">Refinement & Polish</h3>
+              <h3 className="text-2xl font-light mb-4">Production & Generation</h3>
               <p className="text-muted-foreground">
-                Meticulous editing and refinement ensure every piece of content meets the highest standards of quality and aligns perfectly with your brand voice.
+                AI content generation with quality control and refinement, brand compliance review, client preview and feedback for optimal results.
               </p>
             </div>
 
             <div className="step-card border border-border p-8 bg-background">
-              <Sparkles className="w-12 h-12 mb-6 text-accent" />
+              <Mic className="w-12 h-12 mb-6 text-accent" />
               <p className="text-sm text-muted-foreground mb-4">Step -04</p>
-              <h3 className="text-2xl font-light mb-4">Distribution & Optimization</h3>
+              <h3 className="text-2xl font-light mb-4">Post-Production & Delivery</h3>
               <p className="text-muted-foreground">
-                Strategic distribution across channels with continuous performance tracking and optimization to maximize reach, engagement, and conversions.
+                Final editing and optimization, multiple format generation, usage guidelines documentation, and asset delivery with training.
               </p>
             </div>
           </div>
@@ -144,15 +147,17 @@ const ContentCreation = () => {
             Overview -
           </p>
           <h2 className="text-4xl md:text-5xl font-light mb-8 max-w-3xl">
-            Transforming Ideas Into Compelling Stories That Convert
+            AI Avatars and Generative Models for Unique Multimedia Content
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mb-8">
-            Elevate your brand with professional content creation that captures attention and drives action. From stunning visuals to engaging copy, we craft multi-format content that tells your story, builds trust, and converts audiences across all digital touchpoints.
+            AI avatar creation and animation, voice cloning and synthesis, custom video content generation, UGC campaign automation, and brand-aligned content production with multi-language content localization.
           </p>
           <ul className="space-y-4 text-lg text-muted-foreground max-w-3xl">
-            <li>• Create scroll-stopping visuals that demand attention</li>
-            <li>• Craft compelling narratives that build brand loyalty</li>
-            <li>• Optimize content for maximum engagement and reach</li>
+            <li>• AI avatar creation and realistic animation</li>
+            <li>• Voice cloning and synthesis technology</li>
+            <li>• UGC campaign automation and video ads</li>
+            <li>• Multi-language content localization</li>
+            <li>• Brand-aligned content production at scale</li>
           </ul>
         </div>
       </section>
@@ -161,12 +166,12 @@ const ContentCreation = () => {
       <section className="py-16 px-6 bg-secondary/30">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
           <div>
-            <div className="text-7xl md:text-8xl font-light mb-4">500+</div>
-            <p className="text-xl text-muted-foreground">Content Pieces Created</p>
+            <div className="text-7xl md:text-8xl font-light mb-4">$1.5K+</div>
+            <p className="text-xl text-muted-foreground">Starting Investment</p>
           </div>
           <div>
-            <div className="text-7xl md:text-8xl font-light mb-4">3.5x</div>
-            <p className="text-xl text-muted-foreground">Engagement Rate Boost</p>
+            <div className="text-7xl md:text-8xl font-light mb-4">4K</div>
+            <p className="text-xl text-muted-foreground">Video Quality Standard</p>
           </div>
         </div>
       </section>
@@ -184,25 +189,25 @@ const ContentCreation = () => {
           <div className="space-y-12">
             <div className="advantage-card border-t border-border pt-8">
               <div className="text-5xl font-light text-muted-foreground/50 mb-4">01</div>
-              <h3 className="text-3xl font-light mb-4">Multi-Format Expertise</h3>
+              <h3 className="text-3xl font-light mb-4">AI Avatar Technology</h3>
               <p className="text-lg text-muted-foreground max-w-2xl">
-                From video production to graphic design, copywriting to social media content — we're masters of every format. Your brand gets cohesive, high-quality content across all channels.
+                Custom AI avatar creation with realistic animation, talking head presentations, product demos, and brand-aligned visual design for maximum impact.
               </p>
             </div>
 
             <div className="advantage-card border-t border-border pt-8">
               <div className="text-5xl font-light text-muted-foreground/50 mb-4">02</div>
-              <h3 className="text-3xl font-light mb-4">Brand Consistency</h3>
+              <h3 className="text-3xl font-light mb-4">Voice Cloning & Synthesis</h3>
               <p className="text-lg text-muted-foreground max-w-2xl">
-                We ensure every piece of content reinforces your brand identity, maintaining a consistent voice, style, and message that builds recognition and trust.
+                Advanced voice cloning technology for narration, voiceovers, podcast content, and UGC campaigns with studio-quality audio production.
               </p>
             </div>
 
             <div className="advantage-card border-t border-border pt-8">
               <div className="text-5xl font-light text-muted-foreground/50 mb-4">03</div>
-              <h3 className="text-3xl font-light mb-4">Performance-Driven</h3>
+              <h3 className="text-3xl font-light mb-4">UGC Campaign Automation</h3>
               <p className="text-lg text-muted-foreground max-w-2xl">
-                Beautiful content that performs. We combine creative excellence with data insights to create content that not only looks great but drives real business results.
+                Automated creation of video ads and UGC campaigns for paid media, customer testimonials, reviews, and social content at scale.
               </p>
             </div>
           </div>
@@ -217,7 +222,7 @@ const ContentCreation = () => {
           </h2>
           <Link to="/contact">
             <Button variant="outline" className="rounded-full px-12 py-6 text-lg border-foreground hover:bg-foreground hover:text-background">
-              Create Amazing Content
+              Start AI Content Creation
             </Button>
           </Link>
         </div>

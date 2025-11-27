@@ -6,9 +6,9 @@ export const Footer = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           <div>
-            <h3 className="text-xl font-light mb-4">Nava.Studio</h3>
+            <h3 className="text-xl font-light mb-4">SIX3 Agency</h3>
             <p className="text-sm text-muted-foreground">
-              Full-service digital agency transforming brands.
+              AI-powered marketing and automation agency.
             </p>
           </div>
           
@@ -58,7 +58,7 @@ export const Footer = () => {
         
         <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © 2024 Nava Studio. All rights reserved.
+            © 2024 SIX3 Agency. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm text-muted-foreground">
             <a href="#" className="hover:text-foreground transition-colors">Privacy Policy</a>

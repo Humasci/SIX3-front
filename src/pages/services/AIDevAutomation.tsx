@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Brain, Workflow, Code2, Rocket } from "lucide-react";
+import { Brain, Users, Settings, Zap } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,6 +13,9 @@ const AIDevAutomation = () => {
   const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // Scroll to top when component mounts
+    window.scrollTo(0, 0);
+
     const ctx = gsap.context(() => {
       gsap.from(".hero-content", {
         opacity: 0,
@@ -52,11 +55,11 @@ const AIDevAutomation = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-6">
+      <section className="pt-40 pb-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="hero-content mb-12">
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-light mb-8">
-              AI Dev / Automation
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-light mb-8">
+              AI Agent Creation & Workflow Automation
             </h1>
             <div className="aspect-video w-full bg-secondary mb-8 overflow-hidden">
               <img
@@ -68,7 +71,7 @@ const AIDevAutomation = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
               <div>
                 <p className="text-muted-foreground mb-1">Location</p>
-                <p>New York</p>
+                <p>London</p>
               </div>
               <div>
                 <p className="text-muted-foreground mb-1">Year</p>
@@ -80,7 +83,7 @@ const AIDevAutomation = () => {
               </div>
               <div>
                 <p className="text-muted-foreground mb-1">Category</p>
-                <p>Development</p>
+                <p>AI Automation</p>
               </div>
             </div>
           </div>
@@ -101,36 +104,36 @@ const AIDevAutomation = () => {
             <div className="step-card border border-border p-8 bg-background">
               <Brain className="w-12 h-12 mb-6 text-accent" />
               <p className="text-sm text-muted-foreground mb-4">Step -01</p>
-              <h3 className="text-2xl font-light mb-4">Discovery & Analysis</h3>
+              <h3 className="text-2xl font-light mb-4">Discovery & Strategy</h3>
               <p className="text-muted-foreground">
-                We analyze your workflows, identify automation opportunities, and map out AI solutions that will maximize efficiency and scale your operations.
+                Business process audit and mapping, AI opportunity assessment and ROI calculation, technical requirements gathering, and solution architecture design.
               </p>
             </div>
 
             <div className="step-card border border-border p-8 bg-background">
-              <Code2 className="w-12 h-12 mb-6 text-accent" />
+              <Users className="w-12 h-12 mb-6 text-accent" />
               <p className="text-sm text-muted-foreground mb-4">Step -02</p>
-              <h3 className="text-2xl font-light mb-4">Custom Development</h3>
+              <h3 className="text-2xl font-light mb-4">AI Agent Development</h3>
               <p className="text-muted-foreground">
-                Our expert developers build tailored AI solutions using cutting-edge technologies, ensuring seamless integration with your existing systems.
+                Custom agent persona and capability design, conversation flows and decision trees, integration connector development, and workflow automation scripting.
               </p>
             </div>
 
             <div className="step-card border border-border p-8 bg-background">
-              <Workflow className="w-12 h-12 mb-6 text-accent" />
+              <Settings className="w-12 h-12 mb-6 text-accent" />
               <p className="text-sm text-muted-foreground mb-4">Step -03</p>
-              <h3 className="text-2xl font-light mb-4">Testing & Optimization</h3>
+              <h3 className="text-2xl font-light mb-4">Integration & Testing</h3>
               <p className="text-muted-foreground">
-                Rigorous testing ensures accuracy and reliability. We refine algorithms and workflows until every automation performs flawlessly in real-world scenarios.
+                Production environment deployment, system integration testing, user acceptance testing with client teams, and performance optimization.
               </p>
             </div>
 
             <div className="step-card border border-border p-8 bg-background">
-              <Rocket className="w-12 h-12 mb-6 text-accent" />
+              <Zap className="w-12 h-12 mb-6 text-accent" />
               <p className="text-sm text-muted-foreground mb-4">Step -04</p>
-              <h3 className="text-2xl font-light mb-4">Deployment & Support</h3>
+              <h3 className="text-2xl font-light mb-4">Deployment & Training</h3>
               <p className="text-muted-foreground">
-                Smooth deployment with comprehensive training and ongoing support. We ensure your team maximizes the value of AI automation from day one.
+                Live system deployment and cutover, team training and documentation, change management support, and 30-day optimization period.
               </p>
             </div>
           </div>
@@ -144,15 +147,17 @@ const AIDevAutomation = () => {
             Overview -
           </p>
           <h2 className="text-4xl md:text-5xl font-light mb-8 max-w-3xl">
-            Intelligent Solutions That Scale Your Business Operations
+            Custom AI Systems and Automated Workflows for Business Processes
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mb-8">
-            Transform your business with custom AI development and intelligent automation. We design and build AI-powered solutions that streamline workflows, enhance decision-making, and unlock new capabilities — from chatbots and process automation to predictive analytics and custom machine learning applications.
+            Custom AI agent development for call screening, lead qualification, and customer support. Business process automation with workflow orchestration, legacy system integration, real-time analytics, and compliance automation.
           </p>
           <ul className="space-y-4 text-lg text-muted-foreground max-w-3xl">
-            <li>• Automate repetitive tasks and free up valuable resources</li>
-            <li>• Leverage AI for smarter, faster decision-making</li>
-            <li>• Scale operations without proportional cost increases</li>
+            <li>• Call center automation and AI phone screening</li>
+            <li>• Lead management and automated follow-up workflows</li>
+            <li>• Customer service automation with 24/7 support</li>
+            <li>• CRM integration and pipeline management</li>
+            <li>• Operations automation and compliance tracking</li>
           </ul>
         </div>
       </section>
@@ -161,12 +166,12 @@ const AIDevAutomation = () => {
       <section className="py-16 px-6 bg-secondary/30">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
           <div>
-            <div className="text-7xl md:text-8xl font-light mb-4">85+</div>
-            <p className="text-xl text-muted-foreground">AI Solutions Deployed</p>
+            <div className="text-7xl md:text-8xl font-light mb-4">$5-100K</div>
+            <p className="text-xl text-muted-foreground">Investment Range</p>
           </div>
           <div>
-            <div className="text-7xl md:text-8xl font-light mb-4">60%</div>
-            <p className="text-xl text-muted-foreground">Average Time Saved</p>
+            <div className="text-7xl md:text-8xl font-light mb-4">200-500%</div>
+            <p className="text-xl text-muted-foreground">ROI Within 12 Months</p>
           </div>
         </div>
       </section>
@@ -184,25 +189,25 @@ const AIDevAutomation = () => {
           <div className="space-y-12">
             <div className="advantage-card border-t border-border pt-8">
               <div className="text-5xl font-light text-muted-foreground/50 mb-4">01</div>
-              <h3 className="text-3xl font-light mb-4">Custom AI Solutions</h3>
+              <h3 className="text-3xl font-light mb-4">Industry Specializations</h3>
               <p className="text-lg text-muted-foreground max-w-2xl">
-                No generic templates — every solution is built specifically for your unique business needs, workflows, and goals. We create AI that fits your operation perfectly.
+                Legal firms, healthcare, real estate, e-commerce, and manufacturing with specialized solutions for client intake, patient scheduling, lead nurturing, and supply chain optimization.
               </p>
             </div>
 
             <div className="advantage-card border-t border-border pt-8">
               <div className="text-5xl font-light text-muted-foreground/50 mb-4">02</div>
-              <h3 className="text-3xl font-light mb-4">Seamless Integration</h3>
+              <h3 className="text-3xl font-light mb-4">Proven Results</h3>
               <p className="text-lg text-muted-foreground max-w-2xl">
-                Our AI solutions integrate smoothly with your existing tech stack, preserving your current workflows while enhancing them with intelligent automation.
+                30-60% reduction in manual processing time, 40-80% improvement in response times, 25-50% increase in lead conversion rates, and 20-40% reduction in operational costs.
               </p>
             </div>
 
             <div className="advantage-card border-t border-border pt-8">
               <div className="text-5xl font-light text-muted-foreground/50 mb-4">03</div>
-              <h3 className="text-3xl font-light mb-4">Continuous Evolution</h3>
+              <h3 className="text-3xl font-light mb-4">Comprehensive Packages</h3>
               <p className="text-lg text-muted-foreground max-w-2xl">
-                AI that learns and improves over time. We provide ongoing optimization and updates to ensure your automation stays cutting-edge and delivers maximum value.
+                Starter packages from $5-15K, professional packages $15-35K, enterprise solutions $35-100K+, with ongoing support from $2-10K/month for optimization and new features.
               </p>
             </div>
           </div>
@@ -217,7 +222,7 @@ const AIDevAutomation = () => {
           </h2>
           <Link to="/contact">
             <Button variant="outline" className="rounded-full px-12 py-6 text-lg border-foreground hover:bg-foreground hover:text-background">
-              Automate with AI
+              Start AI Automation
             </Button>
           </Link>
         </div>

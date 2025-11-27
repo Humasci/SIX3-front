@@ -33,35 +33,81 @@ export const MobileMenu = () => {
               About
             </Link>
             <div className="space-y-2">
-              <p className="text-lg text-muted-foreground">Services</p>
+              <Link
+                to="/services"
+                onClick={() => setIsOpen(false)}
+                className="text-lg hover:text-accent transition-colors"
+              >
+                Services
+              </Link>
               <div className="pl-4 space-y-2">
                 <Link
                   to="/services/search-marketing-ppc"
                   onClick={() => setIsOpen(false)}
                   className="block hover:text-accent transition-colors"
                 >
-                  Search Marketing / PPC
+                  Search Marketing & Paid Media
                 </Link>
                 <Link
                   to="/services/content-creation"
                   onClick={() => setIsOpen(false)}
                   className="block hover:text-accent transition-colors"
                 >
-                  Content Creation
-                </Link>
-                <Link
-                  to="/services/ai-dev-automation"
-                  onClick={() => setIsOpen(false)}
-                  className="block hover:text-accent transition-colors"
-                >
-                  AI Dev / Automation
+                  Generative AI Video & Audio
                 </Link>
                 <Link
                   to="/services/ml-fine-tuning"
                   onClick={() => setIsOpen(false)}
                   className="block hover:text-accent transition-colors"
                 >
-                  ML Fine Tuning
+                  Fine-Tuning ML Models
+                </Link>
+                <Link
+                  to="/services/ai-dev-automation"
+                  onClick={() => setIsOpen(false)}
+                  className="block hover:text-accent transition-colors"
+                >
+                  AI Agent Creation & Automation
+                </Link>
+              </div>
+            </div>
+            <div className="space-y-2">
+              <p className="text-lg text-muted-foreground">Industries</p>
+              <div className="pl-4 space-y-2">
+                <Link
+                  to="/industries/legal"
+                  onClick={() => setIsOpen(false)}
+                  className="block hover:text-accent transition-colors"
+                >
+                  Legal & Law Firms
+                </Link>
+                <Link
+                  to="/industries/real-estate"
+                  onClick={() => setIsOpen(false)}
+                  className="block hover:text-accent transition-colors"
+                >
+                  Real Estate
+                </Link>
+                <Link
+                  to="/industries/healthcare"
+                  onClick={() => setIsOpen(false)}
+                  className="block hover:text-accent transition-colors"
+                >
+                  Healthcare
+                </Link>
+                <Link
+                  to="/industries/professional-services"
+                  onClick={() => setIsOpen(false)}
+                  className="block hover:text-accent transition-colors"
+                >
+                  Professional Services
+                </Link>
+                <Link
+                  to="/industries/local-business"
+                  onClick={() => setIsOpen(false)}
+                  className="block hover:text-accent transition-colors"
+                >
+                  Local Businesses
                 </Link>
               </div>
             </div>
