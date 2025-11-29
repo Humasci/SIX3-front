@@ -19,7 +19,8 @@ const servicePreviews = [
       "Automated reporting with performance alerts"
     ],
     investment: "£1K-5K management fees + ad spend",
-    path: "/services/search-marketing-ppc"
+    path: "/services/search-marketing-ppc",
+    image: "/ai-marketing-ppc-paid-media.png"
   },
   {
     number: "02", 
@@ -36,19 +37,6 @@ const servicePreviews = [
   },
   {
     number: "03",
-    title: "Fine-Tuning ML Models", 
-    shortDescription: "Custom AI models tailored to client data and objectives",
-    features: [
-      "Large Language Model fine-tuning and adaptation",
-      "Computer vision and image recognition models",
-      "Recommendation systems and predictive analytics", 
-      "Custom chatbot training and NLP solutions"
-    ],
-    investment: "$5K-50K+ with ongoing support",
-    path: "/services/ml-fine-tuning"
-  },
-  {
-    number: "04",
     title: "AI Agent Creation & Workflow Automation",
     shortDescription: "Custom AI systems and automated workflows for business processes",
     features: [
@@ -143,10 +131,18 @@ export const ServicePreviews = () => {
 
                 <div className="relative">
                   <div className="aspect-video bg-gradient-to-br from-accent/10 to-accent/5 rounded-lg flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="text-6xl font-light text-accent/30 mb-4">{service.number}</div>
-                      <div className="text-xl text-muted-foreground">{service.title.split(' ').slice(-2).join(' ')}</div>
-                    </div>
+                    {service.image ? (
+                      <img 
+                        src={service.image} 
+                        alt={service.title}
+                        className="w-full h-full object-contain p-6"
+                      />
+                    ) : (
+                      <div className="text-center">
+                        <div className="text-6xl font-light text-accent/30 mb-4">{service.number}</div>
+                        <div className="text-xl text-muted-foreground">{service.title.split(' ').slice(-2).join(' ')}</div>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>

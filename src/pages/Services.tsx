@@ -42,21 +42,6 @@ const services = [
   },
   {
     number: "03",
-    title: "Fine-Tuning ML Models",
-    subtitle: "Custom AI models tailored to client data and objectives", 
-    description: "Large Language Model fine-tuning, computer vision model adaptation, recommendation system optimization, predictive analytics development, and custom chatbot training.",
-    features: [
-      "Large Language Model fine-tuning and adaptation",
-      "Computer vision and image recognition models",
-      "Recommendation systems and predictive analytics",
-      "Custom chatbot training and NLP solutions"
-    ],
-    investment: "$5K-50K+ with ongoing support",
-    icon: Brain,
-    path: "/services/ml-fine-tuning"
-  },
-  {
-    number: "04",
     title: "AI Agent Creation & Workflow Automation",
     subtitle: "Custom AI systems and automated workflows for business processes",
     description: "Custom AI agent development for call screening, lead qualification, customer support, business process automation, and workflow orchestration with legacy system integration.",

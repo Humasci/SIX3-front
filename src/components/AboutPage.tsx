@@ -106,12 +106,6 @@ export const AboutPage = () => {
               </p>
             </div>
             <div className="about-content">
-              <h3 className="text-xl font-medium mb-4">Custom AI Models</h3>
-              <p className="text-muted-foreground">
-                Fine-tuning language models, computer vision systems, and predictive analytics for specific business needs.
-              </p>
-            </div>
-            <div className="about-content">
               <h3 className="text-xl font-medium mb-4">Workflow Automation</h3>
               <p className="text-muted-foreground">
                 AI agents for call screening, lead qualification, customer support, and business process optimization.

@@ -60,7 +60,7 @@ const projects = [
     id: "manufacturing-ml-optimization",
     number: "06",
     title: "Manufacturing ML Optimization",
-    category: "Fine-Tuning ML Models",
+    category: "AI Development & Automation",
     year: "2024",
     description: "Custom predictive analytics model for supply chain optimization and quality control",
     image: "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=800&h=600&fit=crop",

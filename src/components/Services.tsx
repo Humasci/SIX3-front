@@ -54,6 +54,7 @@ const services = [
     title: "Search Marketing & Paid Media",
     description: "AI-driven search marketing with advanced algorithm optimization across Google Ads, Meta, LinkedIn, TikTok with real-time bid optimization and competitor analysis.",
     path: "/services/search-marketing-ppc",
+    image: "/ai-marketing-ppc-paid-media.png",
   },
   {
     number: "02",
@@ -63,12 +64,6 @@ const services = [
   },
   {
     number: "03",
-    title: "Fine-Tuning ML Models",
-    description: "Custom AI models tailored to client data with large language model fine-tuning, computer vision adaptation, and predictive analytics development.",
-    path: "/services/ml-fine-tuning",
-  },
-  {
-    number: "04",
     title: "AI Agent Creation & Workflow Automation",
     description: "Custom AI systems and automated workflows for call screening, lead qualification, customer support, and business process automation.",
     path: "/services/ai-dev-automation",
@@ -236,6 +231,15 @@ export const Services = () => {
                     </span>
                     <ArrowUpRight className="service-arrow w-6 h-6 text-muted-foreground/60 transition-all duration-300 group-hover:text-accent" />
                   </div>
+                  {service.image && (
+                    <div className="mb-6">
+                      <img 
+                        src={service.image} 
+                        alt={service.title}
+                        className="w-full h-32 object-contain rounded-lg bg-white/90 p-3"
+                      />
+                    </div>
+                  )}
                   <h3 className="service-title text-2xl font-light mb-4 transition-colors duration-300 group-hover:text-foreground">{service.title}</h3>
                   <p className="service-description text-muted-foreground/80 leading-relaxed group-hover:text-muted-foreground transition-colors duration-300">{service.description}</p>
                 </div>

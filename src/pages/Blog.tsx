@@ -52,16 +52,6 @@ const blogPosts = [
     image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop"
   },
   {
-    id: 5,
-    title: "Machine Learning Models: When to Fine-Tune vs Train from Scratch",
-    excerpt: "A technical guide to choosing the right approach for your ML project and maximizing performance efficiently.",
-    author: "SIX3 Team",
-    date: "November 15, 2025",
-    readTime: "15 min read",
-    category: "Machine Learning",
-    image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&h=400&fit=crop"
-  },
-  {
     id: 6,
     title: "Healthcare AI: Improving Patient Communication and Scheduling",
     excerpt: "How AI chatbots and automation are transforming patient experiences in healthcare practices.",

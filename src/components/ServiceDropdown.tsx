@@ -6,7 +6,6 @@ const services = [
   { name: "All Services", path: "/services" },
   { name: "Search Marketing & Paid Media", path: "/services/search-marketing-ppc" },
   { name: "Generative AI Video & Audio", path: "/services/content-creation" },
-  { name: "Fine-Tuning ML Models", path: "/services/ml-fine-tuning" },
   { name: "AI Agent Creation & Automation", path: "/services/ai-dev-automation" },
 ];
 

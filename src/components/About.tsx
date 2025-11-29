@@ -90,7 +90,7 @@ export const About = () => {
             SIX3 Agency delivers AI-powered marketing solutions that drive measurable results.
           </h2>
           <p className="about-description text-lg text-muted-foreground max-w-2xl mb-12">
-            We specialize in AI-driven search marketing, generative content creation, ML model fine-tuning, and custom AI agent development. 
+            We specialize in AI-driven search marketing, generative content creation, and custom AI agent development. 
             Our advanced automation solutions maximize ROI and scale your business operations efficiently.
           </p>
           <Link to="/about">

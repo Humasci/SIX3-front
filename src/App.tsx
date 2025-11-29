@@ -9,7 +9,6 @@ import NotFound from "./pages/NotFound";
 import SearchMarketingPPC from "./pages/services/SearchMarketingPPC";
 import ContentCreation from "./pages/services/ContentCreation";
 import AIDevAutomation from "./pages/services/AIDevAutomation";
-import MLFineTuning from "./pages/services/MLFineTuning";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Portfolio from "./pages/Portfolio";
@@ -45,7 +44,6 @@ const App = () => (
           <Route path="/services/search-marketing-ppc" element={<SearchMarketingPPC />} />
           <Route path="/services/content-creation" element={<ContentCreation />} />
           <Route path="/services/ai-dev-automation" element={<AIDevAutomation />} />
-          <Route path="/services/ml-fine-tuning" element={<MLFineTuning />} />
           <Route path="/industries/legal" element={<Legal />} />
           <Route path="/industries/real-estate" element={<RealEstate />} />
           <Route path="/industries/healthcare" element={<Healthcare />} />

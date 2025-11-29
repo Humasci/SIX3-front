@@ -2,7 +2,6 @@ import { ShoppingBag } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ServiceDropdown } from "./ServiceDropdown";
 import { MobileMenu } from "./MobileMenu";
-import { LanguageSwitcher } from "./LanguageSwitcher";
 import logo from "@/assets/SIX3Agency-AI-marketing-logo.png";
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -104,7 +103,6 @@ export const Header = () => {
         </nav>
 
         <div className="flex items-center gap-4 nav-item">
-          <LanguageSwitcher />
           <ShoppingBag className="w-5 h-5" />
           <MobileMenu />
         </div>

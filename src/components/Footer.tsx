@@ -25,9 +25,6 @@ export const Footer = () => {
               <li className="hover:text-foreground transition-colors cursor-pointer">
                 <Link to="/services/ai-dev-automation">AI Dev / Automation</Link>
               </li>
-              <li className="hover:text-foreground transition-colors cursor-pointer">
-                <Link to="/services/ml-fine-tuning">ML Fine Tuning</Link>
-              </li>
             </ul>
           </div>
           

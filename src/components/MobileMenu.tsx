@@ -56,13 +56,6 @@ export const MobileMenu = () => {
                   Generative AI Video & Audio
                 </Link>
                 <Link
-                  to="/services/ml-fine-tuning"
-                  onClick={() => setIsOpen(false)}
-                  className="block hover:text-accent transition-colors"
-                >
-                  Fine-Tuning ML Models
-                </Link>
-                <Link
                   to="/services/ai-dev-automation"
                   onClick={() => setIsOpen(false)}
                   className="block hover:text-accent transition-colors"

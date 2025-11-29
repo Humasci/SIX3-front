@@ -42,7 +42,6 @@ const Terms = () => {
               <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
                 <li>AI-powered search marketing and paid media management</li>
                 <li>Generative AI content creation (video, audio, and text)</li>
-                <li>Machine learning model fine-tuning and optimization</li>
                 <li>AI agent development and automation solutions</li>
                 <li>Digital marketing strategy and consulting</li>
                 <li>Website development and optimization</li>
