@@ -223,31 +223,6 @@ const Blog = () => {
         </div>
       </section>
 
-      {/* Newsletter CTA */}
-      <section className="py-24 px-6 bg-secondary/20">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-light mb-6">
-            Stay Updated
-          </h2>
-          <p className="text-xl text-muted-foreground mb-8">
-            Get the latest insights on AI marketing and automation delivered to your inbox.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <input 
-              type="email" 
-              placeholder="Enter your email"
-              className="flex-1 px-6 py-4 bg-background border border-border rounded-full focus:outline-none focus:border-accent"
-            />
-            <Button className="px-8 py-4 rounded-full">
-              Subscribe
-            </Button>
-          </div>
-          <p className="text-sm text-muted-foreground mt-4">
-            No spam. Unsubscribe anytime.
-          </p>
-        </div>
-      </section>
-
       <Footer />
     </div>
   );

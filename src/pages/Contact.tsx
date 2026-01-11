@@ -159,7 +159,6 @@ const Contact = () => {
         setSubmitStatus('error');
       }
     } catch (error) {
-      console.error('Form submission error:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
