@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import icons from "@/utils/iconGenerator";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,27 +14,27 @@ const projects = [
     category: "AI Agent Development",
     year: "2024",
     description: "60% reduction in intake administration time, 40% increase in qualified leads, $150K annual savings",
-    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&h=600&fit=crop",
+    image: icons.legal,
     metrics: "60% time reduction, $150K savings"
   },
   {
     id: "real-estate-lead-system",
-    number: "02", 
+    number: "02",
     title: "Real Estate Lead Management",
     category: "Workflow Automation",
     year: "2024",
     description: "45% increase in lead conversion, 70% reduction in manual follow-up, $200K revenue increase",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop",
+    image: icons.realEstate,
     metrics: "45% conversion increase, $200K revenue boost"
   },
   {
     id: "ecommerce-ai-campaign",
     number: "03",
-    title: "E-commerce AI Marketing Campaign", 
+    title: "E-commerce AI Marketing Campaign",
     category: "Search Marketing & Paid Media",
     year: "2024",
     description: "Multi-platform campaign with AI optimization delivering 300% ROAS improvement",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
+    image: icons.ecommerce,
     metrics: "300% ROAS improvement"
   },
   {
@@ -41,9 +42,9 @@ const projects = [
     number: "04",
     title: "Healthcare Patient Management",
     category: "AI Agent Creation",
-    year: "2024", 
+    year: "2024",
     description: "24/7 AI scheduling system with 40% faster patient processing and improved satisfaction",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=600&fit=crop",
+    image: icons.healthcare,
     metrics: "40% faster processing, 24/7 availability"
   },
   {
@@ -53,7 +54,7 @@ const projects = [
     category: "Generative AI Video & Audio",
     year: "2024",
     description: "AI avatars and voice cloning for personalized customer onboarding videos",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop", 
+    image: icons.fintech,
     metrics: "75% engagement increase"
   },
   {
@@ -63,7 +64,7 @@ const projects = [
     category: "AI Development & Automation",
     year: "2024",
     description: "Custom predictive analytics model for supply chain optimization and quality control",
-    image: "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=800&h=600&fit=crop",
+    image: icons.manufacturing,
     metrics: "30% cost reduction, 95% accuracy"
   },
 ];

@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Briefcase, Calculator, TrendingUp, Users, FileText, Phone } from "lucide-react";
+import icons from "@/utils/iconGenerator";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -140,7 +141,7 @@ const ProfessionalServices = () => {
             </div>
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop"
+                src={icons.professionalServices}
                 alt="Professional Services"
                 className="w-full aspect-square object-cover rounded-2xl"
               />

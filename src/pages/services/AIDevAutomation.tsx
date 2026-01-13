@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Brain, Users, Settings, Zap } from "lucide-react";
+import icons from "@/utils/iconGenerator";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -63,7 +64,7 @@ const AIDevAutomation = () => {
             </h1>
             <div className="aspect-video w-full bg-secondary mb-8 overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=675&fit=crop"
+                src={icons.ai}
                 alt="AI Development"
                 className="w-full h-full object-cover"
               />

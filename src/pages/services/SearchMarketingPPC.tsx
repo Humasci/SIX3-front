@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TrendingUp, Target, BarChart3, Zap } from "lucide-react";
+import icons from "@/utils/iconGenerator";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -63,7 +64,7 @@ const SearchMarketingPPC = () => {
             </h1>
             <div className="aspect-video w-full bg-secondary mb-8 overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=675&fit=crop"
+                src={icons.searchMarketing}
                 alt="Search Marketing"
                 className="w-full h-full object-cover"
               />
