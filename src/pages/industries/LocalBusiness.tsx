@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MapPin, Phone, Calendar, TrendingUp, Wrench, Droplets } from "lucide-react";
+import icons from "@/utils/iconGenerator";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -140,7 +141,7 @@ const LocalBusiness = () => {
             </div>
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&h=600&fit=crop"
+                src={icons.localBusiness}
                 alt="Local Service Business"
                 className="w-full aspect-square object-cover rounded-2xl"
               />

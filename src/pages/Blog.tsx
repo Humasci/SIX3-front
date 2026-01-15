@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Calendar, Clock, ArrowUpRight, Tag } from "lucide-react";
+import icons from "@/utils/iconGenerator";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -18,7 +19,7 @@ const blogPosts = [
     date: "November 25, 2025",
     readTime: "8 min read",
     category: "AI Marketing",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop",
+    image: icons.searchMarketing,
     featured: true
   },
   {
@@ -29,7 +30,7 @@ const blogPosts = [
     date: "November 22, 2025",
     readTime: "12 min read",
     category: "Content Creation",
-    image: "https://images.unsplash.com/photo-1589254065878-42c9da997008?w=600&h=400&fit=crop"
+    image: icons.contentCreation
   },
   {
     id: 3,
@@ -39,7 +40,7 @@ const blogPosts = [
     date: "November 20, 2025",
     readTime: "10 min read",
     category: "Automation",
-    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&h=400&fit=crop"
+    image: icons.legal
   },
   {
     id: 4,
@@ -49,7 +50,7 @@ const blogPosts = [
     date: "November 18, 2025",
     readTime: "7 min read",
     category: "Lead Generation",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop"
+    image: icons.realEstate
   },
   {
     id: 6,
@@ -59,7 +60,7 @@ const blogPosts = [
     date: "November 12, 2025",
     readTime: "9 min read",
     category: "Healthcare AI",
-    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop"
+    image: icons.healthcare
   }
 ];
 
@@ -220,31 +221,6 @@ const Blog = () => {
               </article>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Newsletter CTA */}
-      <section className="py-24 px-6 bg-secondary/20">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-light mb-6">
-            Stay Updated
-          </h2>
-          <p className="text-xl text-muted-foreground mb-8">
-            Get the latest insights on AI marketing and automation delivered to your inbox.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <input 
-              type="email" 
-              placeholder="Enter your email"
-              className="flex-1 px-6 py-4 bg-background border border-border rounded-full focus:outline-none focus:border-accent"
-            />
-            <Button className="px-8 py-4 rounded-full">
-              Subscribe
-            </Button>
-          </div>
-          <p className="text-sm text-muted-foreground mt-4">
-            No spam. Unsubscribe anytime.
-          </p>
         </div>
       </section>
 

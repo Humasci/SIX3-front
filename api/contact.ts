@@ -16,6 +16,28 @@ interface FormData {
 // MAILGUN_DOMAIN
 // ATTIO_API_KEY
 
+// Simple in-memory rate limiting (resets on function cold start)
+const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
+const MAX_REQUESTS = 3; // Max 3 submissions per hour per IP
+const WINDOW_MS = 60 * 60 * 1000; // 1 hour
+
+function checkRateLimit(identifier: string): boolean {
+  const now = Date.now();
+  const record = rateLimitMap.get(identifier);
+
+  if (!record || now > record.resetTime) {
+    rateLimitMap.set(identifier, { count: 1, resetTime: now + WINDOW_MS });
+    return true;
+  }
+
+  if (record.count >= MAX_REQUESTS) {
+    return false;
+  }
+
+  record.count++;
+  return true;
+}
+
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   // Enable CORS
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -31,6 +53,15 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
+  // Rate limiting
+  const identifier = req.headers['x-forwarded-for'] as string || req.headers['x-real-ip'] as string || 'unknown';
+  if (!checkRateLimit(identifier)) {
+    return res.status(429).json({
+      error: 'Too many requests',
+      message: 'Please wait before submitting another form. Maximum 3 submissions per hour.'
+    });
+  }
+
   try {
     const formData: FormData = req.body;
 
@@ -44,29 +75,26 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     const mailgunDomain = process.env.MAILGUN_DOMAIN;
     const attioApiKey = process.env.ATTIO_API_KEY;
 
-    console.log('Environment check:', {
-      hasMailgunKey: !!mailgunApiKey,
-      hasMailgunDomain: !!mailgunDomain,
-      hasAttioKey: !!attioApiKey
-    });
-
     // Try to send email via Mailgun (optional)
     try {
       await sendEmailViMailgun(formData);
     } catch (mailgunError) {
-      console.warn('Mailgun error (continuing):', mailgunError);
+      // Mailgun is optional, continue if it fails
     }
 
     // Try to create contact in Attio CRM (optional)
     try {
       await createAttioContact(formData);
     } catch (attioError) {
-      console.warn('Attio error (continuing):', attioError);
+      // Attio is optional, continue if it fails
     }
 
     res.status(200).json({ success: true, message: 'Form submitted successfully' });
   } catch (error) {
-    console.error('Error processing form submission:', error);
+    // Log error in development only
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error processing form submission:', error);
+    }
     res.status(500).json({ 
       error: 'Internal server error', 
       message: error instanceof Error ? error.message : 'Unknown error'

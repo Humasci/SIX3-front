@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { User, Video, Bot, Mic } from "lucide-react";
+import icons from "@/utils/iconGenerator";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -63,7 +64,7 @@ const ContentCreation = () => {
             </h1>
             <div className="aspect-video w-full bg-secondary mb-8 overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1677756119517-756a188d2d94?w=1200&h=675&fit=crop"
+                src={icons.video}
                 alt="AI Generated Content"
                 className="w-full h-full object-cover"
               />

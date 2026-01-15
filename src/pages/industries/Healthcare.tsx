@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Heart, Calendar, Phone, Users, Clock, Shield } from "lucide-react";
+import icons from "@/utils/iconGenerator";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -130,7 +131,7 @@ const Healthcare = () => {
             </div>
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=600&fit=crop"
+                src={icons.healthcare}
                 alt="Healthcare Technology"
                 className="w-full aspect-square object-cover rounded-2xl"
               />
