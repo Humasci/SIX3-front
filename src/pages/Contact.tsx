@@ -165,10 +165,44 @@ const Contact = () => {
     }
   };
 
+  // Show success screen when form is submitted successfully
+  if (submitStatus === 'success') {
+    return (
+      <div className="min-h-screen bg-background text-foreground">
+        <Header />
+        <section className="pt-32 pb-24 px-6 flex items-center justify-center min-h-[80vh]">
+          <div className="max-w-2xl mx-auto text-center">
+            <div className="mb-8">
+              <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-accent/10 flex items-center justify-center">
+                <Check className="w-10 h-10 text-accent" />
+              </div>
+              <h1 className="text-5xl md:text-6xl font-light mb-6">
+                Thank You!
+              </h1>
+              <p className="text-xl text-muted-foreground mb-8">
+                Your message has been sent successfully. We'll get back to you within 24 hours.
+              </p>
+              <Button
+                onClick={() => {
+                  setSubmitStatus('idle');
+                  setCurrentStep(0);
+                }}
+                className="px-8 py-3 rounded-full"
+              >
+                Send Another Message
+              </Button>
+            </div>
+          </div>
+        </section>
+        <Footer />
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header />
-      
+
       <section className="pt-32 pb-24 px-6 mt-5">
         <div className="max-w-4xl mx-auto">
           <div className="contact-title mb-16">
@@ -178,7 +212,7 @@ const Contact = () => {
               </span>
             </div>
             <div className="w-full bg-secondary/30 rounded-full h-1 mb-8">
-              <div 
+              <div
                 className="bg-accent h-1 rounded-full transition-all duration-500"
                 style={{ width: `${((currentStep + 1) / steps.length) * 100}%` }}
               />
@@ -303,16 +337,10 @@ const Contact = () => {
               )}
             </div>
 
-            {/* Status Messages */}
-            {submitStatus === 'success' && (
-              <div className="mt-8 p-4 bg-green-50 border border-green-200 rounded-lg">
-                <p className="text-green-800">✅ Thank you! Your message has been sent successfully. We'll get back to you soon.</p>
-              </div>
-            )}
-            
+            {/* Error Message */}
             {submitStatus === 'error' && (
-              <div className="mt-8 p-4 bg-red-50 border border-red-200 rounded-lg">
-                <p className="text-red-800">❌ Sorry, there was an error sending your message. Please try again or email us directly at form@six3.agency</p>
+              <div className="mt-8 p-6 border border-red-500/20 rounded-lg bg-red-500/5">
+                <p className="text-foreground">Sorry, there was an error sending your message. Please try again or email us directly at <a href="mailto:hello@six3.agency" className="text-accent hover:underline">hello@six3.agency</a></p>
               </div>
             )}
 

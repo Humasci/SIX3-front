@@ -112,7 +112,7 @@ async function sendEmailViMailgun(formData: FormData) {
 
   const emailData = {
     from: `Contact Form <noreply@${mailgunDomain}>`,
-    to: 'form@six3.agency',
+    to: 'hello@six3.agency',
     subject: `New Contact Form Submission from ${formData.name}`,
     html: generateEmailHTML(formData),
     'h:Reply-To': formData.email,
