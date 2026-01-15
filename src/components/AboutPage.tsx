@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import icons from "@/utils/iconGenerator";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -77,11 +78,12 @@ export const AboutPage = () => {
               </p>
             </div>
             <div className="about-content">
-              <div className="aspect-video bg-gradient-to-br from-accent/20 to-accent/5 rounded-lg flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-4xl font-light text-accent mb-4">AI-POWERED</div>
-                  <div className="text-xl text-muted-foreground">INNOVATION</div>
-                </div>
+              <div className="aspect-video bg-secondary rounded-lg overflow-hidden">
+                <img
+                  src={icons.ai}
+                  alt="AI Technology"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>
