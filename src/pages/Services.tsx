@@ -5,7 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ArrowUpRight, TrendingUp, Video, Brain, Users } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import icons from "@/utils/iconGenerator";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -22,22 +23,22 @@ const services = [
       "Custom attribution modeling and automated alerts"
     ],
     investment: "£1K-5K management fees + ad spend",
-    icon: TrendingUp,
+    image: icons.searchMarketing,
     path: "/services/search-marketing-ppc"
   },
   {
-    number: "02", 
+    number: "02",
     title: "Generative AI Video & Audio",
     subtitle: "AI avatars and generative models for unique multimedia content",
     description: "AI avatar creation and animation, voice cloning and synthesis, custom video content generation, UGC campaign automation, and brand-aligned content production.",
     features: [
       "AI avatar creation and realistic animation",
-      "Voice cloning and synthesis technology", 
+      "Voice cloning and synthesis technology",
       "UGC campaign automation and video ads",
       "Multi-language content localization"
     ],
     investment: "£200-7K+ packages",
-    icon: Video,
+    image: icons.video,
     path: "/services/content-creation"
   },
   {
@@ -47,12 +48,12 @@ const services = [
     description: "Custom AI agent development for call screening, lead qualification, customer support, business process automation, and workflow orchestration with legacy system integration.",
     features: [
       "Call center automation and AI phone screening",
-      "Lead management and automated follow-up workflows", 
+      "Lead management and automated follow-up workflows",
       "Customer service automation with 24/7 support",
       "Industry-specific solutions (legal, healthcare, real estate)"
     ],
     investment: "$5K-100K+ with 200-500% ROI",
-    icon: Users,
+    image: icons.automation,
     path: "/services/ai-dev-automation"
   }
 ];
@@ -127,7 +128,6 @@ const Services = () => {
         <div className="max-w-7xl mx-auto">
           <div className="services-grid space-y-16">
             {services.map((service, index) => {
-              const IconComponent = service.icon;
               return (
                 <div key={service.number} className={`service-detail-card ${index % 2 === 0 ? '' : 'lg:flex-row-reverse'}`}>
                   <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -137,9 +137,8 @@ const Services = () => {
                           {service.number}
                         </span>
                         <div className="flex-1 h-px bg-border" />
-                        <IconComponent className="w-8 h-8 text-accent" />
                       </div>
-                      
+
                       <div>
                         <h2 className="text-4xl md:text-5xl font-light mb-4">{service.title}</h2>
                         <p className="text-xl text-muted-foreground mb-6">{service.subtitle}</p>
@@ -175,11 +174,12 @@ const Services = () => {
                     </div>
 
                     <div className="relative">
-                      <div className="aspect-square bg-gradient-to-br from-accent/20 to-accent/5 rounded-2xl flex items-center justify-center">
-                        <div className="text-center">
-                          <IconComponent className="w-24 h-24 text-accent/40 mx-auto mb-6" />
-                          <div className="text-2xl font-light text-accent/60">{service.title.split(' ').slice(-2).join(' ')}</div>
-                        </div>
+                      <div className="aspect-square bg-secondary rounded-2xl overflow-hidden">
+                        <img
+                          src={service.image}
+                          alt={service.title}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
                     </div>
                   </div>
