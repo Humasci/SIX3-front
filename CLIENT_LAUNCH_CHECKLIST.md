@@ -69,7 +69,7 @@ ATTIO_API_KEY=your_attio_api_key_here
 - The API has failsafe error handling - form will work even without these keys
 - Without Mailgun: Emails won't be sent (but form will still accept submissions)
 - Without Attio: Contacts won't be added to CRM
-- Form submissions to: `form@six3.agency`
+- Form submissions to: `hello@six3.agency`
 
 **Steps:**
 1. Go to Vercel Dashboard → Your Project → Settings → Environment Variables
@@ -154,7 +154,7 @@ The meta tags reference: `https://six3.agency/og-image.png`
 - [ ] Email validation rejects invalid formats
 - [ ] Form submits successfully
 - [ ] Success message displays after submission
-- [ ] Email received at `form@six3.agency` (if Mailgun configured)
+- [ ] Email received at `hello@six3.agency` (if Mailgun configured)
 - [ ] Contact appears in Attio CRM (if Attio configured)
 - [ ] Rate limiting triggers after 3 submissions
 - [ ] Mobile responsiveness works correctly
@@ -394,7 +394,7 @@ This website has excellent foundations:
 - **Last Updated:** 2026-01-11
 - **Framework:** React 18 + Vite
 - **Deployment:** Vercel
-- **Primary Contact Email:** form@six3.agency
+- **Primary Contact Email:** hello@six3.agency
 
 ---
 
