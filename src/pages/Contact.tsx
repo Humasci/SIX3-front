@@ -124,10 +124,35 @@ const Contact = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submissionCount, setSubmissionCount] = useState(0);
+  const [cooldownEndTime, setCooldownEndTime] = useState<number | null>(null);
+  const [cooldownSeconds, setCooldownSeconds] = useState(0);
+
+  // Cooldown timer effect
+  useEffect(() => {
+    if (cooldownEndTime) {
+      const interval = setInterval(() => {
+        const now = Date.now();
+        if (now >= cooldownEndTime) {
+          setCooldownEndTime(null);
+          setCooldownSeconds(0);
+        } else {
+          setCooldownSeconds(Math.ceil((cooldownEndTime - now) / 1000));
+        }
+      }, 1000);
+      return () => clearInterval(interval);
+    }
+  }, [cooldownEndTime]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!canProceed() || isSubmitting) return;
+    if (!canProceed() || isSubmitting || cooldownEndTime) return;
+
+    // Rate limiting: max 2 submissions per session
+    if (submissionCount >= 2) {
+      setSubmitStatus('error');
+      return;
+    }
 
     setIsSubmitting(true);
     setSubmitStatus('idle');
@@ -143,6 +168,10 @@ const Contact = () => {
 
       if (response.ok) {
         setSubmitStatus('success');
+        setSubmissionCount(prev => prev + 1);
+        // Set cooldown: 5 minutes after first submission, 15 minutes after second
+        const cooldownMinutes = submissionCount === 0 ? 5 : 15;
+        setCooldownEndTime(Date.now() + cooldownMinutes * 60 * 1000);
         // Reset form
         setFormData({
           name: "",
@@ -156,7 +185,13 @@ const Contact = () => {
         });
         setCurrentStep(0);
       } else {
-        setSubmitStatus('error');
+        const errorData = await response.json();
+        if (response.status === 429) {
+          // Rate limit hit from server
+          setSubmitStatus('error');
+        } else {
+          setSubmitStatus('error');
+        }
       }
     } catch (error) {
       setSubmitStatus('error');
@@ -167,6 +202,9 @@ const Contact = () => {
 
   // Show success screen when form is submitted successfully
   if (submitStatus === 'success') {
+    const canSendAnother = submissionCount < 2 && !cooldownEndTime;
+    const maxReached = submissionCount >= 2;
+
     return (
       <div className="min-h-screen bg-background text-foreground">
         <Header />
@@ -176,21 +214,43 @@ const Contact = () => {
               <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-accent/10 flex items-center justify-center">
                 <Check className="w-10 h-10 text-accent" />
               </div>
-              <h1 className="text-5xl md:text-6xl font-light mb-6">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-light mb-6">
                 Thank You!
               </h1>
-              <p className="text-xl text-muted-foreground mb-8">
+              <p className="text-lg sm:text-xl text-muted-foreground mb-8 px-2">
                 Your message has been sent successfully. We'll get back to you within 24 hours.
               </p>
-              <Button
-                onClick={() => {
-                  setSubmitStatus('idle');
-                  setCurrentStep(0);
-                }}
-                className="px-8 py-3 rounded-full"
-              >
-                Send Another Message
-              </Button>
+
+              {maxReached ? (
+                <p className="text-base sm:text-lg text-muted-foreground mb-4 px-2">
+                  You've reached the maximum number of submissions. For additional inquiries, please email us directly at{' '}
+                  <a href="mailto:hello@six3.agency" className="text-accent hover:underline">
+                    hello@six3.agency
+                  </a>
+                </p>
+              ) : cooldownEndTime ? (
+                <div className="mb-4 px-2">
+                  <p className="text-base sm:text-lg text-muted-foreground mb-2">
+                    Please wait {Math.floor(cooldownSeconds / 60)}:{String(cooldownSeconds % 60).padStart(2, '0')} before sending another message.
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    For urgent matters, email us at{' '}
+                    <a href="mailto:hello@six3.agency" className="text-accent hover:underline">
+                      hello@six3.agency
+                    </a>
+                  </p>
+                </div>
+              ) : (
+                <Button
+                  onClick={() => {
+                    setSubmitStatus('idle');
+                    setCurrentStep(0);
+                  }}
+                  className="px-8 py-3 rounded-full"
+                >
+                  Send Another Message
+                </Button>
+              )}
             </div>
           </div>
         </section>
@@ -217,10 +277,10 @@ const Contact = () => {
                 style={{ width: `${((currentStep + 1) / steps.length) * 100}%` }}
               />
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light mb-4">
               {steps[currentStep].title}
             </h1>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-lg sm:text-xl text-muted-foreground">
               {steps[currentStep].subtitle}
             </p>
           </div>
@@ -340,7 +400,12 @@ const Contact = () => {
             {/* Error Message */}
             {submitStatus === 'error' && (
               <div className="mt-8 p-6 border border-red-500/20 rounded-lg bg-red-500/5">
-                <p className="text-foreground">Sorry, there was an error sending your message. Please try again or email us directly at <a href="mailto:hello@six3.agency" className="text-accent hover:underline">hello@six3.agency</a></p>
+                <p className="text-foreground">
+                  {submissionCount >= 2
+                    ? "You've reached the maximum number of submissions. Please email us directly at "
+                    : "Sorry, there was an error sending your message. Please try again or email us directly at "}
+                  <a href="mailto:hello@six3.agency" className="text-accent hover:underline">hello@six3.agency</a>
+                </p>
               </div>
             )}
 
