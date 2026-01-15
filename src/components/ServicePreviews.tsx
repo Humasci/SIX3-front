@@ -4,6 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import icons from "@/utils/iconGenerator";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,16 +15,16 @@ const servicePreviews = [
     shortDescription: "AI-driven search marketing with advanced algorithm optimization",
     features: [
       "Multi-platform campaign management (Google Ads, Meta, LinkedIn, TikTok)",
-      "Real-time AI bid optimization and competitor analysis", 
+      "Real-time AI bid optimization and competitor analysis",
       "Advanced audience segmentation and custom attribution modeling",
       "Automated reporting with performance alerts"
     ],
     investment: "£1K-5K management fees + ad spend",
     path: "/services/search-marketing-ppc",
-    image: "/ai-marketing-ppc-paid-media.png"
+    image: icons.searchMarketing
   },
   {
-    number: "02", 
+    number: "02",
     title: "Generative AI Video & Audio",
     shortDescription: "AI avatars and generative models for unique multimedia content",
     features: [
@@ -33,7 +34,8 @@ const servicePreviews = [
       "Multi-language content localization"
     ],
     investment: "$1.5K-7K+ packages",
-    path: "/services/content-creation"
+    path: "/services/content-creation",
+    image: icons.video
   },
   {
     number: "03",
@@ -46,7 +48,8 @@ const servicePreviews = [
       "Industry-specific solutions (legal, healthcare, real estate)"
     ],
     investment: "$5K-100K+ with 200-500% ROI",
-    path: "/services/ai-dev-automation"
+    path: "/services/ai-dev-automation",
+    image: icons.automation
   }
 ];
 
