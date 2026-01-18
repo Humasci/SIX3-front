@@ -60,21 +60,28 @@ Replace `G-XXXXXXXXXX` with your actual Google Analytics 4 Measurement ID.
 The contact form requires these environment variables to be set in your Vercel project:
 
 ```bash
-MAILGUN_API_KEY=your_mailgun_api_key_here
-MAILGUN_DOMAIN=your_mailgun_domain_here
-ATTIO_API_KEY=your_attio_api_key_here
+MAILTRAP_API_TOKEN=your_mailtrap_api_token_here
+ATTIO_API_KEY=your_attio_api_key_here (optional)
 ```
 
 **Notes:**
 - The API has failsafe error handling - form will work even without these keys
-- Without Mailgun: Emails won't be sent (but form will still accept submissions)
+- Without Mailtrap: Emails won't be sent (but form will still accept submissions)
 - Without Attio: Contacts won't be added to CRM
 - Form submissions to: `hello@six3.agency`
 
+**Where to get Mailtrap API Token:**
+1. Go to https://mailtrap.io/
+2. Sign up or log in
+3. Navigate to: Sending Domains → API Tokens
+4. Create a new API token or copy existing one
+5. Use this token as MAILTRAP_API_TOKEN
+
 **Steps:**
 1. Go to Vercel Dashboard → Your Project → Settings → Environment Variables
-2. Add each variable with its value
-3. Redeploy the application for changes to take effect
+2. Add MAILTRAP_API_TOKEN with your API token
+3. Optionally add ATTIO_API_KEY for CRM integration
+4. Redeploy the application for changes to take effect
 
 ---
 

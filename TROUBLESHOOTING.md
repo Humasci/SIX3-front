@@ -2,15 +2,15 @@
 
 ## Issue: Not Receiving Emails
 
-**This is expected!** The form submissions are working, but emails aren't being sent because Mailgun isn't configured yet.
+**This is expected!** The form submissions are working, but emails aren't being sent because Mailtrap isn't configured yet.
 
 ### Why It Happens
 The API has **failsafe handling** - it returns success even if email sending fails. This means:
 - ✅ Form submissions are accepted
 - ✅ Success screen displays
-- ❌ Emails won't send until Mailgun is configured
+- ❌ Emails won't send until Mailtrap is configured
 
-### Solution: Configure Mailgun in Vercel
+### Solution: Configure Mailtrap in Vercel
 
 1. **Go to Vercel Dashboard**
    - Navigate to: https://vercel.com/dashboard
@@ -106,7 +106,7 @@ vercel dev
 1. **User fills form** → All 4 steps
 2. **Clicks "Send Message"** → POST to /api/contact
 3. **API receives data** → Validates fields
-4. **API tries Mailgun** → Fails silently (no env vars)
+4. **API tries Mailtrap** → Fails silently (no env vars)
 5. **API returns success** → Status 200
 6. **Frontend gets response** → Shows success screen
 7. **User sees** → "Thank You!" message with checkmark
@@ -140,9 +140,9 @@ vercel dev
 
 ---
 
-## Testing Emails (Once Mailgun is Configured)
+## Testing Emails (Once Mailtrap is Configured)
 
-After setting up Mailgun environment variables:
+After setting up Mailtrap environment variables:
 
 1. Submit a test form
 2. Check **hello@six3.agency** inbox
@@ -158,8 +158,8 @@ After setting up Mailgun environment variables:
 
 ## Need Help?
 
-**If emails still don't work after Mailgun setup:**
-1. Check Mailgun dashboard logs
+**If emails still don't work after Mailtrap setup:**
+1. Check Mailtrap dashboard logs
 2. Verify domain DNS settings (SPF, DKIM)
 3. Check spam folder
 4. Verify sender domain is authorized
@@ -185,7 +185,7 @@ After setting up Mailgun environment variables:
 - Success screen appears with green checkmark
 - "Thank You!" message displays
 - Cooldown timer shows (after first submission)
-- Email arrives at hello@six3.agency (after Mailgun setup)
+- Email arrives at hello@six3.agency (after Mailtrap setup)
 
 ❌ **Not Working If:**
 - Form stays on same screen after submit
@@ -229,7 +229,7 @@ ATTIO_API_KEY=your_attio_key
 NODE_ENV=production
 ```
 
-Get Mailgun credentials from: https://app.mailgun.com/
+Get Mailtrap credentials from: https://app.mailgun.com/
 Get Attio credentials from: https://app.attio.com/
 
 ---
@@ -239,4 +239,4 @@ Get Attio credentials from: https://app.attio.com/
 For additional help:
 - Check CLIENT_LAUNCH_CHECKLIST.md
 - Review Vercel documentation: https://vercel.com/docs
-- Check Mailgun docs: https://documentation.mailgun.com/
+- Check Mailtrap docs: https://documentation.mailgun.com/

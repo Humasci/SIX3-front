@@ -12,9 +12,8 @@ interface FormData {
 }
 
 // Environment variables needed:
-// MAILGUN_API_KEY
-// MAILGUN_DOMAIN
-// ATTIO_API_KEY
+// MAILTRAP_API_TOKEN
+// ATTIO_API_KEY (optional)
 
 // Simple in-memory rate limiting (resets on function cold start)
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
@@ -71,15 +70,14 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     }
 
     // Check environment variables
-    const mailgunApiKey = process.env.MAILGUN_API_KEY;
-    const mailgunDomain = process.env.MAILGUN_DOMAIN;
+    const mailtrapToken = process.env.MAILTRAP_API_TOKEN;
     const attioApiKey = process.env.ATTIO_API_KEY;
 
-    // Try to send email via Mailgun (optional)
+    // Try to send email via Mailtrap (optional)
     try {
-      await sendEmailViMailgun(formData);
-    } catch (mailgunError) {
-      // Mailgun is optional, continue if it fails
+      await sendEmailViaMailtrap(formData);
+    } catch (mailtrapError) {
+      // Mailtrap is optional, continue if it fails
     }
 
     // Try to create contact in Attio CRM (optional)
@@ -102,33 +100,40 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 }
 
-async function sendEmailViMailgun(formData: FormData) {
-  const mailgunApiKey = process.env.MAILGUN_API_KEY;
-  const mailgunDomain = process.env.MAILGUN_DOMAIN;
+async function sendEmailViaMailtrap(formData: FormData) {
+  const mailtrapToken = process.env.MAILTRAP_API_TOKEN;
 
-  if (!mailgunApiKey || !mailgunDomain) {
-    throw new Error('Mailgun configuration missing');
+  if (!mailtrapToken) {
+    throw new Error('Mailtrap API token missing');
   }
 
-  const emailData = {
-    from: `Contact Form <noreply@${mailgunDomain}>`,
-    to: 'hello@six3.agency',
+  const emailPayload = {
+    from: {
+      email: "noreply@six3.agency",
+      name: "SIX3 Agency Contact Form"
+    },
+    to: [
+      {
+        email: "hello@six3.agency"
+      }
+    ],
     subject: `New Contact Form Submission from ${formData.name}`,
     html: generateEmailHTML(formData),
-    'h:Reply-To': formData.email,
+    category: "Contact Form"
   };
 
-  const response = await fetch(`https://api.mailgun.net/v3/${mailgunDomain}/messages`, {
+  const response = await fetch('https://send.api.mailtrap.io/api/send', {
     method: 'POST',
     headers: {
-      'Authorization': `Basic ${Buffer.from(`api:${mailgunApiKey}`).toString('base64')}`,
-      'Content-Type': 'application/x-www-form-urlencoded',
+      'Authorization': `Bearer ${mailtrapToken}`,
+      'Content-Type': 'application/json',
     },
-    body: new URLSearchParams(emailData),
+    body: JSON.stringify(emailPayload),
   });
 
   if (!response.ok) {
-    throw new Error(`Mailgun error: ${response.statusText}`);
+    const errorText = await response.text();
+    throw new Error(`Mailtrap error: ${response.statusText} - ${errorText}`);
   }
 }
 
