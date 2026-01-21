@@ -12,7 +12,8 @@ interface FormData {
 }
 
 // Environment variables needed:
-// MAILTRAP_API_TOKEN
+// GMAIL_USER (your hello@six3.agency email)
+// GMAIL_APP_PASSWORD (Gmail App Password - see setup instructions)
 // ATTIO_API_KEY (optional)
 
 // Simple in-memory rate limiting (resets on function cold start)
@@ -70,14 +71,16 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     }
 
     // Check environment variables
-    const mailtrapToken = process.env.MAILTRAP_API_TOKEN;
+    const gmailUser = process.env.GMAIL_USER;
+    const gmailAppPassword = process.env.GMAIL_APP_PASSWORD;
     const attioApiKey = process.env.ATTIO_API_KEY;
 
-    // Try to send email via Mailtrap (optional)
+    // Try to send email via Gmail (optional)
     try {
-      await sendEmailViaMailtrap(formData);
-    } catch (mailtrapError) {
-      // Mailtrap is optional, continue if it fails
+      await sendEmailViaGmail(formData);
+    } catch (emailError) {
+      // Email is optional, continue if it fails
+      console.error('Email error:', emailError);
     }
 
     // Try to create contact in Attio CRM (optional)
@@ -100,41 +103,38 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 }
 
-async function sendEmailViaMailtrap(formData: FormData) {
-  const mailtrapToken = process.env.MAILTRAP_API_TOKEN;
+async function sendEmailViaGmail(formData: FormData) {
+  const gmailUser = process.env.GMAIL_USER;
+  const gmailAppPassword = process.env.GMAIL_APP_PASSWORD;
 
-  if (!mailtrapToken) {
-    throw new Error('Mailtrap API token missing');
+  if (!gmailUser || !gmailAppPassword) {
+    throw new Error('Gmail credentials missing. Please set GMAIL_USER and GMAIL_APP_PASSWORD environment variables.');
   }
 
-  const emailPayload = {
-    from: {
-      email: "noreply@six3.agency",
-      name: "SIX3 Agency Contact Form"
-    },
-    to: [
-      {
-        email: "hello@six3.agency"
-      }
-    ],
-    subject: `New Contact Form Submission from ${formData.name}`,
-    html: generateEmailHTML(formData),
-    category: "Contact Form"
-  };
+  // Import nodemailer dynamically
+  const nodemailer = await import('nodemailer');
 
-  const response = await fetch('https://send.api.mailtrap.io/api/send', {
-    method: 'POST',
-    headers: {
-      'Authorization': `Bearer ${mailtrapToken}`,
-      'Content-Type': 'application/json',
+  // Create transporter using Gmail SMTP
+  const transporter = nodemailer.default.createTransport({
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true, // use SSL
+    auth: {
+      user: gmailUser,
+      pass: gmailAppPassword,
     },
-    body: JSON.stringify(emailPayload),
   });
 
-  if (!response.ok) {
-    const errorText = await response.text();
-    throw new Error(`Mailtrap error: ${response.statusText} - ${errorText}`);
-  }
+  // Send email
+  const info = await transporter.sendMail({
+    from: `"SIX3 Agency Contact Form" <${gmailUser}>`,
+    to: gmailUser, // Send to your own Gmail
+    subject: `New Contact Form Submission from ${formData.name}`,
+    html: generateEmailHTML(formData),
+    replyTo: formData.email, // Allow easy reply to the customer
+  });
+
+  return info;
 }
 
 async function createAttioContact(formData: FormData) {

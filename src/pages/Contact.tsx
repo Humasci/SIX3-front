@@ -172,7 +172,7 @@ const Contact = () => {
         // Set cooldown: 5 minutes after first submission, 15 minutes after second
         const cooldownMinutes = submissionCount === 0 ? 5 : 15;
         setCooldownEndTime(Date.now() + cooldownMinutes * 60 * 1000);
-        // Reset form
+        // Reset form data (but don't reset currentStep - success screen will show instead)
         setFormData({
           name: "",
           email: "",
@@ -183,7 +183,7 @@ const Contact = () => {
           painPoints: "",
           goals: "",
         });
-        setCurrentStep(0);
+        // Don't reset currentStep here - the success screen will display instead
       } else {
         const errorData = await response.json();
         if (response.status === 429) {

@@ -60,28 +60,35 @@ Replace `G-XXXXXXXXXX` with your actual Google Analytics 4 Measurement ID.
 The contact form requires these environment variables to be set in your Vercel project:
 
 ```bash
-MAILTRAP_API_TOKEN=your_mailtrap_api_token_here
+GMAIL_USER=hello@six3.agency
+GMAIL_APP_PASSWORD=your_gmail_app_password_here
 ATTIO_API_KEY=your_attio_api_key_here (optional)
 ```
 
 **Notes:**
 - The API has failsafe error handling - form will work even without these keys
-- Without Mailtrap: Emails won't be sent (but form will still accept submissions)
+- Without Gmail credentials: Emails won't be sent (but form will still accept submissions)
 - Without Attio: Contacts won't be added to CRM
-- Form submissions to: `hello@six3.agency`
+- Form submissions send to: `hello@six3.agency`
 
-**Where to get Mailtrap API Token:**
-1. Go to https://mailtrap.io/
-2. Sign up or log in
-3. Navigate to: Sending Domains → API Tokens
-4. Create a new API token or copy existing one
-5. Use this token as MAILTRAP_API_TOKEN
+**How to get Gmail App Password (REQUIRED):**
+1. Go to your Google Account: https://myaccount.google.com/
+2. Click on "Security" in the left sidebar
+3. Under "Signing in to Google", enable "2-Step Verification" (if not already enabled)
+4. After enabling 2FA, go back to Security
+5. Under "Signing in to Google", click "App passwords" (or search for "App passwords")
+6. Select "Mail" and "Other" (enter "SIX3 Website")
+7. Click "Generate"
+8. Copy the 16-character password (format: xxxx xxxx xxxx xxxx)
+9. Use this password as GMAIL_APP_PASSWORD (remove spaces)
 
 **Steps:**
-1. Go to Vercel Dashboard → Your Project → Settings → Environment Variables
-2. Add MAILTRAP_API_TOKEN with your API token
-3. Optionally add ATTIO_API_KEY for CRM integration
-4. Redeploy the application for changes to take effect
+1. Generate Gmail App Password using steps above
+2. Go to Vercel Dashboard → Your Project → Settings → Environment Variables
+3. Add `GMAIL_USER` with value: `hello@six3.agency`
+4. Add `GMAIL_APP_PASSWORD` with the 16-character password from Gmail
+5. Optionally add `ATTIO_API_KEY` for CRM integration
+6. Redeploy the application for changes to take effect
 
 ---
 
@@ -160,10 +167,11 @@ The meta tags reference: `https://six3.agency/og-image.png`
 - [ ] Form validation works for all required fields
 - [ ] Email validation rejects invalid formats
 - [ ] Form submits successfully
-- [ ] Success message displays after submission
-- [ ] Email received at `hello@six3.agency` (if Mailgun configured)
+- [ ] Success message displays after submission (not the form)
+- [ ] Email received at `hello@six3.agency` Gmail inbox (if Gmail configured)
 - [ ] Contact appears in Attio CRM (if Attio configured)
 - [ ] Rate limiting triggers after 3 submissions
+- [ ] Cooldown timer displays correctly between submissions
 - [ ] Mobile responsiveness works correctly
 
 ---
@@ -352,9 +360,10 @@ vercel --prod
 - Dashboard: https://vercel.com/dashboard
 - Docs: https://vercel.com/docs
 
-**Email Service:** Mailgun
-- Dashboard: https://app.mailgun.com/
-- Docs: https://documentation.mailgun.com/
+**Email Service:** Gmail SMTP (via Nodemailer)
+- Gmail Settings: https://myaccount.google.com/security
+- App Passwords: https://myaccount.google.com/apppasswords
+- Nodemailer Docs: https://nodemailer.com/
 
 **CRM:** Attio
 - Dashboard: https://app.attio.com/
