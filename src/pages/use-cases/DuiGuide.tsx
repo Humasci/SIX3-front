@@ -1,3 +1,4 @@
+import { PageSEO } from "@/components/PageSEO";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { useEffect, useRef } from "react";
@@ -52,6 +53,11 @@ const DuiGuide = () => {
 
   return (
     <div ref={contentRef} className="min-h-screen bg-background text-foreground">
+      <PageSEO
+        title="dui.guide Case Study — AI Legal Guidance Platform | SIX3 Agency"
+        description="How SIX3 Agency automated DUI procedural guidance across all 50 states with AI agents, cutting user journey time from 45 minutes to under 3 minutes."
+        canonical="https://six3.agency/use-cases/dui-guide"
+      />
       <Header />
 
       {/* Hero Section */}

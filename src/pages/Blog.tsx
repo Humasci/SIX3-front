@@ -1,3 +1,4 @@
+import { PageSEO } from "@/components/PageSEO";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { useEffect, useRef } from "react";
@@ -96,6 +97,11 @@ const Blog = () => {
 
   return (
     <div ref={contentRef} className="min-h-screen bg-background text-foreground">
+      <PageSEO
+        title="Blog — AI Marketing & Automation Insights | SIX3 Agency"
+        description="Practical guides and in-depth analysis on AI-powered marketing, automation workflows, generative content, and business transformation from the SIX3 Agency team."
+        canonical="https://six3.agency/blog"
+      />
       <Header />
 
       {/* Hero Section */}
@@ -105,9 +111,21 @@ const Blog = () => {
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-light mb-8">
               Blog
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto mb-12">
-              Insights, strategies, and the latest trends in AI-powered marketing, 
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto mb-8">
+              Insights, strategies, and the latest trends in AI-powered marketing,
               automation, and business transformation.
+            </p>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-6">
+              At SIX3 Agency, we publish practical guides and in-depth analysis for business owners,
+              marketers, and operators who want to use AI to grow faster. Our articles cover everything
+              from setting up your first automated lead workflow to fine-tuning language models on
+              proprietary data — written by the same team that builds these systems for clients every day.
+            </p>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Whether you're exploring AI for the first time or looking to go deeper on topics like
+              generative video, PPC automation, or industry-specific AI applications in legal,
+              healthcare, and real estate — you'll find actionable content here. New articles are
+              published weekly based on what we're seeing work in real client engagements.
             </p>
           </div>
         </div>

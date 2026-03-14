@@ -1,3 +1,4 @@
+import { PageSEO } from "@/components/PageSEO";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { useEffect, useRef } from "react";
@@ -103,6 +104,11 @@ const Services = () => {
 
   return (
     <div ref={contentRef} className="min-h-screen bg-background text-foreground">
+      <PageSEO
+        title="Our Services — SIX3 Agency"
+        description="Search marketing, generative AI video, AI agent automation, and ML fine-tuning services from SIX3 Agency. Comprehensive AI-powered solutions for business growth."
+        canonical="https://six3.agency/services"
+      />
       <Header />
 
       {/* Hero Section */}

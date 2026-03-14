@@ -1,3 +1,4 @@
+import { PageSEO } from "@/components/PageSEO";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { useEffect, useRef } from "react";
@@ -52,6 +53,11 @@ const MLFineTuning = () => {
 
   return (
     <div ref={contentRef} className="min-h-screen bg-background text-foreground">
+      <PageSEO
+        title="ML Model Fine-Tuning — SIX3 Agency"
+        description="Custom fine-tuning of GPT, LLaMA, and Mistral models on your proprietary data. Domain-specific NLP, RLHF, and full model ownership. SIX3 Agency, London."
+        canonical="https://six3.agency/services/ml-fine-tuning"
+      />
       <Header />
 
       {/* Hero Section */}

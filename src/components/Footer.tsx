@@ -5,7 +5,7 @@ export const Footer = () => {
   return (
     <footer className="py-12 px-6 border-t border-border">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-5 gap-8 mb-12">
+        <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-8 mb-12">
           <div>
             <h3 className="text-xl font-light mb-4">SIX3 Agency</h3>
             <p className="text-sm text-muted-foreground">
@@ -25,9 +25,27 @@ export const Footer = () => {
               <li className="hover:text-foreground transition-colors cursor-pointer">
                 <Link to="/services/ai-dev-automation">AI Dev / Automation</Link>
               </li>
+              <li className="hover:text-foreground transition-colors cursor-pointer">
+                <Link to="/services/ml-fine-tuning">ML Fine-Tuning</Link>
+              </li>
             </ul>
           </div>
           
+          <div>
+            <h4 className="text-sm font-medium mb-4 tracking-wider">Case Studies</h4>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li className="hover:text-foreground transition-colors cursor-pointer">
+                <Link to="/use-cases/dui-guide">dui.guide — AI Legal Platform</Link>
+              </li>
+              <li className="hover:text-foreground transition-colors cursor-pointer">
+                <Link to="/use-cases/law-firm-automation">Legal Firm Automation</Link>
+              </li>
+              <li className="hover:text-foreground transition-colors cursor-pointer">
+                <Link to="/use-cases/real-estate-lead-system">Real Estate Lead System</Link>
+              </li>
+            </ul>
+          </div>
+
           <div>
             <h4 className="text-sm font-medium mb-4 tracking-wider">Company</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">

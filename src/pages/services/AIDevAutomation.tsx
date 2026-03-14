@@ -1,3 +1,4 @@
+import { PageSEO } from "@/components/PageSEO";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { useEffect, useRef } from "react";
@@ -53,6 +54,11 @@ const AIDevAutomation = () => {
 
   return (
     <div ref={contentRef} className="min-h-screen bg-background text-foreground">
+      <PageSEO
+        title="AI Agent Creation & Workflow Automation — SIX3 Agency"
+        description="Custom AI agent development for call screening, lead qualification, and customer support. Business process automation with 200-500% ROI. SIX3 Agency, London."
+        canonical="https://six3.agency/services/ai-dev-automation"
+      />
       <Header />
 
       {/* Hero Section */}
@@ -212,6 +218,26 @@ const AIDevAutomation = () => {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Case Study */}
+      <section className="py-24 px-6">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-sm text-muted-foreground mb-8 tracking-wider">
+            Case Study -
+          </p>
+          <h2 className="text-4xl md:text-5xl font-light mb-6">
+            dui.guide — AI-Powered Legal Guidance Platform
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-3xl mb-8">
+            How we automated state and county-specific DUI procedural guidance at scale — delivering 24/7 intelligent navigation to users across all 50 states, cutting the user journey from 45 minutes to under 3 minutes, and tripling attorney directory conversions.
+          </p>
+          <Link to="/use-cases/dui-guide">
+            <Button variant="outline" className="rounded-full px-8 py-4 border-foreground hover:bg-foreground hover:text-background">
+              Read Case Study
+            </Button>
+          </Link>
         </div>
       </section>
 
