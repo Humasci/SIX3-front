@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import SearchMarketingPPC from "./pages/services/SearchMarketingPPC";
 import ContentCreation from "./pages/services/ContentCreation";
 import AIDevAutomation from "./pages/services/AIDevAutomation";
+import MLFineTuning from "./pages/services/MLFineTuning";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Portfolio from "./pages/Portfolio";
@@ -21,6 +22,7 @@ import ProfessionalServices from "./pages/industries/ProfessionalServices";
 import LocalBusiness from "./pages/industries/LocalBusiness";
 import LawFirmAutomation from "./pages/use-cases/LawFirmAutomation";
 import RealEstateLeadSystem from "./pages/use-cases/RealEstateLeadSystem";
+import DuiGuide from "./pages/use-cases/DuiGuide";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Terms from "./pages/Terms";
 import CookiePolicy from "./pages/CookiePolicy";
@@ -44,6 +46,7 @@ const App = () => (
           <Route path="/services/search-marketing-ppc" element={<SearchMarketingPPC />} />
           <Route path="/services/content-creation" element={<ContentCreation />} />
           <Route path="/services/ai-dev-automation" element={<AIDevAutomation />} />
+          <Route path="/services/ml-fine-tuning" element={<MLFineTuning />} />
           <Route path="/industries/legal" element={<Legal />} />
           <Route path="/industries/real-estate" element={<RealEstate />} />
           <Route path="/industries/healthcare" element={<Healthcare />} />
@@ -51,6 +54,7 @@ const App = () => (
           <Route path="/industries/local-business" element={<LocalBusiness />} />
           <Route path="/use-cases/law-firm-automation" element={<LawFirmAutomation />} />
           <Route path="/use-cases/real-estate-lead-system" element={<RealEstateLeadSystem />} />
+          <Route path="/use-cases/dui-guide" element={<DuiGuide />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/cookie-policy" element={<CookiePolicy />} />

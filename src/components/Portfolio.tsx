@@ -67,6 +67,16 @@ const projects = [
     image: icons.manufacturing,
     metrics: "30% cost reduction, 95% accuracy"
   },
+  {
+    id: "dui-guide",
+    number: "07",
+    title: "dui.guide — Legal Guidance Platform",
+    category: "AI Agent Creation & Workflow Automation",
+    year: "2025",
+    description: "AI-powered DUI procedural guidance platform with 24/7 automated support across all 50 states and intelligent attorney matching",
+    image: icons.duiGuide,
+    metrics: "24/7 availability, 3x attorney conversions"
+  },
 ];
 
 export const Portfolio = () => {

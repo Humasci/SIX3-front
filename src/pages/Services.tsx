@@ -55,6 +55,21 @@ const services = [
     investment: "$5K-100K+ with 200-500% ROI",
     image: icons.automation,
     path: "/services/ai-dev-automation"
+  },
+  {
+    number: "04",
+    title: "ML Model Fine-Tuning",
+    subtitle: "Custom model training and optimization on your proprietary data",
+    description: "Fine-tuning of foundation models (GPT, LLaMA, Mistral) on your domain-specific datasets, with full RLHF pipelines, rigorous benchmarking, and scalable deployment — giving you a model that's truly yours.",
+    features: [
+      "Fine-tuning across GPT, LLaMA, Mistral and more",
+      "Domain-specific training for legal, healthcare, finance, and retail",
+      "Reinforcement Learning from Human Feedback (RLHF)",
+      "Full model ownership with ongoing retraining support"
+    ],
+    investment: "£5K-50K+ per project",
+    image: icons.mlFineTuning,
+    path: "/services/ml-fine-tuning"
   }
 ];
 

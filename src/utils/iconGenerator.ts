@@ -300,6 +300,65 @@ export const icons = {
     </svg>
   `),
 
+  // dui.guide / Legal navigation compass
+  duiGuide: encodeDataUri(`
+    <svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+      <rect width="800" height="600" fill="#0a0a0a"/>
+      <g transform="translate(400, 300)">
+        <!-- Outer compass ring -->
+        <circle cx="0" cy="0" r="140" fill="none" stroke="#16a34a" stroke-width="3"/>
+        <circle cx="0" cy="0" r="120" fill="none" stroke="#16a34a" stroke-width="1" opacity="0.3"/>
+        <!-- Compass needle North -->
+        <path d="M 0 -110 L -18 0 L 0 -20 Z" fill="#16a34a"/>
+        <!-- Compass needle South -->
+        <path d="M 0 110 L 18 0 L 0 20 Z" fill="#16a34a" opacity="0.4"/>
+        <!-- Center dot -->
+        <circle cx="0" cy="0" r="8" fill="#16a34a"/>
+        <!-- Cardinal marks -->
+        <line x1="0" y1="-140" x2="0" y2="-128" stroke="#16a34a" stroke-width="3"/>
+        <line x1="0" y1="128" x2="0" y2="140" stroke="#16a34a" stroke-width="3"/>
+        <line x1="-140" y1="0" x2="-128" y2="0" stroke="#16a34a" stroke-width="3"/>
+        <line x1="128" y1="0" x2="140" y2="0" stroke="#16a34a" stroke-width="3"/>
+        <!-- Scale / gavel at bottom -->
+        <line x1="-50" y1="155" x2="50" y2="155" stroke="#16a34a" stroke-width="3" opacity="0.7"/>
+        <circle cx="-50" cy="155" r="5" fill="#16a34a" opacity="0.7"/>
+        <circle cx="50" cy="155" r="5" fill="#16a34a" opacity="0.7"/>
+        <line x1="0" y1="155" x2="0" y2="175" stroke="#16a34a" stroke-width="3" opacity="0.7"/>
+      </g>
+    </svg>
+  `),
+
+  // ML Fine-Tuning / Training curve with neural nodes
+  mlFineTuning: encodeDataUri(`
+    <svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+      <rect width="800" height="600" fill="#0a0a0a"/>
+      <g transform="translate(400, 300)">
+        <!-- Axis -->
+        <line x1="-150" y1="120" x2="150" y2="120" stroke="#16a34a" stroke-width="3"/>
+        <line x1="-150" y1="120" x2="-150" y2="-120" stroke="#16a34a" stroke-width="3"/>
+        <!-- Loss curve going down (training progress) -->
+        <path d="M -130 -90 Q -80 -85 -40 -20 Q 0 40 40 70 Q 80 90 130 100" fill="none" stroke="#16a34a" stroke-width="4"/>
+        <!-- Data points on curve -->
+        <circle cx="-130" cy="-90" r="6" fill="#16a34a"/>
+        <circle cx="-40" cy="-20" r="6" fill="#16a34a"/>
+        <circle cx="40" cy="70" r="6" fill="#16a34a"/>
+        <circle cx="130" cy="100" r="6" fill="#16a34a"/>
+        <!-- Neural nodes -->
+        <circle cx="-160" cy="-60" r="10" fill="none" stroke="#16a34a" stroke-width="2" opacity="0.6"/>
+        <circle cx="-160" cy="20" r="10" fill="none" stroke="#16a34a" stroke-width="2" opacity="0.6"/>
+        <circle cx="-160" cy="80" r="10" fill="none" stroke="#16a34a" stroke-width="2" opacity="0.6"/>
+        <!-- Slider/tuning bar -->
+        <line x1="-50" y1="-130" x2="150" y2="-130" stroke="#16a34a" stroke-width="3" opacity="0.5"/>
+        <rect x="30" y="-140" width="4" height="20" fill="#16a34a"/>
+        <circle cx="32" cy="-130" r="8" fill="none" stroke="#16a34a" stroke-width="2"/>
+        <!-- Axis label ticks -->
+        <line x1="-150" y1="-90" x2="-145" y2="-90" stroke="#16a34a" stroke-width="2" opacity="0.4"/>
+        <line x1="-150" y1="-30" x2="-145" y2="-30" stroke="#16a34a" stroke-width="2" opacity="0.4"/>
+        <line x1="-150" y1="50" x2="-145" y2="50" stroke="#16a34a" stroke-width="2" opacity="0.4"/>
+      </g>
+    </svg>
+  `),
+
   // Video / Camera
   video: encodeDataUri(`
     <svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
