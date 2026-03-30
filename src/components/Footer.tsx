@@ -105,7 +105,7 @@ export const Footer = () => {
         
         <div className="pt-8 border-t border-border text-center">
           <p className="text-sm text-muted-foreground">
-            © 2018 - 2025 FKA WEB Limited Registered in England and Wales No. 11642660. All rights reserved.
+            © 2018 - 2026 FKA WEB Limited Registered in England and Wales No. 11642660. All rights reserved.
           </p>
         </div>
       </div>

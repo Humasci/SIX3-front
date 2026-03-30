@@ -96,6 +96,14 @@ const DuiGuide = () => {
                     <span className="text-sm text-muted-foreground">Implementation Time:</span>
                     <p className="text-lg">10 weeks</p>
                   </div>
+                  <div>
+                    <span className="text-sm text-muted-foreground">Website:</span>
+                    <p className="text-lg">
+                      <a href="https://dui.guide" target="_blank" rel="noopener" className="text-accent hover:underline">
+                        dui.guide
+                      </a>
+                    </p>
+                  </div>
                 </div>
               </div>
               <div className="relative">
