@@ -1,0 +1,33 @@
+<svg viewBox="0 0 280 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color: #16a34a; stop-opacity: 1" />
+      <stop offset="50%" style="stop-color: #22c55e; stop-opacity: 1" />
+      <stop offset="100%" style="stop-color: #4ade80; stop-opacity: 1" />
+    </linearGradient>
+  </defs>
+
+  <!-- SI Text -->
+  <text x="10" y="55" font-family="DM Sans, system-ui, sans-serif" font-size="48" font-weight="700" fill="currentColor" letter-spacing="-0.5">SI</text>
+
+  <!-- Heart formed by X and 3 (tilted) -->
+  <g transform="translate(90, 10)">
+    <!-- Background heart fill -->
+    <g transform="rotate(-10 30 30)">
+      <path d="M30 50 L15 35 C10 30 10 20 15 15 C20 10 28 10 30 15 C32 10 40 10 45 15 C50 20 50 30 45 35 Z" fill="url(#heartGradient)" opacity="0.15"/>
+    </g>
+
+    <!-- X forming left side -->
+    <g transform="rotate(-10 30 30)">
+      <path d="M 18 18 L 30 30 M 30 18 L 18 30" stroke="url(#heartGradient)" stroke-width="4.5" stroke-linecap="round"/>
+    </g>
+
+    <!-- 3 forming right side -->
+    <g transform="rotate(-10 30 30)">
+      <path d="M 35 18 L 42 18 L 38 24 L 42 24 C 44 24 45 25 45 27 C 45 29 44 30 42 30 L 35 30" stroke="url(#heartGradient)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </g>
+  </g>
+
+  <!-- Agency Text -->
+  <text x="165" y="55" font-family="DM Sans, system-ui, sans-serif" font-size="14" font-weight="400" fill="#888" letter-spacing="3" text-transform="uppercase">AGENCY</text>
+</svg>
