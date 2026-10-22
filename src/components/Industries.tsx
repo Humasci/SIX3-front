@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { Scale, Home, Stethoscope, Building, Store, ShoppingCart } from "lucide-react";
+import { Scale, Stethoscope, Building, Store, ShoppingCart, Cloud } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -14,10 +14,10 @@ const industries = [
     path: "/industries/legal"
   },
   {
-    title: "Real Estate",
-    description: "Lead nurturing, property marketing, and client communication",
-    icon: Home,
-    path: "/industries/real-estate"
+    title: "E-commerce",
+    description: "Product marketing automation, customer retention, and sales optimization",
+    icon: ShoppingCart,
+    path: "/industries/ecommerce"
   },
   {
     title: "Healthcare",
@@ -38,10 +38,10 @@ const industries = [
     path: "/industries/local-business"
   },
   {
-    title: "Ecommerce",
-    description: "Product marketing automation, customer retention, and sales optimization",
-    icon: ShoppingCart,
-    path: "/industries/ecommerce"
+    title: "B2B SaaS",
+    description: "Lead generation, product demos, onboarding automation, and customer success",
+    icon: Cloud,
+    path: "/industries/b2b-saas"
   }
 ];
 
