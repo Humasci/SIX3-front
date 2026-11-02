@@ -78,13 +78,13 @@ export const Industries = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 px-6 bg-secondary/20">
+    <section ref={sectionRef} className="py-24 px-6 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="industries-title text-4xl md:text-5xl lg:text-6xl font-light mb-6">
+          <h2 className="industries-title text-4xl md:text-5xl lg:text-6xl font-light mb-6 text-gray-900">
             Industries We Specialize In
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             We cater to all SMEs, with specialized expertise in these key industries
           </p>
         </div>
@@ -93,21 +93,21 @@ export const Industries = () => {
           {industries.map((industry, index) => {
             const IconComponent = industry.icon;
             return (
-              <Link 
+              <Link
                 key={industry.title}
                 to={industry.path}
                 className="industry-card group"
               >
-                <div className="bg-background border border-border p-8 h-full hover:border-accent/50 transition-all duration-300 hover:translate-y-[-4px] hover:shadow-lg">
+                <div className="bg-white border border-gray-200 p-8 h-full hover:border-accent transition-all duration-300 hover:translate-y-[-4px] hover:shadow-lg">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center group-hover:bg-accent/20 transition-colors">
                       <IconComponent className="w-6 h-6 text-accent" />
                     </div>
-                    <h3 className="text-xl font-medium group-hover:text-accent transition-colors">
+                    <h3 className="text-xl font-medium text-gray-900 group-hover:text-accent transition-colors">
                       {industry.title}
                     </h3>
                   </div>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-gray-600 leading-relaxed">
                     {industry.description}
                   </p>
                 </div>
