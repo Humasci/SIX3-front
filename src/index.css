@@ -107,6 +107,11 @@ All colors MUST be HSL.
     --input: 245 20% 86%;
     --ring: 271 81% 52%;
     background-color: hsl(var(--background));
+    background-image:
+      radial-gradient(circle at 8% 0%, rgb(124 58 237 / 0.07), transparent 38%),
+      radial-gradient(circle at 96% 100%, rgb(249 115 22 / 0.06), transparent 38%),
+      radial-gradient(rgb(16 16 48 / 0.08) 1px, transparent 1.3px);
+    background-size: auto, auto, 22px 22px;
     color: hsl(var(--foreground));
   }
 
