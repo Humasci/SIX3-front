@@ -9,10 +9,10 @@ export const Logo = ({ className = "", isScrolled = false }: LogoProps) => {
   return (
     <Link to="/" className={`flex items-center gap-1.5 ${className}`}>
       <div className={`flex items-baseline gap-0.5 transition-all duration-400 ${isScrolled ? 'text-xl' : 'text-2xl'} font-bold`}>
-        {/* SI text */}
-        <span className="tracking-tight">SI</span>
+        {/* SIX text */}
+        <span className="tracking-tight">SIX</span>
 
-        {/* Green heart replacing the "3" at the end */}
+        {/* Green heart at the end representing the "³" (power of 3) */}
         <svg
           viewBox="0 0 24 28"
           className={`transition-all duration-400 ${isScrolled ? 'w-5 h-6' : 'w-6 h-7'} mb-0.5`}
