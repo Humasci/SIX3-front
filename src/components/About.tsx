@@ -43,7 +43,7 @@ const AnimatedCounter = ({ end }: { end: number }) => {
   }, [end]);
 
   return (
-    <div ref={ref} className="text-8xl md:text-9xl font-light tracking-tight">
+    <div ref={ref} className="text-8xl md:text-9xl font-light tracking-tight bg-gradient-to-r from-[#7c3aed] via-[#ec4899] to-[#f97316] bg-clip-text text-transparent">
       {count.toString().split('').map((digit, i) => (
         <span key={i} className="inline-block">
           {digit}
@@ -82,7 +82,7 @@ export const About = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 px-6">
+    <section ref={sectionRef} className="theme-light py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16">
           <p className="about-label text-sm text-muted-foreground mb-8 tracking-wider">Who we are -</p>
@@ -90,11 +90,11 @@ export const About = () => {
             SIX3 Agency delivers AI-powered marketing solutions that drive measurable results.
           </h2>
           <p className="about-description text-lg text-muted-foreground max-w-2xl mb-12">
-            We specialize in AI-driven search marketing, generative content creation, and custom AI agent development. 
+            We specialize in AI-driven search marketing, generative content creation, and custom AI agent development.
             Our advanced automation solutions maximize ROI and scale your business operations efficiently.
           </p>
           <Link to="/about">
-            <Button variant="outline" className="about-description rounded-full px-8 py-6 text-base border-foreground hover:bg-foreground hover:text-background group">
+            <Button variant="outline" className="about-description rounded-full px-8 py-6 text-base border-foreground text-foreground bg-transparent hover:bg-foreground hover:text-background group">
               <ArrowDown className="w-5 h-5 mr-2 group-hover:translate-y-1 transition-transform" />
               About Us
             </Button>

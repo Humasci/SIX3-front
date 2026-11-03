@@ -202,7 +202,7 @@ export const Portfolio = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 px-6 bg-secondary/30">
+    <section ref={sectionRef} className="theme-light py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="portfolio-header mb-16">
           <p className="text-sm text-muted-foreground mb-8 tracking-wider">
@@ -235,12 +235,12 @@ export const Portfolio = () => {
                   alt={project.title}
                   className="portfolio-image w-full h-full object-cover transition-transform duration-500"
                 />
-                <div className="portfolio-overlay absolute inset-0 bg-background/90 opacity-0 flex items-center justify-center backdrop-blur-sm">
-                  <span className="text-2xl font-light">View Project</span>
+                <div className="portfolio-overlay absolute inset-0 bg-[hsl(243_50%_10%/0.85)] opacity-0 flex items-center justify-center backdrop-blur-sm">
+                  <span className="text-2xl font-light text-white">View Project</span>
                 </div>
               </div>
               <div className="flex items-start justify-between mb-2">
-                <span className="project-number text-4xl font-light text-muted-foreground/50 transition-all duration-300">
+                <span className="project-number text-4xl font-light text-accent transition-all duration-300">
                   {project.number}
                 </span>
                 <span className="text-sm text-muted-foreground">

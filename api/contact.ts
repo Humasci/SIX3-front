@@ -12,9 +12,9 @@ interface FormData {
 }
 
 // Environment variables needed:
-// MAILGUN_API_KEY
-// MAILGUN_DOMAIN
-// ATTIO_API_KEY
+// GMAIL_USER (your hello@six3.agency email)
+// GMAIL_APP_PASSWORD (Gmail App Password - see setup instructions)
+// ATTIO_API_KEY (optional)
 
 // Simple in-memory rate limiting (resets on function cold start)
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
@@ -71,15 +71,16 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     }
 
     // Check environment variables
-    const mailgunApiKey = process.env.MAILGUN_API_KEY;
-    const mailgunDomain = process.env.MAILGUN_DOMAIN;
+    const gmailUser = process.env.GMAIL_USER;
+    const gmailAppPassword = process.env.GMAIL_APP_PASSWORD;
     const attioApiKey = process.env.ATTIO_API_KEY;
 
-    // Try to send email via Mailgun (optional)
+    // Try to send email via Gmail (optional)
     try {
-      await sendEmailViMailgun(formData);
-    } catch (mailgunError) {
-      // Mailgun is optional, continue if it fails
+      await sendEmailViaGmail(formData);
+    } catch (emailError) {
+      // Email is optional, continue if it fails
+      console.error('Email error:', emailError);
     }
 
     // Try to create contact in Attio CRM (optional)
@@ -102,34 +103,38 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 }
 
-async function sendEmailViMailgun(formData: FormData) {
-  const mailgunApiKey = process.env.MAILGUN_API_KEY;
-  const mailgunDomain = process.env.MAILGUN_DOMAIN;
+async function sendEmailViaGmail(formData: FormData) {
+  const gmailUser = process.env.GMAIL_USER;
+  const gmailAppPassword = process.env.GMAIL_APP_PASSWORD;
 
-  if (!mailgunApiKey || !mailgunDomain) {
-    throw new Error('Mailgun configuration missing');
+  if (!gmailUser || !gmailAppPassword) {
+    throw new Error('Gmail credentials missing. Please set GMAIL_USER and GMAIL_APP_PASSWORD environment variables.');
   }
 
-  const emailData = {
-    from: `Contact Form <noreply@${mailgunDomain}>`,
-    to: 'hello@six3.agency',
-    subject: `New Contact Form Submission from ${formData.name}`,
-    html: generateEmailHTML(formData),
-    'h:Reply-To': formData.email,
-  };
+  // Import nodemailer dynamically
+  const nodemailer = await import('nodemailer');
 
-  const response = await fetch(`https://api.mailgun.net/v3/${mailgunDomain}/messages`, {
-    method: 'POST',
-    headers: {
-      'Authorization': `Basic ${Buffer.from(`api:${mailgunApiKey}`).toString('base64')}`,
-      'Content-Type': 'application/x-www-form-urlencoded',
+  // Create transporter using Gmail SMTP
+  const transporter = nodemailer.default.createTransport({
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true, // use SSL
+    auth: {
+      user: gmailUser,
+      pass: gmailAppPassword,
     },
-    body: new URLSearchParams(emailData),
   });
 
-  if (!response.ok) {
-    throw new Error(`Mailgun error: ${response.statusText}`);
-  }
+  // Send email
+  const info = await transporter.sendMail({
+    from: `"SIX3 Agency Contact Form" <${gmailUser}>`,
+    to: gmailUser, // Send to your own Gmail
+    subject: `New Contact Form Submission from ${formData.name}`,
+    html: generateEmailHTML(formData),
+    replyTo: formData.email, // Allow easy reply to the customer
+  });
+
+  return info;
 }
 
 async function createAttioContact(formData: FormData) {

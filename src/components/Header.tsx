@@ -2,7 +2,7 @@ import { ShoppingBag } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ServiceDropdown } from "./ServiceDropdown";
 import { MobileMenu } from "./MobileMenu";
-import logo from "@/assets/SIX3Agency-AI-marketing-logo.png";
+import { Logo } from "./Logo";
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import gsap from "gsap";
@@ -70,15 +70,9 @@ export const Header = () => {
       }`}
     >
       <div className="relative flex items-center justify-between px-6">
-        <Link to="/" className="flex items-center nav-item">
-          <img 
-            src={logo} 
-            alt="SIX3 Agency" 
-            className={`transition-all duration-400 ${
-              isScrolled ? "h-[4.91rem] md:h-[7.02rem]" : "h-[4.91rem] md:h-[7.02rem]"
-            }`}
-          />
-        </Link>
+        <div className="nav-item">
+          <Logo isScrolled={isScrolled} />
+        </div>
         
         <nav className="hidden md:flex items-center gap-8">
           <Link to="/" className="nav-item text-base hover:text-accent transition-colors relative group">

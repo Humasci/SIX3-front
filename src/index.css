@@ -8,75 +8,75 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 0%;
+    --background: 243 50% 10%;
     --foreground: 0 0% 100%;
 
-    --card: 0 0% 5%;
+    --card: 243 45% 14%;
     --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 5%;
+    --popover: 243 45% 14%;
     --popover-foreground: 0 0% 100%;
 
     --primary: 0 0% 100%;
-    --primary-foreground: 0 0% 0%;
+    --primary-foreground: 243 50% 10%;
 
-    --secondary: 0 0% 10%;
+    --secondary: 243 40% 18%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 0 0% 15%;
+    --muted: 243 35% 24%;
     --muted-foreground: 0 0% 60%;
 
-    --accent: 142 76% 36%;
+    --accent: 271 81% 56%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 15%;
-    --input: 0 0% 15%;
+    --border: 245 30% 22%;
+    --input: 245 30% 22%;
     --ring: 0 0% 100%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 5%;
+    --sidebar-background: 245 48% 10%;
     --sidebar-foreground: 0 0% 100%;
     --sidebar-primary: 0 0% 100%;
-    --sidebar-primary-foreground: 0 0% 0%;
-    --sidebar-accent: 0 0% 10%;
+    --sidebar-primary-foreground: 245 55% 6%;
+    --sidebar-accent: 245 40% 14%;
     --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 0 0% 15%;
+    --sidebar-border: 245 30% 22%;
     --sidebar-ring: 0 0% 100%;
   }
 
   .dark {
-    --background: 0 0% 0%;
+    --background: 243 50% 10%;
     --foreground: 0 0% 100%;
 
-    --card: 0 0% 5%;
+    --card: 243 45% 14%;
     --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 5%;
+    --popover: 243 45% 14%;
     --popover-foreground: 0 0% 100%;
 
     --primary: 0 0% 100%;
-    --primary-foreground: 0 0% 0%;
+    --primary-foreground: 243 50% 10%;
 
-    --secondary: 0 0% 10%;
+    --secondary: 243 40% 18%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 0 0% 15%;
+    --muted: 243 35% 24%;
     --muted-foreground: 0 0% 60%;
 
-    --accent: 142 76% 36%;
+    --accent: 271 81% 56%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 15%;
-    --input: 0 0% 15%;
+    --border: 245 30% 22%;
+    --input: 245 30% 22%;
     --ring: 0 0% 100%;
-    --sidebar-background: 0 0% 5%;
+    --sidebar-background: 245 48% 10%;
     --sidebar-foreground: 0 0% 100%;
     --sidebar-primary: 0 0% 100%;
     --sidebar-primary-foreground: 0 0% 0%;
@@ -88,6 +88,28 @@ All colors MUST be HSL.
 }
 
 @layer base {
+  .theme-light {
+    --background: 240 20% 98%;
+    --foreground: 243 50% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 243 50% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 243 50% 12%;
+    --primary: 243 50% 12%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 245 30% 94%;
+    --secondary-foreground: 243 50% 12%;
+    --muted: 245 25% 92%;
+    --muted-foreground: 243 12% 38%;
+    --accent: 271 81% 52%;
+    --accent-foreground: 0 0% 100%;
+    --border: 245 20% 86%;
+    --input: 245 20% 86%;
+    --ring: 271 81% 52%;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+
   * {
     @apply border-border;
   }
