@@ -18,14 +18,14 @@ const projects = [
     metrics: "60% time reduction, $150K savings"
   },
   {
-    id: "real-estate-lead-system",
+    id: "media-publisher-directory",
     number: "02",
-    title: "Real Estate Lead Management",
-    category: "Workflow Automation",
-    year: "2024",
-    description: "45% increase in lead conversion, 70% reduction in manual follow-up, $200K revenue increase",
-    image: icons.realEstate,
-    metrics: "45% conversion increase, $200K revenue boost"
+    title: "Media Publisher & Directory Platform",
+    category: "AI Content & SEO Automation",
+    year: "2025",
+    description: "AI-assisted publishing pipeline that generates, refreshes and interlinks directory listings and editorial pages at scale",
+    image: icons.directory,
+    metrics: "Programmatic SEO with editorial review"
   },
   {
     id: "ecommerce-ai-campaign",
@@ -78,6 +78,11 @@ const projects = [
     metrics: "24/7 availability, 3x attorney conversions"
   },
 ];
+
+const caseStudyPages: Record<string, string> = {
+  "law-firm-automation": "/use-cases/law-firm-automation",
+  "dui-guide": "/use-cases/dui-guide",
+};
 
 export const Portfolio = ({ lightHeader = false }: { lightHeader?: boolean }) => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -230,7 +235,7 @@ export const Portfolio = ({ lightHeader = false }: { lightHeader?: boolean }) =>
           {projects.slice(0, 3).map((project) => (
             <Link
               key={project.id}
-              to={`/portfolio/${project.id}`}
+              to={caseStudyPages[project.id] ?? `/portfolio/${project.id}`}
               className="portfolio-item group block transform-gpu"
             >
               <div className="media-frame mb-4 aspect-[4/3]">

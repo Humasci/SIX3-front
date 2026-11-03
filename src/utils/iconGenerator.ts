@@ -398,6 +398,32 @@ export const icons = {
       </g>
     </svg>
   `),
+  // Media publisher / directory
+  directory: encodeDataUri(`
+    <svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+      <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="-200" y1="-160" x2="200" y2="160"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#a855f7"/><stop offset="100%" stop-color="#f97316"/></linearGradient><radialGradient id="glowA" cx="12%" cy="8%" r="65%"><stop offset="0%" stop-color="#7c3aed" stop-opacity="0.55"/><stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/></radialGradient><radialGradient id="glowB" cx="92%" cy="96%" r="60%"><stop offset="0%" stop-color="#f97316" stop-opacity="0.35"/><stop offset="100%" stop-color="#f97316" stop-opacity="0"/></radialGradient><radialGradient id="halo" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#a855f7" stop-opacity="0.28"/><stop offset="70%" stop-color="#a855f7" stop-opacity="0.06"/><stop offset="100%" stop-color="#a855f7" stop-opacity="0"/></radialGradient><linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#a855f7"/><stop offset="100%" stop-color="#f97316"/></linearGradient><pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.3" fill="#ffffff" fill-opacity="0.07"/></pattern></defs>
+      <rect width="800" height="600" fill="#0e0e2a"/><rect width="800" height="600" fill="url(#glowA)"/><rect width="800" height="600" fill="url(#glowB)"/><rect width="800" height="600" fill="url(#dots)"/><circle cx="400" cy="300" r="250" fill="url(#halo)"/><circle cx="400" cy="300" r="215" fill="none" stroke="url(#ring)" stroke-width="1.5" stroke-opacity="0.35"/><circle cx="400" cy="300" r="160" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1.4"/>
+      <g transform="translate(400, 300)" stroke-linecap="round" stroke-linejoin="round">
+        <!-- Listing cards -->
+        <rect x="-170" y="-120" width="100" height="70" rx="10" fill="none" stroke="url(#g)" stroke-width="4.2"/>
+        <rect x="-50" y="-120" width="100" height="70" rx="10" fill="none" stroke="url(#g)" stroke-width="4.2"/>
+        <rect x="70" y="-120" width="100" height="70" rx="10" fill="none" stroke="url(#g)" stroke-width="4.2"/>
+        <rect x="-170" y="-30" width="100" height="70" rx="10" fill="none" stroke="url(#g)" stroke-width="4.2"/>
+        <rect x="-50" y="-30" width="100" height="70" rx="10" fill="url(#g)" opacity="0.3"/>
+        <rect x="-50" y="-30" width="100" height="70" rx="10" fill="none" stroke="url(#g)" stroke-width="4.2"/>
+        <rect x="-170" y="60" width="100" height="70" rx="10" fill="none" stroke="url(#g)" stroke-width="4.2" opacity="0.6"/>
+        <rect x="-50" y="60" width="100" height="70" rx="10" fill="none" stroke="url(#g)" stroke-width="4.2" opacity="0.6"/>
+        <!-- Card text lines -->
+        <line x1="-155" y1="-95" x2="-100" y2="-95" stroke="url(#g)" stroke-width="2.8" opacity="0.6"/>
+        <line x1="-35" y1="-95" x2="20" y2="-95" stroke="url(#g)" stroke-width="2.8" opacity="0.6"/>
+        <line x1="85" y1="-95" x2="140" y2="-95" stroke="url(#g)" stroke-width="2.8" opacity="0.6"/>
+        <line x1="-155" y1="-5" x2="-100" y2="-5" stroke="url(#g)" stroke-width="2.8" opacity="0.6"/>
+        <!-- Search magnifier -->
+        <circle cx="120" cy="40" r="42" fill="none" stroke="url(#g)" stroke-width="5.6"/>
+        <line x1="150" y1="70" x2="190" y2="110" stroke="url(#g)" stroke-width="7"/>
+      </g>
+    </svg>
+  `),
 };
 
 export default icons;

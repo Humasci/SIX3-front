@@ -4,7 +4,7 @@ import { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ParticleHelix } from "@/components/ParticleHelix";
+import { ParticleLoop } from "@/components/ParticleLoop";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -136,7 +136,7 @@ export const Hero = () => {
     <section ref={heroRef} className="relative min-h-screen flex flex-col">
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div ref={visualRef} className="absolute inset-0">
-          <ParticleHelix className="w-full h-full" />
+          <ParticleLoop className="w-full h-full" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent md:via-transparent pointer-events-none" />
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-background pointer-events-none" />
