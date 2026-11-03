@@ -9,19 +9,19 @@ const pillars = [
     title: "Discover",
     subtitle: "Every business gets a custom AI strategy",
     description: "We analyze your market, competitors, and opportunities to design AI solutions that drive real growth.",
-    gradient: "linear-gradient(90deg, #2563eb 0%, #c026d3 50%, #ea580c 100%)"
+    gradient: "linear-gradient(90deg, #00d4ff 0%, #ff1493 50%, #a855f7 100%)"
   },
   {
     title: "Transform",
     subtitle: "AI that works while you focus on what matters",
     description: "Your marketing transforms into an automated system that generates leads, creates content, and engages customers 24/7.",
-    gradient: "linear-gradient(90deg, #c026d3 0%, #ea580c 50%, #eab308 100%)"
+    gradient: "linear-gradient(90deg, #ff1493 0%, #a855f7 50%, #00d4ff 100%)"
   },
   {
     title: "Optimize",
     subtitle: "Continuous improvement powered by data",
     description: "Real-time analytics and AI-driven insights ensure your marketing performance improves every day.",
-    gradient: "linear-gradient(90deg, #ea580c 0%, #eab308 50%, #16a34a 100%)"
+    gradient: "linear-gradient(90deg, #a855f7 0%, #00d4ff 50%, #ff1493 100%)"
   }
 ];
 
@@ -47,7 +47,7 @@ export const ThreePillars = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 px-6 bg-[#0a0f1e]">
+    <section ref={sectionRef} className="py-24 px-6 bg-background">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-light mb-4 text-white">

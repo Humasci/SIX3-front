@@ -21,9 +21,9 @@ export const Logo = ({ className = "", isScrolled = false }: LogoProps) => {
         >
           <defs>
             <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style={{ stopColor: '#16a34a', stopOpacity: 1 }} />
-              <stop offset="50%" style={{ stopColor: '#22c55e', stopOpacity: 1 }} />
-              <stop offset="100%" style={{ stopColor: '#4ade80', stopOpacity: 1 }} />
+              <stop offset="0%" style={{ stopColor: '#00d4ff', stopOpacity: 1 }} />
+              <stop offset="50%" style={{ stopColor: '#ff1493', stopOpacity: 1 }} />
+              <stop offset="100%" style={{ stopColor: '#a855f7', stopOpacity: 1 }} />
             </linearGradient>
           </defs>
 
