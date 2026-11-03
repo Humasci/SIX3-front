@@ -8,14 +8,14 @@ interface LogoProps {
 export const Logo = ({ className = "", isScrolled = false }: LogoProps) => {
   return (
     <Link to="/" className={`flex items-center gap-1.5 ${className}`}>
-      <div className={`flex items-baseline gap-0 transition-all duration-400 ${isScrolled ? 'text-xl' : 'text-2xl'} font-bold`}>
-        {/* SIX text */}
-        <span className="tracking-tight">SIX</span>
+      <div className={`flex items-baseline gap-0.5 transition-all duration-400 ${isScrolled ? 'text-xl' : 'text-2xl'} font-bold`}>
+        {/* SI text */}
+        <span className="tracking-tight">SI</span>
 
-        {/* Lovable-style heart with green gradient */}
+        {/* Green heart replacing the "3" at the end */}
         <svg
           viewBox="0 0 24 28"
-          className={`transition-all duration-400 ${isScrolled ? 'w-5 h-6' : 'w-6 h-7'} -ml-0.5 mb-0.5`}
+          className={`transition-all duration-400 ${isScrolled ? 'w-5 h-6' : 'w-6 h-7'} mb-0.5`}
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >

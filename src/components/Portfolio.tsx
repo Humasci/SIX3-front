@@ -192,7 +192,7 @@ export const Portfolio = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 px-6 bg-secondary/30">
+    <section ref={sectionRef} className="py-24 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="portfolio-header mb-16">
           <p className="text-sm text-muted-foreground mb-8 tracking-wider">

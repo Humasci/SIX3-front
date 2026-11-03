@@ -77,7 +77,7 @@ export const ServicePreviews = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 px-6 bg-secondary/20">
+    <section ref={sectionRef} className="py-24 px-6 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <div className="service-preview-header mb-16">
           <p className="text-sm text-muted-foreground mb-8 tracking-wider">Our Core Services -</p>
