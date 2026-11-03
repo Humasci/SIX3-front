@@ -54,14 +54,14 @@ const DuiGuide = () => {
   return (
     <div ref={contentRef} className="min-h-screen bg-background text-foreground">
       <PageSEO
-        title="dui.guide Case Study — AI Legal Guidance Platform | SIX3 Agency"
-        description="How SIX3 Agency automated DUI procedural guidance across all 50 states with AI agents, cutting user journey time from 45 minutes to under 3 minutes."
+        title="dui.guide Case Study — AI Legal Guidance Platform | SIX³ Agency"
+        description="How SIX³ Agency automated DUI procedural guidance across all 50 states with AI agents, cutting user journey time from 45 minutes to under 3 minutes."
         canonical="https://six3.agency/use-cases/dui-guide"
       />
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-6">
+      <section className="theme-light pt-32 pb-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="case-study-hero">
             <div className="flex items-center gap-2 mb-6">
@@ -69,9 +69,10 @@ const DuiGuide = () => {
               <ArrowRight className="w-4 h-4" />
               <span>Case Study</span>
             </div>
-            <h1 className="text-3xl md:text-3xl lg:text-4xl font-light mb-8">
+            <h1 className="text-3xl md:text-3xl lg:text-4xl font-light mb-8 text-gradient w-fit pb-1">
               dui.guide — AI-Powered Legal Guidance Platform
             </h1>
+            <div className="h-1 w-40 bg-brand-gradient rounded-full mb-8" />
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="text-xl text-muted-foreground mb-8">
@@ -110,7 +111,7 @@ const DuiGuide = () => {
                 <img
                   src={icons.duiGuide}
                   alt="dui.guide platform"
-                  className="w-full aspect-video object-cover rounded-lg"
+                  className="media-frame w-full aspect-[4/3] object-cover"
                 />
               </div>
             </div>

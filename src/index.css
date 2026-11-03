@@ -89,16 +89,16 @@ All colors MUST be HSL.
 
 @layer base {
   .theme-light {
-    --background: 240 20% 98%;
-    --foreground: 243 50% 12%;
+    --background: 0 0% 100%;
+    --foreground: 240 20% 7%;
     --card: 0 0% 100%;
-    --card-foreground: 243 50% 12%;
+    --card-foreground: 240 20% 7%;
     --popover: 0 0% 100%;
-    --popover-foreground: 243 50% 12%;
-    --primary: 243 50% 12%;
+    --popover-foreground: 240 20% 7%;
+    --primary: 240 20% 7%;
     --primary-foreground: 0 0% 100%;
     --secondary: 245 30% 94%;
-    --secondary-foreground: 243 50% 12%;
+    --secondary-foreground: 240 20% 7%;
     --muted: 245 25% 92%;
     --muted-foreground: 243 12% 38%;
     --accent: 271 81% 52%;
@@ -150,4 +150,34 @@ All colors MUST be HSL.
     border-top: 2px solid transparent;
     border-image: linear-gradient(90deg, #7c3aed 0%, #ec4899 50%, #f97316 100%) 1;
   }
+}
+
+@layer components {
+  .media-frame {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    background-color: #0e0e2a;
+    box-shadow: 0 0 0 1px rgb(255 255 255 / 0.08), 0 24px 60px -28px rgb(124 58 237 / 0.55);
+  }
+
+  .theme-light .media-frame {
+    box-shadow: 0 0 0 1px rgb(16 16 48 / 0.06), 0 28px 60px -28px rgb(124 58 237 / 0.5);
+  }
+
+  .icon-tile {
+    border-radius: 1rem;
+    background:
+      radial-gradient(circle at 15% 10%, rgb(124 58 237 / 0.45), transparent 55%),
+      radial-gradient(circle at 90% 95%, rgb(249 115 22 / 0.3), transparent 55%),
+      #0e0e2a;
+    box-shadow: 0 0 0 1px rgb(255 255 255 / 0.08), 0 24px 60px -28px rgb(124 58 237 / 0.55);
+  }
+}
+
+svg.text-gradient,
+svg[class*="hover:text-gradient"]:hover,
+.group:hover svg[class*="group-hover:text-gradient"] {
+  color: #ec4899;
+  stroke: url(#brand-grad);
 }

@@ -16,7 +16,7 @@ const blogPosts = [
     id: 1,
     title: "How AI is Revolutionizing PPC Campaign Management in 2025",
     excerpt: "Discover the latest AI technologies transforming paid advertising and how they're delivering unprecedented ROI for businesses of all sizes.",
-    author: "SIX3 Team",
+    author: "SIX³ Team",
     date: "November 25, 2025",
     readTime: "8 min read",
     category: "AI Marketing",
@@ -27,7 +27,7 @@ const blogPosts = [
     id: 2,
     title: "The Complete Guide to Voice Cloning for Business Marketing",
     excerpt: "Learn how voice cloning technology can create personalized customer experiences and scale your content production.",
-    author: "SIX3 Team",
+    author: "SIX³ Team",
     date: "November 22, 2025",
     readTime: "12 min read",
     category: "Content Creation",
@@ -37,7 +37,7 @@ const blogPosts = [
     id: 3,
     title: "5 AI Automation Workflows Every Legal Firm Should Implement",
     excerpt: "Streamline client intake, case management, and document processing with these proven AI automation strategies.",
-    author: "SIX3 Team",
+    author: "SIX³ Team",
     date: "November 20, 2025",
     readTime: "10 min read",
     category: "Automation",
@@ -47,7 +47,7 @@ const blogPosts = [
     id: 4,
     title: "Real Estate Lead Generation: AI vs Traditional Methods",
     excerpt: "Compare the effectiveness of AI-powered lead generation against traditional real estate marketing approaches.",
-    author: "SIX3 Team",
+    author: "SIX³ Team",
     date: "November 18, 2025",
     readTime: "7 min read",
     category: "Lead Generation",
@@ -57,7 +57,7 @@ const blogPosts = [
     id: 6,
     title: "Healthcare AI: Improving Patient Communication and Scheduling",
     excerpt: "How AI chatbots and automation are transforming patient experiences in healthcare practices.",
-    author: "SIX3 Team",
+    author: "SIX³ Team",
     date: "November 12, 2025",
     readTime: "9 min read",
     category: "Healthcare AI",
@@ -98,25 +98,26 @@ const Blog = () => {
   return (
     <div ref={contentRef} className="min-h-screen bg-background text-foreground">
       <PageSEO
-        title="Blog — AI Marketing & Automation Insights | SIX3 Agency"
-        description="Practical guides and in-depth analysis on AI-powered marketing, automation workflows, generative content, and business transformation from the SIX3 Agency team."
+        title="Blog — AI Marketing & Automation Insights | SIX³ Agency"
+        description="Practical guides and in-depth analysis on AI-powered marketing, automation workflows, generative content, and business transformation from the SIX³ Agency team."
         canonical="https://six3.agency/blog"
       />
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-6 mt-5">
+      <section className="theme-light pt-32 pb-16 px-6 mt-5">
         <div className="max-w-7xl mx-auto">
           <div className="blog-hero text-center mb-16">
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-light mb-8">
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-light mb-8 text-gradient w-fit pb-1 mx-auto">
               Blog
             </h1>
+            <div className="h-1 w-40 bg-brand-gradient rounded-full mb-8 mx-auto" />
             <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto mb-8">
               Insights, strategies, and the latest trends in AI-powered marketing,
               automation, and business transformation.
             </p>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-6">
-              At SIX3 Agency, we publish practical guides and in-depth analysis for business owners,
+              At SIX³ Agency, we publish practical guides and in-depth analysis for business owners,
               marketers, and operators who want to use AI to grow faster. Our articles cover everything
               from setting up your first automated lead workflow to fine-tuning language models on
               proprietary data — written by the same team that builds these systems for clients every day.
@@ -163,7 +164,7 @@ const Blog = () => {
                 </Button>
               </div>
               <div className="relative">
-                <div className="aspect-[4/3] bg-gradient-to-br from-accent/20 to-accent/5 rounded-2xl overflow-hidden">
+                <div className="media-frame aspect-[4/3]">
                   <img 
                     src={post.image} 
                     alt={post.title}

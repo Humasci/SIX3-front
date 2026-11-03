@@ -111,7 +111,7 @@ const ProfessionalServices = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-6">
+      <section className="theme-light pt-32 pb-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="professional-hero grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -119,9 +119,10 @@ const ProfessionalServices = () => {
                 <Briefcase className="w-8 h-8 icon-gradient" />
                 <span className="text-gradient font-medium">Professional Services</span>
               </div>
-              <h1 className="text-3xl md:text-3xl lg:text-4xl font-light mb-6">
+              <h1 className="text-3xl md:text-3xl lg:text-4xl font-light mb-6 text-gradient w-fit pb-1">
                 AI Automation for Professional Service Firms
               </h1>
+            <div className="h-1 w-40 bg-brand-gradient rounded-full mb-8" />
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
                 Streamline client operations, automate routine tasks, and focus on high-value advisory work 
                 with intelligent automation tailored for accounting, consulting, and financial advisory firms.
@@ -143,7 +144,7 @@ const ProfessionalServices = () => {
               <img
                 src={icons.professionalServices}
                 alt="Professional Services"
-                className="w-full aspect-square object-cover rounded-2xl"
+                className="media-frame w-full max-w-lg ml-auto aspect-[4/3] object-cover"
               />
             </div>
           </div>
@@ -280,8 +281,8 @@ const ProfessionalServices = () => {
               </ul>
             </div>
             <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-accent/20 to-accent/5 rounded-2xl flex items-center justify-center">
-                <Briefcase className="w-32 h-32 text-accent/40" />
+              <div className="icon-tile aspect-[4/3] w-full max-w-lg ml-auto flex items-center justify-center">
+                <Briefcase className="w-24 h-24 icon-gradient" />
               </div>
             </div>
           </div>

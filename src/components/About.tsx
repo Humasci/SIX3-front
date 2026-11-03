@@ -87,7 +87,7 @@ export const About = () => {
         <div className="mb-16">
           <p className="about-label text-sm text-muted-foreground mb-8 tracking-wider">Who we are <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" /></p>
           <h2 className="about-title text-4xl md:text-5xl font-light mb-8 max-w-3xl">
-            SIX3 Agency delivers AI-powered marketing solutions that drive measurable results.
+            SIX³ Agency delivers AI-powered marketing solutions that drive measurable results.
           </h2>
           <p className="about-description text-lg text-muted-foreground max-w-2xl mb-12">
             We specialize in AI-driven search marketing, generative content creation, and custom AI agent development.

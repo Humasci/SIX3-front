@@ -54,27 +54,28 @@ const MLFineTuning = () => {
   return (
     <div ref={contentRef} className="min-h-screen bg-background text-foreground">
       <PageSEO
-        title="ML Model Fine-Tuning — SIX3 Agency"
-        description="Custom fine-tuning of GPT, LLaMA, and Mistral models on your proprietary data. Domain-specific NLP, RLHF, and full model ownership. SIX3 Agency, London."
+        title="ML Model Fine-Tuning — SIX³ Agency"
+        description="Custom fine-tuning of GPT, LLaMA, and Mistral models on your proprietary data. Domain-specific NLP, RLHF, and full model ownership. SIX³ Agency, London."
         canonical="https://six3.agency/services/ml-fine-tuning"
       />
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-40 pb-16 px-6 mt-5">
+      <section className="theme-light pt-40 pb-16 px-6 mt-5">
         <div className="max-w-7xl mx-auto">
-          <div className="hero-content mb-12">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-light mb-8">
+          <div className="hero-content mb-12 grid lg:grid-cols-[minmax(0,1fr)_400px] gap-x-12 gap-y-8 items-center">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-light mb-8 text-gradient w-fit pb-1 lg:col-start-1">
               ML Model Fine-Tuning
             </h1>
-            <div className="aspect-video w-full bg-secondary mb-8 overflow-hidden">
+            <div className="h-1 w-40 bg-brand-gradient rounded-full lg:col-start-1 -mt-4" />
+            <div className="media-frame aspect-[4/3] w-full max-w-md lg:max-w-none lg:col-start-2 lg:row-start-1 lg:row-span-3">
               <img
                 src={icons.mlFineTuning}
                 alt="ML Fine-Tuning"
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm lg:col-start-1">
               <div>
                 <p className="text-muted-foreground mb-1">Location</p>
                 <p>London</p>

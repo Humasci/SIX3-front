@@ -153,30 +153,28 @@ export const Hero = () => {
           <div className="mb-12">
             <h1 
               ref={(el) => (titleRefs.current[0] = el)}
-              className="hero-title text-3xl md:text-6xl lg:text-7xl font-light tracking-tight mb-4"
+              className="hero-title text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-none mb-2"
             >
-              AI-POWERED
+              AI-Powered
             </h1>
             <div
               ref={(el) => (titleRefs.current[1] = el)}
-              className="hero-title text-3xl md:text-6xl lg:text-7xl font-light tracking-tight mb-4 relative"
+              className="hero-title text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-none mb-2"
             >
-              <span className="inline-block relative">
-                MARKETING
-                <div className="absolute -bottom-2 left-0 w-28 md:w-56 h-px bg-foreground/30" />
-              </span>
+              Marketing
             </div>
             <div
               ref={(el) => (titleRefs.current[2] = el)}
-              className="hero-title text-3xl md:text-6xl lg:text-7xl font-light tracking-tight"
+              className="hero-title text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-none"
             >
-              AGENCY
+              Agency
             </div>
+            <div className="hero-subtitle h-1 w-full max-w-3xl bg-brand-gradient rounded-full mt-10" />
           </div>
 
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 max-w-5xl">
             <div>
-              <p className="hero-subtitle text-xl md:text-2xl text-muted-foreground max-w-md">
+              <p className="hero-subtitle text-xl md:text-2xl font-medium text-foreground max-w-md">
                 AI-driven search marketing, generative content creation, and custom automation solutions
               </p>
             </div>

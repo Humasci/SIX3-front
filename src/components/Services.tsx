@@ -236,7 +236,7 @@ export const Services = () => {
                       <img 
                         src={service.image} 
                         alt={service.title}
-                        className="w-full h-32 object-contain rounded-lg bg-white/90 p-3"
+                        className="media-frame w-full aspect-[16/9] object-cover"
                       />
                     </div>
                   )}

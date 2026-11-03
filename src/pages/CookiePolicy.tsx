@@ -17,16 +17,22 @@ const CookiePolicy = () => {
     <div className="min-h-screen bg-background text-foreground">
       <Header />
       
-      <section className="pt-32 pb-24 px-6 mt-5">
+      <section className="theme-light pt-40 pb-16 px-6">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-light mb-8 text-gradient w-fit pb-1">Cookie Policy</h1>
+          <div className="h-1 w-40 bg-brand-gradient rounded-full mb-6" />
+          <p className="text-muted-foreground">Last updated: November 27, 2025</p>
+        </div>
+      </section>
+
+      <section className="pt-16 pb-24 px-6">
         <div className="max-w-4xl mx-auto cookie-content">
-          <h1 className="text-4xl md:text-5xl font-light mb-8">Cookie Policy</h1>
-          <p className="text-muted-foreground mb-12">Last updated: November 27, 2025</p>
           
           <div className="prose prose-lg max-w-none space-y-8">
             <section>
               <h2 className="text-2xl font-medium mb-4">1. Introduction</h2>
               <p className="text-muted-foreground leading-relaxed">
-                FKA WEB Limited trading as SIX3 Agency ("we", "us", or "our") uses cookies and similar technologies on our website. This Cookie Policy explains what cookies are, how we use them, and your choices regarding their use.
+                FKA WEB Limited trading as SIX³ Agency ("we", "us", or "our") uses cookies and similar technologies on our website. This Cookie Policy explains what cookies are, how we use them, and your choices regarding their use.
               </p>
               <p className="text-muted-foreground leading-relaxed mt-4">
                 Company Details:<br />

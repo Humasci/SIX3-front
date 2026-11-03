@@ -42,7 +42,7 @@ const RealEstateLeadSystem = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-6">
+      <section className="theme-light pt-32 pb-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="case-study-hero">
             <div className="flex items-center gap-2 mb-6">
@@ -50,9 +50,10 @@ const RealEstateLeadSystem = () => {
               <ArrowRight className="w-4 h-4" />
               <span>Case Study</span>
             </div>
-            <h1 className="text-4xl md:text-4xl lg:text-5xl font-light mb-8">
+            <h1 className="text-4xl md:text-4xl lg:text-5xl font-light mb-8 text-gradient w-fit pb-1">
               Real Estate Lead Management Case Study
             </h1>
+            <div className="h-1 w-40 bg-brand-gradient rounded-full mb-8" />
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="text-xl text-muted-foreground mb-8">
@@ -78,7 +79,7 @@ const RealEstateLeadSystem = () => {
                 <img
                   src={icons.realEstate}
                   alt="Real estate office"
-                  className="w-full aspect-video object-cover rounded-lg"
+                  className="media-frame w-full aspect-[4/3] object-cover"
                 />
               </div>
             </div>

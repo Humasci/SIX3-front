@@ -77,7 +77,7 @@ export const ServicePreviews = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="theme-light py-24 px-6">
+    <section ref={sectionRef} className="py-24 px-6 bg-background">
       <div className="max-w-7xl mx-auto">
         <div className="service-preview-header mb-16">
           <p className="text-sm text-muted-foreground mb-8 tracking-wider">Our Core Services <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" /></p>
@@ -133,12 +133,12 @@ export const ServicePreviews = () => {
                 </div>
 
                 <div className="relative">
-                  <div className="aspect-video bg-gradient-to-br from-accent/10 to-accent/5 rounded-lg flex items-center justify-center">
+                  <div className="media-frame aspect-[4/3] flex items-center justify-center">
                     {service.image ? (
                       <img 
                         src={service.image} 
                         alt={service.title}
-                        className="w-full h-full object-contain p-6"
+                        className="w-full h-full object-cover"
                       />
                     ) : (
                       <div className="text-center">

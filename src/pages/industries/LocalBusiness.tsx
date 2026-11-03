@@ -111,7 +111,7 @@ const LocalBusiness = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-6">
+      <section className="theme-light pt-32 pb-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="local-business-hero grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -119,9 +119,10 @@ const LocalBusiness = () => {
                 <Wrench className="w-8 h-8 icon-gradient" />
                 <span className="text-gradient font-medium">Local Service Businesses</span>
               </div>
-              <h1 className="text-4xl md:text-4xl lg:text-5xl font-light mb-6">
+              <h1 className="text-4xl md:text-4xl lg:text-5xl font-light mb-6 text-gradient w-fit pb-1">
                 AI Automation for Service-Based Local Businesses
               </h1>
+            <div className="h-1 w-40 bg-brand-gradient rounded-full mb-8" />
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
                 Never miss an emergency call, optimize your service routes, and dominate your local market 
                 with AI-powered automation designed for plumbers, cleaners, and service professionals.
@@ -143,7 +144,7 @@ const LocalBusiness = () => {
               <img
                 src={icons.localBusiness}
                 alt="Local Service Business"
-                className="w-full aspect-square object-cover rounded-2xl"
+                className="media-frame w-full max-w-lg ml-auto aspect-[4/3] object-cover"
               />
             </div>
           </div>
@@ -178,11 +179,11 @@ const LocalBusiness = () => {
                 </div>
 
                 <div>
-                  <h4 className="font-medium mb-3 text-red-600">Emergency Features:</h4>
+                  <h4 className="font-medium mb-3 text-[#f97316]">Emergency Features:</h4>
                   <ul className="space-y-2">
                     {businessType.emergencyFeatures.map((feature, idx) => (
                       <li key={idx} className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-red-500" />
+                        <div className="w-1.5 h-1.5 rounded-full bg-[#f97316]/100" />
                         <span className="text-sm text-muted-foreground">{feature}</span>
                       </li>
                     ))}
@@ -250,13 +251,13 @@ const LocalBusiness = () => {
       </section>
 
       {/* Emergency Response Features */}
-      <section className="py-16 px-6 bg-red-50 dark:bg-red-950/20">
+      <section className="py-16 px-6 bg-[#f97316]/10">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <Phone className="w-8 h-8 text-red-600" />
-                <span className="text-red-600 font-medium">Emergency Response</span>
+                <Phone className="w-8 h-8 text-[#f97316]" />
+                <span className="text-[#f97316] font-medium">Emergency Response</span>
               </div>
               <h2 className="text-4xl font-light mb-6">Never Miss an Emergency Call</h2>
               <p className="text-lg text-muted-foreground mb-6">
@@ -265,26 +266,26 @@ const LocalBusiness = () => {
               </p>
               <ul className="space-y-3">
                 <li className="flex items-center gap-3">
-                  <Phone className="w-5 h-5 text-red-600" />
+                  <Phone className="w-5 h-5 text-[#f97316]" />
                   <span>Intelligent emergency call detection</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <Phone className="w-5 h-5 text-red-600" />
+                  <Phone className="w-5 h-5 text-[#f97316]" />
                   <span>Automatic technician routing by proximity</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <Phone className="w-5 h-5 text-red-600" />
+                  <Phone className="w-5 h-5 text-[#f97316]" />
                   <span>Premium pricing for emergency services</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <Phone className="w-5 h-5 text-red-600" />
+                  <Phone className="w-5 h-5 text-[#f97316]" />
                   <span>Real-time customer communication</span>
                 </li>
               </ul>
             </div>
             <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-red-100 to-red-50 dark:from-red-950/30 dark:to-red-900/20 rounded-2xl flex items-center justify-center">
-                <Phone className="w-32 h-32 text-red-600/40" />
+              <div className="icon-tile aspect-[4/3] w-full max-w-lg ml-auto flex items-center justify-center">
+                <Phone className="w-24 h-24 icon-gradient" />
               </div>
             </div>
           </div>
@@ -296,8 +297,8 @@ const LocalBusiness = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-accent/20 to-accent/5 rounded-2xl flex items-center justify-center">
-                <MapPin className="w-32 h-32 text-accent/40" />
+              <div className="icon-tile aspect-[4/3] w-full max-w-lg ml-auto flex items-center justify-center">
+                <MapPin className="w-24 h-24 icon-gradient" />
               </div>
             </div>
             <div>

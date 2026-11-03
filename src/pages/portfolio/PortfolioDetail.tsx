@@ -188,7 +188,8 @@ const PortfolioDetail = () => {
     <div className="min-h-screen bg-background text-foreground">
       <Header />
       
-      <div ref={contentRef} className="pt-32 pb-24 px-6">
+      <div ref={contentRef}>
+      <section className="theme-light pt-32 pb-12 px-6">
         <div className="max-w-7xl mx-auto">
           <Link to="/portfolio">
             <Button variant="ghost" className="project-hero mb-8">
@@ -197,18 +198,23 @@ const PortfolioDetail = () => {
             </Button>
           </Link>
 
-          <div className="project-hero mb-12">
+          <div className="project-hero">
             <div className="flex items-center gap-4 mb-4 text-sm text-muted-foreground">
               <span>{project.category}</span>
               <span>•</span>
               <span>{project.year}</span>
             </div>
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-light mb-8">
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-light mb-8 text-gradient w-fit pb-1">
               {project.title}
             </h1>
+            <div className="h-1 w-40 bg-brand-gradient rounded-full" />
           </div>
+        </div>
+      </section>
 
-          <div className="project-hero aspect-video w-full mb-16 overflow-hidden bg-secondary">
+      <div className="pt-16 pb-24 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="project-hero media-frame aspect-[2/1] w-full max-w-5xl mx-auto mb-16">
             <img
               src={project.image}
               alt={project.title}
@@ -268,7 +274,7 @@ const PortfolioDetail = () => {
               <h2 className="text-3xl font-light mb-8">Project Gallery</h2>
               <div className="grid md:grid-cols-2 gap-6">
                 {project.gallery.map((image, index) => (
-                  <div key={index} className="aspect-[4/3] overflow-hidden bg-secondary">
+                  <div key={index} className="media-frame aspect-[4/3]">
                     <img
                       src={image}
                       alt={`${project.title} gallery ${index + 1}`}
@@ -280,6 +286,7 @@ const PortfolioDetail = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
 
       <Footer />

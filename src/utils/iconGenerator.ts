@@ -1,5 +1,5 @@
 // Icon generator utility for creating inline SVG data URIs
-// Colors match the SIX3 Agency design system:
+// Colors match the SIX³ Agency design system:
 // - Background: #16163d (navy)
 // - Foreground: #FFFFFF (white)
 // - Accent: #ec4899 (green)
@@ -13,21 +13,21 @@ export const icons = {
   // Legal / Scales of Justice
   legal: encodeDataUri(`
     <svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-      <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="-200" y1="-160" x2="200" y2="160"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient></defs>
-      <rect width="800" height="600" fill="#16163d"/>
-      <g transform="translate(400, 300)">
+      <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="-200" y1="-160" x2="200" y2="160"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient><radialGradient id="glowA" cx="12%" cy="8%" r="65%"><stop offset="0%" stop-color="#7c3aed" stop-opacity="0.55"/><stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/></radialGradient><radialGradient id="glowB" cx="92%" cy="96%" r="60%"><stop offset="0%" stop-color="#f97316" stop-opacity="0.35"/><stop offset="100%" stop-color="#f97316" stop-opacity="0"/></radialGradient><radialGradient id="halo" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ec4899" stop-opacity="0.28"/><stop offset="70%" stop-color="#ec4899" stop-opacity="0.06"/><stop offset="100%" stop-color="#ec4899" stop-opacity="0"/></radialGradient><linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient><pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.3" fill="#ffffff" fill-opacity="0.07"/></pattern></defs>
+      <rect width="800" height="600" fill="#0e0e2a"/><rect width="800" height="600" fill="url(#glowA)"/><rect width="800" height="600" fill="url(#glowB)"/><rect width="800" height="600" fill="url(#dots)"/><circle cx="400" cy="300" r="250" fill="url(#halo)"/><circle cx="400" cy="300" r="215" fill="none" stroke="url(#ring)" stroke-width="1.5" stroke-opacity="0.35"/><circle cx="400" cy="300" r="160" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1.4"/>
+      <g transform="translate(400, 300)" stroke-linecap="round" stroke-linejoin="round">
         <!-- Balance beam -->
-        <line x1="-150" y1="0" x2="150" y2="0" stroke="url(#g)" stroke-width="4"/>
+        <line x1="-150" y1="0" x2="150" y2="0" stroke="url(#g)" stroke-width="5.6"/>
         <!-- Center pole -->
-        <line x1="0" y1="0" x2="0" y2="-120" stroke="url(#g)" stroke-width="4"/>
+        <line x1="0" y1="0" x2="0" y2="-120" stroke="url(#g)" stroke-width="5.6"/>
         <!-- Left scale -->
-        <line x1="-150" y1="0" x2="-180" y2="40" stroke="url(#g)" stroke-width="3"/>
-        <line x1="-150" y1="0" x2="-120" y2="40" stroke="url(#g)" stroke-width="3"/>
-        <line x1="-180" y1="40" x2="-120" y2="40" stroke="url(#g)" stroke-width="3"/>
+        <line x1="-150" y1="0" x2="-180" y2="40" stroke="url(#g)" stroke-width="4.2"/>
+        <line x1="-150" y1="0" x2="-120" y2="40" stroke="url(#g)" stroke-width="4.2"/>
+        <line x1="-180" y1="40" x2="-120" y2="40" stroke="url(#g)" stroke-width="4.2"/>
         <!-- Right scale -->
-        <line x1="150" y1="0" x2="120" y2="40" stroke="url(#g)" stroke-width="3"/>
-        <line x1="150" y1="0" x2="180" y2="40" stroke="url(#g)" stroke-width="3"/>
-        <line x1="120" y1="40" x2="180" y2="40" stroke="url(#g)" stroke-width="3"/>
+        <line x1="150" y1="0" x2="120" y2="40" stroke="url(#g)" stroke-width="4.2"/>
+        <line x1="150" y1="0" x2="180" y2="40" stroke="url(#g)" stroke-width="4.2"/>
+        <line x1="120" y1="40" x2="180" y2="40" stroke="url(#g)" stroke-width="4.2"/>
         <!-- Decorative circles -->
         <circle cx="0" cy="-120" r="8" fill="url(#g)"/>
         <circle cx="-150" cy="0" r="6" fill="url(#g)"/>
@@ -39,23 +39,23 @@ export const icons = {
   // Real Estate / House
   realEstate: encodeDataUri(`
     <svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-      <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="-200" y1="-160" x2="200" y2="160"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient></defs>
-      <rect width="800" height="600" fill="#16163d"/>
-      <g transform="translate(400, 320)">
+      <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="-200" y1="-160" x2="200" y2="160"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient><radialGradient id="glowA" cx="12%" cy="8%" r="65%"><stop offset="0%" stop-color="#7c3aed" stop-opacity="0.55"/><stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/></radialGradient><radialGradient id="glowB" cx="92%" cy="96%" r="60%"><stop offset="0%" stop-color="#f97316" stop-opacity="0.35"/><stop offset="100%" stop-color="#f97316" stop-opacity="0"/></radialGradient><radialGradient id="halo" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ec4899" stop-opacity="0.28"/><stop offset="70%" stop-color="#ec4899" stop-opacity="0.06"/><stop offset="100%" stop-color="#ec4899" stop-opacity="0"/></radialGradient><linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient><pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.3" fill="#ffffff" fill-opacity="0.07"/></pattern></defs>
+      <rect width="800" height="600" fill="#0e0e2a"/><rect width="800" height="600" fill="url(#glowA)"/><rect width="800" height="600" fill="url(#glowB)"/><rect width="800" height="600" fill="url(#dots)"/><circle cx="400" cy="300" r="250" fill="url(#halo)"/><circle cx="400" cy="300" r="215" fill="none" stroke="url(#ring)" stroke-width="1.5" stroke-opacity="0.35"/><circle cx="400" cy="300" r="160" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1.4"/>
+      <g transform="translate(400, 320)" stroke-linecap="round" stroke-linejoin="round">
         <!-- Roof -->
-        <path d="M -140 -60 L 0 -160 L 140 -60 Z" fill="none" stroke="url(#g)" stroke-width="4"/>
+        <path d="M -140 -60 L 0 -160 L 140 -60 Z" fill="none" stroke="url(#g)" stroke-width="5.6"/>
         <!-- House body -->
-        <rect x="-120" y="-60" width="240" height="180" fill="none" stroke="url(#g)" stroke-width="4"/>
+        <rect x="-120" y="-60" width="240" height="180" fill="none" stroke="url(#g)" stroke-width="5.6"/>
         <!-- Door -->
-        <rect x="-30" y="40" width="60" height="80" fill="none" stroke="url(#g)" stroke-width="3"/>
+        <rect x="-30" y="40" width="60" height="80" fill="none" stroke="url(#g)" stroke-width="4.2"/>
         <!-- Windows -->
-        <rect x="-90" y="-20" width="40" height="40" fill="none" stroke="url(#g)" stroke-width="2"/>
-        <rect x="50" y="-20" width="40" height="40" fill="none" stroke="url(#g)" stroke-width="2"/>
+        <rect x="-90" y="-20" width="40" height="40" fill="none" stroke="url(#g)" stroke-width="2.8"/>
+        <rect x="50" y="-20" width="40" height="40" fill="none" stroke="url(#g)" stroke-width="2.8"/>
         <!-- Window crosses -->
-        <line x1="-70" y1="-20" x2="-70" y2="20" stroke="url(#g)" stroke-width="1"/>
-        <line x1="-90" y1="0" x2="-50" y2="0" stroke="url(#g)" stroke-width="1"/>
-        <line x1="70" y1="-20" x2="70" y2="20" stroke="url(#g)" stroke-width="1"/>
-        <line x1="50" y1="0" x2="90" y2="0" stroke="url(#g)" stroke-width="1"/>
+        <line x1="-70" y1="-20" x2="-70" y2="20" stroke="url(#g)" stroke-width="1.4"/>
+        <line x1="-90" y1="0" x2="-50" y2="0" stroke="url(#g)" stroke-width="1.4"/>
+        <line x1="70" y1="-20" x2="70" y2="20" stroke="url(#g)" stroke-width="1.4"/>
+        <line x1="50" y1="0" x2="90" y2="0" stroke="url(#g)" stroke-width="1.4"/>
       </g>
     </svg>
   `),
@@ -63,16 +63,16 @@ export const icons = {
   // E-commerce / Shopping
   ecommerce: encodeDataUri(`
     <svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-      <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="-200" y1="-160" x2="200" y2="160"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient></defs>
-      <rect width="800" height="600" fill="#16163d"/>
-      <g transform="translate(400, 300)">
+      <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="-200" y1="-160" x2="200" y2="160"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient><radialGradient id="glowA" cx="12%" cy="8%" r="65%"><stop offset="0%" stop-color="#7c3aed" stop-opacity="0.55"/><stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/></radialGradient><radialGradient id="glowB" cx="92%" cy="96%" r="60%"><stop offset="0%" stop-color="#f97316" stop-opacity="0.35"/><stop offset="100%" stop-color="#f97316" stop-opacity="0"/></radialGradient><radialGradient id="halo" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ec4899" stop-opacity="0.28"/><stop offset="70%" stop-color="#ec4899" stop-opacity="0.06"/><stop offset="100%" stop-color="#ec4899" stop-opacity="0"/></radialGradient><linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient><pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.3" fill="#ffffff" fill-opacity="0.07"/></pattern></defs>
+      <rect width="800" height="600" fill="#0e0e2a"/><rect width="800" height="600" fill="url(#glowA)"/><rect width="800" height="600" fill="url(#glowB)"/><rect width="800" height="600" fill="url(#dots)"/><circle cx="400" cy="300" r="250" fill="url(#halo)"/><circle cx="400" cy="300" r="215" fill="none" stroke="url(#ring)" stroke-width="1.5" stroke-opacity="0.35"/><circle cx="400" cy="300" r="160" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1.4"/>
+      <g transform="translate(400, 300)" stroke-linecap="round" stroke-linejoin="round">
         <!-- Shopping bag -->
-        <path d="M -100 -40 L -120 120 L 120 120 L 100 -40 Z" fill="none" stroke="url(#g)" stroke-width="4"/>
+        <path d="M -100 -40 L -120 120 L 120 120 L 100 -40 Z" fill="none" stroke="url(#g)" stroke-width="5.6"/>
         <!-- Handles -->
-        <path d="M -70 -40 Q -70 -90 0 -90 Q 70 -90 70 -40" fill="none" stroke="url(#g)" stroke-width="4"/>
+        <path d="M -70 -40 Q -70 -90 0 -90 Q 70 -90 70 -40" fill="none" stroke="url(#g)" stroke-width="5.6"/>
         <!-- Decorative elements -->
-        <circle cx="0" cy="20" r="30" fill="none" stroke="url(#g)" stroke-width="3" opacity="0.5"/>
-        <circle cx="0" cy="20" r="15" fill="none" stroke="url(#g)" stroke-width="2"/>
+        <circle cx="0" cy="20" r="30" fill="none" stroke="url(#g)" stroke-width="4.2" opacity="0.5"/>
+        <circle cx="0" cy="20" r="15" fill="none" stroke="url(#g)" stroke-width="2.8"/>
       </g>
     </svg>
   `),
@@ -80,15 +80,15 @@ export const icons = {
   // Healthcare / Medical Cross
   healthcare: encodeDataUri(`
     <svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-      <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="-200" y1="-160" x2="200" y2="160"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient></defs>
-      <rect width="800" height="600" fill="#16163d"/>
-      <g transform="translate(400, 300)">
+      <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="-200" y1="-160" x2="200" y2="160"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient><radialGradient id="glowA" cx="12%" cy="8%" r="65%"><stop offset="0%" stop-color="#7c3aed" stop-opacity="0.55"/><stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/></radialGradient><radialGradient id="glowB" cx="92%" cy="96%" r="60%"><stop offset="0%" stop-color="#f97316" stop-opacity="0.35"/><stop offset="100%" stop-color="#f97316" stop-opacity="0"/></radialGradient><radialGradient id="halo" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ec4899" stop-opacity="0.28"/><stop offset="70%" stop-color="#ec4899" stop-opacity="0.06"/><stop offset="100%" stop-color="#ec4899" stop-opacity="0"/></radialGradient><linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient><pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.3" fill="#ffffff" fill-opacity="0.07"/></pattern></defs>
+      <rect width="800" height="600" fill="#0e0e2a"/><rect width="800" height="600" fill="url(#glowA)"/><rect width="800" height="600" fill="url(#glowB)"/><rect width="800" height="600" fill="url(#dots)"/><circle cx="400" cy="300" r="250" fill="url(#halo)"/><circle cx="400" cy="300" r="215" fill="none" stroke="url(#ring)" stroke-width="1.5" stroke-opacity="0.35"/><circle cx="400" cy="300" r="160" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1.4"/>
+      <g transform="translate(400, 300)" stroke-linecap="round" stroke-linejoin="round">
         <!-- Medical cross -->
-        <rect x="-30" y="-120" width="60" height="240" fill="none" stroke="url(#g)" stroke-width="4"/>
-        <rect x="-120" y="-30" width="240" height="60" fill="none" stroke="url(#g)" stroke-width="4"/>
+        <rect x="-30" y="-120" width="60" height="240" fill="none" stroke="url(#g)" stroke-width="5.6"/>
+        <rect x="-120" y="-30" width="240" height="60" fill="none" stroke="url(#g)" stroke-width="5.6"/>
         <!-- Heart shape overlay -->
         <path d="M 0 40 Q -60 -20 -80 -40 Q -90 -60 -70 -80 Q -40 -90 0 -60 Q 40 -90 70 -80 Q 90 -60 80 -40 Q 60 -20 0 40"
-              fill="none" stroke="url(#g)" stroke-width="3" opacity="0.7"/>
+              fill="none" stroke="url(#g)" stroke-width="4.2" opacity="0.7"/>
       </g>
     </svg>
   `),
@@ -96,14 +96,14 @@ export const icons = {
   // FinTech / Graph
   fintech: encodeDataUri(`
     <svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-      <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="-200" y1="-160" x2="200" y2="160"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient></defs>
-      <rect width="800" height="600" fill="#16163d"/>
-      <g transform="translate(400, 300)">
+      <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="-200" y1="-160" x2="200" y2="160"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient><radialGradient id="glowA" cx="12%" cy="8%" r="65%"><stop offset="0%" stop-color="#7c3aed" stop-opacity="0.55"/><stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/></radialGradient><radialGradient id="glowB" cx="92%" cy="96%" r="60%"><stop offset="0%" stop-color="#f97316" stop-opacity="0.35"/><stop offset="100%" stop-color="#f97316" stop-opacity="0"/></radialGradient><radialGradient id="halo" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ec4899" stop-opacity="0.28"/><stop offset="70%" stop-color="#ec4899" stop-opacity="0.06"/><stop offset="100%" stop-color="#ec4899" stop-opacity="0"/></radialGradient><linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient><pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.3" fill="#ffffff" fill-opacity="0.07"/></pattern></defs>
+      <rect width="800" height="600" fill="#0e0e2a"/><rect width="800" height="600" fill="url(#glowA)"/><rect width="800" height="600" fill="url(#glowB)"/><rect width="800" height="600" fill="url(#dots)"/><circle cx="400" cy="300" r="250" fill="url(#halo)"/><circle cx="400" cy="300" r="215" fill="none" stroke="url(#ring)" stroke-width="1.5" stroke-opacity="0.35"/><circle cx="400" cy="300" r="160" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1.4"/>
+      <g transform="translate(400, 300)" stroke-linecap="round" stroke-linejoin="round">
         <!-- Axis -->
-        <line x1="-150" y1="100" x2="150" y2="100" stroke="url(#g)" stroke-width="3"/>
-        <line x1="-150" y1="100" x2="-150" y2="-100" stroke="url(#g)" stroke-width="3"/>
+        <line x1="-150" y1="100" x2="150" y2="100" stroke="url(#g)" stroke-width="4.2"/>
+        <line x1="-150" y1="100" x2="-150" y2="-100" stroke="url(#g)" stroke-width="4.2"/>
         <!-- Growth line -->
-        <path d="M -120 80 L -60 40 L 0 -20 L 60 -60 L 120 -90" fill="none" stroke="url(#g)" stroke-width="4"/>
+        <path d="M -120 80 L -60 40 L 0 -20 L 60 -60 L 120 -90" fill="none" stroke="url(#g)" stroke-width="5.6"/>
         <!-- Data points -->
         <circle cx="-120" cy="80" r="6" fill="url(#g)"/>
         <circle cx="-60" cy="40" r="6" fill="url(#g)"/>
@@ -123,12 +123,12 @@ export const icons = {
   // Manufacturing / Gear
   manufacturing: encodeDataUri(`
     <svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-      <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="-200" y1="-160" x2="200" y2="160"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient></defs>
-      <rect width="800" height="600" fill="#16163d"/>
-      <g transform="translate(400, 300)">
+      <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="-200" y1="-160" x2="200" y2="160"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient><radialGradient id="glowA" cx="12%" cy="8%" r="65%"><stop offset="0%" stop-color="#7c3aed" stop-opacity="0.55"/><stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/></radialGradient><radialGradient id="glowB" cx="92%" cy="96%" r="60%"><stop offset="0%" stop-color="#f97316" stop-opacity="0.35"/><stop offset="100%" stop-color="#f97316" stop-opacity="0"/></radialGradient><radialGradient id="halo" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ec4899" stop-opacity="0.28"/><stop offset="70%" stop-color="#ec4899" stop-opacity="0.06"/><stop offset="100%" stop-color="#ec4899" stop-opacity="0"/></radialGradient><linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient><pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.3" fill="#ffffff" fill-opacity="0.07"/></pattern></defs>
+      <rect width="800" height="600" fill="#0e0e2a"/><rect width="800" height="600" fill="url(#glowA)"/><rect width="800" height="600" fill="url(#glowB)"/><rect width="800" height="600" fill="url(#dots)"/><circle cx="400" cy="300" r="250" fill="url(#halo)"/><circle cx="400" cy="300" r="215" fill="none" stroke="url(#ring)" stroke-width="1.5" stroke-opacity="0.35"/><circle cx="400" cy="300" r="160" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1.4"/>
+      <g transform="translate(400, 300)" stroke-linecap="round" stroke-linejoin="round">
         <!-- Large gear -->
-        <circle cx="0" cy="0" r="100" fill="none" stroke="url(#g)" stroke-width="4"/>
-        <circle cx="0" cy="0" r="40" fill="none" stroke="url(#g)" stroke-width="4"/>
+        <circle cx="0" cy="0" r="100" fill="none" stroke="url(#g)" stroke-width="5.6"/>
+        <circle cx="0" cy="0" r="40" fill="none" stroke="url(#g)" stroke-width="5.6"/>
         <!-- Gear teeth (8 teeth) -->
         <rect x="-15" y="-110" width="30" height="20" fill="url(#g)"/>
         <rect x="-15" y="90" width="30" height="20" fill="url(#g)"/>
@@ -139,8 +139,8 @@ export const icons = {
         <rect x="-78" y="58" width="20" height="20" transform="rotate(-45 -68 68)" fill="url(#g)"/>
         <rect x="58" y="58" width="20" height="20" transform="rotate(45 68 68)" fill="url(#g)"/>
         <!-- Small gear overlay -->
-        <circle cx="70" cy="-70" r="40" fill="none" stroke="url(#g)" stroke-width="3" opacity="0.6"/>
-        <circle cx="70" cy="-70" r="15" fill="none" stroke="url(#g)" stroke-width="3" opacity="0.6"/>
+        <circle cx="70" cy="-70" r="40" fill="none" stroke="url(#g)" stroke-width="4.2" opacity="0.6"/>
+        <circle cx="70" cy="-70" r="15" fill="none" stroke="url(#g)" stroke-width="4.2" opacity="0.6"/>
       </g>
     </svg>
   `),
@@ -148,9 +148,9 @@ export const icons = {
   // AI / Brain Neural Network
   ai: encodeDataUri(`
     <svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-      <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="-200" y1="-160" x2="200" y2="160"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient></defs>
-      <rect width="800" height="600" fill="#16163d"/>
-      <g transform="translate(400, 300)">
+      <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="-200" y1="-160" x2="200" y2="160"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient><radialGradient id="glowA" cx="12%" cy="8%" r="65%"><stop offset="0%" stop-color="#7c3aed" stop-opacity="0.55"/><stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/></radialGradient><radialGradient id="glowB" cx="92%" cy="96%" r="60%"><stop offset="0%" stop-color="#f97316" stop-opacity="0.35"/><stop offset="100%" stop-color="#f97316" stop-opacity="0"/></radialGradient><radialGradient id="halo" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ec4899" stop-opacity="0.28"/><stop offset="70%" stop-color="#ec4899" stop-opacity="0.06"/><stop offset="100%" stop-color="#ec4899" stop-opacity="0"/></radialGradient><linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient><pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.3" fill="#ffffff" fill-opacity="0.07"/></pattern></defs>
+      <rect width="800" height="600" fill="#0e0e2a"/><rect width="800" height="600" fill="url(#glowA)"/><rect width="800" height="600" fill="url(#glowB)"/><rect width="800" height="600" fill="url(#dots)"/><circle cx="400" cy="300" r="250" fill="url(#halo)"/><circle cx="400" cy="300" r="215" fill="none" stroke="url(#ring)" stroke-width="1.5" stroke-opacity="0.35"/><circle cx="400" cy="300" r="160" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1.4"/>
+      <g transform="translate(400, 300)" stroke-linecap="round" stroke-linejoin="round">
         <!-- Neural network nodes -->
         <circle cx="-100" cy="-80" r="8" fill="url(#g)"/>
         <circle cx="-100" cy="0" r="8" fill="url(#g)"/>
@@ -163,18 +163,18 @@ export const icons = {
         <circle cx="100" cy="0" r="8" fill="url(#g)"/>
         <circle cx="100" cy="80" r="8" fill="url(#g)"/>
         <!-- Connections -->
-        <line x1="-100" y1="-80" x2="0" y2="-100" stroke="url(#g)" stroke-width="2" opacity="0.4"/>
-        <line x1="-100" y1="-80" x2="0" y2="-40" stroke="url(#g)" stroke-width="2" opacity="0.4"/>
-        <line x1="-100" y1="0" x2="0" y2="-40" stroke="url(#g)" stroke-width="2" opacity="0.4"/>
-        <line x1="-100" y1="0" x2="0" y2="40" stroke="url(#g)" stroke-width="2" opacity="0.4"/>
-        <line x1="-100" y1="80" x2="0" y2="40" stroke="url(#g)" stroke-width="2" opacity="0.4"/>
-        <line x1="-100" y1="80" x2="0" y2="100" stroke="url(#g)" stroke-width="2" opacity="0.4"/>
-        <line x1="0" y1="-100" x2="100" y2="-80" stroke="url(#g)" stroke-width="2" opacity="0.4"/>
-        <line x1="0" y1="-40" x2="100" y2="-80" stroke="url(#g)" stroke-width="2" opacity="0.4"/>
-        <line x1="0" y1="-40" x2="100" y2="0" stroke="url(#g)" stroke-width="2" opacity="0.4"/>
-        <line x1="0" y1="40" x2="100" y2="0" stroke="url(#g)" stroke-width="2" opacity="0.4"/>
-        <line x1="0" y1="40" x2="100" y2="80" stroke="url(#g)" stroke-width="2" opacity="0.4"/>
-        <line x1="0" y1="100" x2="100" y2="80" stroke="url(#g)" stroke-width="2" opacity="0.4"/>
+        <line x1="-100" y1="-80" x2="0" y2="-100" stroke="url(#g)" stroke-width="2.8" opacity="0.4"/>
+        <line x1="-100" y1="-80" x2="0" y2="-40" stroke="url(#g)" stroke-width="2.8" opacity="0.4"/>
+        <line x1="-100" y1="0" x2="0" y2="-40" stroke="url(#g)" stroke-width="2.8" opacity="0.4"/>
+        <line x1="-100" y1="0" x2="0" y2="40" stroke="url(#g)" stroke-width="2.8" opacity="0.4"/>
+        <line x1="-100" y1="80" x2="0" y2="40" stroke="url(#g)" stroke-width="2.8" opacity="0.4"/>
+        <line x1="-100" y1="80" x2="0" y2="100" stroke="url(#g)" stroke-width="2.8" opacity="0.4"/>
+        <line x1="0" y1="-100" x2="100" y2="-80" stroke="url(#g)" stroke-width="2.8" opacity="0.4"/>
+        <line x1="0" y1="-40" x2="100" y2="-80" stroke="url(#g)" stroke-width="2.8" opacity="0.4"/>
+        <line x1="0" y1="-40" x2="100" y2="0" stroke="url(#g)" stroke-width="2.8" opacity="0.4"/>
+        <line x1="0" y1="40" x2="100" y2="0" stroke="url(#g)" stroke-width="2.8" opacity="0.4"/>
+        <line x1="0" y1="40" x2="100" y2="80" stroke="url(#g)" stroke-width="2.8" opacity="0.4"/>
+        <line x1="0" y1="100" x2="100" y2="80" stroke="url(#g)" stroke-width="2.8" opacity="0.4"/>
       </g>
     </svg>
   `),
@@ -182,19 +182,19 @@ export const icons = {
   // Search Marketing / Magnifying Glass with Chart
   searchMarketing: encodeDataUri(`
     <svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-      <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="-200" y1="-160" x2="200" y2="160"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient></defs>
-      <rect width="800" height="600" fill="#16163d"/>
-      <g transform="translate(350, 280)">
+      <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="-200" y1="-160" x2="200" y2="160"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient><radialGradient id="glowA" cx="12%" cy="8%" r="65%"><stop offset="0%" stop-color="#7c3aed" stop-opacity="0.55"/><stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/></radialGradient><radialGradient id="glowB" cx="92%" cy="96%" r="60%"><stop offset="0%" stop-color="#f97316" stop-opacity="0.35"/><stop offset="100%" stop-color="#f97316" stop-opacity="0"/></radialGradient><radialGradient id="halo" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ec4899" stop-opacity="0.28"/><stop offset="70%" stop-color="#ec4899" stop-opacity="0.06"/><stop offset="100%" stop-color="#ec4899" stop-opacity="0"/></radialGradient><linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient><pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.3" fill="#ffffff" fill-opacity="0.07"/></pattern></defs>
+      <rect width="800" height="600" fill="#0e0e2a"/><rect width="800" height="600" fill="url(#glowA)"/><rect width="800" height="600" fill="url(#glowB)"/><rect width="800" height="600" fill="url(#dots)"/><circle cx="400" cy="300" r="250" fill="url(#halo)"/><circle cx="400" cy="300" r="215" fill="none" stroke="url(#ring)" stroke-width="1.5" stroke-opacity="0.35"/><circle cx="400" cy="300" r="160" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1.4"/>
+      <g transform="translate(350, 280)" stroke-linecap="round" stroke-linejoin="round">
         <!-- Magnifying glass -->
-        <circle cx="0" cy="0" r="80" fill="none" stroke="url(#g)" stroke-width="4"/>
-        <line x1="56" y1="56" x2="120" y2="120" stroke="url(#g)" stroke-width="6"/>
+        <circle cx="0" cy="0" r="80" fill="none" stroke="url(#g)" stroke-width="5.6"/>
+        <line x1="56" y1="56" x2="120" y2="120" stroke="url(#g)" stroke-width="8.4"/>
         <!-- Chart inside -->
         <rect x="-40" y="-10" width="12" height="30" fill="url(#g)" opacity="0.7"/>
         <rect x="-20" y="-25" width="12" height="45" fill="url(#g)" opacity="0.7"/>
         <rect x="0" y="-35" width="12" height="55" fill="url(#g)" opacity="0.7"/>
         <rect x="20" y="-45" width="12" height="65" fill="url(#g)" opacity="0.7"/>
         <!-- Arrow up -->
-        <path d="M 45 -55 L 55 -65 L 65 -55" fill="none" stroke="url(#g)" stroke-width="3"/>
+        <path d="M 45 -55 L 55 -65 L 65 -55" fill="none" stroke="url(#g)" stroke-width="4.2"/>
       </g>
     </svg>
   `),
@@ -202,21 +202,21 @@ export const icons = {
   // Content Creation / Document with pen
   contentCreation: encodeDataUri(`
     <svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-      <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="-200" y1="-160" x2="200" y2="160"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient></defs>
-      <rect width="800" height="600" fill="#16163d"/>
-      <g transform="translate(400, 300)">
+      <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="-200" y1="-160" x2="200" y2="160"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient><radialGradient id="glowA" cx="12%" cy="8%" r="65%"><stop offset="0%" stop-color="#7c3aed" stop-opacity="0.55"/><stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/></radialGradient><radialGradient id="glowB" cx="92%" cy="96%" r="60%"><stop offset="0%" stop-color="#f97316" stop-opacity="0.35"/><stop offset="100%" stop-color="#f97316" stop-opacity="0"/></radialGradient><radialGradient id="halo" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ec4899" stop-opacity="0.28"/><stop offset="70%" stop-color="#ec4899" stop-opacity="0.06"/><stop offset="100%" stop-color="#ec4899" stop-opacity="0"/></radialGradient><linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient><pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.3" fill="#ffffff" fill-opacity="0.07"/></pattern></defs>
+      <rect width="800" height="600" fill="#0e0e2a"/><rect width="800" height="600" fill="url(#glowA)"/><rect width="800" height="600" fill="url(#glowB)"/><rect width="800" height="600" fill="url(#dots)"/><circle cx="400" cy="300" r="250" fill="url(#halo)"/><circle cx="400" cy="300" r="215" fill="none" stroke="url(#ring)" stroke-width="1.5" stroke-opacity="0.35"/><circle cx="400" cy="300" r="160" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1.4"/>
+      <g transform="translate(400, 300)" stroke-linecap="round" stroke-linejoin="round">
         <!-- Document -->
-        <rect x="-90" y="-120" width="180" height="240" fill="none" stroke="url(#g)" stroke-width="4"/>
+        <rect x="-90" y="-120" width="180" height="240" fill="none" stroke="url(#g)" stroke-width="5.6"/>
         <!-- Text lines -->
-        <line x1="-70" y1="-80" x2="70" y2="-80" stroke="url(#g)" stroke-width="2" opacity="0.6"/>
-        <line x1="-70" y1="-50" x2="70" y2="-50" stroke="url(#g)" stroke-width="2" opacity="0.6"/>
-        <line x1="-70" y1="-20" x2="70" y2="-20" stroke="url(#g)" stroke-width="2" opacity="0.6"/>
-        <line x1="-70" y1="10" x2="40" y2="10" stroke="url(#g)" stroke-width="2" opacity="0.6"/>
+        <line x1="-70" y1="-80" x2="70" y2="-80" stroke="url(#g)" stroke-width="2.8" opacity="0.6"/>
+        <line x1="-70" y1="-50" x2="70" y2="-50" stroke="url(#g)" stroke-width="2.8" opacity="0.6"/>
+        <line x1="-70" y1="-20" x2="70" y2="-20" stroke="url(#g)" stroke-width="2.8" opacity="0.6"/>
+        <line x1="-70" y1="10" x2="40" y2="10" stroke="url(#g)" stroke-width="2.8" opacity="0.6"/>
         <!-- Pen -->
         <g transform="translate(60, 60) rotate(-45)">
           <rect x="-5" y="-50" width="10" height="50" fill="url(#g)"/>
           <path d="M -5 0 L 0 10 L 5 0 Z" fill="url(#g)"/>
-          <circle cx="0" cy="-50" r="8" fill="none" stroke="url(#g)" stroke-width="2"/>
+          <circle cx="0" cy="-50" r="8" fill="none" stroke="url(#g)" stroke-width="2.8"/>
         </g>
         <!-- Sparkles -->
         <circle cx="80" cy="80" r="3" fill="url(#g)"/>
@@ -229,20 +229,20 @@ export const icons = {
   // Automation / Workflow
   automation: encodeDataUri(`
     <svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-      <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="-200" y1="-160" x2="200" y2="160"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient></defs>
-      <rect width="800" height="600" fill="#16163d"/>
-      <g transform="translate(400, 300)">
+      <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="-200" y1="-160" x2="200" y2="160"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient><radialGradient id="glowA" cx="12%" cy="8%" r="65%"><stop offset="0%" stop-color="#7c3aed" stop-opacity="0.55"/><stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/></radialGradient><radialGradient id="glowB" cx="92%" cy="96%" r="60%"><stop offset="0%" stop-color="#f97316" stop-opacity="0.35"/><stop offset="100%" stop-color="#f97316" stop-opacity="0"/></radialGradient><radialGradient id="halo" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ec4899" stop-opacity="0.28"/><stop offset="70%" stop-color="#ec4899" stop-opacity="0.06"/><stop offset="100%" stop-color="#ec4899" stop-opacity="0"/></radialGradient><linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient><pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.3" fill="#ffffff" fill-opacity="0.07"/></pattern></defs>
+      <rect width="800" height="600" fill="#0e0e2a"/><rect width="800" height="600" fill="url(#glowA)"/><rect width="800" height="600" fill="url(#glowB)"/><rect width="800" height="600" fill="url(#dots)"/><circle cx="400" cy="300" r="250" fill="url(#halo)"/><circle cx="400" cy="300" r="215" fill="none" stroke="url(#ring)" stroke-width="1.5" stroke-opacity="0.35"/><circle cx="400" cy="300" r="160" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1.4"/>
+      <g transform="translate(400, 300)" stroke-linecap="round" stroke-linejoin="round">
         <!-- Flow boxes -->
-        <rect x="-140" y="-40" width="80" height="80" fill="none" stroke="url(#g)" stroke-width="4"/>
-        <rect x="-40" y="-40" width="80" height="80" fill="none" stroke="url(#g)" stroke-width="4"/>
-        <rect x="60" y="-40" width="80" height="80" fill="none" stroke="url(#g)" stroke-width="4"/>
+        <rect x="-140" y="-40" width="80" height="80" fill="none" stroke="url(#g)" stroke-width="5.6"/>
+        <rect x="-40" y="-40" width="80" height="80" fill="none" stroke="url(#g)" stroke-width="5.6"/>
+        <rect x="60" y="-40" width="80" height="80" fill="none" stroke="url(#g)" stroke-width="5.6"/>
         <!-- Arrows -->
-        <path d="M -55 0 L -45 0" stroke="url(#g)" stroke-width="3"/>
+        <path d="M -55 0 L -45 0" stroke="url(#g)" stroke-width="4.2"/>
         <path d="M -50 -5 L -45 0 L -50 5" fill="url(#g)"/>
-        <path d="M 45 0 L 55 0" stroke="url(#g)" stroke-width="3"/>
+        <path d="M 45 0 L 55 0" stroke="url(#g)" stroke-width="4.2"/>
         <path d="M 50 -5 L 55 0 L 50 5" fill="url(#g)"/>
         <!-- Circular arrow (automation symbol) -->
-        <path d="M 0 -80 A 60 60 0 1 1 0 -79" fill="none" stroke="url(#g)" stroke-width="3" opacity="0.5"/>
+        <path d="M 0 -80 A 60 60 0 1 1 0 -79" fill="none" stroke="url(#g)" stroke-width="4.2" opacity="0.5"/>
         <path d="M -5 -75 L 0 -80 L 5 -75" fill="url(#g)" opacity="0.5"/>
       </g>
     </svg>
@@ -251,19 +251,19 @@ export const icons = {
   // Professional Services / Briefcase
   professionalServices: encodeDataUri(`
     <svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-      <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="-200" y1="-160" x2="200" y2="160"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient></defs>
-      <rect width="800" height="600" fill="#16163d"/>
-      <g transform="translate(400, 300)">
+      <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="-200" y1="-160" x2="200" y2="160"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient><radialGradient id="glowA" cx="12%" cy="8%" r="65%"><stop offset="0%" stop-color="#7c3aed" stop-opacity="0.55"/><stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/></radialGradient><radialGradient id="glowB" cx="92%" cy="96%" r="60%"><stop offset="0%" stop-color="#f97316" stop-opacity="0.35"/><stop offset="100%" stop-color="#f97316" stop-opacity="0"/></radialGradient><radialGradient id="halo" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ec4899" stop-opacity="0.28"/><stop offset="70%" stop-color="#ec4899" stop-opacity="0.06"/><stop offset="100%" stop-color="#ec4899" stop-opacity="0"/></radialGradient><linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient><pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.3" fill="#ffffff" fill-opacity="0.07"/></pattern></defs>
+      <rect width="800" height="600" fill="#0e0e2a"/><rect width="800" height="600" fill="url(#glowA)"/><rect width="800" height="600" fill="url(#glowB)"/><rect width="800" height="600" fill="url(#dots)"/><circle cx="400" cy="300" r="250" fill="url(#halo)"/><circle cx="400" cy="300" r="215" fill="none" stroke="url(#ring)" stroke-width="1.5" stroke-opacity="0.35"/><circle cx="400" cy="300" r="160" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1.4"/>
+      <g transform="translate(400, 300)" stroke-linecap="round" stroke-linejoin="round">
         <!-- Briefcase body -->
-        <rect x="-120" y="-20" width="240" height="120" fill="none" stroke="url(#g)" stroke-width="4"/>
+        <rect x="-120" y="-20" width="240" height="120" fill="none" stroke="url(#g)" stroke-width="5.6"/>
         <!-- Handle -->
-        <path d="M -60 -20 L -60 -60 L 60 -60 L 60 -20" fill="none" stroke="url(#g)" stroke-width="4"/>
+        <path d="M -60 -20 L -60 -60 L 60 -60 L 60 -20" fill="none" stroke="url(#g)" stroke-width="5.6"/>
         <!-- Lock/clasp -->
         <rect x="-15" y="-20" width="30" height="20" fill="url(#g)"/>
-        <circle cx="0" cy="30" r="12" fill="none" stroke="url(#g)" stroke-width="3"/>
+        <circle cx="0" cy="30" r="12" fill="none" stroke="url(#g)" stroke-width="4.2"/>
         <!-- Decorative lines -->
-        <line x1="-100" y1="40" x2="100" y2="40" stroke="url(#g)" stroke-width="2" opacity="0.4"/>
-        <line x1="-100" y1="70" x2="100" y2="70" stroke="url(#g)" stroke-width="2" opacity="0.4"/>
+        <line x1="-100" y1="40" x2="100" y2="40" stroke="url(#g)" stroke-width="2.8" opacity="0.4"/>
+        <line x1="-100" y1="70" x2="100" y2="70" stroke="url(#g)" stroke-width="2.8" opacity="0.4"/>
       </g>
     </svg>
   `),
@@ -271,22 +271,22 @@ export const icons = {
   // Local Business / Storefront
   localBusiness: encodeDataUri(`
     <svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-      <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="-200" y1="-160" x2="200" y2="160"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient></defs>
-      <rect width="800" height="600" fill="#16163d"/>
-      <g transform="translate(400, 320)">
+      <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="-200" y1="-160" x2="200" y2="160"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient><radialGradient id="glowA" cx="12%" cy="8%" r="65%"><stop offset="0%" stop-color="#7c3aed" stop-opacity="0.55"/><stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/></radialGradient><radialGradient id="glowB" cx="92%" cy="96%" r="60%"><stop offset="0%" stop-color="#f97316" stop-opacity="0.35"/><stop offset="100%" stop-color="#f97316" stop-opacity="0"/></radialGradient><radialGradient id="halo" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ec4899" stop-opacity="0.28"/><stop offset="70%" stop-color="#ec4899" stop-opacity="0.06"/><stop offset="100%" stop-color="#ec4899" stop-opacity="0"/></radialGradient><linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient><pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.3" fill="#ffffff" fill-opacity="0.07"/></pattern></defs>
+      <rect width="800" height="600" fill="#0e0e2a"/><rect width="800" height="600" fill="url(#glowA)"/><rect width="800" height="600" fill="url(#glowB)"/><rect width="800" height="600" fill="url(#dots)"/><circle cx="400" cy="300" r="250" fill="url(#halo)"/><circle cx="400" cy="300" r="215" fill="none" stroke="url(#ring)" stroke-width="1.5" stroke-opacity="0.35"/><circle cx="400" cy="300" r="160" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1.4"/>
+      <g transform="translate(400, 320)" stroke-linecap="round" stroke-linejoin="round">
         <!-- Awning -->
         <path d="M -130 -80 Q -130 -100 -110 -100 L -70 -100 Q -70 -80 -50 -80 L -30 -80 Q -30 -100 -10 -100 L 10 -100 Q 10 -80 30 -80 L 50 -80 Q 50 -100 70 -100 L 110 -100 Q 130 -100 130 -80 L 130 -60 L -130 -60 Z"
-              fill="none" stroke="url(#g)" stroke-width="3"/>
+              fill="none" stroke="url(#g)" stroke-width="4.2"/>
         <!-- Building -->
-        <rect x="-120" y="-60" width="240" height="160" fill="none" stroke="url(#g)" stroke-width="4"/>
+        <rect x="-120" y="-60" width="240" height="160" fill="none" stroke="url(#g)" stroke-width="5.6"/>
         <!-- Door -->
-        <rect x="-30" y="20" width="60" height="80" fill="none" stroke="url(#g)" stroke-width="3"/>
+        <rect x="-30" y="20" width="60" height="80" fill="none" stroke="url(#g)" stroke-width="4.2"/>
         <circle cx="-10" cy="60" r="3" fill="url(#g)"/>
         <!-- Windows -->
-        <rect x="-100" y="-30" width="35" height="35" fill="none" stroke="url(#g)" stroke-width="2"/>
-        <rect x="65" y="-30" width="35" height="35" fill="none" stroke="url(#g)" stroke-width="2"/>
-        <rect x="-100" y="20" width="35" height="35" fill="none" stroke="url(#g)" stroke-width="2"/>
-        <rect x="65" y="20" width="35" height="35" fill="none" stroke="url(#g)" stroke-width="2"/>
+        <rect x="-100" y="-30" width="35" height="35" fill="none" stroke="url(#g)" stroke-width="2.8"/>
+        <rect x="65" y="-30" width="35" height="35" fill="none" stroke="url(#g)" stroke-width="2.8"/>
+        <rect x="-100" y="20" width="35" height="35" fill="none" stroke="url(#g)" stroke-width="2.8"/>
+        <rect x="65" y="20" width="35" height="35" fill="none" stroke="url(#g)" stroke-width="2.8"/>
       </g>
     </svg>
   `),
@@ -294,21 +294,21 @@ export const icons = {
   // Blog / Article
   blog: encodeDataUri(`
     <svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-      <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="-200" y1="-160" x2="200" y2="160"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient></defs>
-      <rect width="800" height="600" fill="#16163d"/>
-      <g transform="translate(400, 300)">
+      <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="-200" y1="-160" x2="200" y2="160"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient><radialGradient id="glowA" cx="12%" cy="8%" r="65%"><stop offset="0%" stop-color="#7c3aed" stop-opacity="0.55"/><stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/></radialGradient><radialGradient id="glowB" cx="92%" cy="96%" r="60%"><stop offset="0%" stop-color="#f97316" stop-opacity="0.35"/><stop offset="100%" stop-color="#f97316" stop-opacity="0"/></radialGradient><radialGradient id="halo" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ec4899" stop-opacity="0.28"/><stop offset="70%" stop-color="#ec4899" stop-opacity="0.06"/><stop offset="100%" stop-color="#ec4899" stop-opacity="0"/></radialGradient><linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient><pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.3" fill="#ffffff" fill-opacity="0.07"/></pattern></defs>
+      <rect width="800" height="600" fill="#0e0e2a"/><rect width="800" height="600" fill="url(#glowA)"/><rect width="800" height="600" fill="url(#glowB)"/><rect width="800" height="600" fill="url(#dots)"/><circle cx="400" cy="300" r="250" fill="url(#halo)"/><circle cx="400" cy="300" r="215" fill="none" stroke="url(#ring)" stroke-width="1.5" stroke-opacity="0.35"/><circle cx="400" cy="300" r="160" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1.4"/>
+      <g transform="translate(400, 300)" stroke-linecap="round" stroke-linejoin="round">
         <!-- Document outline -->
-        <rect x="-100" y="-120" width="200" height="240" fill="none" stroke="url(#g)" stroke-width="4"/>
+        <rect x="-100" y="-120" width="200" height="240" fill="none" stroke="url(#g)" stroke-width="5.6"/>
         <!-- Title block -->
         <rect x="-80" y="-100" width="160" height="40" fill="url(#g)" opacity="0.3"/>
         <!-- Text lines -->
-        <line x1="-80" y1="-30" x2="80" y2="-30" stroke="url(#g)" stroke-width="2" opacity="0.5"/>
-        <line x1="-80" y1="-10" x2="80" y2="-10" stroke="url(#g)" stroke-width="2" opacity="0.5"/>
-        <line x1="-80" y1="10" x2="80" y2="10" stroke="url(#g)" stroke-width="2" opacity="0.5"/>
-        <line x1="-80" y1="30" x2="50" y2="30" stroke="url(#g)" stroke-width="2" opacity="0.5"/>
-        <line x1="-80" y1="60" x2="80" y2="60" stroke="url(#g)" stroke-width="2" opacity="0.5"/>
-        <line x1="-80" y1="80" x2="80" y2="80" stroke="url(#g)" stroke-width="2" opacity="0.5"/>
-        <line x1="-80" y1="100" x2="60" y2="100" stroke="url(#g)" stroke-width="2" opacity="0.5"/>
+        <line x1="-80" y1="-30" x2="80" y2="-30" stroke="url(#g)" stroke-width="2.8" opacity="0.5"/>
+        <line x1="-80" y1="-10" x2="80" y2="-10" stroke="url(#g)" stroke-width="2.8" opacity="0.5"/>
+        <line x1="-80" y1="10" x2="80" y2="10" stroke="url(#g)" stroke-width="2.8" opacity="0.5"/>
+        <line x1="-80" y1="30" x2="50" y2="30" stroke="url(#g)" stroke-width="2.8" opacity="0.5"/>
+        <line x1="-80" y1="60" x2="80" y2="60" stroke="url(#g)" stroke-width="2.8" opacity="0.5"/>
+        <line x1="-80" y1="80" x2="80" y2="80" stroke="url(#g)" stroke-width="2.8" opacity="0.5"/>
+        <line x1="-80" y1="100" x2="60" y2="100" stroke="url(#g)" stroke-width="2.8" opacity="0.5"/>
       </g>
     </svg>
   `),
@@ -316,12 +316,12 @@ export const icons = {
   // dui.guide / Legal navigation compass
   duiGuide: encodeDataUri(`
     <svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-      <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="-200" y1="-160" x2="200" y2="160"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient></defs>
-      <rect width="800" height="600" fill="#16163d"/>
-      <g transform="translate(400, 300)">
+      <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="-200" y1="-160" x2="200" y2="160"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient><radialGradient id="glowA" cx="12%" cy="8%" r="65%"><stop offset="0%" stop-color="#7c3aed" stop-opacity="0.55"/><stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/></radialGradient><radialGradient id="glowB" cx="92%" cy="96%" r="60%"><stop offset="0%" stop-color="#f97316" stop-opacity="0.35"/><stop offset="100%" stop-color="#f97316" stop-opacity="0"/></radialGradient><radialGradient id="halo" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ec4899" stop-opacity="0.28"/><stop offset="70%" stop-color="#ec4899" stop-opacity="0.06"/><stop offset="100%" stop-color="#ec4899" stop-opacity="0"/></radialGradient><linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient><pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.3" fill="#ffffff" fill-opacity="0.07"/></pattern></defs>
+      <rect width="800" height="600" fill="#0e0e2a"/><rect width="800" height="600" fill="url(#glowA)"/><rect width="800" height="600" fill="url(#glowB)"/><rect width="800" height="600" fill="url(#dots)"/><circle cx="400" cy="300" r="250" fill="url(#halo)"/><circle cx="400" cy="300" r="215" fill="none" stroke="url(#ring)" stroke-width="1.5" stroke-opacity="0.35"/><circle cx="400" cy="300" r="160" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1.4"/>
+      <g transform="translate(400, 300)" stroke-linecap="round" stroke-linejoin="round">
         <!-- Outer compass ring -->
-        <circle cx="0" cy="0" r="140" fill="none" stroke="url(#g)" stroke-width="3"/>
-        <circle cx="0" cy="0" r="120" fill="none" stroke="url(#g)" stroke-width="1" opacity="0.3"/>
+        <circle cx="0" cy="0" r="140" fill="none" stroke="url(#g)" stroke-width="4.2"/>
+        <circle cx="0" cy="0" r="120" fill="none" stroke="url(#g)" stroke-width="1.4" opacity="0.3"/>
         <!-- Compass needle North -->
         <path d="M 0 -110 L -18 0 L 0 -20 Z" fill="url(#g)"/>
         <!-- Compass needle South -->
@@ -329,15 +329,15 @@ export const icons = {
         <!-- Center dot -->
         <circle cx="0" cy="0" r="8" fill="url(#g)"/>
         <!-- Cardinal marks -->
-        <line x1="0" y1="-140" x2="0" y2="-128" stroke="url(#g)" stroke-width="3"/>
-        <line x1="0" y1="128" x2="0" y2="140" stroke="url(#g)" stroke-width="3"/>
-        <line x1="-140" y1="0" x2="-128" y2="0" stroke="url(#g)" stroke-width="3"/>
-        <line x1="128" y1="0" x2="140" y2="0" stroke="url(#g)" stroke-width="3"/>
+        <line x1="0" y1="-140" x2="0" y2="-128" stroke="url(#g)" stroke-width="4.2"/>
+        <line x1="0" y1="128" x2="0" y2="140" stroke="url(#g)" stroke-width="4.2"/>
+        <line x1="-140" y1="0" x2="-128" y2="0" stroke="url(#g)" stroke-width="4.2"/>
+        <line x1="128" y1="0" x2="140" y2="0" stroke="url(#g)" stroke-width="4.2"/>
         <!-- Scale / gavel at bottom -->
-        <line x1="-50" y1="155" x2="50" y2="155" stroke="url(#g)" stroke-width="3" opacity="0.7"/>
+        <line x1="-50" y1="155" x2="50" y2="155" stroke="url(#g)" stroke-width="4.2" opacity="0.7"/>
         <circle cx="-50" cy="155" r="5" fill="url(#g)" opacity="0.7"/>
         <circle cx="50" cy="155" r="5" fill="url(#g)" opacity="0.7"/>
-        <line x1="0" y1="155" x2="0" y2="175" stroke="url(#g)" stroke-width="3" opacity="0.7"/>
+        <line x1="0" y1="155" x2="0" y2="175" stroke="url(#g)" stroke-width="4.2" opacity="0.7"/>
       </g>
     </svg>
   `),
@@ -345,31 +345,31 @@ export const icons = {
   // ML Fine-Tuning / Training curve with neural nodes
   mlFineTuning: encodeDataUri(`
     <svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-      <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="-200" y1="-160" x2="200" y2="160"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient></defs>
-      <rect width="800" height="600" fill="#16163d"/>
-      <g transform="translate(400, 300)">
+      <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="-200" y1="-160" x2="200" y2="160"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient><radialGradient id="glowA" cx="12%" cy="8%" r="65%"><stop offset="0%" stop-color="#7c3aed" stop-opacity="0.55"/><stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/></radialGradient><radialGradient id="glowB" cx="92%" cy="96%" r="60%"><stop offset="0%" stop-color="#f97316" stop-opacity="0.35"/><stop offset="100%" stop-color="#f97316" stop-opacity="0"/></radialGradient><radialGradient id="halo" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ec4899" stop-opacity="0.28"/><stop offset="70%" stop-color="#ec4899" stop-opacity="0.06"/><stop offset="100%" stop-color="#ec4899" stop-opacity="0"/></radialGradient><linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient><pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.3" fill="#ffffff" fill-opacity="0.07"/></pattern></defs>
+      <rect width="800" height="600" fill="#0e0e2a"/><rect width="800" height="600" fill="url(#glowA)"/><rect width="800" height="600" fill="url(#glowB)"/><rect width="800" height="600" fill="url(#dots)"/><circle cx="400" cy="300" r="250" fill="url(#halo)"/><circle cx="400" cy="300" r="215" fill="none" stroke="url(#ring)" stroke-width="1.5" stroke-opacity="0.35"/><circle cx="400" cy="300" r="160" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1.4"/>
+      <g transform="translate(400, 300)" stroke-linecap="round" stroke-linejoin="round">
         <!-- Axis -->
-        <line x1="-150" y1="120" x2="150" y2="120" stroke="url(#g)" stroke-width="3"/>
-        <line x1="-150" y1="120" x2="-150" y2="-120" stroke="url(#g)" stroke-width="3"/>
+        <line x1="-150" y1="120" x2="150" y2="120" stroke="url(#g)" stroke-width="4.2"/>
+        <line x1="-150" y1="120" x2="-150" y2="-120" stroke="url(#g)" stroke-width="4.2"/>
         <!-- Loss curve going down (training progress) -->
-        <path d="M -130 -90 Q -80 -85 -40 -20 Q 0 40 40 70 Q 80 90 130 100" fill="none" stroke="url(#g)" stroke-width="4"/>
+        <path d="M -130 -90 Q -80 -85 -40 -20 Q 0 40 40 70 Q 80 90 130 100" fill="none" stroke="url(#g)" stroke-width="5.6"/>
         <!-- Data points on curve -->
         <circle cx="-130" cy="-90" r="6" fill="url(#g)"/>
         <circle cx="-40" cy="-20" r="6" fill="url(#g)"/>
         <circle cx="40" cy="70" r="6" fill="url(#g)"/>
         <circle cx="130" cy="100" r="6" fill="url(#g)"/>
         <!-- Neural nodes -->
-        <circle cx="-160" cy="-60" r="10" fill="none" stroke="url(#g)" stroke-width="2" opacity="0.6"/>
-        <circle cx="-160" cy="20" r="10" fill="none" stroke="url(#g)" stroke-width="2" opacity="0.6"/>
-        <circle cx="-160" cy="80" r="10" fill="none" stroke="url(#g)" stroke-width="2" opacity="0.6"/>
+        <circle cx="-160" cy="-60" r="10" fill="none" stroke="url(#g)" stroke-width="2.8" opacity="0.6"/>
+        <circle cx="-160" cy="20" r="10" fill="none" stroke="url(#g)" stroke-width="2.8" opacity="0.6"/>
+        <circle cx="-160" cy="80" r="10" fill="none" stroke="url(#g)" stroke-width="2.8" opacity="0.6"/>
         <!-- Slider/tuning bar -->
-        <line x1="-50" y1="-130" x2="150" y2="-130" stroke="url(#g)" stroke-width="3" opacity="0.5"/>
+        <line x1="-50" y1="-130" x2="150" y2="-130" stroke="url(#g)" stroke-width="4.2" opacity="0.5"/>
         <rect x="30" y="-140" width="4" height="20" fill="url(#g)"/>
-        <circle cx="32" cy="-130" r="8" fill="none" stroke="url(#g)" stroke-width="2"/>
+        <circle cx="32" cy="-130" r="8" fill="none" stroke="url(#g)" stroke-width="2.8"/>
         <!-- Axis label ticks -->
-        <line x1="-150" y1="-90" x2="-145" y2="-90" stroke="url(#g)" stroke-width="2" opacity="0.4"/>
-        <line x1="-150" y1="-30" x2="-145" y2="-30" stroke="url(#g)" stroke-width="2" opacity="0.4"/>
-        <line x1="-150" y1="50" x2="-145" y2="50" stroke="url(#g)" stroke-width="2" opacity="0.4"/>
+        <line x1="-150" y1="-90" x2="-145" y2="-90" stroke="url(#g)" stroke-width="2.8" opacity="0.4"/>
+        <line x1="-150" y1="-30" x2="-145" y2="-30" stroke="url(#g)" stroke-width="2.8" opacity="0.4"/>
+        <line x1="-150" y1="50" x2="-145" y2="50" stroke="url(#g)" stroke-width="2.8" opacity="0.4"/>
       </g>
     </svg>
   `),
@@ -377,24 +377,24 @@ export const icons = {
   // Video / Camera
   video: encodeDataUri(`
     <svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-      <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="-200" y1="-160" x2="200" y2="160"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient></defs>
-      <rect width="800" height="600" fill="#16163d"/>
-      <g transform="translate(370, 300)">
+      <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="-200" y1="-160" x2="200" y2="160"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient><radialGradient id="glowA" cx="12%" cy="8%" r="65%"><stop offset="0%" stop-color="#7c3aed" stop-opacity="0.55"/><stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/></radialGradient><radialGradient id="glowB" cx="92%" cy="96%" r="60%"><stop offset="0%" stop-color="#f97316" stop-opacity="0.35"/><stop offset="100%" stop-color="#f97316" stop-opacity="0"/></radialGradient><radialGradient id="halo" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ec4899" stop-opacity="0.28"/><stop offset="70%" stop-color="#ec4899" stop-opacity="0.06"/><stop offset="100%" stop-color="#ec4899" stop-opacity="0"/></radialGradient><linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient><pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.3" fill="#ffffff" fill-opacity="0.07"/></pattern></defs>
+      <rect width="800" height="600" fill="#0e0e2a"/><rect width="800" height="600" fill="url(#glowA)"/><rect width="800" height="600" fill="url(#glowB)"/><rect width="800" height="600" fill="url(#dots)"/><circle cx="400" cy="300" r="250" fill="url(#halo)"/><circle cx="400" cy="300" r="215" fill="none" stroke="url(#ring)" stroke-width="1.5" stroke-opacity="0.35"/><circle cx="400" cy="300" r="160" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1.4"/>
+      <g transform="translate(370, 300)" stroke-linecap="round" stroke-linejoin="round">
         <!-- Camera body -->
-        <rect x="-100" y="-60" width="160" height="120" fill="none" stroke="url(#g)" stroke-width="4"/>
+        <rect x="-100" y="-60" width="160" height="120" fill="none" stroke="url(#g)" stroke-width="5.6"/>
         <!-- Lens -->
-        <circle cx="-30" cy="0" r="40" fill="none" stroke="url(#g)" stroke-width="4"/>
-        <circle cx="-30" cy="0" r="25" fill="none" stroke="url(#g)" stroke-width="3"/>
+        <circle cx="-30" cy="0" r="40" fill="none" stroke="url(#g)" stroke-width="5.6"/>
+        <circle cx="-30" cy="0" r="25" fill="none" stroke="url(#g)" stroke-width="4.2"/>
         <!-- Viewfinder -->
-        <rect x="30" y="-40" width="20" height="20" fill="none" stroke="url(#g)" stroke-width="2"/>
+        <rect x="30" y="-40" width="20" height="20" fill="none" stroke="url(#g)" stroke-width="2.8"/>
         <!-- Tripod part -->
-        <line x1="-20" y1="60" x2="-60" y2="120" stroke="url(#g)" stroke-width="3"/>
-        <line x1="20" y1="60" x2="60" y2="120" stroke="url(#g)" stroke-width="3"/>
-        <line x1="0" y1="60" x2="0" y2="120" stroke="url(#g)" stroke-width="3"/>
+        <line x1="-20" y1="60" x2="-60" y2="120" stroke="url(#g)" stroke-width="4.2"/>
+        <line x1="20" y1="60" x2="60" y2="120" stroke="url(#g)" stroke-width="4.2"/>
+        <line x1="0" y1="60" x2="0" y2="120" stroke="url(#g)" stroke-width="4.2"/>
         <!-- Tripod base -->
-        <line x1="-60" y1="120" x2="60" y2="120" stroke="url(#g)" stroke-width="4"/>
+        <line x1="-60" y1="120" x2="60" y2="120" stroke="url(#g)" stroke-width="5.6"/>
         <!-- Play button overlay -->
-        <path d="M 90 -20 L 150 0 L 90 20 Z" fill="none" stroke="url(#g)" stroke-width="3"/>
+        <path d="M 90 -20 L 150 0 L 90 20 Z" fill="none" stroke="url(#g)" stroke-width="4.2"/>
       </g>
     </svg>
   `),

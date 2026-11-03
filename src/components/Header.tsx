@@ -65,7 +65,7 @@ export const Header = () => {
   return (
     <header 
       ref={headerRef}
-      className={`fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border transition-all duration-400 ease-out ${
+      className={`fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border transition-all duration-400 ease-out ${
         isScrolled ? "py-2 shadow-lg" : "py-4"
       }`}
     >

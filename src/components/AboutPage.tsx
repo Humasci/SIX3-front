@@ -48,12 +48,13 @@ export const AboutPage = () => {
   return (
     <div ref={contentRef}>
       {/* Hero Section */}
-      <section className="py-24 px-6">
+      <section className="theme-light pt-40 pb-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="about-hero">
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-light mb-8">
-              About SIX3 Agency
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-light mb-8 text-gradient w-fit pb-1">
+              About SIX³ Agency
             </h1>
+            <div className="h-1 w-40 bg-brand-gradient rounded-full mb-8" />
             <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl">
               We are a cutting-edge AI marketing agency specializing in intelligent automation, 
               generative content creation, and custom AI solutions that drive measurable business results.
@@ -78,7 +79,7 @@ export const AboutPage = () => {
               </p>
             </div>
             <div className="about-content">
-              <div className="aspect-video bg-secondary rounded-lg overflow-hidden">
+              <div className="media-frame aspect-[4/3] max-w-lg ml-auto">
                 <img
                   src={icons.ai}
                   alt="AI Technology"

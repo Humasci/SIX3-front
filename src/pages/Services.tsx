@@ -105,19 +105,20 @@ const Services = () => {
   return (
     <div ref={contentRef} className="min-h-screen bg-background text-foreground">
       <PageSEO
-        title="Our Services — SIX3 Agency"
-        description="Search marketing, generative AI video, AI agent automation, and ML fine-tuning services from SIX3 Agency. Comprehensive AI-powered solutions for business growth."
+        title="Our Services — SIX³ Agency"
+        description="Search marketing, generative AI video, AI agent automation, and ML fine-tuning services from SIX³ Agency. Comprehensive AI-powered solutions for business growth."
         canonical="https://six3.agency/services"
       />
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-6 mt-5">
+      <section className="theme-light pt-32 pb-16 px-6 mt-5">
         <div className="max-w-7xl mx-auto">
           <div className="services-hero text-center mb-16">
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-light mb-8">
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-light mb-8 text-gradient w-fit pb-1 mx-auto">
               Our Services
             </h1>
+            <div className="h-1 w-40 bg-brand-gradient rounded-full mb-8 mx-auto" />
             <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto mb-12">
               Comprehensive AI-powered solutions that transform your business operations, 
               maximize ROI, and drive sustainable growth through intelligent automation.
@@ -195,7 +196,7 @@ const Services = () => {
                     </div>
 
                     <div className="relative">
-                      <div className="aspect-square bg-secondary rounded-2xl overflow-hidden">
+                      <div className="media-frame aspect-[4/3]">
                         <img
                           src={service.image}
                           alt={service.title}

@@ -209,13 +209,13 @@ const Contact = () => {
     return (
       <div className="min-h-screen bg-background text-foreground">
         <Header />
-        <section className="pt-32 pb-24 px-6 flex items-center justify-center min-h-[80vh]">
+        <section className="theme-light pt-32 pb-24 px-6 flex items-center justify-center min-h-[80vh]">
           <div className="max-w-2xl mx-auto text-center">
             <div className="mb-8">
               <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-accent/10 flex items-center justify-center">
                 <Check className="w-10 h-10 icon-gradient" />
               </div>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-light mb-6">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-light mb-6 text-gradient w-fit pb-1 mx-auto">
                 Thank You!
               </h1>
               <p className="text-lg sm:text-xl text-muted-foreground mb-8 px-2">
@@ -263,16 +263,16 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <PageSEO
-        title="Contact SIX3 Agency — Get a Free Consultation"
-        description="Ready to transform your business with AI? Contact SIX3 Agency for a free consultation on AI marketing, automation, and ML solutions."
+        title="Contact SIX³ Agency — Get a Free Consultation"
+        description="Ready to transform your business with AI? Contact SIX³ Agency for a free consultation on AI marketing, automation, and ML solutions."
         canonical="https://six3.agency/contact"
       />
       <Header />
 
-      <section className="pt-32 pb-24 px-6 mt-5">
+      <section className="theme-light pt-32 pb-24 px-6 mt-5">
         <div className="max-w-4xl mx-auto">
           <div className="contact-title mb-16">
-            <h1 className="sr-only">Contact SIX3 Agency</h1>
+            <h1 className="sr-only">Contact SIX³ Agency</h1>
             <div className="flex items-center gap-2 mb-4">
               <span className="text-sm text-muted-foreground">
                 Step {currentStep + 1} of {steps.length}
@@ -284,7 +284,7 @@ const Contact = () => {
                 style={{ width: `${((currentStep + 1) / steps.length) * 100}%` }}
               />
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light mb-4 text-gradient w-fit pb-1">
               {steps[currentStep].title}
             </h2>
             <p className="text-lg sm:text-xl text-muted-foreground">
