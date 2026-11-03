@@ -12,24 +12,24 @@ export const Logo = ({ className = "", isScrolled = false }: LogoProps) => {
         {/* SIX text */}
         <span className="tracking-tight">SIX</span>
 
-        {/* Green heart at the end representing the "³" (power of 3) */}
+        {/* Lovable-style heart at the end representing the "³" (power of 3) */}
         <svg
-          viewBox="0 0 24 28"
-          className={`transition-all duration-400 ${isScrolled ? 'w-5 h-6' : 'w-6 h-7'} mb-0.5`}
+          viewBox="0 0 32 40"
+          className={`transition-all duration-400 ${isScrolled ? 'w-6 h-8' : 'w-7 h-9'} -ml-1`}
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
           <defs>
             <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style={{ stopColor: '#00d4ff', stopOpacity: 1 }} />
-              <stop offset="50%" style={{ stopColor: '#ff1493', stopOpacity: 1 }} />
-              <stop offset="100%" style={{ stopColor: '#a855f7', stopOpacity: 1 }} />
+              <stop offset="0%" style={{ stopColor: '#16a34a', stopOpacity: 1 }} />
+              <stop offset="50%" style={{ stopColor: '#22c55e', stopOpacity: 1 }} />
+              <stop offset="100%" style={{ stopColor: '#4ade80', stopOpacity: 1 }} />
             </linearGradient>
           </defs>
 
           {/* Lovable-style heart/bookmark shape */}
           <path
-            d="M12 2C9.8 2 8 3.8 8 6c0 1.5.8 2.8 2 3.5V22l2 3 2-3V9.5c1.2-.7 2-2 2-3.5 0-2.2-1.8-4-4-4z"
+            d="M16 3C12.7 3 10 5.7 10 9c0 2 1.1 3.8 2.7 4.7V33l3.3 4 3.3-4V13.7c1.6-.9 2.7-2.7 2.7-4.7 0-3.3-2.7-6-6-6z"
             fill="url(#heartGradient)"
           />
         </svg>
