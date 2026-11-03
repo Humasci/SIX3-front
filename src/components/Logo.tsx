@@ -1,44 +1,51 @@
+import { useId } from "react";
 import { Link } from "react-router-dom";
+import { PARTICLE_THREE } from "@/components/particleThree";
 
 interface LogoProps {
   className?: string;
   isScrolled?: boolean;
 }
 
-export const Logo = ({ className = "", isScrolled = false }: LogoProps) => {
+// The ³ in SIX³, drawn as shaded particles like the hero animation
+export const BrandMark = ({ className = "" }: { className?: string }) => {
+  const highlightId = `brand-hl-${useId().replace(/:/g, "")}`;
   return (
-    <Link to="/" className={`flex items-center gap-1.5 ${className}`}>
-      <div className={`flex items-start gap-0 transition-all duration-400 ${isScrolled ? 'text-xl' : 'text-2xl'} font-bold`}>
-        {/* SIX text */}
-        <span className="tracking-tight">SIX</span>
-
-        {/* Lovable heart as superscript (replacing the ³) */}
-        <svg
-          viewBox="0 0 24 24"
-          className={`transition-all duration-400 ${isScrolled ? 'w-3 h-3 mt-0.5' : 'w-4 h-4 mt-1'}`}
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <defs>
-            <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style={{ stopColor: '#7c3aed', stopOpacity: 1 }} />
-              <stop offset="50%" style={{ stopColor: '#a855f7', stopOpacity: 1 }} />
-              <stop offset="100%" style={{ stopColor: '#f97316', stopOpacity: 1 }} />
-            </linearGradient>
-          </defs>
-
-          {/* Lovable heart/bookmark shape */}
-          <path
-            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-            fill="url(#heartGradient)"
-          />
-        </svg>
-      </div>
-
-      {/* Agency text */}
-      <span className={`text-muted-foreground tracking-wider uppercase font-normal transition-all duration-400 ${isScrolled ? 'text-[10px]' : 'text-xs'} ml-1`}>
-        Agency
-      </span>
-    </Link>
+    <svg viewBox="0 0 24 24" className={className} aria-hidden="true">
+      <defs>
+        <radialGradient id={highlightId} cx="0.36" cy="0.32" r="0.7">
+          <stop offset="0" stopColor="#fff" stopOpacity="0.55" />
+          <stop offset="0.45" stopColor="#fff" stopOpacity="0" />
+          <stop offset="1" stopColor="#000" stopOpacity="0.35" />
+        </radialGradient>
+      </defs>
+      {PARTICLE_THREE.map(([x, y, r, color], i) => (
+        <g key={i}>
+          <circle cx={x} cy={y} r={r} fill={color} />
+          <circle cx={x} cy={y} r={r} fill={`url(#${highlightId})`} />
+        </g>
+      ))}
+    </svg>
   );
 };
+
+export const Logo = ({ className = "", isScrolled = false }: LogoProps) => (
+  <Link to="/" aria-label="SIX³ Agency home" className={`flex items-center gap-3 ${className}`}>
+    <span
+      className={`flex items-start font-extrabold tracking-tighter leading-none transition-all duration-400 ${
+        isScrolled ? "text-xl" : "text-2xl"
+      }`}
+    >
+      SIX
+      <BrandMark className="w-[0.95em] h-[0.95em] -mt-[0.3em] -ml-[0.02em] drop-shadow-[0_0_5px_rgba(168,85,247,0.45)]" />
+    </span>
+    <span className="h-4 w-px bg-gradient-to-b from-[#7c3aed] to-[#f97316] opacity-70" aria-hidden="true" />
+    <span
+      className={`text-muted-foreground uppercase font-medium tracking-[0.28em] transition-all duration-400 ${
+        isScrolled ? "text-[9px]" : "text-[10px]"
+      }`}
+    >
+      Agency
+    </span>
+  </Link>
+);

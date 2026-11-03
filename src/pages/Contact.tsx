@@ -209,7 +209,7 @@ const Contact = () => {
     return (
       <div className="min-h-screen bg-background text-foreground">
         <Header />
-        <section className="theme-light pt-32 pb-24 px-6 flex items-center justify-center min-h-[80vh]">
+        <section className="pt-32 pb-24 px-6 flex items-center justify-center min-h-[80vh]">
           <div className="max-w-2xl mx-auto text-center">
             <div className="mb-8">
               <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-accent/10 flex items-center justify-center">
@@ -269,7 +269,7 @@ const Contact = () => {
       />
       <Header />
 
-      <section className="theme-light pt-32 pb-24 px-6 mt-5">
+      <section className="pt-32 pb-24 px-6 mt-5">
         <div className="max-w-4xl mx-auto">
           <div className="contact-title mb-16">
             <h1 className="sr-only">Contact SIX³ Agency</h1>
