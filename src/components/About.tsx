@@ -85,7 +85,7 @@ export const About = () => {
     <section ref={sectionRef} className="theme-light py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16">
-          <p className="about-label text-sm text-muted-foreground mb-8 tracking-wider">Who we are -</p>
+          <p className="about-label text-sm text-muted-foreground mb-8 tracking-wider">Who we are <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" /></p>
           <h2 className="about-title text-4xl md:text-5xl font-light mb-8 max-w-3xl">
             SIX3 Agency delivers AI-powered marketing solutions that drive measurable results.
           </h2>
@@ -101,7 +101,7 @@ export const About = () => {
           </Link>
         </div>
 
-        <div className="border-t border-border pt-16">
+        <div className="border-t-gradient pt-16">
           <p className="text-lg text-muted-foreground mb-12">
             Successfully deployed AI solutions across industries with proven ROI and operational efficiency gains.
           </p>

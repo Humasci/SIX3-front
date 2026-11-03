@@ -157,7 +157,7 @@ const Services = () => {
                         <span className="text-6xl font-light text-muted-foreground/50">
                           {service.number}
                         </span>
-                        <div className="flex-1 h-px bg-border" />
+                        <div className="flex-1 h-0.5 bg-brand-gradient" />
                       </div>
 
                       <div>
@@ -173,7 +173,7 @@ const Services = () => {
                         <ul className="space-y-3">
                           {service.features.map((feature, idx) => (
                             <li key={idx} className="flex items-start gap-3">
-                              <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0" />
+                              <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient mt-2 flex-shrink-0" />
                               <span className="text-muted-foreground">{feature}</span>
                             </li>
                           ))}

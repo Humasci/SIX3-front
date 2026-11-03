@@ -116,8 +116,8 @@ const LocalBusiness = () => {
           <div className="local-business-hero grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <Wrench className="w-8 h-8 text-accent" />
-                <span className="text-accent font-medium">Local Service Businesses</span>
+                <Wrench className="w-8 h-8 icon-gradient" />
+                <span className="text-gradient font-medium">Local Service Businesses</span>
               </div>
               <h1 className="text-4xl md:text-4xl lg:text-5xl font-light mb-6">
                 AI Automation for Service-Based Local Businesses
@@ -170,7 +170,7 @@ const LocalBusiness = () => {
                   <ul className="space-y-2">
                     {businessType.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                        <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
                         <span className="text-sm text-muted-foreground">{benefit}</span>
                       </li>
                     ))}
@@ -231,13 +231,13 @@ const LocalBusiness = () => {
               const IconComponent = solution.icon;
               return (
                 <div key={index} className="solution-card bg-card border border-border p-8 rounded-lg">
-                  <IconComponent className="w-12 h-12 text-accent mb-6" />
+                  <IconComponent className="w-12 h-12 icon-gradient mb-6" />
                   <h3 className="text-2xl font-medium mb-4">{solution.title}</h3>
                   <p className="text-muted-foreground mb-6">{solution.description}</p>
                   <ul className="space-y-2">
                     {solution.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                        <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
                         <span className="text-sm text-muted-foreground">{benefit}</span>
                       </li>
                     ))}
@@ -331,19 +331,19 @@ const LocalBusiness = () => {
           <h2 className="text-4xl font-light mb-12 text-center">Local Business Results</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-light mb-4 text-accent">85%</div>
+              <div className="text-5xl md:text-6xl font-light mb-4 text-gradient">85%</div>
               <p className="text-lg text-muted-foreground">Emergency Call Capture Rate</p>
             </div>
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-light mb-4 text-accent">30%</div>
+              <div className="text-5xl md:text-6xl font-light mb-4 text-gradient">30%</div>
               <p className="text-lg text-muted-foreground">Reduction in Drive Time</p>
             </div>
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-light mb-4 text-accent">2x</div>
+              <div className="text-5xl md:text-6xl font-light mb-4 text-gradient">2x</div>
               <p className="text-lg text-muted-foreground">Increase in Bookings</p>
             </div>
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-light mb-4 text-accent">95%</div>
+              <div className="text-5xl md:text-6xl font-light mb-4 text-gradient">95%</div>
               <p className="text-lg text-muted-foreground">Customer Satisfaction</p>
             </div>
           </div>
@@ -351,7 +351,7 @@ const LocalBusiness = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-6 bg-accent text-accent-foreground">
+      <section className="py-24 px-6 bg-brand-gradient text-accent-foreground">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-light mb-8">
             Ready to Grow Your Local Business?
@@ -367,7 +367,7 @@ const LocalBusiness = () => {
               </Button>
             </Link>
             <Link to="/services/search-marketing-ppc">
-              <Button variant="outline" className="px-8 py-4 text-lg border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-accent">
+              <Button variant="outline" className="px-8 py-4 text-lg border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-gradient">
                 View Local Google Ads
               </Button>
             </Link>

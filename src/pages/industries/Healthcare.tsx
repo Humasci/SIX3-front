@@ -106,8 +106,8 @@ const Healthcare = () => {
           <div className="healthcare-hero grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <Heart className="w-8 h-8 text-accent" />
-                <span className="text-accent font-medium">Healthcare</span>
+                <Heart className="w-8 h-8 icon-gradient" />
+                <span className="text-gradient font-medium">Healthcare</span>
               </div>
               <h1 className="text-3xl md:text-3xl lg:text-4xl font-light mb-6">
                 AI Automation for Healthcare Practices
@@ -155,7 +155,7 @@ const Healthcare = () => {
                 <ul className="space-y-2">
                   {specialty.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                      <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
                       <span className="text-sm text-muted-foreground">{benefit}</span>
                     </li>
                   ))}
@@ -203,13 +203,13 @@ const Healthcare = () => {
               const IconComponent = solution.icon;
               return (
                 <div key={index} className="solution-card bg-card border border-border p-8 rounded-lg">
-                  <IconComponent className="w-12 h-12 text-accent mb-6" />
+                  <IconComponent className="w-12 h-12 icon-gradient mb-6" />
                   <h3 className="text-2xl font-medium mb-4">{solution.title}</h3>
                   <p className="text-muted-foreground mb-6">{solution.description}</p>
                   <ul className="space-y-2">
                     {solution.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                        <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
                         <span className="text-sm text-muted-foreground">{benefit}</span>
                       </li>
                     ))}
@@ -226,7 +226,7 @@ const Healthcare = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <Shield className="w-16 h-16 text-accent mb-6" />
+              <Shield className="w-16 h-16 icon-gradient mb-6" />
               <h2 className="text-4xl font-light mb-6">HIPAA Compliant & Secure</h2>
               <p className="text-lg text-muted-foreground mb-6">
                 All our healthcare AI solutions are built with HIPAA compliance at the core, ensuring 
@@ -234,15 +234,15 @@ const Healthcare = () => {
               </p>
               <ul className="space-y-3">
                 <li className="flex items-center gap-3">
-                  <Shield className="w-5 h-5 text-accent" />
+                  <Shield className="w-5 h-5 icon-gradient" />
                   <span>End-to-end encryption for all patient communications</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <Shield className="w-5 h-5 text-accent" />
+                  <Shield className="w-5 h-5 icon-gradient" />
                   <span>Secure data storage with audit trails</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <Shield className="w-5 h-5 text-accent" />
+                  <Shield className="w-5 h-5 icon-gradient" />
                   <span>Regular security assessments and compliance updates</span>
                 </li>
               </ul>
@@ -262,19 +262,19 @@ const Healthcare = () => {
           <h2 className="text-4xl font-light mb-12 text-center">Healthcare Practice Results</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-light mb-4 text-accent">40%</div>
+              <div className="text-5xl md:text-6xl font-light mb-4 text-gradient">40%</div>
               <p className="text-lg text-muted-foreground">Faster Patient Processing</p>
             </div>
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-light mb-4 text-accent">30%</div>
+              <div className="text-5xl md:text-6xl font-light mb-4 text-gradient">30%</div>
               <p className="text-lg text-muted-foreground">Reduction in No-Shows</p>
             </div>
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-light mb-4 text-accent">24/7</div>
+              <div className="text-5xl md:text-6xl font-light mb-4 text-gradient">24/7</div>
               <p className="text-lg text-muted-foreground">Patient Support Availability</p>
             </div>
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-light mb-4 text-accent">95%</div>
+              <div className="text-5xl md:text-6xl font-light mb-4 text-gradient">95%</div>
               <p className="text-lg text-muted-foreground">Patient Satisfaction Score</p>
             </div>
           </div>
@@ -282,7 +282,7 @@ const Healthcare = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-6 bg-accent text-accent-foreground">
+      <section className="py-24 px-6 bg-brand-gradient text-accent-foreground">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-light mb-8">
             Transform Your Healthcare Practice
@@ -298,7 +298,7 @@ const Healthcare = () => {
               </Button>
             </Link>
             <Link to="/services/ai-dev-automation">
-              <Button variant="outline" className="px-8 py-4 text-lg border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-accent">
+              <Button variant="outline" className="px-8 py-4 text-lg border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-gradient">
                 View AI Automation Services
               </Button>
             </Link>

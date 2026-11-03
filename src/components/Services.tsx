@@ -207,7 +207,7 @@ export const Services = () => {
     <section ref={sectionRef} className="py-24 px-6 bg-secondary/30">
       <div className="max-w-7xl mx-auto">
         <div className="services-header mb-16">
-          <p className="text-sm text-muted-foreground mb-8 tracking-wider">Services We Provide -</p>
+          <p className="text-sm text-muted-foreground mb-8 tracking-wider">Services We Provide <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" /></p>
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-light">
               Expert Services<br />
@@ -229,7 +229,7 @@ export const Services = () => {
                     <span className="service-number text-6xl font-light text-muted-foreground/40 transition-all duration-300 group-hover:text-muted-foreground/70">
                       {service.number}
                     </span>
-                    <ArrowUpRight className="service-arrow w-6 h-6 text-muted-foreground/60 transition-all duration-300 group-hover:text-accent" />
+                    <ArrowUpRight className="service-arrow w-6 h-6 text-muted-foreground/60 transition-all duration-300 group-hover:text-gradient" />
                   </div>
                   {service.image && (
                     <div className="mb-6">

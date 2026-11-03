@@ -95,7 +95,7 @@ const SearchMarketingPPC = () => {
       <section className="steps-section py-24 px-6 bg-secondary/30">
         <div className="max-w-7xl mx-auto">
           <p className="text-sm text-muted-foreground mb-8 tracking-wider">
-            Simple process -
+            Simple process <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" />
           </p>
           <h2 className="text-4xl md:text-5xl font-light mb-16">
             Clear, & Effective Workflow
@@ -103,7 +103,7 @@ const SearchMarketingPPC = () => {
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="step-card border border-border p-8 bg-background">
-              <TrendingUp className="w-12 h-12 mb-6 text-accent" />
+              <TrendingUp className="w-12 h-12 mb-6 icon-gradient" />
               <p className="text-sm text-muted-foreground mb-4">Step -01</p>
               <h3 className="text-2xl font-light mb-4">Discovery & Strategy</h3>
               <p className="text-muted-foreground">
@@ -112,7 +112,7 @@ const SearchMarketingPPC = () => {
             </div>
 
             <div className="step-card border border-border p-8 bg-background">
-              <Target className="w-12 h-12 mb-6 text-accent" />
+              <Target className="w-12 h-12 mb-6 icon-gradient" />
               <p className="text-sm text-muted-foreground mb-4">Step -02</p>
               <h3 className="text-2xl font-light mb-4">Setup & Launch</h3>
               <p className="text-muted-foreground">
@@ -121,7 +121,7 @@ const SearchMarketingPPC = () => {
             </div>
 
             <div className="step-card border border-border p-8 bg-background">
-              <BarChart3 className="w-12 h-12 mb-6 text-accent" />
+              <BarChart3 className="w-12 h-12 mb-6 text-gradient" />
               <p className="text-sm text-muted-foreground mb-4">Step -03</p>
               <h3 className="text-2xl font-light mb-4">Optimization & Scaling</h3>
               <p className="text-muted-foreground">
@@ -130,7 +130,7 @@ const SearchMarketingPPC = () => {
             </div>
 
             <div className="step-card border border-border p-8 bg-background">
-              <Zap className="w-12 h-12 mb-6 text-accent" />
+              <Zap className="w-12 h-12 mb-6 icon-gradient" />
               <p className="text-sm text-muted-foreground mb-4">Step -04</p>
               <h3 className="text-2xl font-light mb-4">Ongoing Management</h3>
               <p className="text-muted-foreground">
@@ -145,7 +145,7 @@ const SearchMarketingPPC = () => {
       <section className="py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <p className="text-sm text-muted-foreground mb-8 tracking-wider">
-            Overview -
+            Overview <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" />
           </p>
           <h2 className="text-4xl md:text-5xl font-light mb-8 max-w-3xl">
             AI-Driven Search Marketing with Advanced Algorithm Optimization
@@ -180,14 +180,14 @@ const SearchMarketingPPC = () => {
       <section className="advantages-section py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <p className="text-sm text-muted-foreground mb-8 tracking-wider">
-            Our Advantage -
+            Our Advantage <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" />
           </p>
           <h2 className="text-5xl md:text-6xl font-light mb-16 max-w-2xl">
             Where Strategy<br />Meets Results
           </h2>
 
           <div className="space-y-12">
-            <div className="advantage-card border-t border-border pt-8">
+            <div className="advantage-card border-t-gradient pt-8">
               <div className="text-5xl font-light text-muted-foreground/50 mb-4">01</div>
               <h3 className="text-3xl font-light mb-4">Multi-Platform Expertise</h3>
               <p className="text-lg text-muted-foreground max-w-2xl">
@@ -195,7 +195,7 @@ const SearchMarketingPPC = () => {
               </p>
             </div>
 
-            <div className="advantage-card border-t border-border pt-8">
+            <div className="advantage-card border-t-gradient pt-8">
               <div className="text-5xl font-light text-muted-foreground/50 mb-4">02</div>
               <h3 className="text-3xl font-light mb-4">Advanced AI Optimization</h3>
               <p className="text-lg text-muted-foreground max-w-2xl">
@@ -203,7 +203,7 @@ const SearchMarketingPPC = () => {
               </p>
             </div>
 
-            <div className="advantage-card border-t border-border pt-8">
+            <div className="advantage-card border-t-gradient pt-8">
               <div className="text-5xl font-light text-muted-foreground/50 mb-4">03</div>
               <h3 className="text-3xl font-light mb-4">Automated Intelligence</h3>
               <p className="text-lg text-muted-foreground max-w-2xl">

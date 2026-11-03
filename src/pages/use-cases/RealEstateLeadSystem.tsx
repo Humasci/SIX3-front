@@ -46,7 +46,7 @@ const RealEstateLeadSystem = () => {
         <div className="max-w-7xl mx-auto">
           <div className="case-study-hero">
             <div className="flex items-center gap-2 mb-6">
-              <Link to="/industries/real-estate" className="text-accent hover:underline">Real Estate</Link>
+              <Link to="/industries/real-estate" className="text-gradient hover:underline">Real Estate</Link>
               <ArrowRight className="w-4 h-4" />
               <span>Case Study</span>
             </div>
@@ -92,22 +92,22 @@ const RealEstateLeadSystem = () => {
           <h2 className="text-3xl md:text-4xl font-light mb-12 text-center">Key Results</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="result-item text-center">
-              <TrendingUp className="w-12 h-12 text-accent mx-auto mb-4" />
+              <TrendingUp className="w-12 h-12 icon-gradient mx-auto mb-4" />
               <div className="text-4xl font-light mb-2">45%</div>
               <p className="text-muted-foreground">Increase in lead conversion</p>
             </div>
             <div className="result-item text-center">
-              <Phone className="w-12 h-12 text-accent mx-auto mb-4" />
+              <Phone className="w-12 h-12 icon-gradient mx-auto mb-4" />
               <div className="text-4xl font-light mb-2">70%</div>
               <p className="text-muted-foreground">Reduction in manual follow-up</p>
             </div>
             <div className="result-item text-center">
-              <Home className="w-12 h-12 text-accent mx-auto mb-4" />
+              <Home className="w-12 h-12 icon-gradient mx-auto mb-4" />
               <div className="text-4xl font-light mb-2">$200K</div>
               <p className="text-muted-foreground">Additional annual revenue</p>
             </div>
             <div className="result-item text-center">
-              <Users className="w-12 h-12 text-accent mx-auto mb-4" />
+              <Users className="w-12 h-12 icon-gradient mx-auto mb-4" />
               <div className="text-4xl font-light mb-2">24/7</div>
               <p className="text-muted-foreground">Lead capture availability</p>
             </div>
@@ -168,19 +168,19 @@ const RealEstateLeadSystem = () => {
                 <ul className="space-y-3">
                   <li className="flex justify-between">
                     <span>Lead response time:</span>
-                    <span className="font-medium text-accent">Under 5 minutes</span>
+                    <span className="font-medium text-gradient">Under 5 minutes</span>
                   </li>
                   <li className="flex justify-between">
                     <span>Conversion rate:</span>
-                    <span className="font-medium text-accent">26%</span>
+                    <span className="font-medium text-gradient">26%</span>
                   </li>
                   <li className="flex justify-between">
                     <span>Follow-up time per agent:</span>
-                    <span className="font-medium text-accent">1-1.5 hours daily</span>
+                    <span className="font-medium text-gradient">1-1.5 hours daily</span>
                   </li>
                   <li className="flex justify-between">
                     <span>After-hours capture:</span>
-                    <span className="font-medium text-accent">90%</span>
+                    <span className="font-medium text-gradient">90%</span>
                   </li>
                 </ul>
               </div>
@@ -197,7 +197,7 @@ const RealEstateLeadSystem = () => {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-accent-foreground font-medium">1</div>
+                  <div className="w-8 h-8 bg-brand-gradient rounded-full flex items-center justify-center text-accent-foreground font-medium">1</div>
                   <h3 className="text-2xl font-medium">Intelligent Lead Scoring</h3>
                 </div>
                 <p className="text-muted-foreground mb-4">
@@ -206,15 +206,15 @@ const RealEstateLeadSystem = () => {
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
                     <span className="text-sm">Automatic lead scoring (1-100)</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
                     <span className="text-sm">Budget qualification through conversation</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
                     <span className="text-sm">Timeline assessment and urgency detection</span>
                   </li>
                 </ul>
@@ -232,7 +232,7 @@ const RealEstateLeadSystem = () => {
               </div>
               <div className="order-1 md:order-2">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-accent-foreground font-medium">2</div>
+                  <div className="w-8 h-8 bg-brand-gradient rounded-full flex items-center justify-center text-accent-foreground font-medium">2</div>
                   <h3 className="text-2xl font-medium">24/7 Lead Nurturing</h3>
                 </div>
                 <p className="text-muted-foreground mb-4">
@@ -241,15 +241,15 @@ const RealEstateLeadSystem = () => {
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
                     <span className="text-sm">Personalized property matching</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
                     <span className="text-sm">Market update automation</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
                     <span className="text-sm">Appointment scheduling automation</span>
                   </li>
                 </ul>
@@ -259,7 +259,7 @@ const RealEstateLeadSystem = () => {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-accent-foreground font-medium">3</div>
+                  <div className="w-8 h-8 bg-brand-gradient rounded-full flex items-center justify-center text-accent-foreground font-medium">3</div>
                   <h3 className="text-2xl font-medium">Google Ads Optimization</h3>
                 </div>
                 <p className="text-muted-foreground mb-4">
@@ -268,15 +268,15 @@ const RealEstateLeadSystem = () => {
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
                     <span className="text-sm">Local area targeting optimization</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
                     <span className="text-sm">High-intent keyword focus</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
                     <span className="text-sm">Quality-based bid adjustments</span>
                   </li>
                 </ul>
@@ -323,7 +323,7 @@ const RealEstateLeadSystem = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-6 bg-accent text-accent-foreground">
+      <section className="py-24 px-6 bg-brand-gradient text-accent-foreground">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-light mb-8">
             Transform Your Real Estate Business
@@ -338,7 +338,7 @@ const RealEstateLeadSystem = () => {
               </Button>
             </Link>
             <Link to="/industries/real-estate">
-              <Button variant="outline" className="px-8 py-4 text-lg border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-accent">
+              <Button variant="outline" className="px-8 py-4 text-lg border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-gradient">
                 Real Estate Solutions
               </Button>
             </Link>

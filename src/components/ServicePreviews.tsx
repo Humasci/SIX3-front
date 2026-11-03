@@ -80,7 +80,7 @@ export const ServicePreviews = () => {
     <section ref={sectionRef} className="theme-light py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="service-preview-header mb-16">
-          <p className="text-sm text-muted-foreground mb-8 tracking-wider">Our Core Services -</p>
+          <p className="text-sm text-muted-foreground mb-8 tracking-wider">Our Core Services <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" /></p>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-light mb-8">
             AI-Powered Solutions<br />
             That Drive Results
@@ -97,10 +97,10 @@ export const ServicePreviews = () => {
               <div className="grid lg:grid-cols-2 gap-12 p-8 lg:p-12">
                 <div>
                   <div className="flex items-center gap-4 mb-6">
-                    <span className="text-4xl font-light text-accent">
+                    <span className="text-4xl font-light text-gradient">
                       {service.number}
                     </span>
-                    <div className="flex-1 h-px bg-border" />
+                    <div className="flex-1 h-0.5 bg-brand-gradient" />
                   </div>
                   
                   <h3 className="text-3xl md:text-4xl font-light mb-4">{service.title}</h3>
@@ -111,7 +111,7 @@ export const ServicePreviews = () => {
                     <ul className="space-y-3">
                       {service.features.map((feature, idx) => (
                         <li key={idx} className="flex items-start gap-3">
-                          <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0" />
+                          <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient mt-2 flex-shrink-0" />
                           <span className="text-muted-foreground">{feature}</span>
                         </li>
                       ))}

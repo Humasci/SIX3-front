@@ -138,7 +138,7 @@ const Blog = () => {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
                 <div className="flex items-center gap-4 text-sm">
-                  <span className="bg-accent/10 text-accent px-3 py-1 rounded-full">Featured</span>
+                  <span className="bg-accent/10 text-gradient px-3 py-1 rounded-full">Featured</span>
                   <span className="bg-secondary px-3 py-1 rounded-full">{post.category}</span>
                 </div>
                 <h2 className="text-4xl md:text-5xl font-light leading-tight">
@@ -185,8 +185,8 @@ const Blog = () => {
                 key={category}
                 className={`px-6 py-3 rounded-full transition-all ${
                   category === "All" 
-                    ? "bg-accent text-background" 
-                    : "bg-secondary hover:bg-accent hover:text-background"
+                    ? "bg-brand-gradient text-background" 
+                    : "bg-secondary hover:bg-brand-gradient hover:text-background"
                 }`}
               >
                 {category}
@@ -212,10 +212,10 @@ const Blog = () => {
                   </div>
                   <div className="p-6">
                     <div className="flex items-center gap-2 mb-4">
-                      <Tag className="w-4 h-4 text-accent" />
-                      <span className="text-sm text-accent">{post.category}</span>
+                      <Tag className="w-4 h-4 icon-gradient" />
+                      <span className="text-sm text-gradient">{post.category}</span>
                     </div>
-                    <h3 className="text-xl font-medium mb-3 group-hover:text-accent transition-colors">
+                    <h3 className="text-xl font-medium mb-3 group-hover:text-gradient transition-colors">
                       {post.title}
                     </h3>
                     <p className="text-muted-foreground leading-relaxed mb-4">

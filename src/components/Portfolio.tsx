@@ -206,7 +206,7 @@ export const Portfolio = () => {
       <div className="max-w-7xl mx-auto">
         <div className="portfolio-header mb-16">
           <p className="text-sm text-muted-foreground mb-8 tracking-wider">
-            Our Work -
+            Our Work <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" />
           </p>
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-light">
@@ -215,7 +215,7 @@ export const Portfolio = () => {
             </h2>
             <Link
               to="/portfolio"
-              className="text-lg hover:text-accent transition-colors"
+              className="text-lg hover:text-gradient transition-colors"
             >
               View All Projects →
             </Link>
@@ -240,7 +240,7 @@ export const Portfolio = () => {
                 </div>
               </div>
               <div className="flex items-start justify-between mb-2">
-                <span className="project-number text-4xl font-light text-accent transition-all duration-300">
+                <span className="project-number text-4xl font-light text-gradient transition-all duration-300">
                   {project.number}
                 </span>
                 <span className="text-sm text-muted-foreground">
@@ -248,10 +248,10 @@ export const Portfolio = () => {
                 </span>
               </div>
               <h3 className="project-title text-2xl font-light mb-2 transition-all duration-300">{project.title}</h3>
-              <p className="text-sm text-accent mb-2 transition-colors duration-300">{project.category}</p>
+              <p className="text-sm text-gradient mb-2 transition-colors duration-300">{project.category}</p>
               <p className="text-muted-foreground text-sm mb-3 leading-relaxed">{project.description}</p>
               <div className="project-metrics bg-accent/10 border border-accent/20 rounded-full px-4 py-2 transition-all duration-300 hover:bg-accent/20 hover:border-accent/40">
-                <p className="text-xs font-medium text-accent">{project.metrics}</p>
+                <p className="text-xs font-medium text-gradient">{project.metrics}</p>
               </div>
             </Link>
           ))}

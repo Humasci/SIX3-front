@@ -95,7 +95,7 @@ const ContentCreation = () => {
       <section className="steps-section py-24 px-6 bg-secondary/30">
         <div className="max-w-7xl mx-auto">
           <p className="text-sm text-muted-foreground mb-8 tracking-wider">
-            Simple process -
+            Simple process <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" />
           </p>
           <h2 className="text-4xl md:text-5xl font-light mb-16">
             Clear, & Effective Workflow
@@ -103,7 +103,7 @@ const ContentCreation = () => {
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="step-card border border-border p-8 bg-background">
-              <User className="w-12 h-12 mb-6 text-accent" />
+              <User className="w-12 h-12 mb-6 icon-gradient" />
               <p className="text-sm text-muted-foreground mb-4">Step -01</p>
               <h3 className="text-2xl font-light mb-4">Creative Brief & Planning</h3>
               <p className="text-muted-foreground">
@@ -112,7 +112,7 @@ const ContentCreation = () => {
             </div>
 
             <div className="step-card border border-border p-8 bg-background">
-              <Bot className="w-12 h-12 mb-6 text-accent" />
+              <Bot className="w-12 h-12 mb-6 icon-gradient" />
               <p className="text-sm text-muted-foreground mb-4">Step -02</p>
               <h3 className="text-2xl font-light mb-4">AI Model Configuration</h3>
               <p className="text-muted-foreground">
@@ -121,7 +121,7 @@ const ContentCreation = () => {
             </div>
 
             <div className="step-card border border-border p-8 bg-background">
-              <Video className="w-12 h-12 mb-6 text-accent" />
+              <Video className="w-12 h-12 mb-6 icon-gradient" />
               <p className="text-sm text-muted-foreground mb-4">Step -03</p>
               <h3 className="text-2xl font-light mb-4">Production & Generation</h3>
               <p className="text-muted-foreground">
@@ -130,7 +130,7 @@ const ContentCreation = () => {
             </div>
 
             <div className="step-card border border-border p-8 bg-background">
-              <Mic className="w-12 h-12 mb-6 text-accent" />
+              <Mic className="w-12 h-12 mb-6 icon-gradient" />
               <p className="text-sm text-muted-foreground mb-4">Step -04</p>
               <h3 className="text-2xl font-light mb-4">Post-Production & Delivery</h3>
               <p className="text-muted-foreground">
@@ -145,7 +145,7 @@ const ContentCreation = () => {
       <section className="py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <p className="text-sm text-muted-foreground mb-8 tracking-wider">
-            Overview -
+            Overview <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" />
           </p>
           <h2 className="text-4xl md:text-5xl font-light mb-8 max-w-3xl">
             AI Avatars and Generative Models for Unique Multimedia Content
@@ -181,14 +181,14 @@ const ContentCreation = () => {
       <section className="advantages-section py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <p className="text-sm text-muted-foreground mb-8 tracking-wider">
-            Our Advantage -
+            Our Advantage <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" />
           </p>
           <h2 className="text-5xl md:text-6xl font-light mb-16 max-w-2xl">
             Where Creativity<br />Meets Strategy
           </h2>
 
           <div className="space-y-12">
-            <div className="advantage-card border-t border-border pt-8">
+            <div className="advantage-card border-t-gradient pt-8">
               <div className="text-5xl font-light text-muted-foreground/50 mb-4">01</div>
               <h3 className="text-3xl font-light mb-4">AI Avatar Technology</h3>
               <p className="text-lg text-muted-foreground max-w-2xl">
@@ -196,7 +196,7 @@ const ContentCreation = () => {
               </p>
             </div>
 
-            <div className="advantage-card border-t border-border pt-8">
+            <div className="advantage-card border-t-gradient pt-8">
               <div className="text-5xl font-light text-muted-foreground/50 mb-4">02</div>
               <h3 className="text-3xl font-light mb-4">Voice Cloning & Synthesis</h3>
               <p className="text-lg text-muted-foreground max-w-2xl">
@@ -204,7 +204,7 @@ const ContentCreation = () => {
               </p>
             </div>
 
-            <div className="advantage-card border-t border-border pt-8">
+            <div className="advantage-card border-t-gradient pt-8">
               <div className="text-5xl font-light text-muted-foreground/50 mb-4">03</div>
               <h3 className="text-3xl font-light mb-4">UGC Campaign Automation</h3>
               <p className="text-lg text-muted-foreground max-w-2xl">

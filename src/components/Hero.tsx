@@ -193,7 +193,7 @@ export const Hero = () => {
 
       <div className="hero-footer relative flex items-center justify-between px-6 pb-8">
         <div className="flex items-center gap-2">
-          <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+          <div className="w-2 h-2 rounded-full bg-brand-gradient animate-pulse" />
           <span className="text-sm text-muted-foreground">London, {time}</span>
         </div>
         

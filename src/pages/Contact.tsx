@@ -213,7 +213,7 @@ const Contact = () => {
           <div className="max-w-2xl mx-auto text-center">
             <div className="mb-8">
               <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-accent/10 flex items-center justify-center">
-                <Check className="w-10 h-10 text-accent" />
+                <Check className="w-10 h-10 icon-gradient" />
               </div>
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-light mb-6">
                 Thank You!
@@ -225,7 +225,7 @@ const Contact = () => {
               {maxReached ? (
                 <p className="text-base sm:text-lg text-muted-foreground mb-4 px-2">
                   You've reached the maximum number of submissions. For additional inquiries, please email us directly at{' '}
-                  <a href="mailto:hello@six3.agency" className="text-accent hover:underline">
+                  <a href="mailto:hello@six3.agency" className="text-gradient hover:underline">
                     hello@six3.agency
                   </a>
                 </p>
@@ -236,7 +236,7 @@ const Contact = () => {
                   </p>
                   <p className="text-sm text-muted-foreground">
                     For urgent matters, email us at{' '}
-                    <a href="mailto:hello@six3.agency" className="text-accent hover:underline">
+                    <a href="mailto:hello@six3.agency" className="text-gradient hover:underline">
                       hello@six3.agency
                     </a>
                   </p>
@@ -280,7 +280,7 @@ const Contact = () => {
             </div>
             <div className="w-full bg-secondary/30 rounded-full h-1 mb-8">
               <div
-                className="bg-accent h-1 rounded-full transition-all duration-500"
+                className="bg-brand-gradient h-1 rounded-full transition-all duration-500"
                 style={{ width: `${((currentStep + 1) / steps.length) * 100}%` }}
               />
             </div>
@@ -370,7 +370,7 @@ const Contact = () => {
                         <div className="flex items-center justify-between">
                           <span className="text-sm">{service}</span>
                           {formData.services.includes(service) && (
-                            <Check className="w-4 h-4 text-accent" />
+                            <Check className="w-4 h-4 icon-gradient" />
                           )}
                         </div>
                       </button>
@@ -411,7 +411,7 @@ const Contact = () => {
                   {submissionCount >= 2
                     ? "You've reached the maximum number of submissions. Please email us directly at "
                     : "Sorry, there was an error sending your message. Please try again or email us directly at "}
-                  <a href="mailto:hello@six3.agency" className="text-accent hover:underline">hello@six3.agency</a>
+                  <a href="mailto:hello@six3.agency" className="text-gradient hover:underline">hello@six3.agency</a>
                 </p>
               </div>
             )}

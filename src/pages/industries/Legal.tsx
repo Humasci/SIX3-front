@@ -91,8 +91,8 @@ const Legal = () => {
           <div className="legal-hero grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <Scale className="w-8 h-8 text-accent" />
-                <span className="text-accent font-medium">Legal & Law Firms</span>
+                <Scale className="w-8 h-8 icon-gradient" />
+                <span className="text-gradient font-medium">Legal & Law Firms</span>
               </div>
               <h1 className="text-3xl md:text-3xl lg:text-4xl font-light mb-6">
                 AI-Powered Solutions for Legal Practices
@@ -160,13 +160,13 @@ const Legal = () => {
               const IconComponent = solution.icon;
               return (
                 <div key={index} className="solution-card bg-card border border-border p-8 rounded-lg">
-                  <IconComponent className="w-12 h-12 text-accent mb-6" />
+                  <IconComponent className="w-12 h-12 icon-gradient mb-6" />
                   <h3 className="text-2xl font-medium mb-4">{solution.title}</h3>
                   <p className="text-muted-foreground mb-6">{solution.description}</p>
                   <ul className="space-y-2">
                     {solution.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                        <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
                         <span className="text-sm text-muted-foreground">{benefit}</span>
                       </li>
                     ))}
@@ -185,7 +185,7 @@ const Legal = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {caseStudyStats.map((stat, index) => (
               <div key={index} className="stat-item text-center">
-                <div className="text-5xl md:text-6xl font-light mb-4 text-accent">{stat.value}</div>
+                <div className="text-5xl md:text-6xl font-light mb-4 text-gradient">{stat.value}</div>
                 <p className="text-lg text-muted-foreground">{stat.label}</p>
               </div>
             ))}
@@ -207,28 +207,28 @@ const Legal = () => {
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-light text-accent">1</span>
+                <span className="text-2xl font-light text-gradient">1</span>
               </div>
               <h3 className="text-lg font-medium mb-2">Discovery Call</h3>
               <p className="text-muted-foreground text-sm">Understand your practice needs and current challenges</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-light text-accent">2</span>
+                <span className="text-2xl font-light text-gradient">2</span>
               </div>
               <h3 className="text-lg font-medium mb-2">Custom Solution</h3>
               <p className="text-muted-foreground text-sm">Design AI systems tailored to your practice areas</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-light text-accent">3</span>
+                <span className="text-2xl font-light text-gradient">3</span>
               </div>
               <h3 className="text-lg font-medium mb-2">Integration</h3>
               <p className="text-muted-foreground text-sm">Seamless setup with your existing case management system</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-light text-accent">4</span>
+                <span className="text-2xl font-light text-gradient">4</span>
               </div>
               <h3 className="text-lg font-medium mb-2">Training & Launch</h3>
               <p className="text-muted-foreground text-sm">Team training and go-live support with ongoing optimization</p>
@@ -238,7 +238,7 @@ const Legal = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-6 bg-accent text-accent-foreground">
+      <section className="py-24 px-6 bg-brand-gradient text-accent-foreground">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-light mb-8">
             Ready to Transform Your Legal Practice?
@@ -253,7 +253,7 @@ const Legal = () => {
               </Button>
             </Link>
             <Link to="/use-cases/law-firm-automation">
-              <Button variant="outline" className="px-8 py-4 text-lg border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-accent">
+              <Button variant="outline" className="px-8 py-4 text-lg border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-gradient">
                 View Case Study
               </Button>
             </Link>

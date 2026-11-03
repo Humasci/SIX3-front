@@ -152,42 +152,42 @@ export const AboutPage = () => {
               <p className="text-muted-foreground mb-4">
                 Client intake automation, case management, and billing systems with 60% reduction in administration time.
               </p>
-              <p className="text-sm text-accent">$150K+ annual savings achieved</p>
+              <p className="text-sm text-gradient">$150K+ annual savings achieved</p>
             </div>
             <div className="about-content border border-border p-6">
               <h3 className="text-xl font-medium mb-3">Healthcare</h3>
               <p className="text-muted-foreground mb-4">
                 Patient scheduling, insurance verification, and care plan coordination with improved efficiency.
               </p>
-              <p className="text-sm text-accent">40% faster patient processing</p>
+              <p className="text-sm text-gradient">40% faster patient processing</p>
             </div>
             <div className="about-content border border-border p-6">
               <h3 className="text-xl font-medium mb-3">Real Estate</h3>
               <p className="text-muted-foreground mb-4">
                 Lead nurturing, property matching, and transaction management with 45% conversion increase.
               </p>
-              <p className="text-sm text-accent">$200K+ revenue increase</p>
+              <p className="text-sm text-gradient">$200K+ revenue increase</p>
             </div>
             <div className="about-content border border-border p-6">
               <h3 className="text-xl font-medium mb-3">E-commerce</h3>
               <p className="text-muted-foreground mb-4">
                 Customer service automation, inventory management, and order fulfillment optimization.
               </p>
-              <p className="text-sm text-accent">24/7 automated support</p>
+              <p className="text-sm text-gradient">24/7 automated support</p>
             </div>
             <div className="about-content border border-border p-6">
               <h3 className="text-xl font-medium mb-3">Manufacturing</h3>
               <p className="text-muted-foreground mb-4">
                 Supply chain optimization, quality control automation, and maintenance scheduling systems.
               </p>
-              <p className="text-sm text-accent">20-40% cost reduction</p>
+              <p className="text-sm text-gradient">20-40% cost reduction</p>
             </div>
             <div className="about-content border border-border p-6">
               <h3 className="text-xl font-medium mb-3">Financial Services</h3>
               <p className="text-muted-foreground mb-4">
                 Risk assessment automation, customer onboarding, and compliance monitoring solutions.
               </p>
-              <p className="text-sm text-accent">90%+ accuracy rates</p>
+              <p className="text-sm text-gradient">90%+ accuracy rates</p>
             </div>
           </div>
         </div>

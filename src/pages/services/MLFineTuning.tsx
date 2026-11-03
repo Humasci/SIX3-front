@@ -100,7 +100,7 @@ const MLFineTuning = () => {
       <section className="steps-section py-24 px-6 bg-secondary/30">
         <div className="max-w-7xl mx-auto">
           <p className="text-sm text-muted-foreground mb-8 tracking-wider">
-            Simple process -
+            Simple process <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" />
           </p>
           <h2 className="text-4xl md:text-5xl font-light mb-16">
             Clear, & Effective Workflow
@@ -108,7 +108,7 @@ const MLFineTuning = () => {
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="step-card border border-border p-8 bg-background">
-              <Database className="w-12 h-12 mb-6 text-accent" />
+              <Database className="w-12 h-12 mb-6 icon-gradient" />
               <p className="text-sm text-muted-foreground mb-4">Step -01</p>
               <h3 className="text-2xl font-light mb-4">Data Audit & Preparation</h3>
               <p className="text-muted-foreground">
@@ -117,7 +117,7 @@ const MLFineTuning = () => {
             </div>
 
             <div className="step-card border border-border p-8 bg-background">
-              <FlaskConical className="w-12 h-12 mb-6 text-accent" />
+              <FlaskConical className="w-12 h-12 mb-6 icon-gradient" />
               <p className="text-sm text-muted-foreground mb-4">Step -02</p>
               <h3 className="text-2xl font-light mb-4">Model Selection & Training</h3>
               <p className="text-muted-foreground">
@@ -126,7 +126,7 @@ const MLFineTuning = () => {
             </div>
 
             <div className="step-card border border-border p-8 bg-background">
-              <BarChart2 className="w-12 h-12 mb-6 text-accent" />
+              <BarChart2 className="w-12 h-12 mb-6 text-gradient" />
               <p className="text-sm text-muted-foreground mb-4">Step -03</p>
               <h3 className="text-2xl font-light mb-4">Evaluation & Benchmarking</h3>
               <p className="text-muted-foreground">
@@ -135,7 +135,7 @@ const MLFineTuning = () => {
             </div>
 
             <div className="step-card border border-border p-8 bg-background">
-              <Rocket className="w-12 h-12 mb-6 text-accent" />
+              <Rocket className="w-12 h-12 mb-6 icon-gradient" />
               <p className="text-sm text-muted-foreground mb-4">Step -04</p>
               <h3 className="text-2xl font-light mb-4">Deployment & Monitoring</h3>
               <p className="text-muted-foreground">
@@ -150,7 +150,7 @@ const MLFineTuning = () => {
       <section className="py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <p className="text-sm text-muted-foreground mb-8 tracking-wider">
-            Overview -
+            Overview <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" />
           </p>
           <h2 className="text-4xl md:text-5xl font-light mb-8 max-w-3xl">
             Custom Model Training Tailored to Your Business Data
@@ -186,14 +186,14 @@ const MLFineTuning = () => {
       <section className="advantages-section py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <p className="text-sm text-muted-foreground mb-8 tracking-wider">
-            Our Advantage -
+            Our Advantage <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" />
           </p>
           <h2 className="text-5xl md:text-6xl font-light mb-16 max-w-2xl">
             Where Precision<br />Meets Performance
           </h2>
 
           <div className="space-y-12">
-            <div className="advantage-card border-t border-border pt-8">
+            <div className="advantage-card border-t-gradient pt-8">
               <div className="text-5xl font-light text-muted-foreground/50 mb-4">01</div>
               <h3 className="text-3xl font-light mb-4">Domain Expertise</h3>
               <p className="text-lg text-muted-foreground max-w-2xl">
@@ -201,7 +201,7 @@ const MLFineTuning = () => {
               </p>
             </div>
 
-            <div className="advantage-card border-t border-border pt-8">
+            <div className="advantage-card border-t-gradient pt-8">
               <div className="text-5xl font-light text-muted-foreground/50 mb-4">02</div>
               <h3 className="text-3xl font-light mb-4">Proven Accuracy Gains</h3>
               <p className="text-lg text-muted-foreground max-w-2xl">
@@ -209,7 +209,7 @@ const MLFineTuning = () => {
               </p>
             </div>
 
-            <div className="advantage-card border-t border-border pt-8">
+            <div className="advantage-card border-t-gradient pt-8">
               <div className="text-5xl font-light text-muted-foreground/50 mb-4">03</div>
               <h3 className="text-3xl font-light mb-4">Full Ownership</h3>
               <p className="text-lg text-muted-foreground max-w-2xl">
