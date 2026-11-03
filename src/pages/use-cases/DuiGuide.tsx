@@ -54,24 +54,25 @@ const DuiGuide = () => {
   return (
     <div ref={contentRef} className="min-h-screen bg-background text-foreground">
       <PageSEO
-        title="dui.guide Case Study — AI Legal Guidance Platform | SIX3 Agency"
-        description="How SIX3 Agency automated DUI procedural guidance across all 50 states with AI agents, cutting user journey time from 45 minutes to under 3 minutes."
+        title="dui.guide Case Study — AI Legal Guidance Platform | SIX³ Agency"
+        description="How SIX³ Agency automated DUI procedural guidance across all 50 states with AI agents, cutting user journey time from 45 minutes to under 3 minutes."
         canonical="https://six3.agency/use-cases/dui-guide"
       />
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-6">
+      <section className="theme-light pt-32 pb-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="case-study-hero">
             <div className="flex items-center gap-2 mb-6">
-              <Link to="/services/ai-dev-automation" className="text-accent hover:underline">AI Agent Creation & Workflow Automation</Link>
+              <Link to="/services/ai-dev-automation" className="text-gradient hover:underline">AI Agent Creation & Workflow Automation</Link>
               <ArrowRight className="w-4 h-4" />
               <span>Case Study</span>
             </div>
-            <h1 className="text-3xl md:text-3xl lg:text-4xl font-light mb-8">
+            <h1 className="text-3xl md:text-3xl lg:text-4xl font-light mb-8 text-gradient w-fit pb-1">
               dui.guide — AI-Powered Legal Guidance Platform
             </h1>
+            <div className="h-1 w-40 bg-brand-gradient rounded-full mb-8" />
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="text-xl text-muted-foreground mb-8">
@@ -99,7 +100,7 @@ const DuiGuide = () => {
                   <div>
                     <span className="text-sm text-muted-foreground">Website:</span>
                     <p className="text-lg">
-                      <a href="https://dui.guide" target="_blank" rel="noopener" className="text-accent hover:underline">
+                      <a href="https://dui.guide" target="_blank" rel="noopener" className="text-gradient hover:underline">
                         dui.guide
                       </a>
                     </p>
@@ -110,7 +111,7 @@ const DuiGuide = () => {
                 <img
                   src={icons.duiGuide}
                   alt="dui.guide platform"
-                  className="w-full aspect-video object-cover rounded-lg"
+                  className="media-frame w-full aspect-[4/3] object-cover"
                 />
               </div>
             </div>
@@ -124,22 +125,22 @@ const DuiGuide = () => {
           <h2 className="text-3xl md:text-4xl font-light mb-12 text-center">Key Results</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <Bot className="w-12 h-12 text-accent mx-auto mb-4" />
+              <Bot className="w-12 h-12 icon-gradient mx-auto mb-4" />
               <div className="text-4xl font-light mb-2">24/7</div>
               <p className="text-muted-foreground">Automated guidance availability</p>
             </div>
             <div className="text-center">
-              <MapPin className="w-12 h-12 text-accent mx-auto mb-4" />
+              <MapPin className="w-12 h-12 icon-gradient mx-auto mb-4" />
               <div className="text-4xl font-light mb-2">50</div>
               <p className="text-muted-foreground">States with county-level coverage</p>
             </div>
             <div className="text-center">
-              <Bell className="w-12 h-12 text-accent mx-auto mb-4" />
+              <Bell className="w-12 h-12 icon-gradient mx-auto mb-4" />
               <div className="text-4xl font-light mb-2">100%</div>
               <p className="text-muted-foreground">Automated deadline and alert delivery</p>
             </div>
             <div className="text-center">
-              <Users className="w-12 h-12 text-accent mx-auto mb-4" />
+              <Users className="w-12 h-12 icon-gradient mx-auto mb-4" />
               <div className="text-4xl font-light mb-2">3x</div>
               <p className="text-muted-foreground">Increase in attorney directory conversions</p>
             </div>
@@ -201,19 +202,19 @@ const DuiGuide = () => {
                 <ul className="space-y-3">
                   <li className="flex justify-between">
                     <span>User journey to correct info:</span>
-                    <span className="font-medium text-accent">&lt; 3 minutes</span>
+                    <span className="font-medium text-gradient">&lt; 3 minutes</span>
                   </li>
                   <li className="flex justify-between">
                     <span>Deadline miss rate:</span>
-                    <span className="font-medium text-accent">Near zero</span>
+                    <span className="font-medium text-gradient">Near zero</span>
                   </li>
                   <li className="flex justify-between">
                     <span>Attorney match quality:</span>
-                    <span className="font-medium text-accent">AI-scored</span>
+                    <span className="font-medium text-gradient">AI-scored</span>
                   </li>
                   <li className="flex justify-between">
                     <span>After-hours support:</span>
-                    <span className="font-medium text-accent">24/7</span>
+                    <span className="font-medium text-gradient">24/7</span>
                   </li>
                 </ul>
               </div>
@@ -231,7 +232,7 @@ const DuiGuide = () => {
             <div className="solution-step grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-accent-foreground font-medium">1</div>
+                  <div className="w-8 h-8 bg-brand-gradient rounded-full flex items-center justify-center text-accent-foreground font-medium">1</div>
                   <h3 className="text-2xl font-medium">Conversational AI Guidance Agent</h3>
                 </div>
                 <p className="text-muted-foreground mb-4">
@@ -240,15 +241,15 @@ const DuiGuide = () => {
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
                     <span className="text-sm">County-level jurisdiction detection</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
                     <span className="text-sm">Step-by-step procedural checklists</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
                     <span className="text-sm">Plain-English explanations of legal requirements</span>
                   </li>
                 </ul>
@@ -272,7 +273,7 @@ const DuiGuide = () => {
               </div>
               <div className="order-1 md:order-2">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-accent-foreground font-medium">2</div>
+                  <div className="w-8 h-8 bg-brand-gradient rounded-full flex items-center justify-center text-accent-foreground font-medium">2</div>
                   <h3 className="text-2xl font-medium">Automated Deadline Tracking & Alerts</h3>
                 </div>
                 <p className="text-muted-foreground mb-4">
@@ -282,15 +283,15 @@ const DuiGuide = () => {
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
                     <span className="text-sm">Multi-channel deadline alerts (email & SMS)</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
                     <span className="text-sm">Auto-sync with county court calendars</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
                     <span className="text-sm">Dynamic timeline builder per charge type</span>
                   </li>
                 </ul>
@@ -300,7 +301,7 @@ const DuiGuide = () => {
             <div className="solution-step grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-accent-foreground font-medium">3</div>
+                  <div className="w-8 h-8 bg-brand-gradient rounded-full flex items-center justify-center text-accent-foreground font-medium">3</div>
                   <h3 className="text-2xl font-medium">Intelligent Attorney & Provider Matching</h3>
                 </div>
                 <p className="text-muted-foreground mb-4">
@@ -310,15 +311,15 @@ const DuiGuide = () => {
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
                     <span className="text-sm">Charge and county-weighted attorney scoring</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
                     <span className="text-sm">Automated matching for SR-22 providers and ignition interlock installers</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
                     <span className="text-sm">Subscription-tier visibility management</span>
                   </li>
                 </ul>
@@ -373,7 +374,7 @@ const DuiGuide = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-6 bg-accent text-accent-foreground">
+      <section className="py-24 px-6 bg-brand-gradient text-accent-foreground">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-light mb-8">
             Build Your AI Agent Platform
@@ -388,7 +389,7 @@ const DuiGuide = () => {
               </Button>
             </Link>
             <Link to="/services/ai-dev-automation">
-              <Button variant="outline" className="px-8 py-4 text-lg border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-accent">
+              <Button variant="outline" className="px-8 py-4 text-lg border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-gradient">
                 AI Automation Service
               </Button>
             </Link>

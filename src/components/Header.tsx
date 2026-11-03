@@ -65,7 +65,7 @@ export const Header = () => {
   return (
     <header 
       ref={headerRef}
-      className={`fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border transition-all duration-400 ease-out ${
+      className={`fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border transition-all duration-400 ease-out ${
         isScrolled ? "py-2 shadow-lg" : "py-4"
       }`}
     >
@@ -75,24 +75,24 @@ export const Header = () => {
         </div>
         
         <nav className="hidden md:flex items-center gap-8">
-          <Link to="/" className="nav-item text-base hover:text-accent transition-colors relative group">
+          <Link to="/" className="nav-item text-base hover:text-gradient transition-colors relative group">
             {t('nav.home')}
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full" />
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-gradient transition-all duration-300 group-hover:w-full" />
           </Link>
-          <Link to="/about" className="nav-item text-base hover:text-accent transition-colors relative group">
+          <Link to="/about" className="nav-item text-base hover:text-gradient transition-colors relative group">
             {t('nav.about')}
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full" />
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-gradient transition-all duration-300 group-hover:w-full" />
           </Link>
           <div className="nav-item">
             <ServiceDropdown />
           </div>
-          <Link to="/portfolio" className="nav-item text-base hover:text-accent transition-colors relative group">
+          <Link to="/portfolio" className="nav-item text-base hover:text-gradient transition-colors relative group">
             {t('nav.ourWork')}
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full" />
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-gradient transition-all duration-300 group-hover:w-full" />
           </Link>
-          <Link to="/contact" className="nav-item text-base hover:text-accent transition-colors relative group">
+          <Link to="/contact" className="nav-item text-base hover:text-gradient transition-colors relative group">
             {t('nav.contact')}
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full" />
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-gradient transition-all duration-300 group-hover:w-full" />
           </Link>
         </nav>
 

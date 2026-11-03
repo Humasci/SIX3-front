@@ -4,13 +4,14 @@ import { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ParticleHelix } from "@/components/ParticleHelix";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export const Hero = () => {
   const [time, setTime] = useState("");
   const heroRef = useRef<HTMLDivElement>(null);
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const visualRef = useRef<HTMLDivElement>(null);
   const titleRefs = useRef<(HTMLElement | null)[]>([]);
 
   useEffect(() => {
@@ -29,9 +30,8 @@ export const Hero = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Parallax video effect
-      gsap.to(videoRef.current, {
-        yPercent: -50,
+      gsap.to(visualRef.current, {
+        yPercent: -15,
         ease: "none",
         scrollTrigger: {
           trigger: heroRef.current,
@@ -135,17 +135,11 @@ export const Hero = () => {
   return (
     <section ref={heroRef} className="relative min-h-screen flex flex-col">
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <video
-          ref={videoRef}
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="w-full h-[120%] object-cover opacity-30"
-        >
-          <source src="/hero-video.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
+        <div ref={visualRef} className="absolute inset-0">
+          <ParticleHelix className="w-full h-full" />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent md:via-transparent pointer-events-none" />
+        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-background pointer-events-none" />
       </div>
       
       <div className="relative flex-1 flex flex-col items-center justify-center px-6 pt-24">
@@ -153,30 +147,28 @@ export const Hero = () => {
           <div className="mb-12">
             <h1 
               ref={(el) => (titleRefs.current[0] = el)}
-              className="hero-title text-3xl md:text-6xl lg:text-7xl font-light tracking-tight mb-4"
+              className="hero-title text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-none mb-2"
             >
-              AI-POWERED
+              AI-Powered
             </h1>
             <div
               ref={(el) => (titleRefs.current[1] = el)}
-              className="hero-title text-3xl md:text-6xl lg:text-7xl font-light tracking-tight mb-4 relative"
+              className="hero-title text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-none mb-2"
             >
-              <span className="inline-block relative">
-                MARKETING
-                <div className="absolute -bottom-2 left-0 w-28 md:w-56 h-px bg-foreground/30" />
-              </span>
+              Marketing
             </div>
             <div
               ref={(el) => (titleRefs.current[2] = el)}
-              className="hero-title text-3xl md:text-6xl lg:text-7xl font-light tracking-tight"
+              className="hero-title text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-none"
             >
-              AGENCY
+              Agency
             </div>
+            <div className="hero-subtitle h-1 w-full max-w-3xl bg-brand-gradient rounded-full mt-10" />
           </div>
 
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 max-w-5xl">
             <div>
-              <p className="hero-subtitle text-xl md:text-2xl text-muted-foreground max-w-md">
+              <p className="hero-subtitle text-xl md:text-2xl font-medium text-foreground max-w-md">
                 AI-driven search marketing, generative content creation, and custom automation solutions
               </p>
             </div>
@@ -193,7 +185,7 @@ export const Hero = () => {
 
       <div className="hero-footer relative flex items-center justify-between px-6 pb-8">
         <div className="flex items-center gap-2">
-          <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+          <div className="w-2 h-2 rounded-full bg-brand-gradient animate-pulse" />
           <span className="text-sm text-muted-foreground">London, {time}</span>
         </div>
         

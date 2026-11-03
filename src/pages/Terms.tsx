@@ -17,16 +17,22 @@ const Terms = () => {
     <div className="min-h-screen bg-background text-foreground">
       <Header />
       
-      <section className="pt-32 pb-24 px-6 mt-5">
+      <section className="theme-light pt-40 pb-16 px-6">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-light mb-8 text-gradient w-fit pb-1">Terms of Service</h1>
+          <div className="h-1 w-40 bg-brand-gradient rounded-full mb-6" />
+          <p className="text-muted-foreground">Last updated: November 27, 2025</p>
+        </div>
+      </section>
+
+      <section className="pt-16 pb-24 px-6">
         <div className="max-w-4xl mx-auto terms-content">
-          <h1 className="text-4xl md:text-5xl font-light mb-8">Terms of Service</h1>
-          <p className="text-muted-foreground mb-12">Last updated: November 27, 2025</p>
           
           <div className="prose prose-lg max-w-none space-y-8">
             <section>
               <h2 className="text-2xl font-medium mb-4">1. Agreement to Terms</h2>
               <p className="text-muted-foreground leading-relaxed">
-                By accessing and using the services of FKA WEB Limited trading as SIX3 Agency ("we", "us", or "our"), you accept and agree to be bound by the terms and provision of this agreement.
+                By accessing and using the services of FKA WEB Limited trading as SIX³ Agency ("we", "us", or "our"), you accept and agree to be bound by the terms and provision of this agreement.
               </p>
               <p className="text-muted-foreground leading-relaxed mt-4">
                 Company Details:<br />
@@ -38,7 +44,7 @@ const Terms = () => {
 
             <section>
               <h2 className="text-2xl font-medium mb-4">2. Services</h2>
-              <p className="text-muted-foreground leading-relaxed mb-4">SIX3 Agency provides the following services:</p>
+              <p className="text-muted-foreground leading-relaxed mb-4">SIX³ Agency provides the following services:</p>
               <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
                 <li>AI-powered search marketing and paid media management</li>
                 <li>Generative AI content creation (video, audio, and text)</li>

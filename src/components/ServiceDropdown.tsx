@@ -18,10 +18,10 @@ export const ServiceDropdown = () => {
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
     >
-      <Link to="/services" className="flex items-center gap-1 text-base hover:text-accent transition-colors relative group">
+      <Link to="/services" className="flex items-center gap-1 text-base hover:text-gradient transition-colors relative group">
         Services
         <ChevronDown className="w-4 h-4" />
-        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full" />
+        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-gradient transition-all duration-300 group-hover:w-full" />
       </Link>
 
       {isOpen && (

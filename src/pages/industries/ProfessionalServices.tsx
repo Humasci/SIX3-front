@@ -111,17 +111,18 @@ const ProfessionalServices = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-6">
+      <section className="theme-light pt-32 pb-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="professional-hero grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <Briefcase className="w-8 h-8 text-accent" />
-                <span className="text-accent font-medium">Professional Services</span>
+                <Briefcase className="w-8 h-8 icon-gradient" />
+                <span className="text-gradient font-medium">Professional Services</span>
               </div>
-              <h1 className="text-3xl md:text-3xl lg:text-4xl font-light mb-6">
+              <h1 className="text-3xl md:text-3xl lg:text-4xl font-light mb-6 text-gradient w-fit pb-1">
                 AI Automation for Professional Service Firms
               </h1>
+            <div className="h-1 w-40 bg-brand-gradient rounded-full mb-8" />
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
                 Streamline client operations, automate routine tasks, and focus on high-value advisory work 
                 with intelligent automation tailored for accounting, consulting, and financial advisory firms.
@@ -143,7 +144,7 @@ const ProfessionalServices = () => {
               <img
                 src={icons.professionalServices}
                 alt="Professional Services"
-                className="w-full aspect-square object-cover rounded-2xl"
+                className="media-frame w-full max-w-lg ml-auto aspect-[4/3] object-cover"
               />
             </div>
           </div>
@@ -170,7 +171,7 @@ const ProfessionalServices = () => {
                   <ul className="space-y-2">
                     {serviceType.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                        <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
                         <span className="text-sm text-muted-foreground">{benefit}</span>
                       </li>
                     ))}
@@ -231,13 +232,13 @@ const ProfessionalServices = () => {
               const IconComponent = solution.icon;
               return (
                 <div key={index} className="solution-card bg-card border border-border p-8 rounded-lg">
-                  <IconComponent className="w-12 h-12 text-accent mb-6" />
+                  <IconComponent className="w-12 h-12 icon-gradient mb-6" />
                   <h3 className="text-2xl font-medium mb-4">{solution.title}</h3>
                   <p className="text-muted-foreground mb-6">{solution.description}</p>
                   <ul className="space-y-2">
                     {solution.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                        <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
                         <span className="text-sm text-muted-foreground">{benefit}</span>
                       </li>
                     ))}
@@ -254,7 +255,7 @@ const ProfessionalServices = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <FileText className="w-16 h-16 text-accent mb-6" />
+              <FileText className="w-16 h-16 icon-gradient mb-6" />
               <h2 className="text-4xl font-light mb-6">Compliance & Security First</h2>
               <p className="text-lg text-muted-foreground mb-6">
                 Our professional service AI solutions are built with industry compliance standards in mind, 
@@ -262,26 +263,26 @@ const ProfessionalServices = () => {
               </p>
               <ul className="space-y-3">
                 <li className="flex items-center gap-3">
-                  <FileText className="w-5 h-5 text-accent" />
+                  <FileText className="w-5 h-5 icon-gradient" />
                   <span>SOC 2 Type II compliant data handling</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <FileText className="w-5 h-5 text-accent" />
+                  <FileText className="w-5 h-5 icon-gradient" />
                   <span>Encrypted client communications and file storage</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <FileText className="w-5 h-5 text-accent" />
+                  <FileText className="w-5 h-5 icon-gradient" />
                   <span>Audit trails for all automated processes</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <FileText className="w-5 h-5 text-accent" />
+                  <FileText className="w-5 h-5 icon-gradient" />
                   <span>Industry-specific compliance monitoring</span>
                 </li>
               </ul>
             </div>
             <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-accent/20 to-accent/5 rounded-2xl flex items-center justify-center">
-                <Briefcase className="w-32 h-32 text-accent/40" />
+              <div className="icon-tile aspect-[4/3] w-full max-w-lg ml-auto flex items-center justify-center">
+                <Briefcase className="w-24 h-24 icon-gradient" />
               </div>
             </div>
           </div>
@@ -294,19 +295,19 @@ const ProfessionalServices = () => {
           <h2 className="text-4xl font-light mb-12 text-center">Professional Service Results</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-light mb-4 text-accent">50%</div>
+              <div className="text-5xl md:text-6xl font-light mb-4 text-gradient">50%</div>
               <p className="text-lg text-muted-foreground">Reduction in Admin Time</p>
             </div>
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-light mb-4 text-accent">35%</div>
+              <div className="text-5xl md:text-6xl font-light mb-4 text-gradient">35%</div>
               <p className="text-lg text-muted-foreground">Increase in Billable Hours</p>
             </div>
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-light mb-4 text-accent">80%</div>
+              <div className="text-5xl md:text-6xl font-light mb-4 text-gradient">80%</div>
               <p className="text-lg text-muted-foreground">Faster Client Onboarding</p>
             </div>
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-light mb-4 text-accent">90%</div>
+              <div className="text-5xl md:text-6xl font-light mb-4 text-gradient">90%</div>
               <p className="text-lg text-muted-foreground">Client Satisfaction Score</p>
             </div>
           </div>
@@ -319,22 +320,22 @@ const ProfessionalServices = () => {
           <h2 className="text-4xl font-light mb-12 text-center">Industries We Serve</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center p-6">
-              <Calculator className="w-12 h-12 text-accent mx-auto mb-4" />
+              <Calculator className="w-12 h-12 icon-gradient mx-auto mb-4" />
               <h3 className="font-medium mb-2">Tax & Accounting</h3>
               <p className="text-sm text-muted-foreground">CPA firms, tax preparers, bookkeeping services</p>
             </div>
             <div className="text-center p-6">
-              <TrendingUp className="w-12 h-12 text-accent mx-auto mb-4" />
+              <TrendingUp className="w-12 h-12 icon-gradient mx-auto mb-4" />
               <h3 className="font-medium mb-2">Financial Advisory</h3>
               <p className="text-sm text-muted-foreground">Investment advisors, wealth management, insurance</p>
             </div>
             <div className="text-center p-6">
-              <Users className="w-12 h-12 text-accent mx-auto mb-4" />
+              <Users className="w-12 h-12 icon-gradient mx-auto mb-4" />
               <h3 className="font-medium mb-2">Immigration Services</h3>
               <p className="text-sm text-muted-foreground">Visa consultants, immigration lawyers, document services</p>
             </div>
             <div className="text-center p-6">
-              <Briefcase className="w-12 h-12 text-accent mx-auto mb-4" />
+              <Briefcase className="w-12 h-12 icon-gradient mx-auto mb-4" />
               <h3 className="font-medium mb-2">Business Consulting</h3>
               <p className="text-sm text-muted-foreground">Strategy consultants, management advisory, business coaches</p>
             </div>
@@ -343,7 +344,7 @@ const ProfessionalServices = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-6 bg-accent text-accent-foreground">
+      <section className="py-24 px-6 bg-brand-gradient text-accent-foreground">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-light mb-8">
             Ready to Scale Your Professional Practice?
@@ -359,7 +360,7 @@ const ProfessionalServices = () => {
               </Button>
             </Link>
             <Link to="/services/ai-dev-automation">
-              <Button variant="outline" className="px-8 py-4 text-lg border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-accent">
+              <Button variant="outline" className="px-8 py-4 text-lg border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-gradient">
                 View Automation Services
               </Button>
             </Link>

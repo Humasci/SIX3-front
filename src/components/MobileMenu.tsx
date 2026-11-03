@@ -21,14 +21,14 @@ export const MobileMenu = () => {
             <Link
               to="/"
               onClick={() => setIsOpen(false)}
-              className="text-lg hover:text-accent transition-colors"
+              className="text-lg hover:text-gradient transition-colors"
             >
               Home
             </Link>
             <Link
               to="/about"
               onClick={() => setIsOpen(false)}
-              className="text-lg hover:text-accent transition-colors"
+              className="text-lg hover:text-gradient transition-colors"
             >
               About
             </Link>
@@ -36,7 +36,7 @@ export const MobileMenu = () => {
               <Link
                 to="/services"
                 onClick={() => setIsOpen(false)}
-                className="text-lg font-medium hover:text-accent transition-colors"
+                className="text-lg font-medium hover:text-gradient transition-colors"
               >
                 Services
               </Link>
@@ -44,21 +44,21 @@ export const MobileMenu = () => {
                 <Link
                   to="/services/search-marketing-ppc"
                   onClick={() => setIsOpen(false)}
-                  className="block hover:text-accent transition-colors"
+                  className="block hover:text-gradient transition-colors"
                 >
                   Search Marketing & Paid Media
                 </Link>
                 <Link
                   to="/services/content-creation"
                   onClick={() => setIsOpen(false)}
-                  className="block hover:text-accent transition-colors"
+                  className="block hover:text-gradient transition-colors"
                 >
                   Generative AI Video & Audio
                 </Link>
                 <Link
                   to="/services/ai-dev-automation"
                   onClick={() => setIsOpen(false)}
-                  className="block hover:text-accent transition-colors"
+                  className="block hover:text-gradient transition-colors"
                 >
                   AI Agent Creation & Automation
                 </Link>
@@ -67,14 +67,14 @@ export const MobileMenu = () => {
             <Link
               to="/portfolio"
               onClick={() => setIsOpen(false)}
-              className="text-lg hover:text-accent transition-colors"
+              className="text-lg hover:text-gradient transition-colors"
             >
               Our Work
             </Link>
             <Link
               to="/contact"
               onClick={() => setIsOpen(false)}
-              className="text-lg hover:text-accent transition-colors"
+              className="text-lg hover:text-gradient transition-colors"
             >
               Contact
             </Link>

@@ -76,17 +76,18 @@ const RealEstate = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-6">
+      <section className="theme-light pt-32 pb-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="realestate-hero grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <Home className="w-8 h-8 text-accent" />
-                <span className="text-accent font-medium">Real Estate</span>
+                <Home className="w-8 h-8 icon-gradient" />
+                <span className="text-gradient font-medium">Real Estate</span>
               </div>
-              <h1 className="text-3xl md:text-3xl lg:text-4xl font-light mb-6">
+              <h1 className="text-3xl md:text-3xl lg:text-4xl font-light mb-6 text-gradient w-fit pb-1">
                 AI-Powered Lead Generation for Real Estate Professionals
               </h1>
+            <div className="h-1 w-40 bg-brand-gradient rounded-full mb-8" />
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
                 Transform your real estate business with intelligent lead qualification, automated property matching, 
                 and AI-optimized marketing campaigns that convert prospects into clients.
@@ -108,7 +109,7 @@ const RealEstate = () => {
               <img
                 src={icons.realEstate}
                 alt="Real Estate"
-                className="w-full aspect-square object-cover rounded-2xl"
+                className="media-frame w-full max-w-lg ml-auto aspect-[4/3] object-cover"
               />
             </div>
           </div>
@@ -152,13 +153,13 @@ const RealEstate = () => {
               const IconComponent = solution.icon;
               return (
                 <div key={index} className="solution-card bg-card border border-border p-8 rounded-lg">
-                  <IconComponent className="w-12 h-12 text-accent mb-6" />
+                  <IconComponent className="w-12 h-12 icon-gradient mb-6" />
                   <h3 className="text-2xl font-medium mb-4">{solution.title}</h3>
                   <p className="text-muted-foreground mb-6">{solution.description}</p>
                   <ul className="space-y-2">
                     {solution.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                        <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
                         <span className="text-sm text-muted-foreground">{benefit}</span>
                       </li>
                     ))}
@@ -177,7 +178,7 @@ const RealEstate = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {caseStudyStats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-5xl md:text-6xl font-light mb-4 text-accent">{stat.value}</div>
+                <div className="text-5xl md:text-6xl font-light mb-4 text-gradient">{stat.value}</div>
                 <p className="text-lg text-muted-foreground">{stat.label}</p>
               </div>
             ))}
@@ -221,8 +222,8 @@ const RealEstate = () => {
               </div>
             </div>
             <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-accent/20 to-accent/5 rounded-2xl flex items-center justify-center">
-                <TrendingUp className="w-32 h-32 text-accent/40" />
+              <div className="icon-tile aspect-[4/3] w-full max-w-lg ml-auto flex items-center justify-center">
+                <TrendingUp className="w-24 h-24 icon-gradient" />
               </div>
             </div>
           </div>
@@ -230,7 +231,7 @@ const RealEstate = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-6 bg-accent text-accent-foreground">
+      <section className="py-24 px-6 bg-brand-gradient text-accent-foreground">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-light mb-8">
             Ready to Close More Deals?
@@ -246,7 +247,7 @@ const RealEstate = () => {
               </Button>
             </Link>
             <Link to="/services/search-marketing-ppc">
-              <Button variant="outline" className="px-8 py-4 text-lg border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-accent">
+              <Button variant="outline" className="px-8 py-4 text-lg border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-gradient">
                 View Google Ads Services
               </Button>
             </Link>

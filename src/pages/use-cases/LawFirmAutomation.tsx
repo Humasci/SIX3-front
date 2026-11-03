@@ -53,17 +53,18 @@ const LawFirmAutomation = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-6">
+      <section className="theme-light pt-32 pb-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="case-study-hero">
             <div className="flex items-center gap-2 mb-6">
-              <Link to="/industries/legal" className="text-accent hover:underline">Legal Industry</Link>
+              <Link to="/industries/legal" className="text-gradient hover:underline">Legal Industry</Link>
               <ArrowRight className="w-4 h-4" />
               <span>Case Study</span>
             </div>
-            <h1 className="text-3xl md:text-3xl lg:text-4xl font-light mb-8">
+            <h1 className="text-3xl md:text-3xl lg:text-4xl font-light mb-8 text-gradient w-fit pb-1">
               Legal Firm AI Automation Case Study
             </h1>
+            <div className="h-1 w-40 bg-brand-gradient rounded-full mb-8" />
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="text-xl text-muted-foreground mb-8">
@@ -89,7 +90,7 @@ const LawFirmAutomation = () => {
                 <img
                   src={icons.legal}
                   alt="Legal office"
-                  className="w-full aspect-video object-cover rounded-lg"
+                  className="media-frame w-full aspect-[4/3] object-cover"
                 />
               </div>
             </div>
@@ -103,22 +104,22 @@ const LawFirmAutomation = () => {
           <h2 className="text-3xl md:text-4xl font-light mb-12 text-center">Key Results</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <Clock className="w-12 h-12 text-accent mx-auto mb-4" />
+              <Clock className="w-12 h-12 icon-gradient mx-auto mb-4" />
               <div className="text-4xl font-light mb-2">60%</div>
               <p className="text-muted-foreground">Reduction in intake administration time</p>
             </div>
             <div className="text-center">
-              <TrendingUp className="w-12 h-12 text-accent mx-auto mb-4" />
+              <TrendingUp className="w-12 h-12 icon-gradient mx-auto mb-4" />
               <div className="text-4xl font-light mb-2">40%</div>
               <p className="text-muted-foreground">Increase in qualified leads</p>
             </div>
             <div className="text-center">
-              <Scale className="w-12 h-12 text-accent mx-auto mb-4" />
+              <Scale className="w-12 h-12 icon-gradient mx-auto mb-4" />
               <div className="text-4xl font-light mb-2">$150K</div>
               <p className="text-muted-foreground">Annual savings in staff costs</p>
             </div>
             <div className="text-center">
-              <Users className="w-12 h-12 text-accent mx-auto mb-4" />
+              <Users className="w-12 h-12 icon-gradient mx-auto mb-4" />
               <div className="text-4xl font-light mb-2">25%</div>
               <p className="text-muted-foreground">Improvement in client satisfaction</p>
             </div>
@@ -179,19 +180,19 @@ const LawFirmAutomation = () => {
                 <ul className="space-y-3">
                   <li className="flex justify-between">
                     <span>Daily intake hours:</span>
-                    <span className="font-medium text-accent">1-1.5 hours</span>
+                    <span className="font-medium text-gradient">1-1.5 hours</span>
                   </li>
                   <li className="flex justify-between">
                     <span>Conversion rate:</span>
-                    <span className="font-medium text-accent">31%</span>
+                    <span className="font-medium text-gradient">31%</span>
                   </li>
                   <li className="flex justify-between">
                     <span>Response time:</span>
-                    <span className="font-medium text-accent">Immediate</span>
+                    <span className="font-medium text-gradient">Immediate</span>
                   </li>
                   <li className="flex justify-between">
                     <span>After-hours capture:</span>
-                    <span className="font-medium text-accent">85%</span>
+                    <span className="font-medium text-gradient">85%</span>
                   </li>
                 </ul>
               </div>
@@ -208,7 +209,7 @@ const LawFirmAutomation = () => {
             <div className="solution-step grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-accent-foreground font-medium">1</div>
+                  <div className="w-8 h-8 bg-brand-gradient rounded-full flex items-center justify-center text-accent-foreground font-medium">1</div>
                   <h3 className="text-2xl font-medium">AI-Powered Client Intake System</h3>
                 </div>
                 <p className="text-muted-foreground mb-4">
@@ -217,15 +218,15 @@ const LawFirmAutomation = () => {
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
                     <span className="text-sm">24/7 availability for client inquiries</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
                     <span className="text-sm">Automated case evaluation and scoring</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
                     <span className="text-sm">Integration with existing case management system</span>
                   </li>
                 </ul>
@@ -249,7 +250,7 @@ const LawFirmAutomation = () => {
               </div>
               <div className="order-1 md:order-2">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-accent-foreground font-medium">2</div>
+                  <div className="w-8 h-8 bg-brand-gradient rounded-full flex items-center justify-center text-accent-foreground font-medium">2</div>
                   <h3 className="text-2xl font-medium">Intelligent Lead Qualification</h3>
                 </div>
                 <p className="text-muted-foreground mb-4">
@@ -258,15 +259,15 @@ const LawFirmAutomation = () => {
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
                     <span className="text-sm">Automatic lead scoring and prioritization</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
                     <span className="text-sm">Integration with CRM and calendar systems</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
                     <span className="text-sm">Automated follow-up sequences</span>
                   </li>
                 </ul>
@@ -276,7 +277,7 @@ const LawFirmAutomation = () => {
             <div className="solution-step grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-accent-foreground font-medium">3</div>
+                  <div className="w-8 h-8 bg-brand-gradient rounded-full flex items-center justify-center text-accent-foreground font-medium">3</div>
                   <h3 className="text-2xl font-medium">Automated Google Ads Optimization</h3>
                 </div>
                 <p className="text-muted-foreground mb-4">
@@ -285,15 +286,15 @@ const LawFirmAutomation = () => {
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
                     <span className="text-sm">Real-time bid optimization based on lead quality</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
                     <span className="text-sm">A/B testing of ad copy and landing pages</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
                     <span className="text-sm">Compliance-focused legal advertising</span>
                   </li>
                 </ul>
@@ -347,7 +348,7 @@ const LawFirmAutomation = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-6 bg-accent text-accent-foreground">
+      <section className="py-24 px-6 bg-brand-gradient text-accent-foreground">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-light mb-8">
             Transform Your Legal Practice
@@ -362,7 +363,7 @@ const LawFirmAutomation = () => {
               </Button>
             </Link>
             <Link to="/industries/legal">
-              <Button variant="outline" className="px-8 py-4 text-lg border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-accent">
+              <Button variant="outline" className="px-8 py-4 text-lg border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-gradient">
                 Legal Industry Solutions
               </Button>
             </Link>

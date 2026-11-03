@@ -7,14 +7,12 @@ const Portfolio = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <PageSEO
-        title="Portfolio & Case Studies — SIX3 Agency"
-        description="Explore SIX3 Agency's portfolio of AI marketing campaigns, automation projects, and case studies across legal, real estate, healthcare, and more."
+        title="Portfolio & Case Studies — SIX³ Agency"
+        description="Explore SIX³ Agency's portfolio of AI marketing campaigns, automation projects, and case studies across legal, real estate, healthcare, and more."
         canonical="https://six3.agency/portfolio"
       />
       <Header />
-      <div className="pt-24">
-        <PortfolioSection />
-      </div>
+      <PortfolioSection lightHeader />
       <Footer />
     </div>
   );

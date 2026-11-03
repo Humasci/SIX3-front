@@ -78,11 +78,11 @@ export const CursorEffect = () => {
     <>
       <div
         ref={cursorRef}
-        className="fixed top-0 left-0 w-4 h-4 bg-accent rounded-full pointer-events-none z-50 mix-blend-difference transform -translate-x-1/2 -translate-y-1/2 hidden md:block"
+        className="fixed top-0 left-0 w-4 h-4 bg-brand-gradient rounded-full pointer-events-none z-50 transform -translate-x-1/2 -translate-y-1/2 hidden md:block"
       />
       <div
         ref={followerRef}
-        className="fixed top-0 left-0 w-8 h-8 border border-accent/50 rounded-full pointer-events-none z-40 transform -translate-x-1/2 -translate-y-1/2 hidden md:block"
+        className="fixed top-0 left-0 w-8 h-8 border border-[#a855f7]/60 rounded-full pointer-events-none z-40 transform -translate-x-1/2 -translate-y-1/2 hidden md:block"
       />
     </>
   );

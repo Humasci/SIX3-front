@@ -79,7 +79,7 @@ const projects = [
   },
 ];
 
-export const Portfolio = () => {
+export const Portfolio = ({ lightHeader = false }: { lightHeader?: boolean }) => {
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -202,26 +202,30 @@ export const Portfolio = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="theme-light py-24 px-6">
-      <div className="max-w-7xl mx-auto">
-        <div className="portfolio-header mb-16">
+    <section ref={sectionRef} className="bg-background">
+      <div className={lightHeader ? "theme-light pt-40 pb-16 px-6" : "pt-24 pb-16 px-6"}>
+        <div className="max-w-7xl mx-auto portfolio-header">
           <p className="text-sm text-muted-foreground mb-8 tracking-wider">
-            Our Work -
+            Our Work <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" />
           </p>
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-light">
+            <h2 className={`text-5xl md:text-6xl lg:text-7xl font-light ${lightHeader ? "text-gradient w-fit pb-1" : ""}`}>
               Featured Projects<br />
               & Case Studies
             </h2>
-            <Link
-              to="/portfolio"
-              className="text-lg hover:text-accent transition-colors"
-            >
-              View All Projects →
-            </Link>
+            {!lightHeader && (
+              <Link
+                to="/portfolio"
+                className="text-lg hover:text-gradient transition-colors"
+              >
+                View All Projects →
+              </Link>
+            )}
           </div>
         </div>
+      </div>
 
+      <div className={`px-6 pb-24 max-w-7xl mx-auto ${lightHeader ? "pt-16" : ""}`}>
         <div className="portfolio-grid grid md:grid-cols-2 lg:grid-cols-3 gap-8 perspective-1000">
           {projects.slice(0, 3).map((project) => (
             <Link
@@ -229,7 +233,7 @@ export const Portfolio = () => {
               to={`/portfolio/${project.id}`}
               className="portfolio-item group block transform-gpu"
             >
-              <div className="relative overflow-hidden mb-4 aspect-[4/3] bg-secondary rounded-lg">
+              <div className="media-frame mb-4 aspect-[4/3]">
                 <img
                   src={project.image}
                   alt={project.title}
@@ -240,7 +244,7 @@ export const Portfolio = () => {
                 </div>
               </div>
               <div className="flex items-start justify-between mb-2">
-                <span className="project-number text-4xl font-light text-accent transition-all duration-300">
+                <span className="project-number text-4xl font-light text-gradient transition-all duration-300">
                   {project.number}
                 </span>
                 <span className="text-sm text-muted-foreground">
@@ -248,10 +252,10 @@ export const Portfolio = () => {
                 </span>
               </div>
               <h3 className="project-title text-2xl font-light mb-2 transition-all duration-300">{project.title}</h3>
-              <p className="text-sm text-accent mb-2 transition-colors duration-300">{project.category}</p>
+              <p className="text-sm text-gradient mb-2 transition-colors duration-300">{project.category}</p>
               <p className="text-muted-foreground text-sm mb-3 leading-relaxed">{project.description}</p>
               <div className="project-metrics bg-accent/10 border border-accent/20 rounded-full px-4 py-2 transition-all duration-300 hover:bg-accent/20 hover:border-accent/40">
-                <p className="text-xs font-medium text-accent">{project.metrics}</p>
+                <p className="text-xs font-medium text-gradient">{project.metrics}</p>
               </div>
             </Link>
           ))}

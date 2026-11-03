@@ -17,16 +17,22 @@ const CookiePolicy = () => {
     <div className="min-h-screen bg-background text-foreground">
       <Header />
       
-      <section className="pt-32 pb-24 px-6 mt-5">
+      <section className="theme-light pt-40 pb-16 px-6">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-light mb-8 text-gradient w-fit pb-1">Cookie Policy</h1>
+          <div className="h-1 w-40 bg-brand-gradient rounded-full mb-6" />
+          <p className="text-muted-foreground">Last updated: November 27, 2025</p>
+        </div>
+      </section>
+
+      <section className="pt-16 pb-24 px-6">
         <div className="max-w-4xl mx-auto cookie-content">
-          <h1 className="text-4xl md:text-5xl font-light mb-8">Cookie Policy</h1>
-          <p className="text-muted-foreground mb-12">Last updated: November 27, 2025</p>
           
           <div className="prose prose-lg max-w-none space-y-8">
             <section>
               <h2 className="text-2xl font-medium mb-4">1. Introduction</h2>
               <p className="text-muted-foreground leading-relaxed">
-                FKA WEB Limited trading as SIX3 Agency ("we", "us", or "our") uses cookies and similar technologies on our website. This Cookie Policy explains what cookies are, how we use them, and your choices regarding their use.
+                FKA WEB Limited trading as SIX³ Agency ("we", "us", or "our") uses cookies and similar technologies on our website. This Cookie Policy explains what cookies are, how we use them, and your choices regarding their use.
               </p>
               <p className="text-muted-foreground leading-relaxed mt-4">
                 Company Details:<br />
@@ -144,10 +150,10 @@ const CookiePolicy = () => {
 
               <h3 className="text-xl font-medium mb-3">5.3 Opt-Out Links</h3>
               <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
-                <li><strong>Google Analytics:</strong> <a href="https://tools.google.com/dlpage/gaoptout" className="text-accent hover:underline" target="_blank" rel="noopener noreferrer">Browser Add-on</a></li>
-                <li><strong>Google Ads:</strong> <a href="https://adssettings.google.com/" className="text-accent hover:underline" target="_blank" rel="noopener noreferrer">Ad Settings</a></li>
-                <li><strong>Facebook:</strong> <a href="https://www.facebook.com/settings?tab=ads" className="text-accent hover:underline" target="_blank" rel="noopener noreferrer">Ad Preferences</a></li>
-                <li><strong>Industry Opt-out:</strong> <a href="https://youronlinechoices.eu/" className="text-accent hover:underline" target="_blank" rel="noopener noreferrer">Your Online Choices</a></li>
+                <li><strong>Google Analytics:</strong> <a href="https://tools.google.com/dlpage/gaoptout" className="text-gradient hover:underline" target="_blank" rel="noopener noreferrer">Browser Add-on</a></li>
+                <li><strong>Google Ads:</strong> <a href="https://adssettings.google.com/" className="text-gradient hover:underline" target="_blank" rel="noopener noreferrer">Ad Settings</a></li>
+                <li><strong>Facebook:</strong> <a href="https://www.facebook.com/settings?tab=ads" className="text-gradient hover:underline" target="_blank" rel="noopener noreferrer">Ad Preferences</a></li>
+                <li><strong>Industry Opt-out:</strong> <a href="https://youronlinechoices.eu/" className="text-gradient hover:underline" target="_blank" rel="noopener noreferrer">Your Online Choices</a></li>
               </ul>
             </section>
 
@@ -197,7 +203,7 @@ const CookiePolicy = () => {
                 <p>Registration: England and Wales No. 11642660</p>
               </div>
               <p className="text-muted-foreground leading-relaxed mt-4">
-                For data protection concerns, you can also contact the Information Commissioner's Office (ICO) at <a href="https://ico.org.uk" className="text-accent hover:underline" target="_blank" rel="noopener noreferrer">ico.org.uk</a>.
+                For data protection concerns, you can also contact the Information Commissioner's Office (ICO) at <a href="https://ico.org.uk" className="text-gradient hover:underline" target="_blank" rel="noopener noreferrer">ico.org.uk</a>.
               </p>
             </section>
           </div>
