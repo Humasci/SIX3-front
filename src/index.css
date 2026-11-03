@@ -88,6 +88,28 @@ All colors MUST be HSL.
 }
 
 @layer base {
+  .theme-light {
+    --background: 240 20% 98%;
+    --foreground: 243 50% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 243 50% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 243 50% 12%;
+    --primary: 243 50% 12%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 245 30% 94%;
+    --secondary-foreground: 243 50% 12%;
+    --muted: 245 25% 92%;
+    --muted-foreground: 243 12% 38%;
+    --accent: 271 81% 52%;
+    --accent-foreground: 0 0% 100%;
+    --border: 245 20% 86%;
+    --input: 245 20% 86%;
+    --ring: 271 81% 52%;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+
   * {
     @apply border-border;
   }

@@ -77,7 +77,7 @@ export const ServicePreviews = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 px-6 bg-gray-50">
+    <section ref={sectionRef} className="theme-light py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="service-preview-header mb-16">
           <p className="text-sm text-muted-foreground mb-8 tracking-wider">Our Core Services -</p>
@@ -93,11 +93,11 @@ export const ServicePreviews = () => {
 
         <div className="service-previews-grid space-y-12">
           {servicePreviews.map((service, index) => (
-            <div key={service.number} className={`service-preview-card border border-border/50 rounded-lg hover:border-accent/30 transition-all duration-500 ${index % 2 === 0 ? 'bg-background hover:bg-secondary/20' : 'bg-secondary/30 hover:bg-secondary/40'}`}>
+            <div key={service.number} className={`service-preview-card border border-border/50 rounded-lg hover:border-accent/30 transition-all duration-500 bg-card hover:shadow-lg`}>
               <div className="grid lg:grid-cols-2 gap-12 p-8 lg:p-12">
                 <div>
                   <div className="flex items-center gap-4 mb-6">
-                    <span className="text-4xl font-light text-muted-foreground/50">
+                    <span className="text-4xl font-light text-accent">
                       {service.number}
                     </span>
                     <div className="flex-1 h-px bg-border" />

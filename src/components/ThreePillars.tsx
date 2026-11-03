@@ -72,7 +72,7 @@ export const ThreePillars = () => {
                 {pillar.subtitle}
               </h4>
 
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed">
                 {pillar.description}
               </p>
             </div>
