@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { User, Video, Bot, Mic } from "lucide-react";
+import { Video } from "lucide-react";
 import icons from "@/utils/iconGenerator";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -104,7 +104,6 @@ const ContentCreation = () => {
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="step-card border border-border p-8 bg-background">
-              <User className="w-12 h-12 mb-6 icon-gradient" />
               <p className="text-sm text-muted-foreground mb-4">Step -01</p>
               <h3 className="text-2xl font-light mb-4">Creative Brief & Planning</h3>
               <p className="text-muted-foreground">
@@ -113,7 +112,6 @@ const ContentCreation = () => {
             </div>
 
             <div className="step-card border border-border p-8 bg-background">
-              <Bot className="w-12 h-12 mb-6 icon-gradient" />
               <p className="text-sm text-muted-foreground mb-4">Step -02</p>
               <h3 className="text-2xl font-light mb-4">AI Model Configuration</h3>
               <p className="text-muted-foreground">
@@ -122,7 +120,6 @@ const ContentCreation = () => {
             </div>
 
             <div className="step-card border border-border p-8 bg-background">
-              <Video className="w-12 h-12 mb-6 icon-gradient" />
               <p className="text-sm text-muted-foreground mb-4">Step -03</p>
               <h3 className="text-2xl font-light mb-4">Production & Generation</h3>
               <p className="text-muted-foreground">
@@ -131,7 +128,6 @@ const ContentCreation = () => {
             </div>
 
             <div className="step-card border border-border p-8 bg-background">
-              <Mic className="w-12 h-12 mb-6 icon-gradient" />
               <p className="text-sm text-muted-foreground mb-4">Step -04</p>
               <h3 className="text-2xl font-light mb-4">Post-Production & Delivery</h3>
               <p className="text-muted-foreground">

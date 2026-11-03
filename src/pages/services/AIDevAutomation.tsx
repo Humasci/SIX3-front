@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Brain, Users, Settings, Zap } from "lucide-react";
 import icons from "@/utils/iconGenerator";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -110,7 +109,6 @@ const AIDevAutomation = () => {
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="step-card border border-border p-8 bg-background">
-              <Brain className="w-12 h-12 mb-6 icon-gradient" />
               <p className="text-sm text-muted-foreground mb-4">Step -01</p>
               <h3 className="text-2xl font-light mb-4">Discovery & Strategy</h3>
               <p className="text-muted-foreground">
@@ -119,7 +117,6 @@ const AIDevAutomation = () => {
             </div>
 
             <div className="step-card border border-border p-8 bg-background">
-              <Users className="w-12 h-12 mb-6 icon-gradient" />
               <p className="text-sm text-muted-foreground mb-4">Step -02</p>
               <h3 className="text-2xl font-light mb-4">AI Agent Development</h3>
               <p className="text-muted-foreground">
@@ -128,7 +125,6 @@ const AIDevAutomation = () => {
             </div>
 
             <div className="step-card border border-border p-8 bg-background">
-              <Settings className="w-12 h-12 mb-6 icon-gradient" />
               <p className="text-sm text-muted-foreground mb-4">Step -03</p>
               <h3 className="text-2xl font-light mb-4">Integration & Testing</h3>
               <p className="text-muted-foreground">
@@ -137,7 +133,6 @@ const AIDevAutomation = () => {
             </div>
 
             <div className="step-card border border-border p-8 bg-background">
-              <Zap className="w-12 h-12 mb-6 icon-gradient" />
               <p className="text-sm text-muted-foreground mb-4">Step -04</p>
               <h3 className="text-2xl font-light mb-4">Deployment & Training</h3>
               <p className="text-muted-foreground">

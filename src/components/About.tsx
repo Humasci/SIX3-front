@@ -43,7 +43,7 @@ const AnimatedCounter = ({ end }: { end: number }) => {
   }, [end]);
 
   return (
-    <div ref={ref} className="text-8xl md:text-9xl font-light tracking-tight bg-gradient-to-r from-[#7c3aed] via-[#ec4899] to-[#f97316] bg-clip-text text-transparent">
+    <div ref={ref} className="text-8xl md:text-9xl font-light tracking-tight bg-gradient-to-r from-[#7c3aed] via-[#a855f7] to-[#f97316] bg-clip-text text-transparent">
       {count.toString().split('').map((digit, i) => (
         <span key={i} className="inline-block">
           {digit}

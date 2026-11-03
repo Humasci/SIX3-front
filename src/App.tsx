@@ -39,7 +39,7 @@ const App = () => (
         <defs>
           <linearGradient id="brand-grad" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="24" y2="24">
             <stop offset="0%" stopColor="#7c3aed" />
-            <stop offset="50%" stopColor="#ec4899" />
+            <stop offset="50%" stopColor="#a855f7" />
             <stop offset="100%" stopColor="#f97316" />
           </linearGradient>
         </defs>

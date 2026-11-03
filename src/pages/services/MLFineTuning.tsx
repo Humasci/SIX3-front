@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Database, FlaskConical, BarChart2, Rocket } from "lucide-react";
 import icons from "@/utils/iconGenerator";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -109,7 +108,6 @@ const MLFineTuning = () => {
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="step-card border border-border p-8 bg-background">
-              <Database className="w-12 h-12 mb-6 icon-gradient" />
               <p className="text-sm text-muted-foreground mb-4">Step -01</p>
               <h3 className="text-2xl font-light mb-4">Data Audit & Preparation</h3>
               <p className="text-muted-foreground">
@@ -118,7 +116,6 @@ const MLFineTuning = () => {
             </div>
 
             <div className="step-card border border-border p-8 bg-background">
-              <FlaskConical className="w-12 h-12 mb-6 icon-gradient" />
               <p className="text-sm text-muted-foreground mb-4">Step -02</p>
               <h3 className="text-2xl font-light mb-4">Model Selection & Training</h3>
               <p className="text-muted-foreground">
@@ -127,7 +124,6 @@ const MLFineTuning = () => {
             </div>
 
             <div className="step-card border border-border p-8 bg-background">
-              <BarChart2 className="w-12 h-12 mb-6 text-gradient" />
               <p className="text-sm text-muted-foreground mb-4">Step -03</p>
               <h3 className="text-2xl font-light mb-4">Evaluation & Benchmarking</h3>
               <p className="text-muted-foreground">
@@ -136,7 +132,6 @@ const MLFineTuning = () => {
             </div>
 
             <div className="step-card border border-border p-8 bg-background">
-              <Rocket className="w-12 h-12 mb-6 icon-gradient" />
               <p className="text-sm text-muted-foreground mb-4">Step -04</p>
               <h3 className="text-2xl font-light mb-4">Deployment & Monitoring</h3>
               <p className="text-muted-foreground">

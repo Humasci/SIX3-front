@@ -82,7 +82,7 @@ export const CursorEffect = () => {
       />
       <div
         ref={followerRef}
-        className="fixed top-0 left-0 w-8 h-8 border border-[#ec4899]/60 rounded-full pointer-events-none z-40 transform -translate-x-1/2 -translate-y-1/2 hidden md:block"
+        className="fixed top-0 left-0 w-8 h-8 border border-[#a855f7]/60 rounded-full pointer-events-none z-40 transform -translate-x-1/2 -translate-y-1/2 hidden md:block"
       />
     </>
   );
