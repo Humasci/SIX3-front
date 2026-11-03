@@ -313,6 +313,67 @@ export const icons = {
     </svg>
   `),
 
+  // dui.guide / Legal navigation compass
+  duiGuide: encodeDataUri(`
+    <svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+      <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="-200" y1="-160" x2="200" y2="160"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient></defs>
+      <rect width="800" height="600" fill="#16163d"/>
+      <g transform="translate(400, 300)">
+        <!-- Outer compass ring -->
+        <circle cx="0" cy="0" r="140" fill="none" stroke="url(#g)" stroke-width="3"/>
+        <circle cx="0" cy="0" r="120" fill="none" stroke="url(#g)" stroke-width="1" opacity="0.3"/>
+        <!-- Compass needle North -->
+        <path d="M 0 -110 L -18 0 L 0 -20 Z" fill="url(#g)"/>
+        <!-- Compass needle South -->
+        <path d="M 0 110 L 18 0 L 0 20 Z" fill="url(#g)" opacity="0.4"/>
+        <!-- Center dot -->
+        <circle cx="0" cy="0" r="8" fill="url(#g)"/>
+        <!-- Cardinal marks -->
+        <line x1="0" y1="-140" x2="0" y2="-128" stroke="url(#g)" stroke-width="3"/>
+        <line x1="0" y1="128" x2="0" y2="140" stroke="url(#g)" stroke-width="3"/>
+        <line x1="-140" y1="0" x2="-128" y2="0" stroke="url(#g)" stroke-width="3"/>
+        <line x1="128" y1="0" x2="140" y2="0" stroke="url(#g)" stroke-width="3"/>
+        <!-- Scale / gavel at bottom -->
+        <line x1="-50" y1="155" x2="50" y2="155" stroke="url(#g)" stroke-width="3" opacity="0.7"/>
+        <circle cx="-50" cy="155" r="5" fill="url(#g)" opacity="0.7"/>
+        <circle cx="50" cy="155" r="5" fill="url(#g)" opacity="0.7"/>
+        <line x1="0" y1="155" x2="0" y2="175" stroke="url(#g)" stroke-width="3" opacity="0.7"/>
+      </g>
+    </svg>
+  `),
+
+  // ML Fine-Tuning / Training curve with neural nodes
+  mlFineTuning: encodeDataUri(`
+    <svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+      <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="-200" y1="-160" x2="200" y2="160"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#ec4899"/><stop offset="100%" stop-color="#f97316"/></linearGradient></defs>
+      <rect width="800" height="600" fill="#16163d"/>
+      <g transform="translate(400, 300)">
+        <!-- Axis -->
+        <line x1="-150" y1="120" x2="150" y2="120" stroke="url(#g)" stroke-width="3"/>
+        <line x1="-150" y1="120" x2="-150" y2="-120" stroke="url(#g)" stroke-width="3"/>
+        <!-- Loss curve going down (training progress) -->
+        <path d="M -130 -90 Q -80 -85 -40 -20 Q 0 40 40 70 Q 80 90 130 100" fill="none" stroke="url(#g)" stroke-width="4"/>
+        <!-- Data points on curve -->
+        <circle cx="-130" cy="-90" r="6" fill="url(#g)"/>
+        <circle cx="-40" cy="-20" r="6" fill="url(#g)"/>
+        <circle cx="40" cy="70" r="6" fill="url(#g)"/>
+        <circle cx="130" cy="100" r="6" fill="url(#g)"/>
+        <!-- Neural nodes -->
+        <circle cx="-160" cy="-60" r="10" fill="none" stroke="url(#g)" stroke-width="2" opacity="0.6"/>
+        <circle cx="-160" cy="20" r="10" fill="none" stroke="url(#g)" stroke-width="2" opacity="0.6"/>
+        <circle cx="-160" cy="80" r="10" fill="none" stroke="url(#g)" stroke-width="2" opacity="0.6"/>
+        <!-- Slider/tuning bar -->
+        <line x1="-50" y1="-130" x2="150" y2="-130" stroke="url(#g)" stroke-width="3" opacity="0.5"/>
+        <rect x="30" y="-140" width="4" height="20" fill="url(#g)"/>
+        <circle cx="32" cy="-130" r="8" fill="none" stroke="url(#g)" stroke-width="2"/>
+        <!-- Axis label ticks -->
+        <line x1="-150" y1="-90" x2="-145" y2="-90" stroke="url(#g)" stroke-width="2" opacity="0.4"/>
+        <line x1="-150" y1="-30" x2="-145" y2="-30" stroke="url(#g)" stroke-width="2" opacity="0.4"/>
+        <line x1="-150" y1="50" x2="-145" y2="50" stroke="url(#g)" stroke-width="2" opacity="0.4"/>
+      </g>
+    </svg>
+  `),
+
   // Video / Camera
   video: encodeDataUri(`
     <svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">

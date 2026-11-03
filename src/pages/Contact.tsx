@@ -1,3 +1,4 @@
+import { PageSEO } from "@/components/PageSEO";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -261,11 +262,17 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <PageSEO
+        title="Contact SIX3 Agency — Get a Free Consultation"
+        description="Ready to transform your business with AI? Contact SIX3 Agency for a free consultation on AI marketing, automation, and ML solutions."
+        canonical="https://six3.agency/contact"
+      />
       <Header />
 
       <section className="pt-32 pb-24 px-6 mt-5">
         <div className="max-w-4xl mx-auto">
           <div className="contact-title mb-16">
+            <h1 className="sr-only">Contact SIX3 Agency</h1>
             <div className="flex items-center gap-2 mb-4">
               <span className="text-sm text-muted-foreground">
                 Step {currentStep + 1} of {steps.length}
@@ -277,9 +284,9 @@ const Contact = () => {
                 style={{ width: `${((currentStep + 1) / steps.length) * 100}%` }}
               />
             </div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light mb-4">
               {steps[currentStep].title}
-            </h1>
+            </h2>
             <p className="text-lg sm:text-xl text-muted-foreground">
               {steps[currentStep].subtitle}
             </p>

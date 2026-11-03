@@ -93,6 +93,23 @@ const projects = {
       icons.video,
     ],
   },
+  "dui-guide": {
+    title: "dui.guide — Legal Guidance Platform",
+    category: "AI Agent Creation & Workflow Automation",
+    year: "2025",
+    client: "dui.guide — Media Law Group LLC",
+    duration: "10 weeks",
+    description: "AI-powered DUI procedural guidance platform delivering state and county-specific legal navigation, automated deadline tracking, and intelligent attorney matching across all 50 states.",
+    challenge: "DUI cases are intensely jurisdiction-specific. Users faced 45+ minutes navigating fragmented government websites, routinely missed critical deadlines, and had no way to identify the right attorney for their specific charge and county.",
+    solution: "We built a conversational AI guidance agent with county-level jurisdiction detection, an automated deadline tracking and alert system synced to court calendars, and an AI-powered attorney and service provider matching layer over their existing directory.",
+    results: ["24/7 automated guidance across all 50 states", "User journey to correct info reduced from 45 min to under 3 min", "3x increase in attorney directory conversions"],
+    image: icons.duiGuide,
+    gallery: [
+      icons.duiGuide,
+      icons.legal,
+      icons.automation,
+    ],
+  },
   "corporate-website": {
     title: "Corporate Website",
     category: "Web Design",

@@ -17,7 +17,7 @@ const industries = [
     title: "E-commerce",
     description: "Product marketing automation, customer retention, and sales optimization",
     icon: ShoppingCart,
-    path: "/industries/ecommerce"
+    path: "/contact"
   },
   {
     title: "Healthcare",
@@ -41,7 +41,7 @@ const industries = [
     title: "B2B SaaS",
     description: "Lead generation, product demos, onboarding automation, and customer success",
     icon: Cloud,
-    path: "/industries/b2b-saas"
+    path: "/contact"
   }
 ];
 

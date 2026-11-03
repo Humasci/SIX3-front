@@ -11,7 +11,7 @@ export const Hero = () => {
   const [time, setTime] = useState("");
   const heroRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const titleRefs = useRef<(HTMLHeadingElement | null)[]>([]);
+  const titleRefs = useRef<(HTMLElement | null)[]>([]);
 
   useEffect(() => {
     const updateTime = () => {
@@ -157,7 +157,7 @@ export const Hero = () => {
             >
               AI-POWERED
             </h1>
-            <h1 
+            <div
               ref={(el) => (titleRefs.current[1] = el)}
               className="hero-title text-3xl md:text-6xl lg:text-7xl font-light tracking-tight mb-4 relative"
             >
@@ -165,13 +165,13 @@ export const Hero = () => {
                 MARKETING
                 <div className="absolute -bottom-2 left-0 w-28 md:w-56 h-px bg-foreground/30" />
               </span>
-            </h1>
-            <h1 
+            </div>
+            <div
               ref={(el) => (titleRefs.current[2] = el)}
               className="hero-title text-3xl md:text-6xl lg:text-7xl font-light tracking-tight"
             >
               AGENCY
-            </h1>
+            </div>
           </div>
 
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 max-w-5xl">
