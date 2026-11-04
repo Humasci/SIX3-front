@@ -11,10 +11,14 @@ interface FormData {
   goals: string;
 }
 
-// Environment variables needed:
-// GMAIL_USER (your hello@six3.agency email)
-// GMAIL_APP_PASSWORD (Gmail App Password - see setup instructions)
-// ATTIO_API_KEY (optional)
+// Environment variables (see RESEND_SETUP.md):
+// RESEND_API_KEY      required, from resend.com/api-keys
+// CONTACT_TO_EMAIL    optional, defaults to hello@six3.agency
+// CONTACT_FROM_EMAIL  optional, defaults to Resend's test sender until six3.agency is verified
+// ATTIO_API_KEY       optional
+
+const DEFAULT_TO = 'hello@six3.agency';
+const DEFAULT_FROM = 'SIX³ Agency <onboarding@resend.dev>';
 
 // Simple in-memory rate limiting (resets on function cold start)
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
@@ -70,24 +74,31 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       return res.status(400).json({ error: 'Missing required fields' });
     }
 
-    // Check environment variables
-    const gmailUser = process.env.GMAIL_USER;
-    const gmailAppPassword = process.env.GMAIL_APP_PASSWORD;
-    const attioApiKey = process.env.ATTIO_API_KEY;
+    let emailed = false;
+    let savedToCrm = false;
 
-    // Try to send email via Gmail (optional)
     try {
-      await sendEmailViaGmail(formData);
+      await sendEmailViaResend(formData);
+      emailed = true;
     } catch (emailError) {
-      // Email is optional, continue if it fails
       console.error('Email error:', emailError);
     }
 
-    // Try to create contact in Attio CRM (optional)
-    try {
-      await createAttioContact(formData);
-    } catch (attioError) {
-      // Attio is optional, continue if it fails
+    if (process.env.ATTIO_API_KEY) {
+      try {
+        await createAttioContact(formData);
+        savedToCrm = true;
+      } catch (attioError) {
+        console.error('Attio error:', attioError);
+      }
+    }
+
+    // Only report success if the enquiry actually reached us somewhere
+    if (!emailed && !savedToCrm) {
+      return res.status(502).json({
+        error: 'Delivery failed',
+        message: 'We could not send your message. Please email hello@six3.agency directly.',
+      });
     }
 
     res.status(200).json({ success: true, message: 'Form submitted successfully' });
@@ -103,39 +114,50 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 }
 
-async function sendEmailViaGmail(formData: FormData) {
-  const gmailUser = process.env.GMAIL_USER;
-  const gmailAppPassword = process.env.GMAIL_APP_PASSWORD;
-
-  if (!gmailUser || !gmailAppPassword) {
-    throw new Error('Gmail credentials missing. Please set GMAIL_USER and GMAIL_APP_PASSWORD environment variables.');
+async function sendEmailViaResend(formData: FormData) {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    throw new Error('RESEND_API_KEY is not set');
   }
 
-  // Import nodemailer dynamically
-  const nodemailer = await import('nodemailer');
-
-  // Create transporter using Gmail SMTP
-  const transporter = nodemailer.default.createTransport({
-    host: 'smtp.gmail.com',
-    port: 465,
-    secure: true, // use SSL
-    auth: {
-      user: gmailUser,
-      pass: gmailAppPassword,
+  const response = await fetch('https://api.resend.com/emails', {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${apiKey}`,
+      'Content-Type': 'application/json',
     },
+    body: JSON.stringify({
+      from: process.env.CONTACT_FROM_EMAIL || DEFAULT_FROM,
+      to: [process.env.CONTACT_TO_EMAIL || DEFAULT_TO],
+      reply_to: formData.email,
+      subject: `New enquiry from ${formData.name}`.slice(0, 200),
+      html: generateEmailHTML(formData),
+    }),
   });
 
-  // Send email
-  const info = await transporter.sendMail({
-    from: `"SIX3 Agency Contact Form" <${gmailUser}>`,
-    to: gmailUser, // Send to your own Gmail
-    subject: `New Contact Form Submission from ${formData.name}`,
-    html: generateEmailHTML(formData),
-    replyTo: formData.email, // Allow easy reply to the customer
-  });
+  if (!response.ok) {
+    throw new Error(`Resend error ${response.status}: ${await response.text()}`);
+  }
 
-  return info;
+  return response.json();
 }
+
+const escapeHtml = (value: string) =>
+  value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+
+const safeUrl = (value: string) => {
+  const url = /^https?:\/\//i.test(value) ? value : `https://${value}`;
+  try {
+    return new URL(url).protocol.startsWith('http') ? url : '';
+  } catch {
+    return '';
+  }
+};
 
 async function createAttioContact(formData: FormData) {
   const attioApiKey = process.env.ATTIO_API_KEY;
@@ -216,7 +238,19 @@ async function createAttioContact(formData: FormData) {
   }
 }
 
-function generateEmailHTML(formData: FormData): string {
+function generateEmailHTML(raw: FormData): string {
+  const formData = {
+    ...raw,
+    name: escapeHtml(raw.name),
+    email: escapeHtml(raw.email),
+    company: raw.company ? escapeHtml(raw.company) : '',
+    phone: raw.phone ? escapeHtml(raw.phone) : '',
+    website: raw.website ? escapeHtml(raw.website) : '',
+    services: raw.services.map((s) => escapeHtml(String(s))),
+    painPoints: escapeHtml(raw.painPoints),
+    goals: escapeHtml(raw.goals),
+  };
+  const websiteHref = raw.website ? escapeHtml(safeUrl(raw.website)) : '';
   return `
     <!DOCTYPE html>
     <html>
@@ -268,7 +302,7 @@ function generateEmailHTML(formData: FormData): string {
         ${formData.website ? `
         <div class="field">
           <div class="label">Website:</div>
-          <div class="value"><a href="${formData.website}" target="_blank">${formData.website}</a></div>
+          <div class="value"><a href="${websiteHref}" target="_blank">${formData.website}</a></div>
         </div>
         ` : ''}
 
