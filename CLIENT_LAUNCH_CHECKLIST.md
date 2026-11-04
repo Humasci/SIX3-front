@@ -57,38 +57,18 @@ Replace `G-XXXXXXXXXX` with your actual Google Analytics 4 Measurement ID.
 **Priority: HIGH**
 **Action Required:** Configure environment variables in Vercel
 
-The contact form requires these environment variables to be set in your Vercel project:
+The contact form sends enquiries to `hello@six3.agency` through Resend. Full steps are in `RESEND_SETUP.md`.
 
 ```bash
-GMAIL_USER=hello@six3.agency
-GMAIL_APP_PASSWORD=your_gmail_app_password_here
-ATTIO_API_KEY=your_attio_api_key_here (optional)
+RESEND_API_KEY=re_your_api_key_here
+CONTACT_FROM_EMAIL=SIX³ Agency <website@six3.agency>   # optional, once six3.agency is verified in Resend
+ATTIO_API_KEY=your_attio_api_key_here                  # optional
 ```
 
 **Notes:**
-- The API has failsafe error handling - form will work even without these keys
-- Without Gmail credentials: Emails won't be sent (but form will still accept submissions)
-- Without Attio: Contacts won't be added to CRM
-- Form submissions send to: `hello@six3.agency`
-
-**How to get Gmail App Password (REQUIRED):**
-1. Go to your Google Account: https://myaccount.google.com/
-2. Click on "Security" in the left sidebar
-3. Under "Signing in to Google", enable "2-Step Verification" (if not already enabled)
-4. After enabling 2FA, go back to Security
-5. Under "Signing in to Google", click "App passwords" (or search for "App passwords")
-6. Select "Mail" and "Other" (enter "SIX3 Website")
-7. Click "Generate"
-8. Copy the 16-character password (format: xxxx xxxx xxxx xxxx)
-9. Use this password as GMAIL_APP_PASSWORD (remove spaces)
-
-**Steps:**
-1. Generate Gmail App Password using steps above
-2. Go to Vercel Dashboard → Your Project → Settings → Environment Variables
-3. Add `GMAIL_USER` with value: `hello@six3.agency`
-4. Add `GMAIL_APP_PASSWORD` with the 16-character password from Gmail
-5. Optionally add `ATTIO_API_KEY` for CRM integration
-6. Redeploy the application for changes to take effect
+- The form only shows success if the enquiry was emailed (or saved to Attio); otherwise the visitor sees an error and is asked to email directly
+- Sign up to Resend with hello@six3.agency so the test sender works before the domain is verified
+- Redeploy after adding variables
 
 ---
 
@@ -168,7 +148,7 @@ The meta tags reference: `https://six3.agency/og-image.png`
 - [ ] Email validation rejects invalid formats
 - [ ] Form submits successfully
 - [ ] Success message displays after submission (not the form)
-- [ ] Email received at `hello@six3.agency` Gmail inbox (if Gmail configured)
+- [ ] Email received at `hello@six3.agency` (Resend configured)
 - [ ] Contact appears in Attio CRM (if Attio configured)
 - [ ] Rate limiting triggers after 3 submissions
 - [ ] Cooldown timer displays correctly between submissions
@@ -360,10 +340,9 @@ vercel --prod
 - Dashboard: https://vercel.com/dashboard
 - Docs: https://vercel.com/docs
 
-**Email Service:** Gmail SMTP (via Nodemailer)
-- Gmail Settings: https://myaccount.google.com/security
-- App Passwords: https://myaccount.google.com/apppasswords
-- Nodemailer Docs: https://nodemailer.com/
+**Email Service:** Resend
+- Dashboard: https://resend.com/emails
+- Docs: https://resend.com/docs
 
 **CRM:** Attio
 - Dashboard: https://app.attio.com/
