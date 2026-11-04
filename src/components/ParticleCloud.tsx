@@ -4,29 +4,17 @@ const VIOLETS = ["#7c3aed", "#8b5cf6", "#a855f7", "#6d28d9", "#c084fc", "#6366f1
 const ORANGES = ["#f97316", "#fb923c", "#ea580c"];
 const COLORS = [...VIOLETS, ...ORANGES];
 
-// Irregular cluster of overlapping puffs, generated once from a fixed seed so the shape is stable
-type Lobe = { x: number; y: number; z: number; r: number; fx: number; fy: number; phase: number };
-
-const makeLobes = (): Lobe[] => {
-  let seed = 11;
-  const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
-  const lobes: Lobe[] = [];
-  let y = 0.1;
-  for (let i = 0; i < 11; i++) {
-    const x = -1.65 + (i / 10) * 3.4 + (rnd() - 0.5) * 0.25;
-    y += (rnd() - 0.5) * 0.35;
-    y = Math.max(-0.35, Math.min(0.35, y));
-    const middle = 1 - Math.abs(x) / 2.1;
-    lobes.push({ x, y, z: (rnd() - 0.5) * 0.6, r: 0.32 + rnd() * 0.3 + middle * 0.35, fx: 0.15 + rnd() * 0.25, fy: 0.12 + rnd() * 0.2, phase: rnd() * 10 });
-  }
-  // Towering billows on top and a few loose puffs underneath
-  for (const [x, y, r] of [[-0.25, -0.75, 0.62], [0.55, -0.62, 0.5], [0.15, -1.05, 0.38], [-0.9, 0.55, 0.3], [1.15, 0.5, 0.28]]) {
-    lobes.push({ x: x + (rnd() - 0.5) * 0.15, y, z: (rnd() - 0.5) * 0.5, r, fx: 0.15 + rnd() * 0.25, fy: 0.12 + rnd() * 0.2, phase: rnd() * 10 });
-  }
-  return lobes;
-};
-
-const LOBES = makeLobes();
+// Overlapping lobes that make up the cloud: centre (x, y, z) and radius, in cloud units
+const LOBES: [number, number, number, number][] = [
+  [-1.15, 0.18, 0.0, 0.5],
+  [-0.55, -0.12, 0.12, 0.7],
+  [0.15, -0.32, -0.08, 0.82],
+  [0.85, -0.08, 0.06, 0.66],
+  [1.4, 0.22, -0.04, 0.42],
+  [-0.15, 0.3, 0.22, 0.6],
+  [0.55, 0.36, -0.2, 0.52],
+  [-0.8, 0.42, -0.18, 0.4],
+];
 
 type Particle = {
   lobe: number;
@@ -85,26 +73,26 @@ const pickColor = (x: number, y: number) => {
 
 const buildParticles = (count: number): Particle[] => {
   const ps: Particle[] = [];
-  const weights = LOBES.map(({ r }) => r * r * r);
+  const weights = LOBES.map(([, , , r]) => r * r * r);
   const total = weights.reduce((a, b) => a + b, 0);
   for (let i = 0; i < count; i++) {
-    const wisp = Math.random() < 0.08;
+    const wisp = Math.random() < 0.12;
     let lobe = 0;
     let pick = Math.random() * total;
     while (pick > weights[lobe] && lobe < LOBES.length - 1) pick -= weights[lobe++];
-    const r = LOBES[lobe].r;
+    const r = LOBES[lobe][3];
     let gx = gauss(), gy = gauss(), gz = gauss();
     const len = Math.hypot(gx, gy, gz);
     if (len > 1.8) {
       gx *= 1.8 / len; gy *= 1.8 / len; gz *= 1.8 / len;
     }
-    const x = wisp ? (Math.random() - 0.5) * 4.6 : gx * r * 0.34;
-    const y = wisp ? gauss() * 0.35 : gy * r * 0.32;
-    const z = wisp ? gauss() * 0.4 : gz * r * 0.34;
+    const x = wisp ? (Math.random() - 0.5) * 4.2 : gx * r * 0.4;
+    const y = wisp ? gauss() * 0.35 : gy * r * 0.38;
+    const z = wisp ? gauss() * 0.4 : gz * r * 0.4;
     const core = wisp ? 0 : Math.max(0, 1 - Math.min(1.8, len) / 1.8);
     ps.push({
       lobe, x, y, z, core, wisp,
-      color: pickColor(x + (wisp ? 0 : LOBES[lobe].x), y + (wisp ? 0 : LOBES[lobe].y)),
+      color: pickColor(x + (wisp ? 0 : LOBES[lobe][0]), y + (wisp ? 0 : LOBES[lobe][1])),
       size: 0.55 + Math.random() * 0.8,
       seed: Math.random() * 100,
       ox: 0, oy: 0, px: 0, py: 0, pz: 0, ps: 1, alpha: 1,
@@ -138,16 +126,16 @@ export const ParticleCloud = ({ className = "" }: { className?: string }) => {
       canvas.height = Math.round(H * dpr);
       const wasMobile = mobile;
       mobile = W < 768;
-      if (!particles.length || wasMobile !== mobile) particles = buildParticles(mobile ? 1600 : 4400);
+      if (!particles.length || wasMobile !== mobile) particles = buildParticles(mobile ? 1300 : 3400);
     };
 
     const draw = () => {
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       ctx.clearRect(0, 0, W, H);
 
-      const cx0 = mobile ? W * 0.55 : W * 0.66;
-      const cy0 = mobile ? H * 0.74 : H * 0.48;
-      const S = mobile ? Math.min(W * 0.3, H * 0.13) : Math.min(W * 0.17, H * 0.29);
+      const cx0 = mobile ? W * 0.58 : W * 0.71;
+      const cy0 = mobile ? H * 0.74 : H * 0.44;
+      const S = mobile ? Math.min(W * 0.26, H * 0.12) : Math.min(W * 0.155, H * 0.25);
       const r0 = mobile ? 2.3 : Math.max(2.4, Math.min(H * 0.0048, 4.6));
       const F = 1100;
 
@@ -160,21 +148,20 @@ export const ParticleCloud = ({ className = "" }: { className?: string }) => {
         let x: number, y: number, z: number;
         if (p.wisp) {
           // Wisps blow slowly across and wrap round
-          const span = 4.6;
+          const span = 4.2;
           x = ((((p.x + time * 0.05 + span / 2) % span) + span) % span) - span / 2;
           y = p.y + Math.sin(time * 0.4 + p.seed) * 0.08;
           z = p.z;
           p.alpha = 0.45 * Math.pow(Math.max(0, 1 - Math.abs(x) / (span / 2)), 1.5);
         } else {
-          const L = LOBES[p.lobe];
-          const swell = 1 + Math.sin(time * 0.3 + L.phase) * 0.14;
-          const lx = L.x + Math.sin(time * L.fx + L.phase) * 0.14;
-          const ly = L.y + Math.cos(time * L.fy + L.phase * 1.3) * 0.1;
-          const f = 0.1 * L.r;
-          x = lx + p.x * swell + Math.sin(time * 0.5 + p.seed + p.y * 3) * f;
-          y = ly + p.y * swell + Math.sin(time * 0.43 + p.seed * 1.3 + p.z * 3) * f;
-          z = L.z + p.z * swell + Math.cos(time * 0.37 + p.seed + p.x * 3) * f;
-          p.alpha = 0.25 + p.core * 0.75;
+          const [lx, ly, lz, lr] = LOBES[p.lobe];
+          const swell = 1 + Math.sin(time * 0.35 + p.lobe * 1.7) * 0.08;
+          const drift = Math.sin(time * 0.22 + p.lobe) * 0.06;
+          const f = 0.09 * lr;
+          x = lx + drift + p.x * swell + Math.sin(time * 0.5 + p.seed + p.y * 3) * f;
+          y = ly + Math.cos(time * 0.27 + p.lobe * 2.3) * 0.04 + p.y * swell + Math.sin(time * 0.43 + p.seed * 1.3 + p.z * 3) * f;
+          z = lz + p.z * swell + Math.cos(time * 0.37 + p.seed + p.x * 3) * f;
+          p.alpha = 0.35 + p.core * 0.65;
         }
         x *= S; y *= S; z *= S;
 
