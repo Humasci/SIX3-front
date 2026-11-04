@@ -169,10 +169,6 @@ const AIDevAutomation = () => {
       <section className="py-16 px-6 bg-secondary/30">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
           <div>
-            <div className="text-7xl md:text-8xl font-light mb-4">$5-100K</div>
-            <p className="text-xl text-muted-foreground">Investment Range</p>
-          </div>
-          <div>
             <div className="text-7xl md:text-8xl font-light mb-4">Ongoing</div>
             <p className="text-xl text-muted-foreground">Support Available</p>
           </div>
@@ -210,7 +206,7 @@ const AIDevAutomation = () => {
               <div className="text-5xl font-light text-muted-foreground/50 mb-4">03</div>
               <h3 className="text-3xl font-light mb-4">Comprehensive Packages</h3>
               <p className="text-lg text-muted-foreground max-w-2xl">
-                Starter packages from $5-15K, professional packages $15-35K, enterprise solutions $35-100K+, with ongoing support from $2-10K/month for optimization and new features.
+                Starter, professional and enterprise packages scoped to your business, with ongoing support for optimization and new features. Get in touch for a tailored quote.
               </p>
             </div>
           </div>
@@ -227,7 +223,7 @@ const AIDevAutomation = () => {
             dui.guide — AI-Powered Legal Guidance Platform
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mb-8">
-            How we automated state and county-specific DUI procedural guidance at scale — delivering 24/7 intelligent navigation to users across all 50 states, cutting the user journey from 45 minutes to under 3 minutes, and tripling attorney directory conversions.
+            How we built AI agents that deliver state and county-specific DUI procedural guidance across all 50 states, with automated deadline tracking and intelligent attorney matching.
           </p>
           <Link to="/use-cases/dui-guide">
             <Button variant="outline" className="rounded-full px-8 py-4 border-foreground hover:bg-foreground hover:text-background">

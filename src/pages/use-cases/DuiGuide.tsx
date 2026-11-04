@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Bot, MapPin, Bell, Users, ArrowRight } from "lucide-react";
+import { Bot, Bell, Users, ArrowRight } from "lucide-react";
 import icons from "@/utils/iconGenerator";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -55,7 +55,7 @@ const DuiGuide = () => {
     <div ref={contentRef} className="min-h-screen bg-background text-foreground">
       <PageSEO
         title="dui.guide Case Study — AI Legal Guidance Platform | SIX³ Agency"
-        description="How SIX³ Agency automated DUI procedural guidance across all 50 states with AI agents, cutting user journey time from 45 minutes to under 3 minutes."
+        description="How SIX³ Agency built AI agents that deliver state and county-specific DUI procedural guidance across all 50 states."
         canonical="https://six3.agency/use-cases/dui-guide"
       />
       <Header />
@@ -76,9 +76,9 @@ const DuiGuide = () => {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="text-xl text-muted-foreground mb-8">
-                  How dui.guide automated state and county-specific DUI procedural guidance
-                  at scale — delivering 24/7 intelligent navigation to users across all 50 states
-                  without a single manual lookup.
+                  How dui.guide uses AI agents to deliver state and county-specific DUI
+                  procedural guidance across all 50 states, with automated deadline tracking
+                  and intelligent attorney matching.
                 </p>
                 <div className="space-y-4">
                   <div>
@@ -119,40 +119,11 @@ const DuiGuide = () => {
         </div>
       </section>
 
-      {/* Key Results */}
-      <section className="py-16 px-6 bg-secondary/20">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-light mb-12 text-center">Key Results</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <Bot className="w-12 h-12 icon-gradient mx-auto mb-4" />
-              <div className="text-4xl font-light mb-2">24/7</div>
-              <p className="text-muted-foreground">Automated guidance availability</p>
-            </div>
-            <div className="text-center">
-              <MapPin className="w-12 h-12 icon-gradient mx-auto mb-4" />
-              <div className="text-4xl font-light mb-2">50</div>
-              <p className="text-muted-foreground">States with county-level coverage</p>
-            </div>
-            <div className="text-center">
-              <Bell className="w-12 h-12 icon-gradient mx-auto mb-4" />
-              <div className="text-4xl font-light mb-2">100%</div>
-              <p className="text-muted-foreground">Automated deadline and alert delivery</p>
-            </div>
-            <div className="text-center">
-              <Users className="w-12 h-12 icon-gradient mx-auto mb-4" />
-              <div className="text-4xl font-light mb-2">3x</div>
-              <p className="text-muted-foreground">Increase in attorney directory conversions</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* The Challenge */}
       <section className="challenges-section py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-light mb-12">The Challenge</h2>
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="max-w-3xl">
             <div>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                 DUI cases are intensely jurisdiction-specific. Deadlines, court locations, DMV requirements,
@@ -173,50 +144,6 @@ const DuiGuide = () => {
                   <h3 className="text-xl font-medium mb-2">Unqualified Attorney Matching</h3>
                   <p className="text-muted-foreground">The existing directory had no intelligent matching — users had no way to identify which attorneys were best suited to their specific charge, county, or budget.</p>
                 </div>
-              </div>
-            </div>
-            <div className="space-y-6">
-              <div className="bg-card border border-border p-6 rounded-lg">
-                <h3 className="text-lg font-medium mb-4">Before AI Implementation</h3>
-                <ul className="space-y-3">
-                  <li className="flex justify-between">
-                    <span>User journey to correct info:</span>
-                    <span className="font-medium">45+ minutes</span>
-                  </li>
-                  <li className="flex justify-between">
-                    <span>Deadline miss rate:</span>
-                    <span className="font-medium">High</span>
-                  </li>
-                  <li className="flex justify-between">
-                    <span>Attorney match quality:</span>
-                    <span className="font-medium">Manual / none</span>
-                  </li>
-                  <li className="flex justify-between">
-                    <span>After-hours support:</span>
-                    <span className="font-medium">0%</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="bg-accent/10 border border-accent/20 p-6 rounded-lg">
-                <h3 className="text-lg font-medium mb-4">After AI Implementation</h3>
-                <ul className="space-y-3">
-                  <li className="flex justify-between">
-                    <span>User journey to correct info:</span>
-                    <span className="font-medium text-gradient">&lt; 3 minutes</span>
-                  </li>
-                  <li className="flex justify-between">
-                    <span>Deadline miss rate:</span>
-                    <span className="font-medium text-gradient">Near zero</span>
-                  </li>
-                  <li className="flex justify-between">
-                    <span>Attorney match quality:</span>
-                    <span className="font-medium text-gradient">AI-scored</span>
-                  </li>
-                  <li className="flex justify-between">
-                    <span>After-hours support:</span>
-                    <span className="font-medium text-gradient">24/7</span>
-                  </li>
-                </ul>
               </div>
             </div>
           </div>
