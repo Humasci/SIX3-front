@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { WormholeCanvas } from "@/components/WormholeCanvas";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -47,8 +48,17 @@ export const ThreePillars = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 px-6 bg-background">
-      <div className="max-w-7xl mx-auto">
+    <section ref={sectionRef} className="relative overflow-hidden py-24 md:py-32 px-6 bg-background">
+      <div className="absolute inset-0 opacity-90 pointer-events-none" aria-hidden="true">
+        <WormholeCanvas className="w-full h-full" />
+      </div>
+      {/* Darken around the text so the copy stays readable over the grid */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        aria-hidden="true"
+        style={{ background: "radial-gradient(ellipse 70% 55% at 50% 55%, hsl(var(--background) / 0.55), transparent 75%), linear-gradient(180deg, hsl(var(--background)) 0%, transparent 18%, transparent 82%, hsl(var(--background)) 100%)" }}
+      />
+      <div className="relative max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-light mb-4 text-white">
             Everything your business depends on.
