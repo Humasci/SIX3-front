@@ -1,4 +1,3 @@
-import { ShoppingBag } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ServiceDropdown } from "./ServiceDropdown";
 import { MobileMenu } from "./MobileMenu";
@@ -74,7 +73,7 @@ export const Header = () => {
           <Logo isScrolled={isScrolled} />
         </div>
         
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
           <Link to="/" className="nav-item text-base hover:text-gradient transition-colors relative group">
             {t('nav.home')}
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-gradient transition-all duration-300 group-hover:w-full" />
@@ -96,8 +95,7 @@ export const Header = () => {
           </Link>
         </nav>
 
-        <div className="flex items-center gap-4 nav-item">
-          <ShoppingBag className="w-5 h-5" />
+        <div className="flex items-center nav-item md:hidden">
           <MobileMenu />
         </div>
       </div>
