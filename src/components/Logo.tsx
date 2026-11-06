@@ -39,8 +39,8 @@ export const Logo = ({ className = "", isScrolled = false, large = false }: Logo
   return (
     <Link to="/" aria-label="SIX³ Agency home" className={`flex items-center ${large ? "gap-4" : "gap-3"} ${className}`}>
       <span className={`flex items-start font-extrabold tracking-tighter leading-none transition-all duration-400 ${size}`}>
-        SIX
-        <BrandMark className="w-[0.66em] h-[0.66em] -mt-[0.2em] ml-[0.03em]" />
+        six
+        <BrandMark className="w-[0.66em] h-[0.66em] -mt-[0.12em] -ml-[0.03em]" />
       </span>
       <span className={`${rule} w-px bg-gradient-to-b from-[#7c3aed] to-[#f97316] opacity-70 transition-all duration-400`} aria-hidden="true" />
       <span className={`text-muted-foreground uppercase font-medium tracking-[0.28em] transition-all duration-400 ${agency}`}>
