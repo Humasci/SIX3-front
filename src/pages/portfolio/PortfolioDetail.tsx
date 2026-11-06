@@ -6,6 +6,7 @@ import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import gsap from "gsap";
 import icons from "@/utils/iconGenerator";
+import { HeroWormhole } from "@/components/HeroWormhole";
 
 const projects = {
   "brand-refresh-2024": {
@@ -223,7 +224,8 @@ const PortfolioDetail = () => {
       <Header />
       
       <div ref={contentRef}>
-      <section className="theme-light pt-32 pb-12 px-6">
+      <section className="theme-light relative isolate overflow-hidden pt-32 pb-12 px-6">
+        <HeroWormhole />
         <div className="max-w-7xl mx-auto">
           <Link to="/portfolio">
             <Button variant="ghost" className="project-hero mb-8">

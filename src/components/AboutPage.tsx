@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import icons from "@/utils/iconGenerator";
+import { HeroWormhole } from "@/components/HeroWormhole";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -48,7 +49,8 @@ export const AboutPage = () => {
   return (
     <div ref={contentRef}>
       {/* Hero Section */}
-      <section className="theme-light pt-40 pb-20 px-6">
+      <section className="theme-light relative isolate overflow-hidden pt-40 pb-20 px-6">
+        <HeroWormhole />
         <div className="max-w-7xl mx-auto">
           <div className="about-hero">
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-light mb-8 text-gradient w-fit pb-1">

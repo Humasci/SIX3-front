@@ -8,6 +8,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowUpRight } from "lucide-react";
 import icons from "@/utils/iconGenerator";
+import { HeroWormhole } from "@/components/HeroWormhole";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -108,7 +109,8 @@ const Services = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="theme-light pt-32 pb-16 px-6 mt-5">
+      <section className="theme-light relative isolate overflow-hidden pt-32 pb-16 px-6 mt-5">
+        <HeroWormhole />
         <div className="max-w-7xl mx-auto">
           <div className="services-hero text-center mb-16">
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-light mb-8 text-gradient w-fit pb-1 mx-auto">

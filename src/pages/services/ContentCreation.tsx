@@ -7,6 +7,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Video } from "lucide-react";
 import icons from "@/utils/iconGenerator";
+import { HeroWormhole } from "@/components/HeroWormhole";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -56,7 +57,8 @@ const ContentCreation = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="theme-light pt-40 pb-16 px-6 mt-5">
+      <section className="theme-light relative isolate overflow-hidden pt-40 pb-16 px-6 mt-5">
+        <HeroWormhole />
         <div className="max-w-7xl mx-auto">
           <div className="hero-content mb-12 grid lg:grid-cols-[minmax(0,1fr)_400px] gap-x-12 gap-y-8 items-center">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-light mb-8 text-gradient w-fit pb-1 lg:col-start-1">
