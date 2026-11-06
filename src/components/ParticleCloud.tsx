@@ -137,17 +137,17 @@ export const ParticleCloud = ({ className = "" }: { className?: string }) => {
       canvas.height = Math.round(H * dpr);
       const wasMobile = mobile;
       mobile = W < 768;
-      if (!particles.length || wasMobile !== mobile) particles = buildParticles(mobile ? 2800 : 7500);
+      if (!particles.length || wasMobile !== mobile) particles = buildParticles(mobile ? 5000 : 11000);
     };
 
     const draw = () => {
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       ctx.clearRect(0, 0, W, H);
 
-      const cx0 = mobile ? W * 0.58 : W * 0.71;
-      const cy0 = mobile ? H * 0.74 : H * 0.44;
-      const S = mobile ? Math.min(W * 0.26, H * 0.12) : Math.min(W * 0.155, H * 0.25);
-      const r0 = mobile ? 0.95 : Math.max(1, Math.min(H * 0.0016, 1.7));
+      const cx0 = mobile ? W * 0.52 : W * 0.68;
+      const cy0 = mobile ? H * 0.3 : H * 0.46;
+      const S = mobile ? Math.min(W * 0.46, H * 0.2) : Math.min(W * 0.22, H * 0.4);
+      const r0 = mobile ? 1.15 : Math.max(1.1, Math.min(H * 0.0019, 2));
       const F = 1100;
 
       const ry = Math.sin(time * 0.16) * 0.5;
@@ -199,7 +199,7 @@ export const ParticleCloud = ({ className = "" }: { className?: string }) => {
       }
 
       const depth = S * 0.9;
-      const base = mobile ? 0.5 : 0.95;
+      const base = mobile ? 0.9 : 0.95;
       // Additive blending: where particles gather, the light builds up into glowing clumps and trails
       ctx.globalCompositeOperation = "lighter";
       for (let i = 0; i < n; i++) {
@@ -217,7 +217,7 @@ export const ParticleCloud = ({ className = "" }: { className?: string }) => {
 
     const loop = (now: number) => {
       const elapsed = now - last;
-      if (elapsed > 26 && drawCount > 1500) {
+      if (elapsed > 26 && drawCount > 3000) {
         if (++slowFrames > 20) {
           drawCount = Math.round(Math.min(drawCount, particles.length) * 0.75);
           slowFrames = 0;
