@@ -189,7 +189,7 @@ const Blog = () => {
                 className={`px-6 py-3 rounded-full transition-all ${
                   category === "All" 
                     ? "bg-brand-gradient text-background" 
-                    : "bg-secondary hover:bg-brand-gradient hover:text-background"
+                    : "bg-secondary hover:bg-brand-gradient-glow hover:text-[#0d0d26]"
                 }`}
               >
                 {category}

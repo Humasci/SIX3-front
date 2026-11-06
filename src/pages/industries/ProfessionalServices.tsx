@@ -362,7 +362,7 @@ const ProfessionalServices = () => {
               </Button>
             </Link>
             <Link to="/services/ai-dev-automation">
-              <Button variant="outline" className="px-8 py-4 text-lg border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-gradient">
+              <Button variant="outline" className="px-8 py-4 text-lg border-accent-foreground text-accent-foreground hover:bg-glow hover:text-[#0d0d26] hover:border-glow">
                 View Automation Services
               </Button>
             </Link>

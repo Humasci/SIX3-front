@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Linkedin, Instagram, Dribbble, Mail } from "lucide-react";
+import { Linkedin, Mail } from "lucide-react";
 import { Logo } from "@/components/Logo";
 
 export const Footer = () => {
@@ -8,7 +8,7 @@ export const Footer = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-8 mb-12">
           <div>
-            <h3 className="text-xl font-light mb-4">SIX³ Agency</h3>
+            <Logo className="mb-4" />
             <p className="text-sm text-muted-foreground">
               AI-powered marketing and automation agency.
             </p>
@@ -80,12 +80,6 @@ export const Footer = () => {
               <div className="flex gap-4">
                 <a href="https://linkedin.com/company/six3-agency" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="LinkedIn">
                   <Linkedin className="w-5 h-5" />
-                </a>
-                <a href="https://instagram.com/six3agency" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="Instagram">
-                  <Instagram className="w-5 h-5" />
-                </a>
-                <a href="https://dribbble.com/six3agency" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="Dribbble">
-                  <Dribbble className="w-5 h-5" />
                 </a>
               </div>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">

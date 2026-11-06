@@ -67,7 +67,7 @@ export const ThreePillars = () => {
 
         <div className="grid md:grid-cols-3 gap-12 lg:gap-16">
           {pillars.map((pillar, index) => (
-            <div key={pillar.title} className="pillar-item">
+            <div key={pillar.title} className="pillar-item text-center">
               <h3 className="text-4xl md:text-5xl font-bold mb-4 text-white">
                 {pillar.title}
               </h3>

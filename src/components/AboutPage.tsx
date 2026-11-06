@@ -2,7 +2,6 @@ import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import icons from "@/utils/iconGenerator";
 import { HeroWormhole } from "@/components/HeroWormhole";
 import { WormholeCta } from "@/components/WormholeCta";
 
@@ -52,12 +51,12 @@ export const AboutPage = () => {
       <section className="theme-light relative isolate overflow-hidden pt-40 pb-20 px-6">
         <HeroWormhole />
         <div className="max-w-7xl mx-auto">
-          <div className="about-hero">
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-light mb-8 text-gradient w-fit pb-1">
+          <div className="about-hero text-center">
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-light mb-8 text-gradient w-fit pb-1 mx-auto">
               About SIX³ Agency
             </h1>
-            <div className="h-1 w-40 bg-brand-gradient rounded-full mb-8" />
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl">
+            <div className="h-1 w-40 bg-brand-gradient rounded-full mb-8 mx-auto" />
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto">
               We are a cutting-edge AI marketing agency specializing in intelligent automation, 
               generative content creation, and custom AI solutions that drive measurable business results.
             </p>
@@ -66,38 +65,25 @@ export const AboutPage = () => {
       </section>
 
       {/* Mission Section */}
-      <section className="py-16 px-6 bg-secondary/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="about-content grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-light mb-6">Our Mission</h2>
-              <p className="text-lg text-muted-foreground mb-6">
-                To revolutionize digital marketing through advanced AI technology, delivering automated solutions 
-                that maximize ROI while reducing operational complexity for businesses of all sizes.
-              </p>
-              <p className="text-lg text-muted-foreground">
-                We believe in the power of artificial intelligence to transform how businesses connect with 
-                their audiences, optimize their operations, and scale their success.
-              </p>
-            </div>
-            <div className="about-content">
-              <div className="media-frame aspect-[4/3] max-w-lg ml-auto">
-                <img
-                  src={icons.ai}
-                  alt="AI Technology"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-          </div>
+      <section className="py-20 px-6 bg-secondary/30">
+        <div className="about-content max-w-3xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-light mb-6">Our Mission</h2>
+          <p className="text-lg text-muted-foreground mb-6">
+            To revolutionize digital marketing through advanced AI technology, delivering automated solutions
+            that maximize ROI while reducing operational complexity for businesses of all sizes.
+          </p>
+          <p className="text-lg text-muted-foreground">
+            We believe in the power of artificial intelligence to transform how businesses connect with
+            their audiences, optimize their operations, and scale their success.
+          </p>
         </div>
       </section>
 
       {/* What We Do */}
       <section className="py-24 px-6">
         <div className="max-w-7xl mx-auto">
-          <h2 className="about-content text-4xl md:text-5xl font-light mb-12">What We Do</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <h2 className="about-content text-4xl md:text-5xl font-light mb-12 text-center">What We Do</h2>
+          <div className="grid md:grid-cols-3 gap-8 text-center max-w-6xl mx-auto">
             <div className="about-content">
               <h3 className="text-xl font-medium mb-4">AI-Driven Marketing</h3>
               <p className="text-muted-foreground">
@@ -148,7 +134,7 @@ export const AboutPage = () => {
       {/* Industries */}
       <section className="py-24 px-6">
         <div className="max-w-7xl mx-auto">
-          <h2 className="about-content text-4xl md:text-5xl font-light mb-12">Industries We Serve</h2>
+          <h2 className="about-content text-4xl md:text-5xl font-light mb-12 text-center">Industries We Serve</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="about-content border border-border p-6">
               <h3 className="text-xl font-medium mb-3">Legal Firms</h3>

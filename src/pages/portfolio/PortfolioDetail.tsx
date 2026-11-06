@@ -72,7 +72,7 @@ const projects = {
   "dui-guide": {
     title: "dui.guide — Legal Guidance Platform",
     category: "AI Agent Creation & Workflow Automation",
-    year: "2025",
+    year: "2025–2026",
     client: "dui.guide — Media Law Group LLC",
     duration: "10 weeks",
     description: "AI-powered DUI procedural guidance platform delivering state and county-specific legal navigation, automated deadline tracking, and intelligent attorney matching across all 50 states.",
@@ -84,7 +84,7 @@ const projects = {
   "media-publisher-directory": {
     title: "Media Publisher & Directory Platform",
     category: "AI Content & SEO Automation",
-    year: "2025",
+    year: "2025–2026",
     client: "Digital media publisher",
     duration: "12 weeks",
     description: "An AI-assisted publishing pipeline for a media publisher running a large online directory: listing pages generated from structured data, editorial content refreshed on a schedule, and every page built to be found in search.",
@@ -96,7 +96,7 @@ const projects = {
   "ecommerce-ai-campaign": {
     title: "E-commerce AI Marketing Campaign",
     category: "Search Marketing & Paid Media",
-    year: "2024",
+    year: "2026",
     client: "Online retailer",
     duration: "Ongoing",
     description: "Multi-platform paid media campaign with AI-driven bid and audience optimization across search and social.",

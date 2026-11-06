@@ -364,7 +364,7 @@ const LawFirmAutomation = () => {
               </Button>
             </Link>
             <Link to="/industries/legal">
-              <Button variant="outline" className="px-8 py-4 text-lg border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-gradient">
+              <Button variant="outline" className="px-8 py-4 text-lg border-accent-foreground text-accent-foreground hover:bg-glow hover:text-[#0d0d26] hover:border-glow">
                 Legal Industry Solutions
               </Button>
             </Link>

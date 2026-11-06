@@ -5,6 +5,7 @@ import { PARTICLE_THREE } from "@/components/particleThree";
 interface LogoProps {
   className?: string;
   isScrolled?: boolean;
+  large?: boolean;
 }
 
 // The ³ in SIX³, drawn as a fine dust of tiny shaded spheres
@@ -30,23 +31,21 @@ export const BrandMark = ({ className = "" }: { className?: string }) => {
   );
 };
 
-export const Logo = ({ className = "", isScrolled = false }: LogoProps) => (
-  <Link to="/" aria-label="SIX³ Agency home" className={`flex items-center gap-3 ${className}`}>
-    <span
-      className={`flex items-start font-extrabold tracking-tighter leading-none transition-all duration-400 ${
-        isScrolled ? "text-xl" : "text-2xl"
-      }`}
-    >
-      SIX
-      <BrandMark className="w-[0.66em] h-[0.66em] -mt-[0.2em] ml-[0.03em]" />
-    </span>
-    <span className="h-4 w-px bg-gradient-to-b from-[#7c3aed] to-[#f97316] opacity-70" aria-hidden="true" />
-    <span
-      className={`text-muted-foreground uppercase font-medium tracking-[0.28em] transition-all duration-400 ${
-        isScrolled ? "text-[9px]" : "text-[10px]"
-      }`}
-    >
-      Agency
-    </span>
-  </Link>
-);
+export const Logo = ({ className = "", isScrolled = false, large = false }: LogoProps) => {
+  // Three sizes: large (header at the top of the page), default, and compact (scrolled header)
+  const size = large ? "text-4xl" : isScrolled ? "text-xl" : "text-2xl";
+  const rule = large ? "h-7" : "h-4";
+  const agency = large ? "text-sm" : isScrolled ? "text-[9px]" : "text-[10px]";
+  return (
+    <Link to="/" aria-label="SIX³ Agency home" className={`flex items-center ${large ? "gap-4" : "gap-3"} ${className}`}>
+      <span className={`flex items-start font-extrabold tracking-tighter leading-none transition-all duration-400 ${size}`}>
+        SIX
+        <BrandMark className="w-[0.66em] h-[0.66em] -mt-[0.2em] ml-[0.03em]" />
+      </span>
+      <span className={`${rule} w-px bg-gradient-to-b from-[#7c3aed] to-[#f97316] opacity-70 transition-all duration-400`} aria-hidden="true" />
+      <span className={`text-muted-foreground uppercase font-medium tracking-[0.28em] transition-all duration-400 ${agency}`}>
+        Agency
+      </span>
+    </Link>
+  );
+};

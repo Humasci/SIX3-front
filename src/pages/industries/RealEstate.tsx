@@ -249,7 +249,7 @@ const RealEstate = () => {
               </Button>
             </Link>
             <Link to="/services/search-marketing-ppc">
-              <Button variant="outline" className="px-8 py-4 text-lg border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-gradient">
+              <Button variant="outline" className="px-8 py-4 text-lg border-accent-foreground text-accent-foreground hover:bg-glow hover:text-[#0d0d26] hover:border-glow">
                 View Google Ads Services
               </Button>
             </Link>

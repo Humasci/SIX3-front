@@ -23,7 +23,7 @@ const projects = [
     number: "02",
     title: "Media Publisher & Directory Platform",
     category: "AI Content & SEO Automation",
-    year: "2025",
+    year: "2025–2026",
     description: "AI-assisted publishing pipeline that generates, refreshes and interlinks directory listings and editorial pages at scale",
     image: "/images/use-cases/media-publisher-directory-dui-guide.jpg",
     metrics: "Programmatic SEO with editorial review"
@@ -33,7 +33,7 @@ const projects = [
     number: "03",
     title: "E-commerce AI Marketing Campaign",
     category: "Search Marketing & Paid Media",
-    year: "2024",
+    year: "2026",
     description: "Multi-platform campaign with AI optimization delivering 300% ROAS improvement",
     image: "/images/use-cases/ecommerce-noovit.jpg",
     metrics: "300% ROAS improvement"
@@ -73,7 +73,7 @@ const projects = [
     number: "07",
     title: "dui.guide — Legal Guidance Platform",
     category: "AI Agent Creation & Workflow Automation",
-    year: "2025",
+    year: "2025–2026",
     description: "AI-powered DUI procedural guidance platform with 24/7 automated support across all 50 states and intelligent attorney matching",
     image: "/images/use-cases/media-publisher-directory-dui-guide.jpg",
     metrics: "AI guidance across all 50 states"

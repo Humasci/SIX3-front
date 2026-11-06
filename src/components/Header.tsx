@@ -70,7 +70,7 @@ export const Header = () => {
     >
       <div className="relative flex items-center justify-between px-6">
         <div className="nav-item">
-          <Logo isScrolled={isScrolled} />
+          <Logo isScrolled={isScrolled} large={!isScrolled} />
         </div>
         
         <nav className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
