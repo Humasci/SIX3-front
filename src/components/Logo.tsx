@@ -37,7 +37,7 @@ export const Logo = ({ className = "", isScrolled = false }: LogoProps) => (
       }`}
     >
       SIX
-      <BrandMark className="w-[0.95em] h-[0.95em] -mt-[0.3em] -ml-[0.02em] drop-shadow-[0_0_5px_rgba(168,85,247,0.45)]" />
+      <BrandMark className="w-[0.75em] h-[0.75em] -mt-[0.26em] ml-[0.03em] drop-shadow-[0_0_5px_rgba(168,85,247,0.45)]" />
     </span>
     <span className="h-4 w-px bg-gradient-to-b from-[#7c3aed] to-[#f97316] opacity-70" aria-hidden="true" />
     <span
