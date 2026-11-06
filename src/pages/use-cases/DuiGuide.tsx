@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Bot, Bell, Users, ArrowRight } from "lucide-react";
-import icons from "@/utils/iconGenerator";
 import { HeroWormhole } from "@/components/HeroWormhole";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -111,8 +110,8 @@ const DuiGuide = () => {
               </div>
               <div className="relative">
                 <img
-                  src={icons.duiGuide}
-                  alt="dui.guide platform"
+                  src="/images/use-cases/media-publisher-directory-dui-guide.jpg"
+                  alt="SIX³ Agency × dui.guide"
                   className="media-frame w-full aspect-[4/3] object-cover"
                 />
               </div>

@@ -15,7 +15,7 @@ const projects = [
     category: "AI Agent Development",
     year: "2024",
     description: "60% reduction in intake administration time, 40% increase in qualified leads, $150K annual savings",
-    image: icons.legal,
+    image: "/images/use-cases/law-firm-automation.jpg",
     metrics: "60% time reduction, $150K savings"
   },
   {
@@ -25,7 +25,7 @@ const projects = [
     category: "AI Content & SEO Automation",
     year: "2025",
     description: "AI-assisted publishing pipeline that generates, refreshes and interlinks directory listings and editorial pages at scale",
-    image: icons.directory,
+    image: "/images/use-cases/media-publisher-directory-dui-guide.jpg",
     metrics: "Programmatic SEO with editorial review"
   },
   {
@@ -35,7 +35,7 @@ const projects = [
     category: "Search Marketing & Paid Media",
     year: "2024",
     description: "Multi-platform campaign with AI optimization delivering 300% ROAS improvement",
-    image: icons.ecommerce,
+    image: "/images/use-cases/ecommerce-noovit.jpg",
     metrics: "300% ROAS improvement"
   },
   {
@@ -75,7 +75,7 @@ const projects = [
     category: "AI Agent Creation & Workflow Automation",
     year: "2025",
     description: "AI-powered DUI procedural guidance platform with 24/7 automated support across all 50 states and intelligent attorney matching",
-    image: icons.duiGuide,
+    image: "/images/use-cases/media-publisher-directory-dui-guide.jpg",
     metrics: "AI guidance across all 50 states"
   },
 ];

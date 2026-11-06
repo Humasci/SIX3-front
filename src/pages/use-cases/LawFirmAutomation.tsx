@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Scale, Clock, TrendingUp, Users, ArrowRight } from "lucide-react";
-import icons from "@/utils/iconGenerator";
 import { HeroWormhole } from "@/components/HeroWormhole";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -90,8 +89,8 @@ const LawFirmAutomation = () => {
               </div>
               <div className="relative">
                 <img
-                  src={icons.legal}
-                  alt="Legal office"
+                  src="/images/use-cases/law-firm-automation.jpg"
+                  alt="SIX³ Agency × confidential legal client"
                   className="media-frame w-full aspect-[4/3] object-cover"
                 />
               </div>
