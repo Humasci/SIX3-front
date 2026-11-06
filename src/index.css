@@ -132,6 +132,11 @@ All colors MUST be HSL.
     background-image: linear-gradient(90deg, #7c3aed 0%, #a855f7 50%, #f97316 100%);
   }
 
+  /* Deeper violet to orange, readable under white text: used for button hovers */
+  .bg-brand-gradient-button {
+    background-image: linear-gradient(90deg, #6d28d9 0%, #9333ea 50%, #ea580c 100%);
+  }
+
   /* Ends in the wormhole's light-yellow glow; for dark backgrounds */
   .bg-brand-gradient-glow {
     background-image: linear-gradient(90deg, #7c3aed 0%, #a855f7 38%, #f97316 74%, #fde7b0 100%);
