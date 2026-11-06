@@ -1,3 +1,4 @@
+import { PageSEO } from "@/components/PageSEO";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { useEffect, useRef } from "react";
@@ -14,58 +15,58 @@ gsap.registerPlugin(ScrollTrigger);
 const localBusinessSolutions = [
   {
     icon: Phone,
-    title: "24/7 AI Phone Answering",
-    description: "Never miss an emergency call or booking opportunity with intelligent call screening and routing",
-    benefits: ["Capture after-hours emergencies", "Instant quote generation", "Appointment scheduling"]
+    title: "Get it done: AI receptionist",
+    description: "An AI receptionist answers every call, message and web enquiry while you're on a job, takes the details and books the work in.",
+    benefits: ["Out-of-hours emergencies captured", "Job details and photos collected up front", "Bookings and callbacks logged automatically"]
   },
   {
     icon: Calendar,
-    title: "Smart Scheduling System",
-    description: "Automated booking system that manages technician calendars, route optimization, and customer confirmations",
-    benefits: ["Optimized route planning", "Reduced travel time", "Automated confirmations"]
+    title: "Get it done: booking and reminders",
+    description: "Jobs booked into your team's calendars with confirmations, reminders and follow-ups sent automatically.",
+    benefits: ["Fewer wasted trips and no-shows", "Confirmations and reminders by SMS", "Review requests sent after every job"]
   },
   {
     icon: TrendingUp,
-    title: "Local Google Ads",
-    description: "Hyper-local PPC campaigns targeting emergency services and scheduled maintenance in your service area",
-    benefits: ["Emergency call capture", "Local market dominance", "High-intent lead generation"]
+    title: "Get found: Search & Paid Media",
+    description: "Local Google Ads and Meta campaigns for the jobs you want, shown to people in your service area when they need help.",
+    benefits: ["Emergency and planned-work campaigns", "Ads shown only in the areas you cover", "Monthly reporting on cost per booked job"]
   },
   {
     icon: MapPin,
-    title: "Service Area Optimization",
-    description: "AI-powered geographic targeting and service area expansion recommendations",
-    benefits: ["Maximize coverage efficiency", "Identify growth opportunities", "Competitive analysis"]
+    title: "Get chosen: AI Content Studio",
+    description: "Short videos, before-and-after content and local ads produced every month, so people trust you before they pick up the phone.",
+    benefits: ["Video ads that show your team and your work", "Content for Google, Facebook and Instagram", "AI voiceovers without a studio day"]
   }
 ];
 
 const businessTypes = [
   {
-    title: "Plumbing Services",
+    title: "Plumbing & Heating",
     icon: "🔧",
-    description: "Emergency call handling, maintenance scheduling, and customer follow-up automation",
-    benefits: ["24/7 emergency response", "Maintenance reminders", "Customer retention"],
-    emergencyFeatures: ["Burst pipe emergency routing", "After-hours call capture", "Priority scheduling"]
+    description: "Emergency calls answered, boiler services booked and customers reminded when they're due",
+    benefits: ["Every call answered, even under a sink", "Annual service reminders", "More repeat customers"],
+    emergencyFeatures: ["Burst pipe and leak calls flagged as urgent", "After-hours calls captured", "On-call engineer alerted straight away"]
   },
   {
-    title: "Commercial Cleaning", 
+    title: "Commercial Cleaning",
     icon: "🏢",
-    description: "Contract management, scheduling optimization, and quality assurance automation",
-    benefits: ["Contract renewal automation", "Quality reporting", "Crew scheduling"],
-    emergencyFeatures: ["Emergency cleanup dispatch", "Facility management alerts", "Compliance tracking"]
+    description: "Quote requests handled quickly, contracts renewed on time and clients kept informed",
+    benefits: ["Quotes followed up automatically", "Contract renewal reminders", "Crew schedules shared automatically"],
+    emergencyFeatures: ["Urgent clean-up requests routed fast", "Facilities manager updates", "Site access details collected up front"]
   },
   {
-    title: "Industrial Cleaning",
-    icon: "🏭", 
-    description: "Safety compliance, equipment tracking, and specialized service coordination",
-    benefits: ["Safety protocol automation", "Equipment maintenance", "Compliance reporting"],
-    emergencyFeatures: ["Hazmat response protocols", "Safety incident reporting", "Emergency crew dispatch"]
+    title: "Specialist Cleaning",
+    icon: "🏭",
+    description: "Urgent call-outs triaged, site details collected and the right crew sent",
+    benefits: ["Job details captured before you quote", "Safety information collected up front", "Reports sent to clients automatically"],
+    emergencyFeatures: ["Spill and incident calls flagged as urgent", "Incident details recorded", "Emergency crew alerted"]
   },
   {
-    title: "Pool Services",
-    icon: "🏊",
-    description: "Seasonal scheduling, chemical monitoring, and maintenance automation",
-    benefits: ["Seasonal optimization", "Chemical tracking", "Equipment maintenance"],
-    emergencyFeatures: ["Equipment failure alerts", "Chemical emergency response", "Leak detection services"]
+    title: "Electrical & Trades",
+    icon: "⚡",
+    description: "Calls answered while you're on the tools, quotes followed up and jobs booked in",
+    benefits: ["No more missed calls on site", "Quote follow-ups sent automatically", "Reviews requested after each job"],
+    emergencyFeatures: ["Power-loss calls flagged as urgent", "After-hours enquiries captured", "Callbacks booked for the next free slot"]
   }
 ];
 
@@ -109,6 +110,11 @@ const LocalBusiness = () => {
 
   return (
     <div ref={contentRef} className="min-h-screen bg-background text-foreground">
+      <PageSEO
+        title="AI Marketing for Local Businesses | SIX³ Agency"
+        description="AI marketing for local businesses and trades: local ads that bring the right jobs, and an AI receptionist that answers every call and books the work in."
+        canonical="https://six3.agency/industries/local-business"
+      />
       <Header />
 
       {/* Hero Section */}
@@ -122,22 +128,23 @@ const LocalBusiness = () => {
                 <span className="text-gradient font-medium">Local Service Businesses</span>
               </div>
               <h1 className="text-4xl md:text-4xl lg:text-5xl font-light mb-6 text-gradient w-fit pb-1">
-                AI Automation for Service-Based Local Businesses
+                AI marketing for local businesses: answer every call, book every job
               </h1>
             <div className="h-1 w-40 bg-brand-gradient rounded-full mb-8" />
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                Never miss an emergency call, optimize your service routes, and dominate your local market 
-                with AI-powered automation designed for plumbers, cleaners, and service professionals.
+                When you're on a job, you can't answer the phone. That missed call is often the next
+                customer. We bring in local jobs, help people choose you, and make sure every call and
+                message is answered and booked.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/contact">
                   <Button className="px-8 py-4 text-lg">
-                    Get More Service Calls
+                    Book an AI Growth Audit
                   </Button>
                 </Link>
                 <Link to="/services">
                   <Button variant="outline" className="px-8 py-4 text-lg">
-                    View Local Business Solutions
+                    See our services
                   </Button>
                 </Link>
               </div>
@@ -159,7 +166,7 @@ const LocalBusiness = () => {
       <section className="business-types-section py-16 px-6 bg-secondary/20">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-light mb-12 text-center">
-            Specialized Solutions by Business Type
+            Built for the way your business runs
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             {businessTypes.map((businessType, index) => (
@@ -169,9 +176,9 @@ const LocalBusiness = () => {
                   <h3 className="text-2xl font-medium">{businessType.title}</h3>
                 </div>
                 <p className="text-muted-foreground mb-6">{businessType.description}</p>
-                
+
                 <div className="mb-6">
-                  <h4 className="font-medium mb-3">Key Benefits:</h4>
+                  <h4 className="font-medium mb-3">What changes:</h4>
                   <ul className="space-y-2">
                     {businessType.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center gap-2">
@@ -183,7 +190,7 @@ const LocalBusiness = () => {
                 </div>
 
                 <div>
-                  <h4 className="font-medium mb-3 text-[#f97316]">Emergency Features:</h4>
+                  <h4 className="font-medium mb-3 text-[#f97316]">Urgent calls:</h4>
                   <ul className="space-y-2">
                     {businessType.emergencyFeatures.map((feature, idx) => (
                       <li key={idx} className="flex items-center gap-2">
@@ -203,23 +210,23 @@ const LocalBusiness = () => {
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-light mb-12 text-center">
-            Common Local Business Challenges
+            Where local businesses lose jobs
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <Phone className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
-              <h3 className="text-xl font-medium mb-3">Missed Emergency Calls</h3>
-              <p className="text-muted-foreground">Lost revenue from after-hours emergencies when customers can't reach you</p>
+              <h3 className="text-xl font-medium mb-3">Missed calls</h3>
+              <p className="text-muted-foreground">Customers ring while you're on a job or after hours. If nobody answers, they call the next name on Google.</p>
             </div>
             <div className="text-center">
               <MapPin className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
-              <h3 className="text-xl font-medium mb-3">Inefficient Routing</h3>
-              <p className="text-muted-foreground">Wasted time and fuel from poor scheduling and route planning</p>
+              <h3 className="text-xl font-medium mb-3">Ads nobody manages</h3>
+              <p className="text-muted-foreground">Local ads left running without checks spend money on the wrong areas and the wrong searches.</p>
             </div>
             <div className="text-center">
               <Calendar className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
-              <h3 className="text-xl font-medium mb-3">Manual Scheduling</h3>
-              <p className="text-muted-foreground">Time-consuming booking process affecting customer experience</p>
+              <h3 className="text-xl font-medium mb-3">Evenings spent on admin</h3>
+              <p className="text-muted-foreground">Quotes, bookings and reminders get done late at night, or don't get done at all.</p>
             </div>
           </div>
         </div>
@@ -229,7 +236,7 @@ const LocalBusiness = () => {
       <section className="solutions-section py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-light mb-16 text-center">
-            AI-Powered Local Business Solutions
+            Get found, get chosen, get it done
           </h2>
           <div className="grid md:grid-cols-2 gap-12">
             {localBusinessSolutions.map((solution, index) => {
@@ -261,29 +268,29 @@ const LocalBusiness = () => {
             <div>
               <div className="flex items-center gap-3 mb-6">
                 <Phone className="w-8 h-8 text-[#f97316]" />
-                <span className="text-[#f97316] font-medium">Emergency Response</span>
+                <span className="text-[#f97316] font-medium">Urgent calls</span>
               </div>
-              <h2 className="text-4xl font-light mb-6">Never Miss an Emergency Call</h2>
+              <h2 className="text-4xl font-light mb-6">Never miss an emergency call</h2>
               <p className="text-lg text-muted-foreground mb-6">
-                Our AI system recognizes emergency situations and immediately routes urgent calls to 
-                available technicians, ensuring you capture high-value emergency service revenue 24/7.
+                Emergency jobs are often the most valuable, and they go to whoever answers first. The AI
+                receptionist spots urgent calls, takes the details and alerts whoever is on call, day or night.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-[#f97316]" />
-                  <span>Intelligent emergency call detection</span>
+                  <span>Urgent calls recognised and flagged</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-[#f97316]" />
-                  <span>Automatic technician routing by proximity</span>
+                  <span>On-call team member alerted straight away</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-[#f97316]" />
-                  <span>Premium pricing for emergency services</span>
+                  <span>Your call-out rates explained up front</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-[#f97316]" />
-                  <span>Real-time customer communication</span>
+                  <span>Customer kept updated by text</span>
                 </li>
               </ul>
             </div>
@@ -306,23 +313,23 @@ const LocalBusiness = () => {
               </div>
             </div>
             <div>
-              <h2 className="text-4xl font-light mb-6">Dominate Your Local Market</h2>
+              <h2 className="text-4xl font-light mb-6">Get found by local customers</h2>
               <p className="text-lg text-muted-foreground mb-6">
-                Our hyper-local Google Ads campaigns target customers in your exact service area 
-                who need immediate help, ensuring maximum ROI and market penetration.
+                Get Found: Search & Paid Media puts you in front of people in your service area at the moment
+                they need help, and tracks which ads turn into booked jobs.
               </p>
               <div className="space-y-4">
                 <div>
-                  <h3 className="text-xl font-medium mb-2">Emergency Keywords</h3>
-                  <p className="text-muted-foreground">Target "emergency plumber," "24/7 cleaning," and urgent service searches</p>
+                  <h3 className="text-xl font-medium mb-2">Urgent searches</h3>
+                  <p className="text-muted-foreground">Reach people searching "emergency plumber", "electrician near me" and other urgent local searches</p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-medium mb-2">Geo-Radius Targeting</h3>
-                  <p className="text-muted-foreground">Precise targeting within your service radius for maximum efficiency</p>
+                  <h3 className="text-xl font-medium mb-2">Your service area only</h3>
+                  <p className="text-muted-foreground">Ads shown in the towns and postcodes you cover, so you don't pay for clicks you can't serve</p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-medium mb-2">Competitor Conquest</h3>
-                  <p className="text-muted-foreground">Capture customers searching for your competitors</p>
+                  <h3 className="text-xl font-medium mb-2">Spend that follows results</h3>
+                  <p className="text-muted-foreground">Budget moved towards the campaigns that bring booked jobs, reported every month</p>
                 </div>
               </div>
             </div>
@@ -333,23 +340,23 @@ const LocalBusiness = () => {
       {/* Results Section */}
       <section className="py-16 px-6 bg-secondary/30">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-light mb-12 text-center">Local Business Results</h2>
+          <h2 className="text-4xl font-light mb-12 text-center">What you can count on</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-light mb-4 text-gradient">85%</div>
-              <p className="text-lg text-muted-foreground">Emergency Call Capture Rate</p>
+              <div className="text-5xl md:text-6xl font-light mb-4 text-gradient">24/7</div>
+              <p className="text-lg text-muted-foreground">Every call and message answered</p>
             </div>
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-light mb-4 text-gradient">30%</div>
-              <p className="text-lg text-muted-foreground">Reduction in Drive Time</p>
+              <div className="text-5xl md:text-6xl font-light mb-4 text-gradient">&lt;1 min</div>
+              <p className="text-lg text-muted-foreground">First reply to a new enquiry</p>
             </div>
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-light mb-4 text-gradient">2x</div>
-              <p className="text-lg text-muted-foreground">Increase in Bookings</p>
+              <div className="text-5xl md:text-6xl font-light mb-4 text-gradient">4</div>
+              <p className="text-lg text-muted-foreground">Ad channels managed: Google, Meta, LinkedIn, TikTok</p>
             </div>
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-light mb-4 text-gradient">95%</div>
-              <p className="text-lg text-muted-foreground">Customer Satisfaction</p>
+              <div className="text-5xl md:text-6xl font-light mb-4 text-gradient">1</div>
+              <p className="text-lg text-muted-foreground">Team running your ads, content and automation</p>
             </div>
           </div>
         </div>
@@ -359,21 +366,21 @@ const LocalBusiness = () => {
       <section className="py-24 px-6 bg-brand-gradient text-accent-foreground">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-light mb-8">
-            Ready to Grow Your Local Business?
+            Stop losing jobs to missed calls
           </h2>
           <p className="text-xl mb-12 opacity-90">
-            Join local service businesses who have doubled their bookings and captured 85% 
-            of emergency calls with our AI automation and local marketing solutions.
+            Start with an AI Growth Audit. In two weeks we review your ads, online presence and how you handle
+            enquiries, and give you a prioritised plan with quick wins.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
               <Button variant="secondary" className="px-8 py-4 text-lg">
-                Get More Local Customers
+                Book an AI Growth Audit
               </Button>
             </Link>
             <Link to="/services/search-marketing-ppc">
               <Button variant="outline" className="px-8 py-4 text-lg border-accent-foreground text-accent-foreground hover:bg-glow hover:text-[#0d0d26] hover:border-glow">
-                View Local Google Ads
+                See Search & Paid Media
               </Button>
             </Link>
           </div>

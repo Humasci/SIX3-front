@@ -11,16 +11,18 @@ import { ServiceVisual } from "@/components/ServiceVisual";
 import { BlogCard } from "@/components/BlogCard";
 import { WormholeCta } from "@/components/WormholeCta";
 import { Button } from "@/components/ui/button";
-import { blogPosts } from "@/data/blogPosts";
+import { formatPostDate, publishedPosts } from "@/data/blogPosts";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Blog = () => {
   const contentRef = useRef<HTMLDivElement>(null);
   const [category, setCategory] = useState("All");
-  const featured = blogPosts.find((p) => p.featured);
-  const categories = useMemo(() => ["All", ...Array.from(new Set(blogPosts.map((p) => p.category)))], []);
-  const posts = blogPosts.filter((p) => !p.featured && (category === "All" || p.category === category));
+  const all = useMemo(() => publishedPosts(), []);
+  // The newest post marked featured leads the page; otherwise the newest post
+  const featured = all.find((p) => p.featured) ?? all[0];
+  const categories = useMemo(() => ["All", ...Array.from(new Set(all.map((p) => p.category)))], [all]);
+  const posts = all.filter((p) => p !== featured && (category === "All" || p.category === category));
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -39,8 +41,8 @@ const Blog = () => {
   return (
     <div ref={contentRef} className="min-h-screen bg-background text-foreground">
       <PageSEO
-        title="Blog — AI Marketing & Automation Insights | SIX³ Agency"
-        description="Practical guides and in-depth analysis on AI-powered marketing, automation workflows, generative content, and business transformation from the SIX³ Agency team."
+        title="AI Marketing & Automation Blog | SIX³ Agency"
+        description="Practical guides on AI marketing and automation for UK businesses: paid media, AI video, AI receptionists, speed to lead and using AI safely."
         canonical="https://six3.agency/blog"
       />
       <Header />
@@ -53,18 +55,12 @@ const Blog = () => {
           <h1 className="text-6xl md:text-7xl lg:text-8xl font-light mb-8 text-gradient w-fit pb-1 mx-auto">Blog</h1>
           <div className="h-1 w-40 bg-brand-gradient rounded-full mb-8 mx-auto" />
           <p className="text-xl md:text-2xl text-foreground/80 mb-8">
-            Insights, strategies, and the latest trends in AI-powered marketing, automation, and business transformation.
-          </p>
-          <p className="text-lg text-muted-foreground mb-6">
-            At SIX³ Agency, we publish practical guides and in-depth analysis for business owners, marketers, and
-            operators who want to use AI to grow faster. Our articles cover everything from setting up your first
-            automated lead workflow to fine-tuning language models on proprietary data — written by the same team
-            that builds these systems for clients every day.
+            Practical guides on getting found, getting chosen and getting more done with AI.
           </p>
           <p className="text-lg text-muted-foreground">
-            Whether you're exploring AI for the first time or looking to go deeper on topics like generative video,
-            PPC automation, or industry-specific AI applications in legal, healthcare, and real estate — you'll find
-            actionable content here.
+            Written for owners and managers of UK service businesses by the team that builds these systems: paid media
+            that brings in the right enquiries, AI video and voice content, AI receptionists, and using AI safely with
+            customer data. New articles every Tuesday.
           </p>
         </div>
       </section>
@@ -89,7 +85,7 @@ const Blog = () => {
                 <div className="h-1 w-24 rounded-full bg-brand-gradient-glow" />
                 <p className="text-lg text-muted-foreground leading-relaxed">{featured.excerpt}</p>
                 <div className="flex items-center gap-6 text-sm text-muted-foreground">
-                  <span className="flex items-center gap-2"><Calendar className="w-4 h-4" />{featured.date}</span>
+                  <span className="flex items-center gap-2"><Calendar className="w-4 h-4" />{formatPostDate(featured.date)}</span>
                   <span className="flex items-center gap-2"><Clock className="w-4 h-4" />{featured.readTime}</span>
                 </div>
                 <span className="inline-flex w-fit items-center gap-2 rounded-full border border-foreground/60 px-6 py-3 font-medium transition-all duration-300 group-hover:border-transparent group-hover:bg-brand-gradient-button group-hover:text-white">
@@ -135,7 +131,7 @@ const Blog = () => {
         </div>
       </section>
 
-      <WormholeCta buttonLabel="Start Your AI Journey" />
+      <WormholeCta buttonLabel="Book an AI Growth Audit" />
       <Footer />
     </div>
   );

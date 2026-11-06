@@ -87,11 +87,12 @@ export const About = () => {
         <div className="mb-16">
           <p className="about-label text-sm text-muted-foreground mb-8 tracking-wider">Who we are <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" /></p>
           <h2 className="about-title text-4xl md:text-5xl font-light mb-8 max-w-3xl">
-            SIX³ Agency delivers AI-powered marketing solutions that drive measurable results.
+            Most businesses buy ads, content and automation from three suppliers. We make them one system.
           </h2>
           <p className="about-description text-lg text-muted-foreground max-w-2xl mb-12">
-            We specialize in AI-driven search marketing, generative content creation, and custom AI agent development.
-            Our advanced automation solutions maximize ROI and scale your business operations efficiently.
+            SIX³ is a London agency for service businesses that run on enquiries. We bring in the right leads, give
+            people a reason to choose you, and make sure every enquiry gets an answer, so each part makes the others
+            work harder. That's the ³: growth that compounds instead of adding up.
           </p>
           <Link to="/about">
             <Button variant="outline" className="about-description rounded-full px-8 py-6 text-base border-foreground text-foreground bg-transparent hover:bg-brand-gradient-button hover:text-white hover:border-transparent hover:shadow-[0_0_32px_-10px_rgba(249,115,22,0.6)] group">
@@ -103,11 +104,11 @@ export const About = () => {
 
         <div className="border-t-gradient pt-16">
           <p className="text-lg text-muted-foreground mb-12">
-            Successfully deployed AI solutions across industries with proven ROI and operational efficiency gains.
+            Senior people on every account, and we run our own digital properties too, so we build what we'd use ourselves.
           </p>
           <div className="flex flex-col items-start gap-4">
-            <AnimatedCounter end={200} />
-            <p className="text-xl text-muted-foreground">% Average ROI Increase</p>
+            <AnimatedCounter end={2018} />
+            <p className="text-xl text-muted-foreground">The year we started building growth for UK businesses</p>
           </div>
         </div>
       </div>

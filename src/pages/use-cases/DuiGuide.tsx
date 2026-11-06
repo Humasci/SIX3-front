@@ -54,8 +54,8 @@ const DuiGuide = () => {
   return (
     <div ref={contentRef} className="min-h-screen bg-background text-foreground">
       <PageSEO
-        title="dui.guide Case Study — AI Legal Guidance Platform | SIX³ Agency"
-        description="How SIX³ Agency built AI agents that deliver state and county-specific DUI procedural guidance across all 50 states."
+        title="dui.guide: Our AI Legal Guidance Platform | SIX³ Agency"
+        description="dui.guide is our own AI legal guidance platform: county-level DUI guidance, deadline alerts and attorney matching, built and run by SIX³ since 2025."
         canonical="https://six3.agency/use-cases/dui-guide"
       />
       <Header />
@@ -66,25 +66,25 @@ const DuiGuide = () => {
         <div className="max-w-7xl mx-auto">
           <div className="case-study-hero">
             <div className="flex items-center gap-2 mb-6">
-              <Link to="/services/ai-dev-automation" className="text-gradient hover:underline">AI Agent Creation & Workflow Automation</Link>
+              <Link to="/services/ai-dev-automation" className="text-gradient hover:underline">AI Agents & Automation</Link>
               <ArrowRight className="w-4 h-4" />
-              <span>Case Study</span>
+              <span>Our own platform</span>
             </div>
             <h1 className="text-3xl md:text-3xl lg:text-4xl font-light mb-8 text-gradient w-fit pb-1">
-              dui.guide — AI-Powered Legal Guidance Platform
+              dui.guide: our AI legal guidance and directory platform
             </h1>
             <div className="h-1 w-40 bg-brand-gradient rounded-full mb-8" />
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="text-xl text-muted-foreground mb-8">
-                  How dui.guide uses AI agents to deliver state and county-specific DUI
-                  procedural guidance across all 50 states, with automated deadline tracking
-                  and intelligent attorney matching.
+                  dui.guide is a digital property we built and run ourselves. AI agents give people
+                  facing a DUI plain-English guidance for their state and county, track their deadlines
+                  and match them with the right attorneys. We build for clients what we'd use ourselves.
                 </p>
                 <div className="space-y-4">
                   <div>
-                    <span className="text-sm text-muted-foreground">Client:</span>
-                    <p className="text-lg">dui.guide — Media Law Group LLC</p>
+                    <span className="text-sm text-muted-foreground">Platform:</span>
+                    <p className="text-lg">dui.guide, our own property (Media Law Group LLC)</p>
                   </div>
                   <div>
                     <span className="text-sm text-muted-foreground">Industry:</span>
@@ -92,11 +92,11 @@ const DuiGuide = () => {
                   </div>
                   <div>
                     <span className="text-sm text-muted-foreground">Location:</span>
-                    <p className="text-lg">Sheridan, Wyoming — National Coverage</p>
+                    <p className="text-lg">Sheridan, Wyoming, with national US coverage</p>
                   </div>
                   <div>
-                    <span className="text-sm text-muted-foreground">Implementation Time:</span>
-                    <p className="text-lg">10 weeks</p>
+                    <span className="text-sm text-muted-foreground">Years:</span>
+                    <p className="text-lg">2025–2026</p>
                   </div>
                   <div>
                     <span className="text-sm text-muted-foreground">Website:</span>
@@ -125,27 +125,27 @@ const DuiGuide = () => {
       {/* The Challenge */}
       <section className="challenges-section py-24 px-6">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-light mb-12">The Challenge</h2>
+          <h2 className="text-4xl md:text-5xl font-light mb-12">The problem</h2>
           <div className="max-w-3xl">
             <div>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                DUI cases are intensely jurisdiction-specific. Deadlines, court locations, DMV requirements,
-                SR-22 obligations, and ignition interlock rules vary dramatically from county to county.
-                Users facing a DUI were forced to navigate dozens of fragmented government websites —
-                often missing critical deadlines or connecting with the wrong professionals.
+                DUI cases depend heavily on where they happen. Deadlines, court locations, DMV requirements,
+                SR-22 obligations and ignition interlock rules change from county to county. People facing
+                a DUI had to piece it together from scattered government websites, and often missed
+                deadlines or found the wrong professional.
               </p>
               <div className="space-y-6">
                 <div className="challenge-item">
-                  <h3 className="text-xl font-medium mb-2">Fragmented Information</h3>
-                  <p className="text-muted-foreground">Procedural guidance was scattered across state DMV sites, county court portals, and legislative databases — impossible for a layperson to piece together quickly.</p>
+                  <h3 className="text-xl font-medium mb-2">Scattered information</h3>
+                  <p className="text-muted-foreground">Guidance was spread across state DMV sites, county court portals and legislative databases. Hard for anyone without legal training to piece together quickly.</p>
                 </div>
                 <div className="challenge-item">
-                  <h3 className="text-xl font-medium mb-2">Missed Critical Deadlines</h3>
-                  <p className="text-muted-foreground">Without centralised deadline tracking, users routinely missed licence reinstatement windows or administrative hearing requests, compounding their legal situation.</p>
+                  <h3 className="text-xl font-medium mb-2">Missed deadlines</h3>
+                  <p className="text-muted-foreground">With no single place to track deadlines, people missed licence reinstatement windows and hearing requests, which made their situation worse.</p>
                 </div>
                 <div className="challenge-item">
-                  <h3 className="text-xl font-medium mb-2">Unqualified Attorney Matching</h3>
-                  <p className="text-muted-foreground">The existing directory had no intelligent matching — users had no way to identify which attorneys were best suited to their specific charge, county, or budget.</p>
+                  <h3 className="text-xl font-medium mb-2">Poor attorney matching</h3>
+                  <p className="text-muted-foreground">The directory had no matching, so people couldn't tell which attorneys suited their charge, county or budget.</p>
                 </div>
               </div>
             </div>
@@ -156,18 +156,18 @@ const DuiGuide = () => {
       {/* The Solution */}
       <section className="solution-section py-24 px-6 bg-secondary/20">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-light mb-12">The Solution</h2>
+          <h2 className="text-4xl md:text-5xl font-light mb-12">What we built</h2>
           <div className="space-y-12">
 
             <div className="solution-step grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-8 h-8 bg-brand-gradient rounded-full flex items-center justify-center text-accent-foreground font-medium">1</div>
-                  <h3 className="text-2xl font-medium">Conversational AI Guidance Agent</h3>
+                  <h3 className="text-2xl font-medium">AI guidance agent</h3>
                 </div>
                 <p className="text-muted-foreground mb-4">
-                  Built a state and county-aware AI agent that walks users through their specific procedural
-                  requirements in plain language — pulling from verified government data sources in real time.
+                  An AI agent that knows the user's state and county and walks them through what they need
+                  to do, in plain language, using verified government data sources.
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2">
@@ -187,7 +187,7 @@ const DuiGuide = () => {
               <div className="aspect-video bg-card border border-border rounded-lg flex items-center justify-center">
                 <div className="text-center">
                   <Bot className="w-16 h-16 text-accent/40 mx-auto mb-4" />
-                  <p className="text-muted-foreground">AI Guidance Agent</p>
+                  <p className="text-muted-foreground">AI guidance agent</p>
                 </div>
               </div>
             </div>
@@ -197,19 +197,18 @@ const DuiGuide = () => {
                 <div className="aspect-video bg-card border border-border rounded-lg flex items-center justify-center">
                   <div className="text-center">
                     <Bell className="w-16 h-16 text-accent/40 mx-auto mb-4" />
-                    <p className="text-muted-foreground">Deadline Automation</p>
+                    <p className="text-muted-foreground">Deadline alerts</p>
                   </div>
                 </div>
               </div>
               <div className="order-1 md:order-2">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-8 h-8 bg-brand-gradient rounded-full flex items-center justify-center text-accent-foreground font-medium">2</div>
-                  <h3 className="text-2xl font-medium">Automated Deadline Tracking & Alerts</h3>
+                  <h3 className="text-2xl font-medium">Deadline tracking and alerts</h3>
                 </div>
                 <p className="text-muted-foreground mb-4">
-                  Deployed an automated workflow that monitors jurisdiction-specific filing windows,
-                  licence reinstatement deadlines, and court appearance schedules — delivering personalised
-                  alerts via email and SMS before time-sensitive windows close.
+                  An automated workflow that tracks local filing windows, licence reinstatement deadlines
+                  and court dates, and sends personalised reminders by email and SMS before each one closes.
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2">
@@ -232,12 +231,11 @@ const DuiGuide = () => {
               <div>
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-8 h-8 bg-brand-gradient rounded-full flex items-center justify-center text-accent-foreground font-medium">3</div>
-                  <h3 className="text-2xl font-medium">Intelligent Attorney & Provider Matching</h3>
+                  <h3 className="text-2xl font-medium">Attorney and provider matching</h3>
                 </div>
                 <p className="text-muted-foreground mb-4">
-                  Implemented an AI-driven matching layer over the attorney and service provider directory —
-                  scoring and surfacing the most relevant professionals based on the user's specific charge,
-                  county, budget, and urgency.
+                  AI matching on top of the attorney and service provider directory, showing the most relevant
+                  professionals for the user's charge, county, budget and urgency.
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2">
@@ -257,7 +255,7 @@ const DuiGuide = () => {
               <div className="aspect-video bg-card border border-border rounded-lg flex items-center justify-center">
                 <div className="text-center">
                   <Users className="w-16 h-16 text-accent/40 mx-auto mb-4" />
-                  <p className="text-muted-foreground">Provider Matching System</p>
+                  <p className="text-muted-foreground">Provider matching</p>
                 </div>
               </div>
             </div>
@@ -269,34 +267,34 @@ const DuiGuide = () => {
       {/* Implementation Timeline */}
       <section className="py-24 px-6">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-light mb-12">Implementation Timeline</h2>
+          <h2 className="text-4xl md:text-5xl font-light mb-12">How we built it</h2>
           <div className="space-y-8">
             <div className="flex gap-6">
-              <div className="flex-shrink-0 w-24 text-sm text-muted-foreground">Weeks 1-2</div>
+              <div className="flex-shrink-0 w-24 text-sm text-muted-foreground">Discover</div>
               <div>
-                <h3 className="font-medium mb-2">Discovery & Data Architecture</h3>
-                <p className="text-muted-foreground">Mapped all 50 state DMV and county court data sources, defined data schemas, and designed the jurisdiction-detection logic.</p>
+                <h3 className="font-medium mb-2">Data sources and structure</h3>
+                <p className="text-muted-foreground">Mapped state DMV and county court data sources, defined how the data is structured and designed the logic that works out each user's jurisdiction.</p>
               </div>
             </div>
             <div className="flex gap-6">
-              <div className="flex-shrink-0 w-24 text-sm text-muted-foreground">Weeks 3-6</div>
+              <div className="flex-shrink-0 w-24 text-sm text-muted-foreground">Build</div>
               <div>
-                <h3 className="font-medium mb-2">AI Agent & Workflow Development</h3>
-                <p className="text-muted-foreground">Built the conversational guidance agent, deadline tracking automation, and attorney matching algorithms with county-level coverage.</p>
+                <h3 className="font-medium mb-2">Agent and workflows</h3>
+                <p className="text-muted-foreground">Built the guidance agent, deadline tracking and attorney matching, with county-level coverage.</p>
               </div>
             </div>
             <div className="flex gap-6">
-              <div className="flex-shrink-0 w-24 text-sm text-muted-foreground">Weeks 7-9</div>
+              <div className="flex-shrink-0 w-24 text-sm text-muted-foreground">Test</div>
               <div>
-                <h3 className="font-medium mb-2">Integration & Quality Assurance</h3>
-                <p className="text-muted-foreground">Integrated all systems with the existing site, verified data accuracy against official government sources, and conducted end-to-end testing.</p>
+                <h3 className="font-medium mb-2">Integration and checks</h3>
+                <p className="text-muted-foreground">Connected everything to the site, checked the data against official government sources and tested the full journey.</p>
               </div>
             </div>
             <div className="flex gap-6">
-              <div className="flex-shrink-0 w-24 text-sm text-muted-foreground">Week 10</div>
+              <div className="flex-shrink-0 w-24 text-sm text-muted-foreground">Launch</div>
               <div>
-                <h3 className="font-medium mb-2">Launch & Monitoring Setup</h3>
-                <p className="text-muted-foreground">Full deployment with automated monitoring, scheduled data refresh pipelines, and ongoing support handover.</p>
+                <h3 className="font-medium mb-2">Launch and monitoring</h3>
+                <p className="text-muted-foreground">Went live with automated monitoring and scheduled data refreshes, and we keep improving it.</p>
               </div>
             </div>
           </div>
@@ -307,20 +305,20 @@ const DuiGuide = () => {
       <section className="py-24 px-6 bg-brand-gradient text-accent-foreground">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-light mb-8">
-            Build Your AI Agent Platform
+            Want AI agents that do real work?
           </h2>
           <p className="text-xl mb-12 opacity-90">
-            Ready to automate complex, jurisdiction-specific workflows at scale? Let's build the system for you.
+            Start with an AI Growth Audit. In two weeks we find where enquiries and time are leaking, and show you which AI agents and automations would fix it.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
               <Button variant="secondary" className="px-8 py-4 text-lg">
-                Schedule Free Consultation
+                Book an AI Growth Audit
               </Button>
             </Link>
             <Link to="/services/ai-dev-automation">
               <Button variant="outline" className="px-8 py-4 text-lg border-accent-foreground text-accent-foreground hover:bg-glow hover:text-[#0d0d26] hover:border-glow">
-                AI Automation Service
+                See AI Agents & Automation
               </Button>
             </Link>
           </div>

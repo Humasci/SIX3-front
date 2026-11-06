@@ -11,39 +11,39 @@ gsap.registerPlugin(ScrollTrigger);
 const servicePreviews = [
   {
     number: "01",
-    title: "Search Marketing & Paid Media",
-    shortDescription: "AI-driven search marketing with advanced algorithm optimization",
+    title: "Get Found: Search & Paid Media",
+    shortDescription: "Campaigns that bring in the right enquiries, not just more clicks",
     features: [
-      "Multi-platform campaign management (Google Ads, Meta, LinkedIn, TikTok)",
-      "Real-time AI bid optimization and competitor analysis",
-      "Advanced audience segmentation and custom attribution modeling",
-      "Automated reporting with performance alerts"
+      "Google Ads, Meta, LinkedIn and TikTok, planned as one budget",
+      "Landing pages built to turn visits into enquiries",
+      "Conversion tracking so you know which ads bring customers",
+      "Monthly optimisation and plain-English reporting"
     ],
     path: "/services/search-marketing-ppc",
     visual: "search" as const
   },
   {
     number: "02",
-    title: "Generative AI Video & Audio",
-    shortDescription: "AI avatars and generative models for unique multimedia content",
+    title: "Get Chosen: AI Content Studio",
+    shortDescription: "Video, voice and ad content that makes people pick you",
     features: [
-      "AI avatar creation and realistic animation",
-      "Voice cloning and synthesis technology",
-      "UGC campaign automation and video ads for paid media",
-      "Multi-language content localization"
+      "AI video ads and social content on a monthly plan",
+      "Avatar presenters and voiceovers in your brand's voice",
+      "Translations and versions for every channel and language",
+      "Creative tested in your ads, so the winners get the budget"
     ],
     path: "/services/content-creation",
     visual: "video" as const
   },
   {
     number: "03",
-    title: "AI Agent Creation & Workflow Automation",
-    shortDescription: "Custom AI systems and automated workflows for business processes",
+    title: "Get It Done: AI Agents & Automation",
+    shortDescription: "AI that answers, qualifies and books every enquiry, day and night",
     features: [
-      "Call center automation and AI phone screening",
-      "Lead management and automated follow-up workflows",
-      "Customer service automation with 24/7 support",
-      "Industry-specific solutions (legal, healthcare, real estate)"
+      "AI receptionists for phone, chat and email",
+      "Lead qualification and booking straight into your calendar",
+      "Client intake, follow-ups and CRM updates on autopilot",
+      "Built around the tools you already use"
     ],
     path: "/services/ai-dev-automation",
     visual: "agents" as const
@@ -77,14 +77,14 @@ export const ServicePreviews = () => {
     <section ref={sectionRef} className="py-24 px-6 bg-background">
       <div className="max-w-7xl mx-auto">
         <div className="service-preview-header mb-16">
-          <p className="text-sm text-muted-foreground mb-8 tracking-wider">Our Core Services <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" /></p>
+          <p className="text-sm text-muted-foreground mb-8 tracking-wider">What we do <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" /></p>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-light mb-8">
-            AI-Powered Solutions<br />
-            That Drive Results
+            Three parts.<br />
+            One growth system.
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl">
-            From intelligent search marketing to custom AI agents, we deliver comprehensive solutions 
-            that transform your business operations and maximize ROI through advanced automation.
+            Each part works on its own, but they're built to work together: better ads bring more enquiries,
+            better content converts more of them, and automation makes sure none slip through.
           </p>
         </div>
 
@@ -145,7 +145,7 @@ export const ServicePreviews = () => {
         <div className="text-center mt-16">
           <Link to="/contact">
             <Button variant="outline" className="rounded-full px-8 py-6 text-lg border-foreground hover:bg-brand-gradient-button hover:text-white hover:border-transparent hover:shadow-[0_0_32px_-10px_rgba(249,115,22,0.6)]">
-              Get Started Today
+              Start with an AI Growth Audit
             </Button>
           </Link>
         </div>

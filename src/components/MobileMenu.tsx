@@ -10,13 +10,15 @@ const links = [
 ];
 
 const services = [
-  { to: "/services/search-marketing-ppc", label: "Search Marketing & Paid Media" },
-  { to: "/services/content-creation", label: "Generative AI Video & Audio" },
-  { to: "/services/ai-dev-automation", label: "AI Agent Creation & Automation" },
+  { to: "/services/search-marketing-ppc", label: "Search & Paid Media" },
+  { to: "/services/content-creation", label: "AI Content Studio" },
+  { to: "/services/ai-dev-automation", label: "AI Agents & Automation" },
+  { to: "/services/ml-fine-tuning", label: "Private AI" },
 ];
 
 const moreLinks = [
   { to: "/portfolio", label: "Our Work" },
+  { to: "/blog", label: "Blog" },
   { to: "/contact", label: "Contact" },
 ];
 

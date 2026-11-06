@@ -1,4 +1,5 @@
 import { Header } from "@/components/Header";
+import { PageSEO } from "@/components/PageSEO";
 import { Footer } from "@/components/Footer";
 import { useEffect } from "react";
 import gsap from "gsap";
@@ -16,6 +17,7 @@ const Terms = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <PageSEO title="Terms of Service | SIX³ Agency" description="The terms that apply when you use the SIX³ Agency website and services, provided by FKA WEB Limited, registered in England and Wales." canonical="https://six3.agency/terms" />
       <Header />
       
       <section className="theme-light relative isolate overflow-hidden pt-40 pb-16 px-6">

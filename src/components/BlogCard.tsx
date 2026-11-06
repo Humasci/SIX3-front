@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight, Calendar, Clock } from "lucide-react";
 import { ServiceVisual } from "@/components/ServiceVisual";
-import type { BlogPost } from "@/data/blogPosts";
+import { formatPostDate, type BlogPost } from "@/data/blogPosts";
 
 export const BlogCard = ({ post }: { post: BlogPost }) => (
   <Link to={`/blog/${post.slug}`} className="blog-post-card group block h-full">
@@ -22,7 +22,7 @@ export const BlogCard = ({ post }: { post: BlogPost }) => (
           <div className="flex items-center gap-4">
             <span className="flex items-center gap-2">
               <Calendar className="w-4 h-4" />
-              {post.date}
+              {formatPostDate(post.date)}
             </span>
             <span className="flex items-center gap-2">
               <Clock className="w-4 h-4" />

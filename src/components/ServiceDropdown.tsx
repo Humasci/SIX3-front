@@ -4,9 +4,10 @@ import { useState } from "react";
 
 const services = [
   { name: "All Services", path: "/services" },
-  { name: "Search Marketing & Paid Media", path: "/services/search-marketing-ppc" },
-  { name: "Generative AI Video & Audio", path: "/services/content-creation" },
-  { name: "AI Agent Creation & Automation", path: "/services/ai-dev-automation" },
+  { name: "Search & Paid Media", path: "/services/search-marketing-ppc" },
+  { name: "AI Content Studio", path: "/services/content-creation" },
+  { name: "AI Agents & Automation", path: "/services/ai-dev-automation" },
+  { name: "Private AI", path: "/services/ml-fine-tuning" },
 ];
 
 export const ServiceDropdown = () => {

@@ -16,56 +16,60 @@ gsap.registerPlugin(ScrollTrigger);
 const services = [
   {
     number: "01",
-    title: "Search Marketing & Paid Media",
-    subtitle: "AI-driven search marketing with advanced algorithm optimization",
-    description: "Multi-platform campaign management across Google Ads, Meta, LinkedIn, and TikTok with real-time AI bid optimization, advanced audience segmentation, and competitor analysis.",
+    title: "Get Found: Search & Paid Media",
+    subtitle: "Campaigns that bring in the right enquiries, not just more clicks",
+    description: "We plan Google Ads, Meta, LinkedIn and TikTok as one budget, build landing pages that turn visits into enquiries, and track every lead back to the ad that brought it in. You get monthly optimisation and a plain-English report on what your spend is buying.",
+    format: "Monthly",
     features: [
-      "Real-time AI bid optimization for maximum ROAS",
-      "Multi-platform management (Google, Meta, LinkedIn, TikTok)",
-      "Advanced audience segmentation and targeting",
-      "Custom attribution modeling and automated alerts"
+      "Campaign strategy, build and management across four channels",
+      "Landing pages and offers designed to convert",
+      "Conversion and call tracking so you can see cost per enquiry",
+      "Monthly optimisation, testing and reporting"
     ],
     visual: "search" as const,
     path: "/services/search-marketing-ppc"
   },
   {
     number: "02",
-    title: "Generative AI Video & Audio",
-    subtitle: "AI avatars and generative models for unique multimedia content",
-    description: "AI avatar creation and animation, voice cloning and synthesis, custom video content generation, UGC campaign automation, and brand-aligned content production.",
+    title: "Get Chosen: AI Content Studio",
+    subtitle: "Video, voice and ad content that makes people pick you",
+    description: "Most businesses know they need more video but never have the time to film it. We produce ads, explainers and social content with AI presenters, voiceovers and translations, on a monthly plan, in your brand's look and voice. Creative is tested in your ads, so the winners get the budget.",
+    format: "Monthly content packs",
     features: [
-      "AI avatar creation and realistic animation",
-      "Voice cloning and synthesis technology",
-      "UGC campaign automation and video ads",
-      "Multi-language content localization"
+      "AI video ads, explainers and social clips",
+      "Avatar presenters and voiceovers, with your consent and branding",
+      "Translations and versions for every channel and language",
+      "Creative testing linked to your ad results"
     ],
     visual: "video" as const,
     path: "/services/content-creation"
   },
   {
     number: "03",
-    title: "AI Agent Creation & Workflow Automation",
-    subtitle: "Custom AI systems and automated workflows for business processes",
-    description: "Custom AI agent development for call screening, lead qualification, customer support, business process automation, and workflow orchestration with legacy system integration.",
+    title: "Get It Done: AI Agents & Automation",
+    subtitle: "AI that answers, qualifies and books every enquiry, day and night",
+    description: "Missed calls and slow replies quietly lose you customers. We build AI receptionists for phone, chat and email that answer straight away, ask the right questions, book qualified people into your calendar and update your CRM. Then we look after them on a monthly care plan.",
+    format: "Build, then monthly care plan",
     features: [
-      "Call center automation and AI phone screening",
-      "Lead management and automated follow-up workflows",
-      "Customer service automation with 24/7 support",
-      "Industry-specific solutions (legal, healthcare, real estate)"
+      "AI receptionists for phone, website chat and email",
+      "Lead qualification, booking and reminders",
+      "Client intake, follow-ups and CRM workflows",
+      "Integrations with the tools you already use"
     ],
     visual: "agents" as const,
     path: "/services/ai-dev-automation"
   },
   {
     number: "04",
-    title: "ML Model Fine-Tuning",
-    subtitle: "Custom model training and optimization on your proprietary data",
-    description: "Fine-tuning of foundation models (GPT, LLaMA, Mistral) on your domain-specific datasets, with full RLHF pipelines, rigorous benchmarking, and scalable deployment — giving you a model that's truly yours.",
+    title: "Private AI: Custom Models",
+    subtitle: "AI trained on your own knowledge, deployed privately",
+    description: "For firms with specialist knowledge or strict data rules, off-the-shelf AI isn't always enough. We fine-tune open and commercial language models on your documents and data, test them properly against your real tasks, and deploy them where your data stays under your control.",
+    format: "By enquiry",
     features: [
-      "Fine-tuning across GPT, LLaMA, Mistral and more",
-      "Domain-specific training for legal, healthcare, finance, and retail",
-      "Reinforcement Learning from Human Feedback (RLHF)",
-      "Full model ownership with ongoing retraining support"
+      "Fine-tuning on your documents, data and house style",
+      "Evaluation against your real tasks before anything goes live",
+      "Private deployment that keeps your data under your control",
+      "Ongoing retraining as your knowledge changes"
     ],
     visual: "ml" as const,
     path: "/services/ml-fine-tuning"
@@ -103,8 +107,8 @@ const Services = () => {
   return (
     <div ref={contentRef} className="min-h-screen bg-background text-foreground">
       <PageSEO
-        title="Our Services — SIX³ Agency"
-        description="Search marketing, generative AI video, AI agent automation, and ML fine-tuning services from SIX³ Agency. Comprehensive AI-powered solutions for business growth."
+        title="AI Marketing & Automation Services | SIX³ Agency"
+        description="Search and paid media, AI video content, AI receptionists and automation, and private AI models for UK businesses. Start with a two-week AI Growth Audit."
         canonical="https://six3.agency/services"
       />
       <Header />
@@ -115,29 +119,65 @@ const Services = () => {
         <div className="max-w-7xl mx-auto">
           <div className="services-hero text-center mb-16">
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-light mb-8 text-gradient w-fit pb-1 mx-auto">
-              Our Services
+              Services
             </h1>
             <div className="h-1 w-40 bg-brand-gradient rounded-full mb-8 mx-auto" />
             <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto mb-12">
-              Comprehensive AI-powered solutions that transform your business operations, 
-              maximize ROI, and drive sustainable growth through intelligent automation.
+              Get found, get chosen, get it done. Buy one part or all three: they're built to work together,
+              so each one makes the others work harder.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-light mb-2">200-500%</div>
-                <p className="text-sm text-muted-foreground">Average ROI</p>
+                <div className="text-3xl md:text-4xl font-light mb-2">2 weeks</div>
+                <p className="text-sm text-muted-foreground">From audit to a clear plan</p>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-light mb-2">30-60%</div>
-                <p className="text-sm text-muted-foreground">Time Savings</p>
+                <div className="text-3xl md:text-4xl font-light mb-2">4</div>
+                <p className="text-sm text-muted-foreground">Ad channels, one budget</p>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-light mb-2">40-80%</div>
-                <p className="text-sm text-muted-foreground">Faster Response</p>
+                <div className="text-3xl md:text-4xl font-light mb-2">24/7</div>
+                <p className="text-sm text-muted-foreground">Every enquiry answered</p>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-light mb-2">25-50%</div>
-                <p className="text-sm text-muted-foreground">Lead Increase</p>
+                <div className="text-3xl md:text-4xl font-light mb-2">1</div>
+                <p className="text-sm text-muted-foreground">Team and report for it all</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Entry offer */}
+      <section className="px-6 pt-16">
+        <div className="max-w-7xl mx-auto">
+          <div className="relative overflow-hidden rounded-3xl border border-[#a855f7]/40 bg-card p-8 md:p-12">
+            <div className="absolute inset-x-0 top-0 h-1 bg-brand-gradient-glow" />
+            <div className="grid lg:grid-cols-[1.4fr_1fr] gap-10 items-center">
+              <div>
+                <p className="mb-4 text-sm font-medium tracking-[0.25em] uppercase text-gradient w-fit">Start here</p>
+                <h2 className="text-4xl md:text-5xl font-light mb-4">AI Growth Audit</h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  In two weeks we review your search, ads, content and how you handle enquiries. You get a prioritised
+                  plan showing where growth is leaking, what to fix first and what it's worth, plus quick wins you can
+                  act on straight away, whether or not you work with us afterwards.
+                </p>
+              </div>
+              <div className="space-y-4">
+                <ul className="space-y-3">
+                  {["Fixed fee, two weeks", "Ads, search, content and lead handling reviewed", "Prioritised plan and quick wins", "Walk-through call with your team"].map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient mt-2 flex-shrink-0" />
+                      <span className="text-muted-foreground">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Link to="/contact" className="inline-block pt-2">
+                  <Button className="group px-8 py-4">
+                    Book your audit
+                    <ArrowUpRight className="w-4 h-4 ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
@@ -161,6 +201,7 @@ const Services = () => {
                       </div>
 
                       <div>
+                        <span className="mb-4 inline-block rounded-full border border-[#a855f7]/40 px-3 py-1 text-xs font-medium tracking-wide text-gradient">{service.format}</span>
                         <h2 className="text-4xl md:text-5xl font-light mb-4">{service.title}</h2>
                         <p className="text-xl text-muted-foreground mb-6">{service.subtitle}</p>
                         <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
@@ -169,7 +210,7 @@ const Services = () => {
                       </div>
 
                       <div className="space-y-4">
-                        <h3 className="text-lg font-medium">Key Features</h3>
+                        <h3 className="text-lg font-medium">What's included</h3>
                         <ul className="space-y-3">
                           {service.features.map((feature, idx) => (
                             <li key={idx} className="flex items-start gap-3">
@@ -203,7 +244,7 @@ const Services = () => {
         </div>
       </section>
 
-      <WormholeCta buttonLabel="Get Started Today" />
+      <WormholeCta buttonLabel="Book an AI Growth Audit" />
 
       <Footer />
     </div>

@@ -7,8 +7,8 @@ const Portfolio = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <PageSEO
-        title="Portfolio & Case Studies — SIX³ Agency"
-        description="Explore SIX³ Agency's portfolio of AI marketing campaigns, automation projects, and case studies across legal, real estate, healthcare, and more."
+        title="Case Studies & Portfolio | SIX³ Agency"
+        description="Our work in AI marketing and automation: client intake automation for a UK law firm, e-commerce paid media and dui.guide, our own AI legal platform."
         canonical="https://six3.agency/portfolio"
       />
       <Header />

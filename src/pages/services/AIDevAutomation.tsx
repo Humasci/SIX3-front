@@ -55,8 +55,8 @@ const AIDevAutomation = () => {
   return (
     <div ref={contentRef} className="min-h-screen bg-background text-foreground">
       <PageSEO
-        title="AI Agent Creation & Workflow Automation — SIX³ Agency"
-        description="Custom AI agent development for call screening, lead qualification, and customer support. Business process automation with 200-500% ROI. SIX³ Agency, London."
+        title="AI Receptionist & Business Automation | SIX³ Agency"
+        description="AI receptionists for phone, chat and email that answer, qualify and book every enquiry 24/7, plus CRM workflows for UK firms. Start with an AI Growth Audit."
         canonical="https://six3.agency/services/ai-dev-automation"
       />
       <Header />
@@ -67,28 +67,32 @@ const AIDevAutomation = () => {
         <div className="max-w-7xl mx-auto">
           <div className="hero-content mb-12 grid lg:grid-cols-[minmax(0,1fr)_400px] gap-x-12 gap-y-8 items-center">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-light mb-8 text-gradient w-fit pb-1 lg:col-start-1">
-              AI Agent Creation & Workflow Automation
+              Get It Done: AI Agents & Automation
             </h1>
             <div className="h-1 w-40 bg-brand-gradient rounded-full lg:col-start-1 -mt-4" />
             <div className="media-frame aspect-[4/3] w-full max-w-md lg:max-w-none lg:col-start-2 lg:row-start-1 lg:row-span-3">
-              <ServiceVisual kind="agents" label="AI Development" className="w-full h-full" />
+              <ServiceVisual kind="agents" label="Get It Done: AI Agents & Automation" className="w-full h-full" />
             </div>
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl lg:col-start-1">
+              AI that answers, qualifies and books every enquiry, day and night. AI receptionists for phone, chat
+              and email that reply straight away, book qualified people into your calendar and update your CRM.
+            </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm lg:col-start-1">
               <div>
-                <p className="text-muted-foreground mb-1">Location</p>
-                <p>London</p>
+                <p className="text-muted-foreground mb-1">Format</p>
+                <p>Build, then monthly care plan</p>
               </div>
               <div>
-                <p className="text-muted-foreground mb-1">Year</p>
-                <p>2025</p>
+                <p className="text-muted-foreground mb-1">Channels</p>
+                <p>Phone, chat, email</p>
               </div>
               <div>
-                <p className="text-muted-foreground mb-1">Lead</p>
-                <p>AI Team</p>
+                <p className="text-muted-foreground mb-1">Hours</p>
+                <p>24/7</p>
               </div>
               <div>
-                <p className="text-muted-foreground mb-1">Category</p>
-                <p>AI Automation</p>
+                <p className="text-muted-foreground mb-1">Start with</p>
+                <p>AI Growth Audit</p>
               </div>
             </div>
           </div>
@@ -99,42 +103,46 @@ const AIDevAutomation = () => {
       <section className="steps-section py-24 px-6 bg-secondary/30">
         <div className="max-w-7xl mx-auto">
           <p className="text-sm text-muted-foreground mb-8 tracking-wider">
-            Simple process <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" />
+            How it works <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" />
           </p>
           <h2 className="text-4xl md:text-5xl font-light mb-16">
-            Clear, & Effective Workflow
+            Built around how you already work
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="step-card border border-border p-8 bg-background">
               <p className="text-sm text-muted-foreground mb-4">Step -01</p>
-              <h3 className="text-2xl font-light mb-4">Discovery & Strategy</h3>
+              <h3 className="text-2xl font-light mb-4">Map your enquiries</h3>
               <p className="text-muted-foreground">
-                Business process audit and mapping, AI opportunity assessment and ROI calculation, technical requirements gathering, and solution architecture design.
+                We map how enquiries reach you today, by phone, website and email, what happens next, and where they
+                stall or go unanswered. This is usually part of your AI Growth Audit.
               </p>
             </div>
 
             <div className="step-card border border-border p-8 bg-background">
               <p className="text-sm text-muted-foreground mb-4">Step -02</p>
-              <h3 className="text-2xl font-light mb-4">AI Agent Development</h3>
+              <h3 className="text-2xl font-light mb-4">Design your receptionist</h3>
               <p className="text-muted-foreground">
-                Custom agent persona and capability design, conversation flows and decision trees, integration connector development, and workflow automation scripting.
+                We write the questions your AI receptionist asks, the answers it can give, the rules for who gets
+                booked in and when it hands over to a person, all in your tone of voice.
               </p>
             </div>
 
             <div className="step-card border border-border p-8 bg-background">
               <p className="text-sm text-muted-foreground mb-4">Step -03</p>
-              <h3 className="text-2xl font-light mb-4">Integration & Testing</h3>
+              <h3 className="text-2xl font-light mb-4">Connect & test</h3>
               <p className="text-muted-foreground">
-                Production environment deployment, system integration testing, user acceptance testing with client teams, and performance optimization.
+                We connect it to your phone line, website, inbox, calendar and CRM, then test it with your team on
+                real scenarios before it talks to a single customer.
               </p>
             </div>
 
             <div className="step-card border border-border p-8 bg-background">
               <p className="text-sm text-muted-foreground mb-4">Step -04</p>
-              <h3 className="text-2xl font-light mb-4">Deployment & Training</h3>
+              <h3 className="text-2xl font-light mb-4">Go live, then care plan</h3>
               <p className="text-muted-foreground">
-                Live system deployment and cutover, team training and documentation, change management support, and 30-day optimization period.
+                Once it's live, your monthly care plan covers monitoring, updates to answers and workflows, new
+                integrations, and a monthly review of what it handled and what to improve.
               </p>
             </div>
           </div>
@@ -148,17 +156,20 @@ const AIDevAutomation = () => {
             Overview <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" />
           </p>
           <h2 className="text-4xl md:text-5xl font-light mb-8 max-w-3xl">
-            Custom AI Systems and Automated Workflows for Business Processes
+            Every enquiry answered, qualified and booked
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mb-8">
-            Custom AI agent development for call screening, lead qualification, and customer support. Business process automation with workflow orchestration, legacy system integration, real-time analytics, and compliance automation.
+            Missed calls and slow replies quietly lose you customers. If nobody picks up, people ring the next firm
+            on the list, and web enquiries go cold while they wait. We build AI receptionists that answer straight
+            away, ask the right questions, book qualified people into your calendar and keep your CRM up to date,
+            so your team spends its time on the work, not the admin.
           </p>
           <ul className="space-y-4 text-lg text-muted-foreground max-w-3xl">
-            <li>• Call center automation and AI phone screening</li>
-            <li>• Lead management and automated follow-up workflows</li>
-            <li>• Customer service automation with 24/7 support</li>
-            <li>• CRM integration and pipeline management</li>
-            <li>• Operations automation and compliance tracking</li>
+            <li>• AI receptionists for phone, website chat and email</li>
+            <li>• Lead qualification, booking and reminders</li>
+            <li>• Client intake, follow-ups and CRM workflows</li>
+            <li>• Integrations with the tools you already use</li>
+            <li>• A clear handover to your team whenever a person is needed</li>
           </ul>
         </div>
       </section>
@@ -167,8 +178,12 @@ const AIDevAutomation = () => {
       <section className="py-16 px-6 bg-secondary/30">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
           <div>
-            <div className="text-7xl md:text-8xl font-light mb-4">Ongoing</div>
-            <p className="text-xl text-muted-foreground">Support Available</p>
+            <div className="text-7xl md:text-8xl font-light mb-4">24/7</div>
+            <p className="text-xl text-muted-foreground">Every enquiry answered</p>
+          </div>
+          <div>
+            <div className="text-7xl md:text-8xl font-light mb-4">{"<1 min"}</div>
+            <p className="text-xl text-muted-foreground">First reply to a new lead</p>
           </div>
         </div>
       </section>
@@ -177,34 +192,39 @@ const AIDevAutomation = () => {
       <section className="advantages-section py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <p className="text-sm text-muted-foreground mb-8 tracking-wider">
-            Our Advantage <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" />
+            Why it works <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" />
           </p>
           <h2 className="text-5xl md:text-6xl font-light mb-16 max-w-2xl">
-            Where Innovation<br />Meets Practical Solutions
+            Practical AI<br />with a clear job
           </h2>
 
           <div className="space-y-12">
             <div className="advantage-card border-t-gradient pt-8">
               <div className="text-5xl font-light text-muted-foreground/50 mb-4">01</div>
-              <h3 className="text-3xl font-light mb-4">Industry Specializations</h3>
+              <h3 className="text-3xl font-light mb-4">Built for service businesses</h3>
               <p className="text-lg text-muted-foreground max-w-2xl">
-                Legal firms, healthcare, real estate, e-commerce, and manufacturing with specialized solutions for client intake, patient scheduling, lead nurturing, and supply chain optimization.
+                Law firms, clinics, estate agents, professional services and local businesses. We build intake,
+                booking and follow-up around how your sector takes on clients, including the questions you must ask
+                and the ones the AI should leave to a person. Recent work includes intake automation for a UK law firm.
               </p>
             </div>
 
             <div className="advantage-card border-t-gradient pt-8">
               <div className="text-5xl font-light text-muted-foreground/50 mb-4">02</div>
-              <h3 className="text-3xl font-light mb-4">Proven Results</h3>
+              <h3 className="text-3xl font-light mb-4">Part of one system</h3>
               <p className="text-lg text-muted-foreground max-w-2xl">
-                30-60% reduction in manual processing time, 40-80% improvement in response times, 25-50% increase in lead conversion rates, and 20-40% reduction in operational costs.
+                Get Found brings the enquiries in and Get Chosen's content makes people pick you. Get It Done makes
+                sure none are lost: every lead from your ads gets a reply in under a minute, and what happens next
+                shows up in the same monthly report.
               </p>
             </div>
 
             <div className="advantage-card border-t-gradient pt-8">
               <div className="text-5xl font-light text-muted-foreground/50 mb-4">03</div>
-              <h3 className="text-3xl font-light mb-4">Comprehensive Packages</h3>
+              <h3 className="text-3xl font-light mb-4">Build, then a care plan</h3>
               <p className="text-lg text-muted-foreground max-w-2xl">
-                Starter, professional and enterprise packages scoped to your business, with ongoing support for optimization and new features. Get in touch for a tailored quote.
+                We scope and build your agents as a one-off project, then look after them on a monthly care plan:
+                monitoring, updates, new workflows and a monthly review. Get in touch for a tailored quote.
               </p>
             </div>
           </div>
@@ -218,14 +238,15 @@ const AIDevAutomation = () => {
             Case Study <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" />
           </p>
           <h2 className="text-4xl md:text-5xl font-light mb-6">
-            dui.guide — AI-Powered Legal Guidance Platform
+            dui.guide: our own AI legal guidance platform
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mb-8">
-            How we built AI agents that deliver state and county-specific DUI procedural guidance across all 50 states, with automated deadline tracking and intelligent attorney matching.
+            We build what we'd use ourselves. dui.guide is our own AI legal guidance and directory platform, where
+            AI agents help people understand the DUI process and find the right legal help. See how we built it.
           </p>
           <Link to="/use-cases/dui-guide">
             <Button variant="outline" className="rounded-full px-8 py-4 border-foreground hover:bg-brand-gradient-button hover:text-white hover:border-transparent hover:shadow-[0_0_32px_-10px_rgba(249,115,22,0.6)]">
-              Read Case Study
+              Read the case study
             </Button>
           </Link>
         </div>
@@ -235,11 +256,11 @@ const AIDevAutomation = () => {
       <section className="py-24 px-6 bg-secondary/30">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-5xl md:text-6xl font-light mb-12">
-            Let's work Together
+            Find out how many enquiries you're missing
           </h2>
           <Link to="/contact">
             <Button variant="outline" className="rounded-full px-12 py-6 text-lg border-foreground hover:bg-brand-gradient-button hover:text-white hover:border-transparent hover:shadow-[0_0_32px_-10px_rgba(249,115,22,0.6)]">
-              Start AI Automation
+              Book an AI Growth Audit
             </Button>
           </Link>
         </div>

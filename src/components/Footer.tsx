@@ -10,7 +10,7 @@ export const Footer = () => {
           <div>
             <Logo className="mb-4" />
             <p className="text-sm text-muted-foreground">
-              AI-powered marketing and automation agency.
+              AI marketing and automation for UK businesses. Get found, get chosen, get it done.
             </p>
           </div>
           
@@ -18,13 +18,16 @@ export const Footer = () => {
             <h4 className="text-sm font-medium mb-4 tracking-wider">Services</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li className="hover:text-foreground transition-colors cursor-pointer">
-                <Link to="/services/search-marketing-ppc">Search Marketing / PPC</Link>
+                <Link to="/services/search-marketing-ppc">Search &amp; Paid Media</Link>
               </li>
               <li className="hover:text-foreground transition-colors cursor-pointer">
-                <Link to="/services/content-creation">Content Creation</Link>
+                <Link to="/services/content-creation">AI Content Studio</Link>
               </li>
               <li className="hover:text-foreground transition-colors cursor-pointer">
-                <Link to="/services/ai-dev-automation">AI Dev / Automation</Link>
+                <Link to="/services/ai-dev-automation">AI Agents &amp; Automation</Link>
+              </li>
+              <li className="hover:text-foreground transition-colors cursor-pointer">
+                <Link to="/services/ml-fine-tuning">Private AI</Link>
               </li>
             </ul>
           </div>
@@ -36,7 +39,7 @@ export const Footer = () => {
                 <Link to="/use-cases/dui-guide">dui.guide — AI Legal Platform</Link>
               </li>
               <li className="hover:text-foreground transition-colors cursor-pointer">
-                <Link to="/use-cases/law-firm-automation">Legal Firm Automation</Link>
+                <Link to="/use-cases/law-firm-automation">Law Firm Intake Automation</Link>
               </li>
             </ul>
           </div>
