@@ -144,6 +144,8 @@ const LocalBusiness = () => {
             </div>
             <div className="relative">
               <img
+                loading="lazy"
+                decoding="async"
                 src={icons.localBusiness}
                 alt="Local Service Business"
                 className="media-frame w-full max-w-lg ml-auto aspect-[4/3] object-cover"

@@ -10,6 +10,17 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
+  build: {
+    rollupOptions: {
+      output: {
+        // Libraries change rarely, so they get their own cached files separate from site code
+        manualChunks: {
+          react: ["react", "react-dom", "react-router-dom"],
+          gsap: ["gsap", "gsap/ScrollTrigger"],
+        },
+      },
+    },
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

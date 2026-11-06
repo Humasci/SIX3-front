@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { reduceMotion } from "@/lib/motion";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -54,7 +55,7 @@ const services = [
     title: "Search Marketing & Paid Media",
     description: "AI-driven search marketing with advanced algorithm optimization across Google Ads, Meta, LinkedIn, TikTok with real-time bid optimization and competitor analysis.",
     path: "/services/search-marketing-ppc",
-    image: "/ai-marketing-ppc-paid-media.png",
+    image: "/ai-marketing-ppc-paid-media.webp",
   },
   {
     number: "02",
@@ -188,7 +189,7 @@ export const Services = () => {
         });
 
         // Staggered parallax effect on scroll
-        gsap.to(card, {
+        if (!reduceMotion) gsap.to(card, {
           yPercent: -20 * (index % 2 === 0 ? 1 : -1),
           scrollTrigger: {
             trigger: card,
@@ -234,6 +235,8 @@ export const Services = () => {
                   {service.image && (
                     <div className="mb-6">
                       <img 
+                        loading="lazy"
+                        decoding="async"
                         src={service.image} 
                         alt={service.title}
                         className="media-frame w-full aspect-[16/9] object-cover"

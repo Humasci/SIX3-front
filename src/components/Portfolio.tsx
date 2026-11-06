@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import icons from "@/utils/iconGenerator";
 import { HeroWormhole } from "@/components/HeroWormhole";
+import { reduceMotion } from "@/lib/motion";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,7 +16,7 @@ const projects = [
     category: "AI Agent Development",
     year: "2024",
     description: "60% reduction in intake administration time, 40% increase in qualified leads, $150K annual savings",
-    image: "/images/use-cases/law-firm-automation.jpg",
+    image: "/images/use-cases/law-firm-automation.webp",
     metrics: "60% time reduction, $150K savings"
   },
   {
@@ -25,7 +26,7 @@ const projects = [
     category: "AI Content & SEO Automation",
     year: "2025–2026",
     description: "AI-assisted publishing pipeline that generates, refreshes and interlinks directory listings and editorial pages at scale",
-    image: "/images/use-cases/media-publisher-directory-dui-guide.jpg",
+    image: "/images/use-cases/media-publisher-directory-dui-guide.webp",
     metrics: "Programmatic SEO with editorial review"
   },
   {
@@ -35,7 +36,7 @@ const projects = [
     category: "Search Marketing & Paid Media",
     year: "2026",
     description: "Multi-platform campaign with AI optimization delivering 300% ROAS improvement",
-    image: "/images/use-cases/ecommerce-noovit.jpg",
+    image: "/images/use-cases/ecommerce-noovit.webp",
     metrics: "300% ROAS improvement"
   },
   {
@@ -75,7 +76,7 @@ const projects = [
     category: "AI Agent Creation & Workflow Automation",
     year: "2025–2026",
     description: "AI-powered DUI procedural guidance platform with 24/7 automated support across all 50 states and intelligent attorney matching",
-    image: "/images/use-cases/media-publisher-directory-dui-guide.jpg",
+    image: "/images/use-cases/media-publisher-directory-dui-guide.webp",
     metrics: "AI guidance across all 50 states"
   },
 ];
@@ -192,7 +193,7 @@ export const Portfolio = ({ lightHeader = false }: { lightHeader?: boolean }) =>
         });
 
         // Parallax on scroll
-        gsap.to(item, {
+        if (!reduceMotion) gsap.to(item, {
           yPercent: -10 * (index % 2 === 0 ? 1 : -1),
           scrollTrigger: {
             trigger: item,
@@ -242,6 +243,8 @@ export const Portfolio = ({ lightHeader = false }: { lightHeader?: boolean }) =>
             >
               <div className="media-frame mb-4 aspect-[4/3]">
                 <img
+                  loading="lazy"
+                  decoding="async"
                   src={project.image}
                   alt={project.title}
                   className="portfolio-image w-full h-full object-cover transition-transform duration-500"

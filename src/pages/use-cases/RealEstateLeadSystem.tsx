@@ -79,6 +79,8 @@ const RealEstateLeadSystem = () => {
               </div>
               <div className="relative">
                 <img
+                  loading="lazy"
+                  decoding="async"
                   src={icons.realEstate}
                   alt="Real estate office"
                   className="media-frame w-full aspect-[4/3] object-cover"
