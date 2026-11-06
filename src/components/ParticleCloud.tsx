@@ -137,17 +137,19 @@ export const ParticleCloud = ({ className = "" }: { className?: string }) => {
       canvas.height = Math.round(H * dpr);
       const wasMobile = mobile;
       mobile = W < 768;
-      if (!particles.length || wasMobile !== mobile) particles = buildParticles(mobile ? 5000 : 11000);
+      if (!particles.length || wasMobile !== mobile) particles = buildParticles(mobile ? 8000 : 18000);
     };
 
     const draw = () => {
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       ctx.clearRect(0, 0, W, H);
 
-      const cx0 = mobile ? W * 0.52 : W * 0.68;
-      const cy0 = mobile ? H * 0.3 : H * 0.46;
-      const S = mobile ? Math.min(W * 0.46, H * 0.2) : Math.min(W * 0.22, H * 0.4);
-      const r0 = mobile ? 1.15 : Math.max(1.1, Math.min(H * 0.0019, 2));
+      const cx0 = W * 0.5;
+      const cy0 = mobile ? H * 0.46 : H * 0.5;
+      // The cloud is stretched to fill the whole hero: width and height scale separately
+      const S = mobile ? W * 0.34 : W * 0.3;
+      const SY = mobile ? H * 0.42 : H * 0.48;
+      const r0 = mobile ? 1.25 : Math.max(1.4, Math.min(H * 0.0024, 2.4));
       const F = 1100;
 
       const ry = Math.sin(time * 0.16) * 0.5;
@@ -177,7 +179,7 @@ export const ParticleCloud = ({ className = "" }: { className?: string }) => {
           z = lz + p.z * swell + Math.cos(time * 0.37 + p.seed + p.x * 3) * f;
           p.alpha = 0.35 + p.core * 0.65;
         }
-        x *= S; y *= S; z *= S;
+        x *= S; y *= SY; z *= S;
 
         const x1 = x * cY + z * sY;
         const z1 = -x * sY + z * cY;
@@ -199,7 +201,7 @@ export const ParticleCloud = ({ className = "" }: { className?: string }) => {
       }
 
       const depth = S * 0.9;
-      const base = mobile ? 0.9 : 0.95;
+      const base = mobile ? 0.95 : 1;
       // Additive blending: where particles gather, the light builds up into glowing clumps and trails
       ctx.globalCompositeOperation = "lighter";
       for (let i = 0; i < n; i++) {
