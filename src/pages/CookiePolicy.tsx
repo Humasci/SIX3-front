@@ -2,6 +2,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { useEffect } from "react";
 import gsap from "gsap";
+import { HeroWormhole } from "@/components/HeroWormhole";
 
 const CookiePolicy = () => {
   useEffect(() => {
@@ -17,7 +18,8 @@ const CookiePolicy = () => {
     <div className="min-h-screen bg-background text-foreground">
       <Header />
       
-      <section className="theme-light pt-40 pb-16 px-6">
+      <section className="theme-light relative isolate overflow-hidden pt-40 pb-16 px-6">
+        <HeroWormhole />
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-light mb-8 text-gradient w-fit pb-1">Cookie Policy</h1>
           <div className="h-1 w-40 bg-brand-gradient rounded-full mb-6" />

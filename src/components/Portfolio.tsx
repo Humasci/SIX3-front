@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import icons from "@/utils/iconGenerator";
+import { HeroWormhole } from "@/components/HeroWormhole";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -208,7 +209,8 @@ export const Portfolio = ({ lightHeader = false }: { lightHeader?: boolean }) =>
 
   return (
     <section ref={sectionRef} className="bg-background">
-      <div className={lightHeader ? "theme-light pt-40 pb-16 px-6" : "pt-24 pb-16 px-6"}>
+      <div className={lightHeader ? "theme-light relative isolate overflow-hidden pt-40 pb-16 px-6" : "pt-24 pb-16 px-6"}>
+        {lightHeader && <HeroWormhole />}
         <div className="max-w-7xl mx-auto portfolio-header">
           <p className="text-sm text-muted-foreground mb-8 tracking-wider">
             Our Work <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" />

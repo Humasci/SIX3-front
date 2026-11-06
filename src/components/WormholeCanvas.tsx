@@ -18,8 +18,16 @@ const rgba = (t: number, a: number) => {
 
 type Particle = { u: number; th: number; speed: number; size: number; tone: number };
 
+type WormholeProps = {
+  className?: string;
+  // "light" draws with normal blending for white backgrounds; "dark" glows additively
+  variant?: "dark" | "light";
+  // Horizontal position of the throat, as a fraction of the width (desktop only)
+  centerX?: number;
+};
+
 // A wormhole drawn as a glowing grid: the surface r = r0·cosh(u/a), rings flowing into the throat
-export const WormholeCanvas = ({ className = "" }: { className?: string }) => {
+export const WormholeCanvas = ({ className = "", variant = "dark", centerX = 0.5 }: WormholeProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -63,7 +71,8 @@ export const WormholeCanvas = ({ className = "" }: { className?: string }) => {
       // Along = the wormhole's axis (horizontal on desktop, vertical on phones), across = its radius
       const along = vertical ? H : W;
       const across = vertical ? W : H;
-      const cx = W / 2, cy = H / 2;
+      const light = variant === "light";
+      const cx = vertical ? W / 2 : W * centerX, cy = H / 2;
       const r0 = across * (vertical ? 0.13 : 0.12);
       const a = along * 0.13;
       const span = along * 0.55;
@@ -79,13 +88,14 @@ export const WormholeCanvas = ({ className = "" }: { className?: string }) => {
       };
 
       const glow = ctx.createRadialGradient(cx, cy, 0, cx, cy, r0 * 2.6);
-      glow.addColorStop(0, "rgba(255,210,170,0.32)");
-      glow.addColorStop(0.3, "rgba(249,115,22,0.14)");
+      glow.addColorStop(0, light ? "rgba(249,115,22,0.16)" : "rgba(255,210,170,0.32)");
+      glow.addColorStop(0.3, light ? "rgba(236,120,90,0.08)" : "rgba(249,115,22,0.14)");
       glow.addColorStop(1, "rgba(124,58,237,0)");
       ctx.fillStyle = glow;
       ctx.fillRect(0, 0, W, H);
 
-      ctx.globalCompositeOperation = "lighter";
+      ctx.globalCompositeOperation = light ? "source-over" : "lighter";
+      const k = light ? 0.75 : 1;
 
       // Rings flow inward towards the throat from both mouths
       const rings = 34;
@@ -100,7 +110,7 @@ export const WormholeCanvas = ({ className = "" }: { className?: string }) => {
           ctx.beginPath();
           if (vertical) ctx.ellipse(cx, cy + u, r, Math.max(1, r * tilt), 0, 0, Math.PI * 2);
           else ctx.ellipse(cx + u, cy, Math.max(1, r * tilt), r, 0, 0, Math.PI * 2);
-          ctx.strokeStyle = rgba(0.15 + h * 0.85, (0.1 + h * 0.5) * Math.min(1, f * 4));
+          ctx.strokeStyle = rgba(0.15 + h * 0.85, k * (0.1 + h * 0.5) * Math.min(1, f * 4));
           ctx.lineWidth = 0.6 + h * 1.4;
           ctx.stroke();
         }
@@ -120,7 +130,7 @@ export const WormholeCanvas = ({ className = "" }: { className?: string }) => {
             ctx.beginPath();
             ctx.moveTo(prev[0], prev[1]);
             ctx.lineTo(p[0], p[1]);
-            ctx.strokeStyle = rgba(0.15 + h * 0.85, (0.06 + h * 0.42) * (0.5 + 0.5 * p[2]));
+            ctx.strokeStyle = rgba(0.15 + h * 0.85, k * (0.06 + h * 0.42) * (0.5 + 0.5 * p[2]));
             ctx.lineWidth = 0.6 + h;
             ctx.stroke();
           }
@@ -136,7 +146,7 @@ export const WormholeCanvas = ({ className = "" }: { className?: string }) => {
         const h = heat(u);
         const [x, y, front] = P(u, p.th + spin);
         const edge = 1 - Math.abs(p.u);
-        ctx.globalAlpha = Math.min(1, edge * 2.2) * (0.35 + h * 0.65) * (0.55 + 0.45 * front);
+        ctx.globalAlpha = k * Math.min(1, edge * 2.2) * (0.35 + h * 0.65) * (0.55 + 0.45 * front);
         ctx.fillStyle = rgba(0.12 + h * 0.88 + p.tone, 1);
         ctx.beginPath();
         ctx.arc(x, y, p.size * (0.7 + h * 0.8), 0, Math.PI * 2);
@@ -185,7 +195,7 @@ export const WormholeCanvas = ({ className = "" }: { className?: string }) => {
       io.disconnect();
       document.removeEventListener("visibilitychange", onVisibility);
     };
-  }, []);
+  }, [variant, centerX]);
 
   return <canvas ref={canvasRef} className={className} aria-hidden="true" />;
 };

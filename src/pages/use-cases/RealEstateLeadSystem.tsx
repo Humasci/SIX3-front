@@ -7,6 +7,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Home, TrendingUp, Users, Phone, ArrowRight } from "lucide-react";
 import icons from "@/utils/iconGenerator";
+import { HeroWormhole } from "@/components/HeroWormhole";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -42,7 +43,8 @@ const RealEstateLeadSystem = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="theme-light pt-32 pb-16 px-6">
+      <section className="theme-light relative isolate overflow-hidden pt-32 pb-16 px-6">
+        <HeroWormhole />
         <div className="max-w-7xl mx-auto">
           <div className="case-study-hero">
             <div className="flex items-center gap-2 mb-6">
