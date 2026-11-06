@@ -36,7 +36,7 @@ export const WormholeCta = ({ buttonLabel, to = "/contact" }: WormholeCtaProps) 
         to={to}
         className="group relative inline-flex items-center gap-3 rounded-full p-[1.5px] bg-brand-gradient-glow shadow-[0_0_40px_-12px_rgba(249,115,22,0.6)] transition-shadow duration-300 hover:shadow-[0_0_60px_-8px_rgba(253,231,176,0.7)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-glow focus-visible:ring-offset-2 focus-visible:ring-offset-background"
       >
-        <span className="inline-flex items-center gap-3 rounded-full bg-background px-10 py-5 text-lg font-medium text-foreground transition-colors duration-300 group-hover:bg-transparent group-hover:text-[#0d0d26]">
+        <span className="inline-flex items-center gap-3 rounded-full bg-background px-10 py-5 text-lg font-medium text-foreground transition-colors duration-300 group-hover:bg-brand-gradient-button group-hover:text-white">
           {buttonLabel}
           <ArrowUpRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
         </span>

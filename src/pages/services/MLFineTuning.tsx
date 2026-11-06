@@ -217,7 +217,7 @@ const MLFineTuning = () => {
             Let's work Together
           </h2>
           <Link to="/contact">
-            <Button variant="outline" className="rounded-full px-12 py-6 text-lg border-foreground hover:bg-brand-gradient-glow hover:text-[#0d0d26] hover:border-transparent hover:shadow-[0_0_32px_-10px_rgba(249,115,22,0.6)]">
+            <Button variant="outline" className="rounded-full px-12 py-6 text-lg border-foreground hover:bg-brand-gradient-button hover:text-white hover:border-transparent hover:shadow-[0_0_32px_-10px_rgba(249,115,22,0.6)]">
               Start Fine-Tuning
             </Button>
           </Link>
