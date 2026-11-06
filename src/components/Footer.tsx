@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Linkedin, Instagram, Dribbble, Mail } from "lucide-react";
+import { Logo } from "@/components/Logo";
 
 export const Footer = () => {
   return (
@@ -97,10 +98,11 @@ export const Footer = () => {
           </div>
         </div>
         
-        <div className="pt-8 border-t border-border text-center">
-          <p className="text-sm text-muted-foreground">
+        <div className="pt-8 border-t border-border flex flex-col-reverse md:flex-row items-center md:justify-between gap-6">
+          <p className="text-sm text-muted-foreground text-center md:text-left">
             © 2018 - 2026 FKA WEB Limited Registered in England and Wales No. 11642660. All rights reserved.
           </p>
+          <Logo />
         </div>
       </div>
     </footer>

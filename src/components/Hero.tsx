@@ -164,7 +164,7 @@ export const Hero = () => {
             >
               Agency
             </div>
-            <div className="hero-subtitle h-1 w-full max-w-3xl bg-brand-gradient rounded-full mt-10" />
+            <div className="hero-subtitle h-1 w-full max-w-3xl bg-brand-gradient-glow rounded-full mt-10" />
           </div>
 
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 max-w-5xl">
