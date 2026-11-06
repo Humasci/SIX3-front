@@ -23,7 +23,6 @@ const services = [
       "Advanced audience segmentation and targeting",
       "Custom attribution modeling and automated alerts"
     ],
-    investment: "£1K-5K management fees + ad spend",
     image: icons.searchMarketing,
     path: "/services/search-marketing-ppc"
   },
@@ -38,7 +37,6 @@ const services = [
       "UGC campaign automation and video ads",
       "Multi-language content localization"
     ],
-    investment: "£200-7K+ packages",
     image: icons.video,
     path: "/services/content-creation"
   },
@@ -53,7 +51,6 @@ const services = [
       "Customer service automation with 24/7 support",
       "Industry-specific solutions (legal, healthcare, real estate)"
     ],
-    investment: "$5K-100K+ with 200-500% ROI",
     image: icons.automation,
     path: "/services/ai-dev-automation"
   },
@@ -68,7 +65,6 @@ const services = [
       "Reinforcement Learning from Human Feedback (RLHF)",
       "Full model ownership with ongoing retraining support"
     ],
-    investment: "£5K-50K+ per project",
     image: icons.mlFineTuning,
     path: "/services/ml-fine-tuning"
   }
@@ -181,11 +177,7 @@ const Services = () => {
                         </ul>
                       </div>
 
-                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 pt-6 border-t border-border">
-                        <div>
-                          <p className="text-sm text-muted-foreground mb-2">Investment Range</p>
-                          <p className="text-xl font-medium">{service.investment}</p>
-                        </div>
+                      <div className="flex pt-6 border-t border-border">
                         <Link to={service.path}>
                           <Button className="group px-8 py-4">
                             Learn More

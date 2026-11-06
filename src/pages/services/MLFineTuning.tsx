@@ -168,10 +168,6 @@ const MLFineTuning = () => {
       <section className="py-16 px-6 bg-secondary/30">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
           <div>
-            <div className="text-7xl md:text-8xl font-light mb-4">£5-50K</div>
-            <p className="text-xl text-muted-foreground">Investment Range</p>
-          </div>
-          <div>
             <div className="text-7xl md:text-8xl font-light mb-4">Ongoing</div>
             <p className="text-xl text-muted-foreground">Retraining Available</p>
           </div>

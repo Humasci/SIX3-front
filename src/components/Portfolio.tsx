@@ -75,7 +75,7 @@ const projects = [
     year: "2025",
     description: "AI-powered DUI procedural guidance platform with 24/7 automated support across all 50 states and intelligent attorney matching",
     image: icons.duiGuide,
-    metrics: "24/7 availability, 3x attorney conversions"
+    metrics: "AI guidance across all 50 states"
   },
 ];
 

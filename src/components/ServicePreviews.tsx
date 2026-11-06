@@ -19,7 +19,6 @@ const servicePreviews = [
       "Advanced audience segmentation and custom attribution modeling",
       "Automated reporting with performance alerts"
     ],
-    investment: "£1K-5K management fees + ad spend",
     path: "/services/search-marketing-ppc",
     image: icons.searchMarketing
   },
@@ -33,7 +32,6 @@ const servicePreviews = [
       "UGC campaign automation and video ads for paid media",
       "Multi-language content localization"
     ],
-    investment: "$1.5K-7K+ packages",
     path: "/services/content-creation",
     image: icons.video
   },
@@ -47,7 +45,6 @@ const servicePreviews = [
       "Customer service automation with 24/7 support",
       "Industry-specific solutions (legal, healthcare, real estate)"
     ],
-    investment: "$5K-100K+ with 200-500% ROI",
     path: "/services/ai-dev-automation",
     image: icons.automation
   }
@@ -118,11 +115,7 @@ export const ServicePreviews = () => {
                     </ul>
                   </div>
 
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                    <div>
-                      <p className="text-sm text-muted-foreground mb-1">Investment Range</p>
-                      <p className="text-lg font-medium">{service.investment}</p>
-                    </div>
+                  <div className="flex">
                     <Link to={service.path}>
                       <Button variant="outline" className="group px-6 py-3">
                         Learn More

@@ -28,8 +28,7 @@
         "Multi-platform management (Google, Meta, LinkedIn, TikTok)",
         "Advanced audience segmentation and targeting",
         "Custom attribution modeling and automated alerts"
-      ],
-      "investment": "£1K-5K management fees + ad spend"
+      ]
     },
     "contentCreation": {
       "title": "Generative AI Video & Audio",
@@ -40,8 +39,7 @@
         "Voice cloning and synthesis technology",
         "UGC campaign automation and video ads",
         "Multi-language content localization"
-      ],
-      "investment": "£200-7K+ packages"
+      ]
     },
     "aiAutomation": {
       "title": "AI Agent Creation & Workflow Automation",
@@ -52,8 +50,7 @@
         "Lead management and automated follow-up workflows",
         "Customer service automation with 24/7 support",
         "Industry-specific solutions (legal, healthcare, real estate)"
-      ],
-      "investment": "$5K-100K+ with ongoing support"
+      ]
     },
     "stats": {
       "averageROI": "Average ROI",
@@ -62,7 +59,6 @@
       "leadIncrease": "Lead Increase"
     },
     "learnMore": "Learn More",
-    "investmentRange": "Investment Range",
     "keyFeatures": "Key Features"
   },
   "industries": {
