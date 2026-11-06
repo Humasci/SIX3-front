@@ -1,10 +1,10 @@
 import { useEffect, useRef } from "react";
-import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import icons from "@/utils/iconGenerator";
 import { HeroWormhole } from "@/components/HeroWormhole";
+import { WormholeCta } from "@/components/WormholeCta";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -196,22 +196,7 @@ export const AboutPage = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 px-6 bg-secondary/30">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-5xl md:text-6xl font-light mb-8">
-            Ready to Transform<br />Your Business?
-          </h2>
-          <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Let's discuss how our AI-powered solutions can drive measurable results for your organization.
-          </p>
-          <Link to="/contact">
-            <Button variant="outline" className="rounded-full px-12 py-6 text-lg border-foreground hover:bg-foreground hover:text-background">
-              Start Your AI Journey
-            </Button>
-          </Link>
-        </div>
-      </section>
+      <WormholeCta buttonLabel="Start Your AI Journey" />
     </div>
   );
 };

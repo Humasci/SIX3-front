@@ -24,10 +24,12 @@ type WormholeProps = {
   variant?: "dark" | "light";
   // Horizontal position of the throat, as a fraction of the width (desktop only)
   centerX?: number;
+  // Always run the wormhole top-to-bottom, whatever the width
+  orientation?: "auto" | "vertical";
 };
 
 // A wormhole drawn as a glowing grid: the surface r = r0·cosh(u/a), rings flowing into the throat
-export const WormholeCanvas = ({ className = "", variant = "dark", centerX = 0.5 }: WormholeProps) => {
+export const WormholeCanvas = ({ className = "", variant = "dark", centerX = 0.5, orientation = "auto" }: WormholeProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -60,7 +62,7 @@ export const WormholeCanvas = ({ className = "", variant = "dark", centerX = 0.5
       canvas.width = Math.round(W * dpr);
       canvas.height = Math.round(H * dpr);
       const was = vertical;
-      vertical = W < 768;
+      vertical = orientation === "vertical" || W < 768;
       if (!particles.length || was !== vertical) build();
     };
 
@@ -195,7 +197,7 @@ export const WormholeCanvas = ({ className = "", variant = "dark", centerX = 0.5
       io.disconnect();
       document.removeEventListener("visibilitychange", onVisibility);
     };
-  }, [variant, centerX]);
+  }, [variant, centerX, orientation]);
 
   return <canvas ref={canvasRef} className={className} aria-hidden="true" />;
 };

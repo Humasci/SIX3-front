@@ -20,11 +20,6 @@ const projects = {
     solution: "We created a flexible brand system with a bold, contemporary aesthetic that scales across all touchpoints. The new identity increased brand recognition by 85%.",
     results: ["85% increase in brand recognition", "150% growth in social media engagement", "40% increase in conversion rates"],
     image: icons.contentCreation,
-    gallery: [
-      icons.contentCreation,
-      icons.blog,
-      icons.ai,
-    ],
   },
   "mobile-banking-app": {
     title: "Mobile Banking App",
@@ -37,11 +32,6 @@ const projects = {
     solution: "We designed a clean, minimal interface with focus on core banking tasks and implemented advanced security features without compromising usability.",
     results: ["200K+ downloads in first month", "4.8 star rating on app stores", "60% daily active user rate"],
     image: icons.fintech,
-    gallery: [
-      icons.fintech,
-      icons.searchMarketing,
-      icons.automation,
-    ],
   },
   "ecommerce-platform": {
     title: "E-Commerce Platform",
@@ -54,11 +44,6 @@ const projects = {
     solution: "We implemented a modular design system with AI-powered recommendations and optimized the checkout flow to reduce cart abandonment.",
     results: ["45% reduction in cart abandonment", "2M+ monthly visitors", "35% increase in average order value"],
     image: icons.ecommerce,
-    gallery: [
-      icons.ecommerce,
-      icons.searchMarketing,
-      icons.localBusiness,
-    ],
   },
   "ai-saas-platform": {
     title: "AI SaaS Platform",
@@ -71,11 +56,6 @@ const projects = {
     solution: "Built a microservices architecture with advanced caching and implemented a drag-and-drop dashboard builder for custom analytics.",
     results: ["1000+ enterprise clients", "99.9% uptime", "50% reduction in data analysis time"],
     image: icons.ai,
-    gallery: [
-      icons.ai,
-      icons.manufacturing,
-      icons.professionalServices,
-    ],
   },
   "fitness-tracking-app": {
     title: "Fitness Tracking App",
@@ -88,11 +68,6 @@ const projects = {
     solution: "Designed a gamified experience with achievement systems, social challenges, and AI-powered personalized recommendations.",
     results: ["500K+ active users", "4.7 star rating", "75% user retention rate"],
     image: icons.healthcare,
-    gallery: [
-      icons.healthcare,
-      icons.automation,
-      icons.video,
-    ],
   },
   "dui-guide": {
     title: "dui.guide — Legal Guidance Platform",
@@ -105,11 +80,6 @@ const projects = {
     solution: "We built a conversational AI guidance agent with county-level jurisdiction detection, an automated deadline tracking and alert system synced to court calendars, and an AI-powered attorney and service provider matching layer over their existing directory.",
     results: [],
     image: "/images/use-cases/media-publisher-directory-dui-guide.jpg",
-    gallery: [
-      "/images/use-cases/media-publisher-directory-dui-guide.jpg",
-      icons.legal,
-      icons.automation,
-    ],
   },
   "media-publisher-directory": {
     title: "Media Publisher & Directory Platform",
@@ -122,11 +92,6 @@ const projects = {
     solution: "We built a content pipeline that generates and refreshes listing pages from the publisher's data, an editorial workflow with human review before anything goes live, and a technical SEO layer that adds schema markup and internal links to every page automatically.",
     results: ["Listing pages generated and refreshed automatically from source data", "Human editorial review built into every publish", "Consistent schema markup and internal linking across the directory"],
     image: "/images/use-cases/media-publisher-directory-dui-guide.jpg",
-    gallery: [
-      "/images/use-cases/media-publisher-directory-dui-guide.jpg",
-      icons.contentCreation,
-      icons.searchMarketing,
-    ],
   },
   "ecommerce-ai-campaign": {
     title: "E-commerce AI Marketing Campaign",
@@ -139,11 +104,6 @@ const projects = {
     solution: "We consolidated the campaigns, introduced AI bid optimization and audience segmentation on each platform, and set up attribution reporting with automated performance alerts.",
     results: ["300% ROAS improvement", "One reporting view across every ad platform", "Automated alerts on campaign performance"],
     image: "/images/use-cases/ecommerce-noovit.jpg",
-    gallery: [
-      "/images/use-cases/ecommerce-noovit.jpg",
-      icons.searchMarketing,
-      icons.automation,
-    ],
   },
   "corporate-website": {
     title: "Corporate Website",
@@ -156,11 +116,6 @@ const projects = {
     solution: "Created a bold, minimalist design with innovative interactions and smooth animations that enhance user engagement.",
     results: ["300% increase in leads", "65% longer session duration", "Award-winning design"],
     image: icons.professionalServices,
-    gallery: [
-      icons.realEstate,
-      icons.legal,
-      icons.contentCreation,
-    ],
   },
 };
 
@@ -308,20 +263,6 @@ const PortfolioDetail = () => {
             </div>
             )}
 
-            <div className="project-section">
-              <h2 className="text-3xl font-light mb-8">Project Gallery</h2>
-              <div className="grid md:grid-cols-2 gap-6">
-                {project.gallery.map((image, index) => (
-                  <div key={index} className="media-frame aspect-[4/3]">
-                    <img
-                      src={image}
-                      alt={`${project.title} gallery ${index + 1}`}
-                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
       </div>

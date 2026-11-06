@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import gsap from "gsap";
 import { ArrowRight, ArrowLeft, Check } from "lucide-react";
+import { WormholeBackdrop } from "@/components/WormholeBackdrop";
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -209,7 +210,8 @@ const Contact = () => {
     return (
       <div className="min-h-screen bg-background text-foreground">
         <Header />
-        <section className="pt-32 pb-24 px-6 flex items-center justify-center min-h-[80vh]">
+        <section className="relative isolate overflow-hidden pt-32 pb-24 px-6 flex items-center justify-center min-h-[80vh]">
+        <WormholeBackdrop />
           <div className="max-w-2xl mx-auto text-center">
             <div className="mb-8">
               <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-accent/10 flex items-center justify-center">
@@ -269,7 +271,8 @@ const Contact = () => {
       />
       <Header />
 
-      <section className="pt-32 pb-24 px-6 mt-5">
+      <section className="relative isolate overflow-hidden pt-32 pb-24 px-6 mt-5">
+        <WormholeBackdrop />
         <div className="max-w-4xl mx-auto">
           <div className="contact-title mb-16">
             <h1 className="sr-only">Contact SIX³ Agency</h1>
