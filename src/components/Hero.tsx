@@ -138,7 +138,8 @@ export const Hero = () => {
         <div ref={visualRef} className="absolute inset-0">
           <ParticleCloud className="w-full h-full" />
         </div>
-        <div className="absolute inset-0 hidden md:block bg-gradient-to-r from-background via-transparent to-transparent pointer-events-none" />
+        {/* Soft shade behind the copy keeps the text in front of the full-width cloud */}
+        <div className="absolute inset-0 bg-gradient-to-r from-background/60 via-background/20 to-transparent pointer-events-none" />
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-background pointer-events-none" />
       </div>
       
@@ -163,7 +164,7 @@ export const Hero = () => {
             >
               Agency
             </div>
-            <div className="hero-subtitle h-1 w-full max-w-3xl bg-brand-gradient rounded-full mt-10" />
+            <div className="hero-subtitle h-1 w-full max-w-3xl bg-brand-gradient-glow rounded-full mt-10" />
           </div>
 
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 max-w-5xl">

@@ -5,8 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import icons from "@/utils/iconGenerator";
 import { HeroWormhole } from "@/components/HeroWormhole";
+import { ServiceVisual } from "@/components/ServiceVisual";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -65,11 +65,7 @@ const SearchMarketingPPC = () => {
             </h1>
             <div className="h-1 w-40 bg-brand-gradient rounded-full lg:col-start-1 -mt-4" />
             <div className="media-frame aspect-[4/3] w-full max-w-md lg:max-w-none lg:col-start-2 lg:row-start-1 lg:row-span-3">
-              <img
-                src={icons.searchMarketing}
-                alt="Search Marketing"
-                className="w-full h-full object-cover"
-              />
+              <ServiceVisual kind="search" label="Search Marketing" className="w-full h-full" />
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm lg:col-start-1">
               <div>

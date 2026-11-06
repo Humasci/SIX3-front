@@ -4,7 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import icons from "@/utils/iconGenerator";
+import { ServiceVisual } from "@/components/ServiceVisual";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -20,7 +20,7 @@ const servicePreviews = [
       "Automated reporting with performance alerts"
     ],
     path: "/services/search-marketing-ppc",
-    image: icons.searchMarketing
+    visual: "search" as const
   },
   {
     number: "02",
@@ -33,7 +33,7 @@ const servicePreviews = [
       "Multi-language content localization"
     ],
     path: "/services/content-creation",
-    image: icons.video
+    visual: "video" as const
   },
   {
     number: "03",
@@ -46,7 +46,7 @@ const servicePreviews = [
       "Industry-specific solutions (legal, healthcare, real estate)"
     ],
     path: "/services/ai-dev-automation",
-    image: icons.automation
+    visual: "agents" as const
   }
 ];
 
@@ -127,12 +127,8 @@ export const ServicePreviews = () => {
 
                 <div className="relative">
                   <div className="media-frame aspect-[4/3] flex items-center justify-center">
-                    {service.image ? (
-                      <img 
-                        src={service.image} 
-                        alt={service.title}
-                        className="w-full h-full object-cover"
-                      />
+                    {service.visual ? (
+                      <ServiceVisual kind={service.visual} label={service.title} className="w-full h-full" />
                     ) : (
                       <div className="text-center">
                         <div className="text-6xl font-light text-accent/30 mb-4">{service.number}</div>

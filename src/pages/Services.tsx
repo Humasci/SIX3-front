@@ -7,8 +7,8 @@ import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowUpRight } from "lucide-react";
-import icons from "@/utils/iconGenerator";
 import { HeroWormhole } from "@/components/HeroWormhole";
+import { ServiceVisual } from "@/components/ServiceVisual";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -24,7 +24,7 @@ const services = [
       "Advanced audience segmentation and targeting",
       "Custom attribution modeling and automated alerts"
     ],
-    image: icons.searchMarketing,
+    visual: "search" as const,
     path: "/services/search-marketing-ppc"
   },
   {
@@ -38,7 +38,7 @@ const services = [
       "UGC campaign automation and video ads",
       "Multi-language content localization"
     ],
-    image: icons.video,
+    visual: "video" as const,
     path: "/services/content-creation"
   },
   {
@@ -52,7 +52,7 @@ const services = [
       "Customer service automation with 24/7 support",
       "Industry-specific solutions (legal, healthcare, real estate)"
     ],
-    image: icons.automation,
+    visual: "agents" as const,
     path: "/services/ai-dev-automation"
   },
   {
@@ -66,7 +66,7 @@ const services = [
       "Reinforcement Learning from Human Feedback (RLHF)",
       "Full model ownership with ongoing retraining support"
     ],
-    image: icons.mlFineTuning,
+    visual: "ml" as const,
     path: "/services/ml-fine-tuning"
   }
 ];
@@ -191,11 +191,7 @@ const Services = () => {
 
                     <div className="relative">
                       <div className="media-frame aspect-[4/3]">
-                        <img
-                          src={service.image}
-                          alt={service.title}
-                          className="w-full h-full object-cover"
-                        />
+                        <ServiceVisual kind={service.visual} label={service.title} className="w-full h-full" />
                       </div>
                     </div>
                   </div>
