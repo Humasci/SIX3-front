@@ -19,8 +19,13 @@ const color = (t: number, a: number) => {
 };
 
 // A particle with a home position in a 100×75 design space; `kind` says how it moves
-type P = { x: number; y: number; r: number; seed: number; group: number; f: number; kind: "dot" | "bar" | "wave" | "ring" | "dust" };
+type P = { x: number; y: number; r: number; seed: number; group: number; f: number; kind: "dot" | "bar" | "wave" | "ring" | "dust"; c?: number };
 type Edge = { a: [number, number]; b: [number, number]; speed: number; offset: number };
+
+// Same palette as the hero cloud: mostly violets, with orange flecks that grow towards the right
+const VIOLETS = ["#7c3aed", "#8b5cf6", "#a855f7", "#6d28d9", "#c084fc", "#6366f1"];
+const ORANGES = ["#f97316", "#fb923c", "#ea580c"];
+const PALETTE = [...VIOLETS, ...ORANGES];
 
 const rand = (seed: number) => () => (seed = (seed * 16807) % 2147483647) / 2147483647;
 
@@ -93,7 +98,22 @@ const build = (kind: ServiceVisualKind) => {
       }));
     }
   }
-  for (let i = 0; i < 260; i++) ps.push({ x: rnd() * 100, y: rnd() * 75, r: 0.2 + rnd() * 0.25, seed: rnd() * 100, group: 0, f: 0, kind: "dust" });
+  // Denser, finer texture: each particle gets a near twin, so shapes read as fine grain like the hero
+  const twins: P[] = ps.map((p) => ({
+    ...p,
+    x: p.kind === "ring" ? p.x : p.x + (rnd() - 0.5) * 0.9,
+    y: p.kind === "ring" || p.kind === "bar" ? p.y : p.y + (rnd() - 0.5) * 0.9,
+    seed: p.kind === "ring" ? p.seed + (rnd() - 0.5) * 0.02 : rnd() * 100,
+    r: p.r * (0.6 + rnd() * 0.3),
+  }));
+  ps.push(...twins);
+  for (let i = 0; i < 320; i++) ps.push({ x: rnd() * 100, y: rnd() * 75, r: 0.15 + rnd() * 0.2, seed: rnd() * 100, group: 0, f: 0, kind: "dust" });
+  for (const p of ps) {
+    const toward = Math.min(1, Math.max(0, p.x / 100));
+    p.c = rnd() < 0.06 + Math.pow(toward, 2.2) * 0.4
+      ? VIOLETS.length + Math.floor(rnd() * ORANGES.length)
+      : Math.floor(rnd() * VIOLETS.length);
+  }
   return { ps, edges };
 };
 
@@ -124,7 +144,7 @@ export const ServiceVisual = ({ kind, className = "", label }: { kind: ServiceVi
       const s = Math.min(W / 100, H / 75);
       const ox = (W - 100 * s) / 2, oy = (H - 75 * s) / 2;
       const glow = ctx.createRadialGradient(W * 0.5, H * 0.48, 0, W * 0.5, H * 0.48, Math.max(W, H) * 0.6);
-      glow.addColorStop(0, "rgba(124,58,237,0.22)");
+      glow.addColorStop(0, "rgba(124,58,237,0.12)");
       glow.addColorStop(0.6, "rgba(124,58,237,0.04)");
       glow.addColorStop(1, "rgba(124,58,237,0)");
       ctx.fillStyle = glow;
@@ -133,7 +153,7 @@ export const ServiceVisual = ({ kind, className = "", label }: { kind: ServiceVi
       const sweep = (time * 0.18) % 1.4 - 0.2;
 
       for (const p of ps) {
-        let x = p.x, y = p.y, a = 0.55;
+        let x = p.x, y = p.y, a = 0.42;
         const wob = Math.sin(time * 1.3 + p.seed) * 0.25;
         if (p.kind === "bar") {
           const h = 0.55 + 0.45 * Math.sin(time * 0.9 + p.group * 1.3);
@@ -154,9 +174,9 @@ export const ServiceVisual = ({ kind, className = "", label }: { kind: ServiceVi
         }
         // A soft highlight sweeps across left to right
         const lit = Math.exp(-Math.pow((x / 100 - sweep) / 0.12, 2));
-        ctx.globalAlpha = Math.min(0.9, a + lit * 0.35);
-        ctx.fillStyle = color(x / 100 * 0.9 + 0.05, 1);
-        const r = p.r * s * 0.7 * (1 + lit * 0.5);
+        ctx.globalAlpha = Math.min(0.62, a + lit * 0.18);
+        ctx.fillStyle = PALETTE[p.c ?? 0];
+        const r = p.r * s * 0.55 * (1 + lit * 0.3);
         ctx.beginPath();
         ctx.arc(ox + x * s, oy + y * s, Math.max(0.5, r), 0, Math.PI * 2);
         ctx.fill();
@@ -167,10 +187,10 @@ export const ServiceVisual = ({ kind, className = "", label }: { kind: ServiceVi
         for (let k = 0; k < 3; k++) {
           const t = (time * e.speed + e.offset + k * 0.07) % 1;
           const x = e.a[0] + (e.b[0] - e.a[0]) * t, y = e.a[1] + (e.b[1] - e.a[1]) * t;
-          ctx.globalAlpha = 0.95 - k * 0.3;
+          ctx.globalAlpha = 0.7 - k * 0.22;
           ctx.fillStyle = color(0.55 + t * 0.45, 1);
           ctx.beginPath();
-          ctx.arc(ox + x * s, oy + y * s, (0.7 - k * 0.18) * s, 0, Math.PI * 2);
+          ctx.arc(ox + x * s, oy + y * s, (0.55 - k * 0.14) * s, 0, Math.PI * 2);
           ctx.fill();
         }
       }

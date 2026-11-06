@@ -94,7 +94,7 @@ export const About = () => {
             Our advanced automation solutions maximize ROI and scale your business operations efficiently.
           </p>
           <Link to="/about">
-            <Button variant="outline" className="about-description rounded-full px-8 py-6 text-base border-foreground text-foreground bg-transparent hover:bg-foreground hover:text-background group">
+            <Button variant="outline" className="about-description rounded-full px-8 py-6 text-base border-foreground text-foreground bg-transparent hover:bg-brand-gradient-glow hover:text-[#0d0d26] hover:border-transparent hover:shadow-[0_0_32px_-10px_rgba(249,115,22,0.6)] group">
               <ArrowDown className="w-5 h-5 mr-2 group-hover:translate-y-1 transition-transform" />
               About Us
             </Button>
