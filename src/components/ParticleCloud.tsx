@@ -124,20 +124,26 @@ export const ParticleCloud = ({ className = "" }: { className?: string }) => {
     let particles: Particle[] = [];
     let W = 0, H = 0, dpr = 1, mobile = false;
     let raf = 0, visible = true, last = performance.now(), time = 0;
-    // Adaptive quality: draw fewer particles if frames run slow on this device
-    let drawCount = Infinity, slowFrames = 0;
+    // Adaptive quality: start with a light load sized to the device, add particles while frames
+    // stay smooth and drop them if frames run slow
+    const lowEnd = (navigator.hardwareConcurrency || 8) <= 4;
+    let drawCount = 0, slowFrames = 0, fastFrames = 0;
     const mouse = { x: -9999, y: -9999 };
 
     const resize = () => {
       const rect = canvas.getBoundingClientRect();
       W = rect.width;
       H = rect.height;
-      dpr = Math.min(window.devicePixelRatio || 1, 2);
-      canvas.width = Math.round(W * dpr);
-      canvas.height = Math.round(H * dpr);
       const wasMobile = mobile;
       mobile = W < 768;
-      if (!particles.length || wasMobile !== mobile) particles = buildParticles(mobile ? 8000 : 18000);
+      // Phones get no extra detail beyond 1.5x: the dust is fine enough and it saves a lot of pixels
+      dpr = Math.min(window.devicePixelRatio || 1, mobile ? 1.5 : 2);
+      canvas.width = Math.round(W * dpr);
+      canvas.height = Math.round(H * dpr);
+      if (!particles.length || wasMobile !== mobile) {
+        particles = buildParticles(mobile ? 8000 : 18000);
+        drawCount = mobile ? (lowEnd ? 2500 : 4000) : lowEnd ? 6000 : 10000;
+      }
     };
 
     const draw = () => {
@@ -201,7 +207,8 @@ export const ParticleCloud = ({ className = "" }: { className?: string }) => {
       }
 
       const depth = S * 0.9;
-      const base = mobile ? 0.95 : 1;
+      // With fewer particles, each one glows a little more so the cloud keeps its brightness
+      const base = (mobile ? 0.95 : 1) * Math.min(1.6, Math.sqrt(particles.length / Math.max(1, n)));
       // Additive blending: where particles gather, the light builds up into glowing clumps and trails
       ctx.globalCompositeOperation = "lighter";
       for (let i = 0; i < n; i++) {
@@ -219,12 +226,20 @@ export const ParticleCloud = ({ className = "" }: { className?: string }) => {
 
     const loop = (now: number) => {
       const elapsed = now - last;
-      if (elapsed > 26 && drawCount > 3000) {
-        if (++slowFrames > 20) {
-          drawCount = Math.round(Math.min(drawCount, particles.length) * 0.75);
+      if (elapsed > 26) {
+        fastFrames = 0;
+        if (++slowFrames > 20 && drawCount > 1200) {
+          drawCount = Math.max(1200, Math.round(drawCount * 0.7));
           slowFrames = 0;
         }
-      } else slowFrames = Math.max(0, slowFrames - 1);
+      } else {
+        slowFrames = Math.max(0, slowFrames - 1);
+        // Steady 60fps for a second or so: add more particles, up to the full cloud
+        if (elapsed < 19 && ++fastFrames > 60 && drawCount < particles.length) {
+          drawCount = Math.min(particles.length, Math.round(drawCount * 1.25));
+          fastFrames = 0;
+        }
+      }
       const dt = Math.min(0.05, elapsed / 1000);
       last = now;
       time += dt;
@@ -249,10 +264,13 @@ export const ParticleCloud = ({ className = "" }: { className?: string }) => {
     });
     ro.observe(canvas);
 
-    const io = new IntersectionObserver(([entry]) => {
-      visible = entry.isIntersecting;
-      start();
-    });
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        visible = entry.isIntersecting;
+        start();
+      },
+      { rootMargin: "200px 0px" },
+    );
     io.observe(canvas);
 
     const onVisibility = () => start();

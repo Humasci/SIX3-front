@@ -89,7 +89,9 @@ const LawFirmAutomation = () => {
               </div>
               <div className="relative">
                 <img
-                  src="/images/use-cases/law-firm-automation.jpg"
+                  loading="lazy"
+                  decoding="async"
+                  src="/images/use-cases/law-firm-automation.webp"
                   alt="SIX³ Agency × confidential legal client"
                   className="media-frame w-full aspect-[4/3] object-cover"
                 />

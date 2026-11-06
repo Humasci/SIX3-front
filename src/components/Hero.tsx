@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ParticleCloud } from "@/components/ParticleCloud";
+import { reduceMotion } from "@/lib/motion";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -30,7 +31,7 @@ export const Hero = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.to(visualRef.current, {
+      if (!reduceMotion) gsap.to(visualRef.current, {
         yPercent: -15,
         ease: "none",
         scrollTrigger: {

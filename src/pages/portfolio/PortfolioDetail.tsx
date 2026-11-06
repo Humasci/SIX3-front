@@ -79,7 +79,7 @@ const projects = {
     challenge: "DUI cases are intensely jurisdiction-specific. Users had to navigate fragmented government websites, could easily miss critical deadlines, and had no way to identify the right attorney for their specific charge and county.",
     solution: "We built a conversational AI guidance agent with county-level jurisdiction detection, an automated deadline tracking and alert system synced to court calendars, and an AI-powered attorney and service provider matching layer over their existing directory.",
     results: [],
-    image: "/images/use-cases/media-publisher-directory-dui-guide.jpg",
+    image: "/images/use-cases/media-publisher-directory-dui-guide.webp",
   },
   "media-publisher-directory": {
     title: "Media Publisher & Directory Platform",
@@ -91,7 +91,7 @@ const projects = {
     challenge: "Thousands of directory listings and editorial pages were created and updated by hand. Content went stale, new categories took weeks to launch, and internal linking and structured data were inconsistent across the site.",
     solution: "We built a content pipeline that generates and refreshes listing pages from the publisher's data, an editorial workflow with human review before anything goes live, and a technical SEO layer that adds schema markup and internal links to every page automatically.",
     results: ["Listing pages generated and refreshed automatically from source data", "Human editorial review built into every publish", "Consistent schema markup and internal linking across the directory"],
-    image: "/images/use-cases/media-publisher-directory-dui-guide.jpg",
+    image: "/images/use-cases/media-publisher-directory-dui-guide.webp",
   },
   "ecommerce-ai-campaign": {
     title: "E-commerce AI Marketing Campaign",
@@ -103,7 +103,7 @@ const projects = {
     challenge: "Spend was spread across several ad platforms with manual bidding and no shared view of which campaigns actually drove sales.",
     solution: "We consolidated the campaigns, introduced AI bid optimization and audience segmentation on each platform, and set up attribution reporting with automated performance alerts.",
     results: ["300% ROAS improvement", "One reporting view across every ad platform", "Automated alerts on campaign performance"],
-    image: "/images/use-cases/ecommerce-noovit.jpg",
+    image: "/images/use-cases/ecommerce-noovit.webp",
   },
   "corporate-website": {
     title: "Corporate Website",
@@ -207,6 +207,7 @@ const PortfolioDetail = () => {
         <div className="max-w-7xl mx-auto">
           <div className="project-hero media-frame aspect-[2/1] w-full max-w-5xl mx-auto mb-16">
             <img
+              decoding="async"
               src={project.image}
               alt={project.title}
               className="w-full h-full object-cover"

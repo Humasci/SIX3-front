@@ -110,7 +110,9 @@ const DuiGuide = () => {
               </div>
               <div className="relative">
                 <img
-                  src="/images/use-cases/media-publisher-directory-dui-guide.jpg"
+                  loading="lazy"
+                  decoding="async"
+                  src="/images/use-cases/media-publisher-directory-dui-guide.webp"
                   alt="SIX³ Agency × dui.guide"
                   className="media-frame w-full aspect-[4/3] object-cover"
                 />

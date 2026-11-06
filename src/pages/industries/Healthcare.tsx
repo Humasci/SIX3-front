@@ -134,6 +134,8 @@ const Healthcare = () => {
             </div>
             <div className="relative">
               <img
+                loading="lazy"
+                decoding="async"
                 src={icons.healthcare}
                 alt="Healthcare Technology"
                 className="media-frame w-full max-w-lg ml-auto aspect-[4/3] object-cover"

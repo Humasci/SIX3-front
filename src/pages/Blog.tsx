@@ -1,98 +1,38 @@
 import { PageSEO } from "@/components/PageSEO";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { useEffect, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Calendar, Clock, ArrowUpRight, Tag } from "lucide-react";
-import icons from "@/utils/iconGenerator";
+import { Calendar, Clock, ArrowUpRight } from "lucide-react";
 import { HeroWormhole } from "@/components/HeroWormhole";
+import { ServiceVisual } from "@/components/ServiceVisual";
+import { BlogCard } from "@/components/BlogCard";
+import { WormholeCta } from "@/components/WormholeCta";
+import { Button } from "@/components/ui/button";
+import { blogPosts } from "@/data/blogPosts";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const blogPosts = [
-  {
-    id: 1,
-    title: "How AI is Revolutionizing PPC Campaign Management in 2025",
-    excerpt: "Discover the latest AI technologies transforming paid advertising and how they're delivering unprecedented ROI for businesses of all sizes.",
-    author: "SIX³ Team",
-    date: "November 25, 2025",
-    readTime: "8 min read",
-    category: "AI Marketing",
-    image: icons.searchMarketing,
-    featured: true
-  },
-  {
-    id: 2,
-    title: "The Complete Guide to Voice Cloning for Business Marketing",
-    excerpt: "Learn how voice cloning technology can create personalized customer experiences and scale your content production.",
-    author: "SIX³ Team",
-    date: "November 22, 2025",
-    readTime: "12 min read",
-    category: "Content Creation",
-    image: icons.contentCreation
-  },
-  {
-    id: 3,
-    title: "5 AI Automation Workflows Every Legal Firm Should Implement",
-    excerpt: "Streamline client intake, case management, and document processing with these proven AI automation strategies.",
-    author: "SIX³ Team",
-    date: "November 20, 2025",
-    readTime: "10 min read",
-    category: "Automation",
-    image: icons.legal
-  },
-  {
-    id: 4,
-    title: "Real Estate Lead Generation: AI vs Traditional Methods",
-    excerpt: "Compare the effectiveness of AI-powered lead generation against traditional real estate marketing approaches.",
-    author: "SIX³ Team",
-    date: "November 18, 2025",
-    readTime: "7 min read",
-    category: "Lead Generation",
-    image: icons.realEstate
-  },
-  {
-    id: 6,
-    title: "Healthcare AI: Improving Patient Communication and Scheduling",
-    excerpt: "How AI chatbots and automation are transforming patient experiences in healthcare practices.",
-    author: "SIX³ Team",
-    date: "November 12, 2025",
-    readTime: "9 min read",
-    category: "Healthcare AI",
-    image: icons.healthcare
-  }
-];
-
-const categories = ["All", "AI Marketing", "Content Creation", "Automation", "Lead Generation", "Machine Learning", "Healthcare AI"];
-
 const Blog = () => {
   const contentRef = useRef<HTMLDivElement>(null);
+  const [category, setCategory] = useState("All");
+  const featured = blogPosts.find((p) => p.featured);
+  const categories = useMemo(() => ["All", ...Array.from(new Set(blogPosts.map((p) => p.category)))], []);
+  const posts = blogPosts.filter((p) => !p.featured && (category === "All" || p.category === category));
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from(".blog-hero", {
+      gsap.from(".blog-hero", { opacity: 0, y: 50, duration: 1, ease: "power3.out" });
+      gsap.from(".blog-featured", {
+        scrollTrigger: { trigger: ".blog-featured", start: "top 85%" },
         opacity: 0,
-        y: 50,
-        duration: 1,
-        ease: "power3.out",
-      });
-
-      gsap.from(".blog-post-card", {
-        scrollTrigger: {
-          trigger: ".blog-grid",
-          start: "top 80%",
-        },
-        opacity: 0,
-        y: 80,
-        stagger: 0.15,
-        duration: 0.8,
+        y: 60,
+        duration: 0.9,
         ease: "power3.out",
       });
     }, contentRef);
-
     return () => ctx.revert();
   }, []);
 
@@ -105,146 +45,97 @@ const Blog = () => {
       />
       <Header />
 
-      {/* Hero Section */}
-      <section className="theme-light relative isolate overflow-hidden pt-32 pb-16 px-6 mt-5">
-        <HeroWormhole />
-        <div className="max-w-7xl mx-auto">
-          <div className="blog-hero text-center mb-16">
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-light mb-8 text-gradient w-fit pb-1 mx-auto">
-              Blog
-            </h1>
-            <div className="h-1 w-40 bg-brand-gradient rounded-full mb-8 mx-auto" />
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto mb-8">
-              Insights, strategies, and the latest trends in AI-powered marketing,
-              automation, and business transformation.
-            </p>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-6">
-              At SIX³ Agency, we publish practical guides and in-depth analysis for business owners,
-              marketers, and operators who want to use AI to grow faster. Our articles cover everything
-              from setting up your first automated lead workflow to fine-tuning language models on
-              proprietary data — written by the same team that builds these systems for clients every day.
-            </p>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Whether you're exploring AI for the first time or looking to go deeper on topics like
-              generative video, PPC automation, or industry-specific AI applications in legal,
-              healthcare, and real estate — you'll find actionable content here. New articles are
-              published weekly based on what we're seeing work in real client engagements.
-            </p>
-          </div>
+      {/* Hero */}
+      <section className="theme-light relative isolate overflow-hidden pt-40 pb-20 px-6">
+        <HeroWormhole centered />
+        <div className="blog-hero max-w-4xl mx-auto text-center">
+          <p className="mb-6 text-sm font-medium tracking-[0.3em] uppercase text-gradient w-fit mx-auto">Insights</p>
+          <h1 className="text-6xl md:text-7xl lg:text-8xl font-light mb-8 text-gradient w-fit pb-1 mx-auto">Blog</h1>
+          <div className="h-1 w-40 bg-brand-gradient rounded-full mb-8 mx-auto" />
+          <p className="text-xl md:text-2xl text-foreground/80 mb-8">
+            Insights, strategies, and the latest trends in AI-powered marketing, automation, and business transformation.
+          </p>
+          <p className="text-lg text-muted-foreground mb-6">
+            At SIX³ Agency, we publish practical guides and in-depth analysis for business owners, marketers, and
+            operators who want to use AI to grow faster. Our articles cover everything from setting up your first
+            automated lead workflow to fine-tuning language models on proprietary data — written by the same team
+            that builds these systems for clients every day.
+          </p>
+          <p className="text-lg text-muted-foreground">
+            Whether you're exploring AI for the first time or looking to go deeper on topics like generative video,
+            PPC automation, or industry-specific AI applications in legal, healthcare, and real estate — you'll find
+            actionable content here.
+          </p>
         </div>
       </section>
 
-      {/* Featured Post */}
-      {blogPosts.filter(post => post.featured).map(post => (
-        <section key={post.id} className="py-16 px-6 bg-secondary/20">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="space-y-6">
-                <div className="flex items-center gap-4 text-sm">
-                  <span className="bg-accent/10 text-gradient px-3 py-1 rounded-full">Featured</span>
-                  <span className="bg-secondary px-3 py-1 rounded-full">{post.category}</span>
+      {/* Featured post */}
+      {featured && (
+        <section className="py-24 px-6">
+          <div className="blog-featured max-w-7xl mx-auto">
+            <Link
+              to={`/blog/${featured.slug}`}
+              className="group grid lg:grid-cols-2 overflow-hidden rounded-3xl border border-border bg-card transition-all duration-300 hover:border-[#a855f7]/50 hover:shadow-[0_30px_80px_-35px_rgba(124,58,237,0.7)]"
+            >
+              <div className="aspect-[4/3] lg:aspect-auto lg:min-h-[420px] bg-[#0e0e2a]">
+                <ServiceVisual kind={featured.visual} label={featured.title} className="w-full h-full" />
+              </div>
+              <div className="flex flex-col justify-center gap-6 p-8 md:p-12">
+                <div className="flex flex-wrap items-center gap-3 text-sm">
+                  <span className="rounded-full bg-brand-gradient-button px-3 py-1 font-medium text-white">Featured</span>
+                  <span className="rounded-full border border-[#a855f7]/40 px-3 py-1 text-gradient">{featured.category}</span>
                 </div>
-                <h2 className="text-4xl md:text-5xl font-light leading-tight">
-                  {post.title}
-                </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  {post.excerpt}
-                </p>
+                <h2 className="text-3xl md:text-5xl font-light leading-tight text-foreground">{featured.title}</h2>
+                <div className="h-1 w-24 rounded-full bg-brand-gradient-glow" />
+                <p className="text-lg text-muted-foreground leading-relaxed">{featured.excerpt}</p>
                 <div className="flex items-center gap-6 text-sm text-muted-foreground">
-                  <div className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4" />
-                    <span>{post.date}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Clock className="w-4 h-4" />
-                    <span>{post.readTime}</span>
-                  </div>
+                  <span className="flex items-center gap-2"><Calendar className="w-4 h-4" />{featured.date}</span>
+                  <span className="flex items-center gap-2"><Clock className="w-4 h-4" />{featured.readTime}</span>
                 </div>
-                <Button className="group">
-                  Read Full Article
-                  <ArrowUpRight className="w-4 h-4 ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                </Button>
+                <span className="inline-flex w-fit items-center gap-2 rounded-full border border-foreground/60 px-6 py-3 font-medium transition-all duration-300 group-hover:border-transparent group-hover:bg-brand-gradient-button group-hover:text-white">
+                  Read article
+                  <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                </span>
               </div>
-              <div className="relative">
-                <div className="media-frame aspect-[4/3]">
-                  <img 
-                    src={post.image} 
-                    alt={post.title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-            </div>
+            </Link>
           </div>
         </section>
-      ))}
+      )}
 
-      {/* Category Filter */}
-      <section className="py-16 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-wrap gap-4 justify-center mb-12">
-            {categories.map((category) => (
-              <button
-                key={category}
-                className={`px-6 py-3 rounded-full transition-all ${
-                  category === "All" 
-                    ? "bg-brand-gradient text-background" 
-                    : "bg-secondary hover:bg-brand-gradient-button hover:text-white"
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Blog Grid */}
+      {/* Filter + grid */}
       <section className="pb-24 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="blog-grid grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.filter(post => !post.featured).map((post) => (
-              <article key={post.id} className="blog-post-card group cursor-pointer">
-                <div className="bg-background border border-border overflow-hidden hover:border-accent/50 transition-all duration-300 hover:translate-y-[-4px] hover:shadow-lg">
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <img 
-                      src={post.image} 
-                      alt={post.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <div className="flex items-center gap-2 mb-4">
-                      <Tag className="w-4 h-4 icon-gradient" />
-                      <span className="text-sm text-gradient">{post.category}</span>
-                    </div>
-                    <h3 className="text-xl font-medium mb-3 group-hover:text-gradient transition-colors">
-                      {post.title}
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed mb-4">
-                      {post.excerpt}
-                    </p>
-                    <div className="flex items-center justify-between text-sm text-muted-foreground">
-                      <div className="flex items-center gap-4">
-                        <div className="flex items-center gap-2">
-                          <Calendar className="w-4 h-4" />
-                          <span>{post.date}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <Clock className="w-4 h-4" />
-                          <span>{post.readTime}</span>
-                        </div>
-                      </div>
-                      <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                    </div>
-                  </div>
-                </div>
-              </article>
+          <div className="mb-6 text-center">
+            <h2 className="text-4xl md:text-5xl font-light mb-4">Latest articles</h2>
+            <div className="h-1 w-24 rounded-full bg-brand-gradient mx-auto" />
+          </div>
+          <div className="flex flex-wrap gap-3 justify-center my-12" role="tablist" aria-label="Filter by category">
+            {categories.map((c) => (
+              <Button
+                key={c}
+                role="tab"
+                aria-selected={category === c}
+                variant="outline"
+                onClick={() => setCategory(c)}
+                className={`rounded-full px-6 py-2 ${
+                  category === c ? "border-transparent bg-brand-gradient-button text-white" : "border-border bg-transparent text-muted-foreground"
+                }`}
+              >
+                {c}
+              </Button>
             ))}
           </div>
+          {posts.length > 0 ? (
+            <div className="blog-grid grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {posts.map((post) => <BlogCard key={post.slug} post={post} />)}
+            </div>
+          ) : (
+            <p className="text-center text-muted-foreground">No other articles in this category yet.</p>
+          )}
         </div>
       </section>
 
+      <WormholeCta buttonLabel="Start Your AI Journey" />
       <Footer />
     </div>
   );

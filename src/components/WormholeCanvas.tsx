@@ -58,7 +58,8 @@ export const WormholeCanvas = ({ className = "", variant = "dark", centerX = 0.5
       const rect = canvas.getBoundingClientRect();
       W = rect.width;
       H = rect.height;
-      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      // Phones get no extra detail beyond 1.5x
+      dpr = Math.min(window.devicePixelRatio || 1, W < 768 ? 1.5 : 2);
       canvas.width = Math.round(W * dpr);
       canvas.height = Math.round(H * dpr);
       const was = vertical;
@@ -173,19 +174,30 @@ export const WormholeCanvas = ({ className = "", variant = "dark", centerX = 0.5
       raf = requestAnimationFrame(loop);
     };
 
-    resize();
-    draw();
+    // Nothing is built or drawn until the canvas is about to scroll into view
+    let ready = false;
+    const prepare = () => {
+      if (ready) return;
+      ready = true;
+      resize();
+      draw();
+    };
 
     const ro = new ResizeObserver(() => {
+      if (!ready) return;
       resize();
       draw();
     });
     ro.observe(canvas);
 
-    const io = new IntersectionObserver(([entry]) => {
-      visible = entry.isIntersecting;
-      start();
-    });
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        visible = entry.isIntersecting;
+        if (visible) prepare();
+        start();
+      },
+      { rootMargin: "200px 0px" },
+    );
     io.observe(canvas);
 
     const onVisibility = () => start();

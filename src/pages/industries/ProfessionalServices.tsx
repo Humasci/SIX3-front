@@ -144,6 +144,8 @@ const ProfessionalServices = () => {
             </div>
             <div className="relative">
               <img
+                loading="lazy"
+                decoding="async"
                 src={icons.professionalServices}
                 alt="Professional Services"
                 className="media-frame w-full max-w-lg ml-auto aspect-[4/3] object-cover"

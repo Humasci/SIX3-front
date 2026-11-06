@@ -1,52 +1,47 @@
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./i18n";
 import { ScrollToTop } from "./components/ScrollToTop";
 import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
-import SearchMarketingPPC from "./pages/services/SearchMarketingPPC";
-import ContentCreation from "./pages/services/ContentCreation";
-import AIDevAutomation from "./pages/services/AIDevAutomation";
-import MLFineTuning from "./pages/services/MLFineTuning";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Portfolio from "./pages/Portfolio";
-import PortfolioDetail from "./pages/portfolio/PortfolioDetail";
-import Services from "./pages/Services";
-import Legal from "./pages/industries/Legal";
-import RealEstate from "./pages/industries/RealEstate";
-import Healthcare from "./pages/industries/Healthcare";
-import ProfessionalServices from "./pages/industries/ProfessionalServices";
-import LocalBusiness from "./pages/industries/LocalBusiness";
-import LawFirmAutomation from "./pages/use-cases/LawFirmAutomation";
-import RealEstateLeadSystem from "./pages/use-cases/RealEstateLeadSystem";
-import DuiGuide from "./pages/use-cases/DuiGuide";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import Terms from "./pages/Terms";
-import CookiePolicy from "./pages/CookiePolicy";
-import Blog from "./pages/Blog";
-
-const queryClient = new QueryClient();
+const NotFound = lazy(() => import("./pages/NotFound"));
+const SearchMarketingPPC = lazy(() => import("./pages/services/SearchMarketingPPC"));
+const ContentCreation = lazy(() => import("./pages/services/ContentCreation"));
+const AIDevAutomation = lazy(() => import("./pages/services/AIDevAutomation"));
+const MLFineTuning = lazy(() => import("./pages/services/MLFineTuning"));
+const About = lazy(() => import("./pages/About"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Portfolio = lazy(() => import("./pages/Portfolio"));
+const PortfolioDetail = lazy(() => import("./pages/portfolio/PortfolioDetail"));
+const Services = lazy(() => import("./pages/Services"));
+const Legal = lazy(() => import("./pages/industries/Legal"));
+const RealEstate = lazy(() => import("./pages/industries/RealEstate"));
+const Healthcare = lazy(() => import("./pages/industries/Healthcare"));
+const ProfessionalServices = lazy(() => import("./pages/industries/ProfessionalServices"));
+const LocalBusiness = lazy(() => import("./pages/industries/LocalBusiness"));
+const LawFirmAutomation = lazy(() => import("./pages/use-cases/LawFirmAutomation"));
+const RealEstateLeadSystem = lazy(() => import("./pages/use-cases/RealEstateLeadSystem"));
+const DuiGuide = lazy(() => import("./pages/use-cases/DuiGuide"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const Terms = lazy(() => import("./pages/Terms"));
+const CookiePolicy = lazy(() => import("./pages/CookiePolicy"));
+const Blog = lazy(() => import("./pages/Blog"));
+const BlogPost = lazy(() => import("./pages/BlogPost"));
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <svg width="0" height="0" className="absolute" aria-hidden="true">
-        <defs>
-          <linearGradient id="brand-grad" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="24" y2="24">
-            <stop offset="0%" stopColor="#7c3aed" />
-            <stop offset="50%" stopColor="#a855f7" />
-            <stop offset="100%" stopColor="#f97316" />
-          </linearGradient>
-        </defs>
-      </svg>
-      <BrowserRouter>
-        <ScrollToTop />
+  <>
+    <svg width="0" height="0" className="absolute" aria-hidden="true">
+      <defs>
+        <linearGradient id="brand-grad" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="24" y2="24">
+          <stop offset="0%" stopColor="#7c3aed" />
+          <stop offset="50%" stopColor="#a855f7" />
+          <stop offset="100%" stopColor="#f97316" />
+        </linearGradient>
+      </defs>
+    </svg>
+    <BrowserRouter>
+      <ScrollToTop />
+      {/* Each page's code loads only when it's visited; the homepage ships in the main bundle */}
+      <Suspense fallback={<div className="min-h-screen bg-background" />}>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
@@ -70,12 +65,13 @@ const App = () => (
           <Route path="/terms" element={<Terms />} />
           <Route path="/cookie-policy" element={<CookiePolicy />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
+      </Suspense>
+    </BrowserRouter>
+  </>
 );
 
 export default App;
