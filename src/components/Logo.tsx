@@ -7,25 +7,23 @@ interface LogoProps {
   isScrolled?: boolean;
 }
 
-// The ³ in SIX³, drawn as a clump of lit, overlapping particles
+// The ³ in SIX³, drawn as a fine dust of tiny shaded spheres
 export const BrandMark = ({ className = "" }: { className?: string }) => {
-  const highlightId = `brand-hl-${useId().replace(/:/g, "")}`;
+  const shadeId = `brand-shade-${useId().replace(/:/g, "")}`;
   return (
     <svg viewBox="0 0 24 24" className={className} aria-hidden="true">
       <defs>
-        <radialGradient id={highlightId} cx="0.34" cy="0.3" r="0.75">
-          <stop offset="0" stopColor="#fff" stopOpacity="0.75" />
-          <stop offset="0.28" stopColor="#fff" stopOpacity="0.18" />
-          <stop offset="0.6" stopColor="#fff" stopOpacity="0" />
-          <stop offset="1" stopColor="#0b0820" stopOpacity="0.55" />
+        <radialGradient id={shadeId} cx="0.4" cy="0.36" r="0.66">
+          <stop offset="0" stopColor="#fff" stopOpacity="0.22" />
+          <stop offset="0.55" stopColor="#fff" stopOpacity="0" />
+          <stop offset="1" stopColor="#0b0820" stopOpacity="0.38" />
         </radialGradient>
       </defs>
+      {/* Nearer particles are drawn last and brighter, which gives the 3 its depth */}
       {PARTICLE_THREE.map(([x, y, r, color, depth], i) => (
-        <g key={i}>
+        <g key={i} opacity={0.5 + depth * 0.5}>
           <circle cx={x} cy={y} r={r} fill={color} />
-          <circle cx={x} cy={y} r={r} fill={`url(#${highlightId})`} />
-          {/* Beads further back sit in shadow, which gives the clump its depth */}
-          <circle cx={x} cy={y} r={r} fill="#0b0820" opacity={(1 - depth) * 0.38} />
+          <circle cx={x} cy={y} r={r} fill={`url(#${shadeId})`} />
         </g>
       ))}
     </svg>
@@ -40,7 +38,7 @@ export const Logo = ({ className = "", isScrolled = false }: LogoProps) => (
       }`}
     >
       SIX
-      <BrandMark className="w-[0.66em] h-[0.66em] -mt-[0.2em] ml-[0.03em] drop-shadow-[0_0_5px_rgba(168,85,247,0.45)]" />
+      <BrandMark className="w-[0.66em] h-[0.66em] -mt-[0.2em] ml-[0.03em]" />
     </span>
     <span className="h-4 w-px bg-gradient-to-b from-[#7c3aed] to-[#f97316] opacity-70" aria-hidden="true" />
     <span

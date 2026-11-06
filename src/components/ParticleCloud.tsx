@@ -16,6 +16,15 @@ const LOBES: [number, number, number, number][] = [
   [-0.8, 0.42, -0.18, 0.4],
 ];
 
+// Curved ribbons particles flow along: vertical offset, wave amplitude, frequency, phase
+const STREAMS: [number, number, number, number][] = [
+  [-0.18, 0.32, 1.5, 0.0],
+  [0.12, 0.26, 1.9, 2.1],
+  [0.32, 0.22, 1.2, 4.0],
+  [-0.42, 0.18, 2.3, 1.2],
+  [0.02, 0.4, 1.0, 5.3],
+];
+
 type Particle = {
   lobe: number;
   x: number;
@@ -42,14 +51,14 @@ const mix = (hex: string, target: number, amount: number) => {
 };
 
 const makeSprite = (hex: string) => {
-  const s = 64;
+  const s = 16;
   const c = document.createElement("canvas");
   c.width = c.height = s;
   const g = c.getContext("2d")!;
-  const grad = g.createRadialGradient(s * 0.36, s * 0.32, s * 0.04, s * 0.5, s * 0.5, s * 0.5);
-  grad.addColorStop(0, mix(hex, 255, 0.6));
-  grad.addColorStop(0.35, hex);
-  grad.addColorStop(1, mix(hex, 0, 0.6));
+  const grad = g.createRadialGradient(s * 0.42, s * 0.38, s * 0.04, s * 0.5, s * 0.5, s * 0.5);
+  grad.addColorStop(0, mix(hex, 255, 0.18));
+  grad.addColorStop(0.5, hex);
+  grad.addColorStop(1, mix(hex, 0, 0.45));
   g.fillStyle = grad;
   g.beginPath();
   g.arc(s / 2, s / 2, s / 2, 0, Math.PI * 2);
@@ -76,7 +85,7 @@ const buildParticles = (count: number): Particle[] => {
   const weights = LOBES.map(([, , , r]) => r * r * r);
   const total = weights.reduce((a, b) => a + b, 0);
   for (let i = 0; i < count; i++) {
-    const wisp = Math.random() < 0.12;
+    const wisp = Math.random() < 0.3;
     let lobe = 0;
     let pick = Math.random() * total;
     while (pick > weights[lobe] && lobe < LOBES.length - 1) pick -= weights[lobe++];
@@ -87,11 +96,11 @@ const buildParticles = (count: number): Particle[] => {
       gx *= 1.8 / len; gy *= 1.8 / len; gz *= 1.8 / len;
     }
     const x = wisp ? (Math.random() - 0.5) * 4.2 : gx * r * 0.4;
-    const y = wisp ? gauss() * 0.35 : gy * r * 0.38;
-    const z = wisp ? gauss() * 0.4 : gz * r * 0.4;
+    const y = wisp ? gauss() * 0.035 : gy * r * 0.38;
+    const z = wisp ? gauss() * 0.035 : gz * r * 0.4;
     const core = wisp ? 0 : Math.max(0, 1 - Math.min(1.8, len) / 1.8);
     ps.push({
-      lobe, x, y, z, core, wisp,
+      lobe: wisp ? Math.floor(Math.random() * STREAMS.length) : lobe, x, y, z, core, wisp,
       color: pickColor(x + (wisp ? 0 : LOBES[lobe][0]), y + (wisp ? 0 : LOBES[lobe][1])),
       size: 0.55 + Math.random() * 0.8,
       seed: Math.random() * 100,
@@ -115,6 +124,8 @@ export const ParticleCloud = ({ className = "" }: { className?: string }) => {
     let particles: Particle[] = [];
     let W = 0, H = 0, dpr = 1, mobile = false;
     let raf = 0, visible = true, last = performance.now(), time = 0;
+    // Adaptive quality: draw fewer particles if frames run slow on this device
+    let drawCount = Infinity, slowFrames = 0;
     const mouse = { x: -9999, y: -9999 };
 
     const resize = () => {
@@ -126,7 +137,7 @@ export const ParticleCloud = ({ className = "" }: { className?: string }) => {
       canvas.height = Math.round(H * dpr);
       const wasMobile = mobile;
       mobile = W < 768;
-      if (!particles.length || wasMobile !== mobile) particles = buildParticles(mobile ? 1300 : 3400);
+      if (!particles.length || wasMobile !== mobile) particles = buildParticles(mobile ? 2800 : 7500);
     };
 
     const draw = () => {
@@ -136,7 +147,7 @@ export const ParticleCloud = ({ className = "" }: { className?: string }) => {
       const cx0 = mobile ? W * 0.58 : W * 0.71;
       const cy0 = mobile ? H * 0.74 : H * 0.44;
       const S = mobile ? Math.min(W * 0.26, H * 0.12) : Math.min(W * 0.155, H * 0.25);
-      const r0 = mobile ? 2.3 : Math.max(2.4, Math.min(H * 0.0048, 4.6));
+      const r0 = mobile ? 0.95 : Math.max(1, Math.min(H * 0.0016, 1.7));
       const F = 1100;
 
       const ry = Math.sin(time * 0.16) * 0.5;
@@ -144,15 +155,18 @@ export const ParticleCloud = ({ className = "" }: { className?: string }) => {
       const cY = Math.cos(ry), sY = Math.sin(ry);
       const cX = Math.cos(rx), sX = Math.sin(rx);
 
-      for (const p of particles) {
+      const n = Math.min(particles.length, drawCount);
+      for (let i = 0; i < n; i++) {
+        const p = particles[i];
         let x: number, y: number, z: number;
         if (p.wisp) {
           // Wisps blow slowly across and wrap round
           const span = 4.2;
-          x = ((((p.x + time * 0.05 + span / 2) % span) + span) % span) - span / 2;
-          y = p.y + Math.sin(time * 0.4 + p.seed) * 0.08;
-          z = p.z;
-          p.alpha = 0.45 * Math.pow(Math.max(0, 1 - Math.abs(x) / (span / 2)), 1.5);
+          const [off, amp, freq, phase] = STREAMS[p.lobe];
+          x = ((((p.x + time * 0.06 + span / 2) % span) + span) % span) - span / 2;
+          y = off + amp * Math.sin(freq * x + phase + time * 0.3) + p.y;
+          z = 0.35 * Math.cos(freq * 0.8 * x + phase) + p.z;
+          p.alpha = Math.pow(Math.max(0, 1 - Math.abs(x) / (span / 2)), 1.2);
         } else {
           const [lx, ly, lz, lr] = LOBES[p.lobe];
           const swell = 1 + Math.sin(time * 0.35 + p.lobe * 1.7) * 0.08;
@@ -184,21 +198,32 @@ export const ParticleCloud = ({ className = "" }: { className?: string }) => {
         p.oy += ((push ? (ddy / dist) * push * 50 : 0) - p.oy) * 0.08;
       }
 
-      particles.sort((a, b) => a.pz - b.pz);
       const depth = S * 0.9;
-      const base = mobile ? 0.5 : 1;
-      for (const p of particles) {
-        const r = r0 * p.size * p.ps * (p.wisp ? 0.6 : 0.75 + p.core * 0.4);
-        if (r < 0.4 || p.alpha <= 0.01) continue;
+      const base = mobile ? 0.5 : 0.95;
+      // Additive blending: where particles gather, the light builds up into glowing clumps and trails
+      ctx.globalCompositeOperation = "lighter";
+      for (let i = 0; i < n; i++) {
+        const p = particles[i];
+        const near0 = Math.min(1, Math.max(0, (p.pz + S * 0.9) / (S * 1.8)));
+        const r = r0 * p.size * p.ps * (0.7 + near0 * 0.6) * (p.wisp ? 0.85 : 0.8 + p.core * 0.4);
+        if (r < 0.3 || p.alpha <= 0.01) continue;
         const near = Math.min(1, Math.max(0, (p.pz + depth) / (2 * depth)));
         ctx.globalAlpha = base * p.alpha * (0.4 + near * 0.6);
         ctx.drawImage(sprites[p.color], p.px - r, p.py - r, r * 2, r * 2);
       }
       ctx.globalAlpha = 1;
+      ctx.globalCompositeOperation = "source-over";
     };
 
     const loop = (now: number) => {
-      const dt = Math.min(0.05, (now - last) / 1000);
+      const elapsed = now - last;
+      if (elapsed > 26 && drawCount > 1500) {
+        if (++slowFrames > 20) {
+          drawCount = Math.round(Math.min(drawCount, particles.length) * 0.75);
+          slowFrames = 0;
+        }
+      } else slowFrames = Math.max(0, slowFrames - 1);
+      const dt = Math.min(0.05, elapsed / 1000);
       last = now;
       time += dt;
       draw();
