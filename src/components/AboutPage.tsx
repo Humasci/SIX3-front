@@ -49,7 +49,7 @@ export const AboutPage = () => {
     <div ref={contentRef}>
       {/* Hero Section */}
       <section className="theme-light relative isolate overflow-hidden pt-40 pb-20 px-6">
-        <HeroWormhole />
+        <HeroWormhole centered />
         <div className="max-w-7xl mx-auto">
           <div className="about-hero text-center">
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-light mb-8 text-gradient w-fit pb-1 mx-auto">
