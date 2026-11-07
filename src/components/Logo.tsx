@@ -43,7 +43,7 @@ export const Logo = ({ className = "", isScrolled = false, large = false }: Logo
         SIX
         <BrandMark className="w-[0.66em] h-[0.66em] -mt-[0.2em] ml-[0.03em]" />
       </span>
-      <span className={`${rule} w-px bg-gradient-to-b from-[#7c3aed] to-[#f97316] opacity-70 transition-all duration-400`} aria-hidden="true" />
+      <span className={`${rule} w-px bg-gradient-to-b from-[#7c3aed] via-[#f97316] to-glow opacity-80 transition-all duration-400`} aria-hidden="true" />
       <span className={`text-muted-foreground uppercase font-medium tracking-[0.28em] transition-all duration-400 ${agency}`}>
         Agency
       </span>

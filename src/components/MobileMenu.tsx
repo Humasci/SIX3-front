@@ -64,7 +64,7 @@ export const MobileMenu = () => {
           <Link to="/services" onClick={close} className="block text-3xl font-light text-foreground hover:text-gradient transition-colors">
             Services
           </Link>
-          <div className="mt-4 ml-1 space-y-3 border-l-2 border-transparent pl-4 [border-image:linear-gradient(to_bottom,#7c3aed,#f97316)_1]">
+          <div className="mt-4 ml-1 space-y-3 border-l-2 border-transparent pl-4 [border-image:linear-gradient(to_bottom,#7c3aed,#f97316,#fde7b0)_1]">
             {services.map((s) => (
               <Link key={s.to} to={s.to} onClick={close} className="block text-lg text-muted-foreground hover:text-foreground transition-colors">
                 {s.label}
