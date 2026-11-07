@@ -46,9 +46,28 @@ export const Hero = () => {
       titleRefs.current.forEach((title, index) => {
         if (title) {
           const text = title.textContent || "";
-          title.innerHTML = text.split("").map((char, i) => 
-            `<span class="char" style="display: inline-block; transform: translateY(100px) rotateX(-90deg); opacity: 0;">${char === " " ? "&nbsp;" : char}</span>`
-          ).join("");
+          // Letters animate one by one; each word stays in one piece so lines never break mid-word
+          // Lines marked hero-title-gradient get each letter coloured along the brand gradient
+          const stops = [[168, 85, 247], [249, 115, 22], [253, 231, 176]];
+          const gradient = title.classList.contains("hero-title-gradient");
+          const letters = text.replace(/ /g, "").length;
+          let n = 0;
+          const colour = () => {
+            const t = letters > 1 ? n++ / (letters - 1) : 0;
+            const seg = t < 0.6 ? 0 : 1;
+            const k = seg === 0 ? t / 0.6 : (t - 0.6) / 0.4;
+            const c = stops[seg].map((v, j) => Math.round(v + (stops[seg + 1][j] - v) * k));
+            return gradient ? ` color: rgb(${c.join(",")});` : "";
+          };
+          title.innerHTML = text
+            .split(" ")
+            .map((word) =>
+              `<span style="display: inline-block; white-space: nowrap;">${word
+                .split("")
+                .map((char) => `<span class="char" style="display: inline-block; transform: translateY(100px) rotateX(-90deg); opacity: 0;${colour()}">${char}</span>`)
+                .join("")}</span>`
+            )
+            .join(" ");
 
           gsap.to(title.querySelectorAll(".char"), {
             y: 0,
@@ -152,21 +171,15 @@ export const Hero = () => {
             </h1>
             <div
               ref={(el) => (titleRefs.current[0] = el)}
-              className="hero-title text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-none mb-2"
+              className="hero-title text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight leading-none mb-2"
             >
-              Get found.
+              Growth,
             </div>
             <div
               ref={(el) => (titleRefs.current[1] = el)}
-              className="hero-title text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-none mb-2"
+              className="hero-title hero-title-gradient text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight leading-none pb-2"
             >
-              Get chosen.
-            </div>
-            <div
-              ref={(el) => (titleRefs.current[2] = el)}
-              className="hero-title text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-none"
-            >
-              Get it done.
+              cubed.
             </div>
             <div className="hero-subtitle h-1 w-full max-w-3xl bg-brand-gradient-glow rounded-full mt-10" />
           </div>
@@ -174,7 +187,7 @@ export const Hero = () => {
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 max-w-5xl">
             <div>
               <p className="hero-subtitle text-xl md:text-2xl font-medium text-foreground max-w-xl">
-                Search and paid media that bring in enquiries, AI content that wins them, and AI agents that answer every one. One team, one system.
+                The AI marketing agency for businesses that run on enquiries. We bring more leads in, and make sure every one gets answered.
               </p>
             </div>
             

@@ -226,3 +226,4 @@ svg[class*="hover:text-gradient"]:hover,
    If JavaScript fails, it appears after 3 seconds anyway */
 #root[data-prerendered] { opacity: 0; animation: prerender-reveal 0s linear 3s forwards; }
 @keyframes prerender-reveal { to { opacity: 1; } }
+

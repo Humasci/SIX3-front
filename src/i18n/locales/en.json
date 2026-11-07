@@ -8,17 +8,17 @@
     "blog": "Blog"
   },
   "hero": {
-    "title1": "Get found.",
-    "title2": "Get chosen.",
-    "title3": "Get it done.",
-    "subtitle": "Search and paid media that bring in enquiries, AI content that wins them, and AI agents that answer every one. One team, one system.",
+    "title1": "Growth,",
+    "title2": "cubed.",
+    "title3": "",
+    "subtitle": "The AI marketing agency for businesses that run on enquiries. We bring more leads in, and make sure every one gets answered.",
     "cta": "Book an AI Growth Audit",
     "location": "London",
     "scrollDown": "Scroll Down"
   },
   "services": {
     "title": "Our Services",
-    "subtitle": "Get found, get chosen, get it done. Buy one part or all three: they're built to work together.",
+    "subtitle": "More leads in, every lead answered. Buy one part or all three: they're built to work together.",
     "searchMarketing": {
       "title": "Search Marketing & Paid Media",
       "subtitle": "AI-driven search marketing with advanced algorithm optimization",
@@ -134,7 +134,7 @@
     "emailValidation": "Please enter a valid email address"
   },
   "footer": {
-    "description": "AI marketing and automation for UK businesses. Get found, get chosen, get it done.",
+    "description": "Growth, cubed. The AI marketing agency for businesses that run on enquiries.",
     "services": "Services",
     "company": "Company",
     "legal": "Legal",

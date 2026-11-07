@@ -123,7 +123,7 @@ const Services = () => {
             </h1>
             <div className="h-1 w-40 bg-brand-gradient rounded-full mb-8 mx-auto" />
             <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto mb-12">
-              Get found, get chosen, get it done. Buy one part or all three: they're built to work together,
+              Bring more leads in, and make sure every one gets answered. Buy one part or all three: they're built to work together,
               so each one makes the others work harder.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">

@@ -10,7 +10,7 @@ export const Footer = () => {
           <div>
             <Logo className="mb-4" />
             <p className="text-sm text-muted-foreground">
-              AI marketing and automation for UK businesses. Get found, get chosen, get it done.
+              Growth, cubed. The AI marketing agency for businesses that run on enquiries.
             </p>
           </div>
           
