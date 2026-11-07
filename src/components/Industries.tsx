@@ -82,7 +82,7 @@ export const Industries = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="industries-title text-4xl md:text-5xl lg:text-6xl font-light mb-6">
-            Built for businesses that run on enquiries
+            Industries we know best
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             We work with UK small and mid-sized businesses, and know these sectors best
