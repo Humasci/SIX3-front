@@ -54,7 +54,7 @@ export const organizationJsonLd = {
   image: DEFAULT_IMAGE,
   email: "hello@six3.agency",
   description:
-    "AI marketing and automation agency in Brighton, UK: search and paid media, AI video content and AI agents that answer every enquiry, as one growth system.",
+    "AI marketing and automation agency in Brighton, UK: search and paid media, AI video content and AI agents that answer every customer, as one growth system.",
   foundingDate: "2018",
   address: { "@type": "PostalAddress", addressLocality: "Brighton", addressCountry: "GB" },
   areaServed: { "@type": "Country", name: "United Kingdom" },

@@ -91,7 +91,7 @@ export const About = () => {
           </h2>
           <p className="about-description text-lg text-muted-foreground max-w-2xl mb-12">
             SIX³ is an AI marketing and automation agency in Brighton, UK. We bring in the right leads, give
-            people a reason to choose you, and make sure every enquiry gets an answer, so each part makes the others
+            people a reason to choose you, and make sure every lead gets an answer, so each part makes the others
             work harder. That's the ³: growth that compounds instead of adding up.
           </p>
           <Link to="/about">

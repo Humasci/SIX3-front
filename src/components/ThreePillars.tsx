@@ -15,7 +15,7 @@ const pillars = [
   {
     title: "Build",
     subtitle: "Launch the system that fixes it",
-    description: "Campaigns that bring in the right enquiries, content that wins them, and AI agents that answer and book every one.",
+    description: "Campaigns that bring in the right customers, content that wins them, and AI agents that answer and book every one.",
     gradient: "linear-gradient(90deg, #a855f7 0%, #f97316 55%, #fde7b0 100%)"
   },
   {

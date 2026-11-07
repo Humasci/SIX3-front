@@ -14,25 +14,25 @@ gsap.registerPlugin(ScrollTrigger);
 const legalSolutions = [
   {
     icon: TrendingUp,
-    title: "Get found: Search & Paid Media",
+    title: "Search & Paid Media",
     description: "Google Ads and paid social for the matters you want more of, with landing pages and call tracking so you know which enquiries became instructions.",
     benefits: ["Campaigns by practice area and location", "SRA-aware ad copy and landing pages", "Monthly reporting from click to instruction"]
   },
   {
     icon: Users,
-    title: "Get chosen: AI Content Studio",
+    title: "AI Content Studio",
     description: "Short videos, explainers and ads that answer the questions clients ask before they pick a solicitor, produced on a monthly content plan.",
     benefits: ["\"What happens next\" videos for each practice area", "AI presenters and voiceovers in your firm's style", "Content you can reuse on your site, ads and social"]
   },
   {
     icon: Phone,
-    title: "Get it done: AI receptionist and intake",
+    title: "AI receptionist and intake",
     description: "An AI receptionist answers calls, chat and email, asks your intake questions and books consultations straight into fee earners' diaries.",
     benefits: ["Every enquiry answered, day and night", "Qualified against your own criteria", "Urgent matters passed to a person straight away"]
   },
   {
     icon: FileText,
-    title: "Get it done: case workflows",
+    title: "Case workflows",
     description: "Automations that move client details into your case management system, chase missing documents and keep clients updated without manual re-keying.",
     benefits: ["Client details logged once, not three times", "Document requests and reminders sent automatically", "Private AI option for firms with strict data rules"]
   }

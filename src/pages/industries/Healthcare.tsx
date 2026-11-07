@@ -15,25 +15,25 @@ gsap.registerPlugin(ScrollTrigger);
 const healthcareSolutions = [
   {
     icon: Calendar,
-    title: "Get it done: online booking and reminders",
+    title: "Online booking and reminders",
     description: "Patients book, move and cancel appointments at any hour. Reminders go out automatically and freed-up slots are offered to the waiting list.",
     benefits: ["Booking open 24/7", "Automatic reminders by SMS and email", "Cancelled slots offered to the next patient"]
   },
   {
     icon: Phone,
-    title: "Get it done: AI receptionist",
+    title: "AI receptionist",
     description: "An AI receptionist answers calls, chat and email, handles routine questions and books appointments, so your front desk isn't stuck in a phone queue.",
     benefits: ["Shorter phone queues at peak times", "Routine questions answered on the spot", "Clinical or urgent calls passed straight to your team"]
   },
   {
     icon: Shield,
-    title: "Get chosen: AI Content Studio",
+    title: "AI Content Studio",
     description: "Treatment explainers, clinician introductions and ads produced each month, so patients understand what you offer and trust you before they book.",
     benefits: ["Treatment and aftercare videos", "AI voiceovers and translations for diverse patient groups", "Content that stays within advertising rules"]
   },
   {
     icon: Users,
-    title: "Get found: Search & Paid Media",
+    title: "Search & Paid Media",
     description: "Google Ads and paid social for the treatments you want to grow, aimed at people near your clinic, with tracking from search to booking.",
     benefits: ["Campaigns by treatment and location", "Landing pages that lead to a booking", "Monthly reporting on cost per new patient"]
   }

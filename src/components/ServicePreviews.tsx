@@ -12,10 +12,10 @@ const servicePreviews = [
   {
     number: "01",
     title: "Search & Paid Media",
-    shortDescription: "Campaigns that bring in the right enquiries, not just more clicks",
+    shortDescription: "Campaigns that bring in the right customers, not just more clicks",
     features: [
       "Google Ads, Meta, LinkedIn and TikTok, planned as one budget",
-      "Landing pages built to turn visits into enquiries",
+      "Landing pages built to turn visits into leads and sales",
       "Conversion tracking so you know which ads bring customers",
       "Monthly optimisation and plain-English reporting"
     ],
@@ -38,7 +38,7 @@ const servicePreviews = [
   {
     number: "03",
     title: "AI Agents & Automation",
-    shortDescription: "AI that answers, qualifies and books every enquiry, day and night",
+    shortDescription: "AI that answers every customer and qualifies every lead, day and night",
     features: [
       "AI receptionists for phone, chat and email",
       "Lead qualification and booking straight into your calendar",
@@ -83,7 +83,7 @@ export const ServicePreviews = () => {
             One growth system.
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl">
-            Each part works on its own, but they're built to work together: better ads bring more enquiries,
+            Each part works on its own, but they're built to work together: better ads bring more leads,
             better content converts more of them, and automation makes sure none slip through.
           </p>
         </div>

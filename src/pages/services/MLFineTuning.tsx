@@ -79,7 +79,7 @@ const MLFineTuning = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm lg:col-start-1">
               <div>
                 <p className="text-muted-foreground mb-1">Format</p>
-                <p>By enquiry</p>
+                <p>On request</p>
               </div>
               <div>
                 <p className="text-muted-foreground mb-1">Built for</p>
@@ -224,7 +224,7 @@ const MLFineTuning = () => {
               <h3 className="text-3xl font-light mb-4">Yours, and part of the system</h3>
               <p className="text-lg text-muted-foreground max-w-2xl">
                 Your fine-tuned model, training data and test results belong to you. The model can also power the
-                rest of your system, for example giving your Get It Done AI receptionist accurate answers in your own
+                rest of your system, for example giving your AI receptionist accurate answers in your own
                 words.
               </p>
             </div>

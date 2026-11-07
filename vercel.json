@@ -31,5 +31,18 @@
     }
   ],
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.six3.agency"
+        }
+      ],
+      "destination": "https://six3.agency/:path*",
+      "permanent": true
+    }
+  ]
 }
