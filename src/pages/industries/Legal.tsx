@@ -1,3 +1,4 @@
+import { PageSEO } from "@/components/PageSEO";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { useEffect, useRef } from "react";
@@ -12,36 +13,36 @@ gsap.registerPlugin(ScrollTrigger);
 
 const legalSolutions = [
   {
+    icon: TrendingUp,
+    title: "Get found: Search & Paid Media",
+    description: "Google Ads and paid social for the matters you want more of, with landing pages and call tracking so you know which enquiries became instructions.",
+    benefits: ["Campaigns by practice area and location", "SRA-aware ad copy and landing pages", "Monthly reporting from click to instruction"]
+  },
+  {
     icon: Users,
-    title: "Client Intake Automation",
-    description: "AI-powered client screening and qualification system that processes initial inquiries 24/7",
-    benefits: ["60% reduction in manual intake time", "40% increase in qualified leads", "24/7 availability"]
+    title: "Get chosen: AI Content Studio",
+    description: "Short videos, explainers and ads that answer the questions clients ask before they pick a solicitor, produced on a monthly content plan.",
+    benefits: ["\"What happens next\" videos for each practice area", "AI presenters and voiceovers in your firm's style", "Content you can reuse on your site, ads and social"]
   },
   {
     icon: Phone,
-    title: "AI Phone Screening",
-    description: "Intelligent call routing and initial consultation scheduling with natural language processing",
-    benefits: ["Instant response to client calls", "Automated appointment scheduling", "Lead qualification scoring"]
+    title: "Get it done: AI receptionist and intake",
+    description: "An AI receptionist answers calls, chat and email, asks your intake questions and books consultations straight into fee earners' diaries.",
+    benefits: ["Every enquiry answered, day and night", "Qualified against your own criteria", "Urgent matters passed to a person straight away"]
   },
   {
     icon: FileText,
-    title: "Case Management Automation", 
-    description: "Streamlined document processing, case tracking, and client communication workflows",
-    benefits: ["Automated document generation", "Case progress tracking", "Client update notifications"]
-  },
-  {
-    icon: TrendingUp,
-    title: "Google Ads for Legal",
-    description: "AI-optimized PPC campaigns targeting high-intent legal keywords and local search",
-    benefits: ["Higher quality leads", "Lower cost per acquisition", "Compliance-focused ad copy"]
+    title: "Get it done: case workflows",
+    description: "Automations that move client details into your case management system, chase missing documents and keep clients updated without manual re-keying.",
+    benefits: ["Client details logged once, not three times", "Document requests and reminders sent automatically", "Private AI option for firms with strict data rules"]
   }
 ];
 
 const caseStudyStats = [
-  { label: "Administration Time Reduction", value: "60%" },
-  { label: "Increase in Qualified Leads", value: "40%" },
-  { label: "Annual Savings", value: "$150K" },
-  { label: "Client Satisfaction Improvement", value: "25%" }
+  { label: "Every enquiry answered, evenings and weekends included", value: "24/7" },
+  { label: "First reply to a new enquiry", value: "<1 min" },
+  { label: "Ad channels managed: Google, Meta, LinkedIn, TikTok", value: "4" },
+  { label: "Team running your ads, content and automation", value: "1" }
 ];
 
 const Legal = () => {
@@ -84,6 +85,11 @@ const Legal = () => {
 
   return (
     <div ref={contentRef} className="min-h-screen bg-background text-foreground">
+      <PageSEO
+        title="AI Automation for Law Firms | SIX³ Agency"
+        description="AI automation for law firms: ads that bring the right matters, content that wins trust and an AI receptionist that answers and books every enquiry."
+        canonical="https://six3.agency/industries/legal"
+      />
       <Header />
 
       {/* Hero Section */}
@@ -94,25 +100,26 @@ const Legal = () => {
             <div>
               <div className="flex items-center gap-3 mb-6">
                 <Scale className="w-8 h-8 icon-gradient" />
-                <span className="text-gradient font-medium">Legal & Law Firms</span>
+                <span className="text-gradient font-medium">Law Firms</span>
               </div>
               <h1 className="text-3xl md:text-3xl lg:text-4xl font-light mb-6 text-gradient w-fit pb-1">
-                AI-Powered Solutions for Legal Practices
+                AI automation for law firms: answer, qualify and book every enquiry
               </h1>
             <div className="h-1 w-40 bg-brand-gradient rounded-full mb-8" />
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                Transform your legal practice with intelligent automation that reduces administrative burden, 
-                increases client satisfaction, and drives qualified lead generation through AI-optimized marketing.
+                Most firms don't lack enquiries. They lose them to missed calls, slow replies and intake that
+                waits for someone to be free. We bring in the right matters, help clients choose you, and make
+                sure every enquiry is answered and booked, day and night.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/contact">
                   <Button className="px-8 py-4 text-lg">
-                    Get Free Consultation
+                    Book an AI Growth Audit
                   </Button>
                 </Link>
                 <Link to="/services">
                   <Button variant="outline" className="px-8 py-4 text-lg">
-                    View Our Services
+                    See our services
                   </Button>
                 </Link>
               </div>
@@ -130,23 +137,23 @@ const Legal = () => {
       <section className="py-16 px-6 bg-secondary/20">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-light mb-12 text-center">
-            Common Challenges in Legal Practices
+            Where law firms lose new clients
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="text-center">
               <Clock className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
-              <h3 className="text-xl font-medium mb-3">Time-Consuming Intake</h3>
-              <p className="text-muted-foreground">Manual client screening and initial consultations consume valuable attorney time</p>
+              <h3 className="text-xl font-medium mb-3">Slow intake</h3>
+              <p className="text-muted-foreground">Enquiries wait in a shared inbox until a fee earner has time. By then the client has called another firm.</p>
             </div>
             <div className="text-center">
               <Phone className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
-              <h3 className="text-xl font-medium mb-3">Missed Opportunities</h3>
-              <p className="text-muted-foreground">Potential clients call outside business hours with no way to get immediate response</p>
+              <h3 className="text-xl font-medium mb-3">Missed calls</h3>
+              <p className="text-muted-foreground">People look for a solicitor in the evening and at weekends. If nobody answers, they move on.</p>
             </div>
             <div className="text-center">
               <FileText className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
-              <h3 className="text-xl font-medium mb-3">Administrative Overhead</h3>
-              <p className="text-muted-foreground">Repetitive paperwork and case management tasks reduce billable hour efficiency</p>
+              <h3 className="text-xl font-medium mb-3">Admin that eats fee-earning time</h3>
+              <p className="text-muted-foreground">Re-keying client details, chasing documents and sending updates take hours that should be billed.</p>
             </div>
           </div>
         </div>
@@ -156,7 +163,7 @@ const Legal = () => {
       <section className="solutions-section py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-light mb-16 text-center">
-            AI Solutions Built for Legal Professionals
+            Get found, get chosen, get it done
           </h2>
           <div className="grid md:grid-cols-2 gap-12">
             {legalSolutions.map((solution, index) => {
@@ -184,7 +191,7 @@ const Legal = () => {
       {/* Case Study Stats */}
       <section className="stats-section py-16 px-6 bg-secondary/30">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-light mb-12 text-center">Proven Results</h2>
+          <h2 className="text-4xl font-light mb-12 text-center">What you can count on</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {caseStudyStats.map((stat, index) => (
               <div key={index} className="stat-item text-center">
@@ -195,7 +202,7 @@ const Legal = () => {
           </div>
           <div className="text-center mt-12">
             <p className="text-lg text-muted-foreground">
-              Based on our case study with a mid-sized law firm specializing in personal injury and family law
+              We built client intake automation for a UK law firm in 2024. They're under NDA, so we don't name them or publish their figures.
             </p>
           </div>
         </div>
@@ -205,36 +212,36 @@ const Legal = () => {
       <section className="py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-light mb-16 text-center">
-            Implementation Process
+            How we work with your firm
           </h2>
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-light text-gradient">1</span>
               </div>
-              <h3 className="text-lg font-medium mb-2">Discovery Call</h3>
-              <p className="text-muted-foreground text-sm">Understand your practice needs and current challenges</p>
+              <h3 className="text-lg font-medium mb-2">AI Growth Audit</h3>
+              <p className="text-muted-foreground text-sm">Two weeks reviewing your search, ads, content and intake to find where enquiries leak</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-light text-gradient">2</span>
               </div>
-              <h3 className="text-lg font-medium mb-2">Custom Solution</h3>
-              <p className="text-muted-foreground text-sm">Design AI systems tailored to your practice areas</p>
+              <h3 className="text-lg font-medium mb-2">Build</h3>
+              <p className="text-muted-foreground text-sm">We launch the campaigns, content and intake automation the audit prioritises</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-light text-gradient">3</span>
               </div>
-              <h3 className="text-lg font-medium mb-2">Integration</h3>
-              <p className="text-muted-foreground text-sm">Seamless setup with your existing case management system</p>
+              <h3 className="text-lg font-medium mb-2">Connect</h3>
+              <p className="text-muted-foreground text-sm">We link everything to your case management system, diaries and phone line</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-light text-gradient">4</span>
               </div>
-              <h3 className="text-lg font-medium mb-2">Training & Launch</h3>
-              <p className="text-muted-foreground text-sm">Team training and go-live support with ongoing optimization</p>
+              <h3 className="text-lg font-medium mb-2">Compound</h3>
+              <p className="text-muted-foreground text-sm">We improve it every month and report on enquiries, consultations and instructions</p>
             </div>
           </div>
         </div>
@@ -244,20 +251,20 @@ const Legal = () => {
       <section className="py-24 px-6 bg-brand-gradient text-accent-foreground">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-light mb-8">
-            Ready to Transform Your Legal Practice?
+            Find out where your firm is losing enquiries
           </h2>
           <p className="text-xl mb-12 opacity-90">
-            Join leading law firms who have automated their client intake and increased qualified leads by 40%
+            Start with an AI Growth Audit. In two weeks you get a clear view of your ads, content and intake, and a prioritised plan to fix the gaps.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
               <Button variant="secondary" className="px-8 py-4 text-lg">
-                Schedule Free Consultation
+                Book an AI Growth Audit
               </Button>
             </Link>
             <Link to="/use-cases/law-firm-automation">
               <Button variant="outline" className="px-8 py-4 text-lg border-accent-foreground text-accent-foreground hover:bg-glow hover:text-[#0d0d26] hover:border-glow">
-                View Case Study
+                See the law firm project
               </Button>
             </Link>
           </div>

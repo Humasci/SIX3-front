@@ -20,8 +20,9 @@ export const BrandMark = ({ className = "" }: { className?: string }) => {
           <stop offset="1" stopColor="#0b0820" stopOpacity="0.38" />
         </radialGradient>
       </defs>
-      {/* Nearer particles are drawn last and brighter, which gives the 3 its depth */}
-      {PARTICLE_THREE.map(([x, y, r, color, depth], i) => (
+      {/* Nearer particles are drawn last and brighter, which gives the 3 its depth.
+          Skipped in the prerendered HTML (hidden until the app loads) to keep every page light */}
+      {typeof window !== "undefined" && PARTICLE_THREE.map(([x, y, r, color, depth], i) => (
         <g key={i} opacity={0.5 + depth * 0.5}>
           <circle cx={x} cy={y} r={r} fill={color} />
           <circle cx={x} cy={y} r={r} fill={`url(#${shadeId})`} />

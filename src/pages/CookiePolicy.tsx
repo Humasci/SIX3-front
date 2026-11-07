@@ -1,4 +1,5 @@
 import { Header } from "@/components/Header";
+import { PageSEO } from "@/components/PageSEO";
 import { Footer } from "@/components/Footer";
 import { useEffect } from "react";
 import gsap from "gsap";
@@ -16,6 +17,7 @@ const CookiePolicy = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <PageSEO title="Cookie Policy | SIX³ Agency" description="Which cookies the SIX³ Agency website uses, why we use them, how long they last and how you can manage or turn them off in your browser settings." canonical="https://six3.agency/cookie-policy" />
       <Header />
       
       <section className="theme-light relative isolate overflow-hidden pt-40 pb-16 px-6">

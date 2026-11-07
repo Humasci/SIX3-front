@@ -7,21 +7,21 @@ gsap.registerPlugin(ScrollTrigger);
 
 const pillars = [
   {
-    title: "Discover",
-    subtitle: "Every business gets a custom AI strategy",
-    description: "We analyze your market, competitors, and opportunities to design AI solutions that drive real growth.",
+    title: "Audit",
+    subtitle: "Find where growth is leaking",
+    description: "In two weeks we review your search, ads, content and lead handling, and hand you a prioritised plan with quick wins.",
     gradient: "linear-gradient(90deg, #7c3aed 0%, #a855f7 45%, #f97316 85%, #fde7b0 100%)"
   },
   {
-    title: "Transform",
-    subtitle: "AI that works while you focus on what matters",
-    description: "Your marketing transforms into an automated system that generates leads, creates content, and engages customers 24/7.",
+    title: "Build",
+    subtitle: "Launch the system that fixes it",
+    description: "Campaigns that bring in the right enquiries, content that wins them, and AI agents that answer and book every one.",
     gradient: "linear-gradient(90deg, #a855f7 0%, #f97316 55%, #fde7b0 100%)"
   },
   {
-    title: "Optimize",
-    subtitle: "Continuous improvement powered by data",
-    description: "Real-time analytics and AI-driven insights ensure your marketing performance improves every day.",
+    title: "Compound",
+    subtitle: "Every month, each part lifts the others",
+    description: "We optimise ads, content and automations together, so better leads meet faster replies and results build on each other.",
     gradient: "linear-gradient(90deg, #fde7b0 0%, #f97316 25%, #a855f7 65%, #7c3aed 100%)"
   }
 ];
@@ -61,7 +61,7 @@ export const ThreePillars = () => {
       <div className="relative max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-light mb-4 text-white">
-            Everything your business depends on.
+            How growth gets cubed.
           </h2>
         </div>
 

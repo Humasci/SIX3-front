@@ -1,4 +1,4 @@
-import { PageSEO } from "@/components/PageSEO";
+import { PageSEO, organizationJsonLd } from "@/components/PageSEO";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
@@ -13,9 +13,10 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <PageSEO
-        title="SIX³ Agency — AI-Powered Marketing & Automation"
-        description="AI-driven search marketing, generative content creation, and custom automation solutions. Transform your business with SIX³ Agency."
+        title="SIX³ Agency | AI Marketing & Automation Agency, London"
+        description="London AI marketing and automation agency. Search and paid media, AI video content and AI agents that answer every enquiry, as one growth system."
         canonical="https://six3.agency/"
+        jsonLd={organizationJsonLd}
       />
       <CursorEffect />
       <Header />

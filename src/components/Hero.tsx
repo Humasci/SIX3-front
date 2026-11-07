@@ -47,7 +47,7 @@ export const Hero = () => {
         if (title) {
           const text = title.textContent || "";
           title.innerHTML = text.split("").map((char, i) => 
-            `<span class="char" style="display: inline-block; transform: translateY(100px) rotateX(-90deg); opacity: 0;">${char}</span>`
+            `<span class="char" style="display: inline-block; transform: translateY(100px) rotateX(-90deg); opacity: 0;">${char === " " ? "&nbsp;" : char}</span>`
           ).join("");
 
           gsap.to(title.querySelectorAll(".char"), {
@@ -147,38 +147,41 @@ export const Hero = () => {
       <div className="relative flex-1 flex flex-col items-center justify-center px-6 pt-24">
         <div className="max-w-7xl w-full">
           <div className="mb-12">
-            <h1 
+            <h1 className="hero-subtitle mb-6 text-sm md:text-base font-medium tracking-[0.25em] uppercase text-gradient w-fit">
+              AI marketing &amp; automation agency · London
+            </h1>
+            <div
               ref={(el) => (titleRefs.current[0] = el)}
               className="hero-title text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-none mb-2"
             >
-              AI-Powered
-            </h1>
+              Get found.
+            </div>
             <div
               ref={(el) => (titleRefs.current[1] = el)}
               className="hero-title text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-none mb-2"
             >
-              Marketing
+              Get chosen.
             </div>
             <div
               ref={(el) => (titleRefs.current[2] = el)}
               className="hero-title text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-none"
             >
-              Agency
+              Get it done.
             </div>
             <div className="hero-subtitle h-1 w-full max-w-3xl bg-brand-gradient-glow rounded-full mt-10" />
           </div>
 
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 max-w-5xl">
             <div>
-              <p className="hero-subtitle text-xl md:text-2xl font-medium text-foreground max-w-md">
-                AI-driven search marketing, generative content creation, and custom automation solutions
+              <p className="hero-subtitle text-xl md:text-2xl font-medium text-foreground max-w-xl">
+                Search and paid media that bring in enquiries, AI content that wins them, and AI agents that answer every one. One team, one system.
               </p>
             </div>
             
             <Link to="/contact">
               <Button variant="outline" className="hero-cta rounded-full px-8 py-6 text-base border-foreground hover:bg-brand-gradient-button hover:text-white hover:border-transparent hover:shadow-[0_0_32px_-10px_rgba(249,115,22,0.6)] group">
                 <ArrowDown className="w-5 h-5 mr-2 group-hover:translate-y-1 transition-transform" />
-                Contact Us
+                Book an AI Growth Audit
               </Button>
             </Link>
           </div>

@@ -1,3 +1,4 @@
+import { PageSEO } from "@/components/PageSEO";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { useEffect, useRef } from "react";
@@ -14,27 +15,27 @@ gsap.registerPlugin(ScrollTrigger);
 const healthcareSolutions = [
   {
     icon: Calendar,
-    title: "AI Patient Scheduling",
-    description: "Intelligent appointment booking system that handles patient scheduling, reminders, and rescheduling 24/7",
-    benefits: ["40% faster patient processing", "Reduced no-show rates", "24/7 booking availability"]
+    title: "Get it done: online booking and reminders",
+    description: "Patients book, move and cancel appointments at any hour. Reminders go out automatically and freed-up slots are offered to the waiting list.",
+    benefits: ["Booking open 24/7", "Automatic reminders by SMS and email", "Cancelled slots offered to the next patient"]
   },
   {
     icon: Phone,
-    title: "AI Phone Screening",
-    description: "Automated patient intake and triage system that collects symptoms and medical history",
-    benefits: ["Streamlined check-in process", "Better appointment preparation", "Reduced wait times"]
+    title: "Get it done: AI receptionist",
+    description: "An AI receptionist answers calls, chat and email, handles routine questions and books appointments, so your front desk isn't stuck in a phone queue.",
+    benefits: ["Shorter phone queues at peak times", "Routine questions answered on the spot", "Clinical or urgent calls passed straight to your team"]
   },
   {
     icon: Shield,
-    title: "Insurance Verification",
-    description: "Automated insurance verification and pre-authorization processing",
-    benefits: ["Faster claim processing", "Reduced billing errors", "Improved cash flow"]
+    title: "Get chosen: AI Content Studio",
+    description: "Treatment explainers, clinician introductions and ads produced each month, so patients understand what you offer and trust you before they book.",
+    benefits: ["Treatment and aftercare videos", "AI voiceovers and translations for diverse patient groups", "Content that stays within advertising rules"]
   },
   {
     icon: Users,
-    title: "Patient Lead Generation",
-    description: "AI-optimized Google Ads targeting patients seeking specific treatments in your area",
-    benefits: ["Higher quality patient leads", "Treatment-specific targeting", "Local market reach"]
+    title: "Get found: Search & Paid Media",
+    description: "Google Ads and paid social for the treatments you want to grow, aimed at people near your clinic, with tracking from search to booking.",
+    benefits: ["Campaigns by treatment and location", "Landing pages that lead to a booking", "Monthly reporting on cost per new patient"]
   }
 ];
 
@@ -42,20 +43,20 @@ const specialties = [
   {
     title: "Dental Practices",
     icon: "🦷",
-    description: "Automated appointment scheduling, patient reminders, and treatment follow-up sequences",
-    benefits: ["Reduce missed appointments", "Automated treatment reminders", "Emergency scheduling"]
+    description: "Recall reminders, new patient enquiries and private treatment campaigns for implants, aligners and whitening",
+    benefits: ["Fewer missed appointments", "Automatic recall and hygiene reminders", "Emergency appointment requests handled out of hours"]
   },
   {
-    title: "Medical Clinics", 
+    title: "Private Clinics",
     icon: "🏥",
-    description: "Patient intake automation, insurance verification, and care coordination",
-    benefits: ["Streamlined patient flow", "Faster check-in process", "Better care coordination"]
+    description: "Enquiry handling, online booking and follow-up for private GP, physio, aesthetics and specialist clinics",
+    benefits: ["Every enquiry answered quickly", "Online booking that patients use", "Follow-up after each appointment"]
   },
   {
-    title: "Surgical Practices",
-    icon: "⚕️", 
-    description: "Pre-op coordination, patient education, and post-surgical care automation",
-    benefits: ["Improved pre-op preparation", "Better patient outcomes", "Reduced complications"]
+    title: "Specialist & Surgical Practices",
+    icon: "⚕️",
+    description: "Consultation booking, pre-appointment information and aftercare messages for higher-value treatments",
+    benefits: ["Consultation requests qualified before they reach you", "Pre-op information sent on time", "Aftercare check-ins sent automatically"]
   }
 ];
 
@@ -99,6 +100,11 @@ const Healthcare = () => {
 
   return (
     <div ref={contentRef} className="min-h-screen bg-background text-foreground">
+      <PageSEO
+        title="AI Marketing & Automation for Clinics | SIX³ Agency"
+        description="AI marketing and automation for clinics and dental practices: fewer no-shows, shorter phone queues and ads that fill the diary with the right patients."
+        canonical="https://six3.agency/industries/healthcare"
+      />
       <Header />
 
       {/* Hero Section */}
@@ -109,25 +115,26 @@ const Healthcare = () => {
             <div>
               <div className="flex items-center gap-3 mb-6">
                 <Heart className="w-8 h-8 icon-gradient" />
-                <span className="text-gradient font-medium">Healthcare</span>
+                <span className="text-gradient font-medium">Clinics & Healthcare Practices</span>
               </div>
               <h1 className="text-3xl md:text-3xl lg:text-4xl font-light mb-6 text-gradient w-fit pb-1">
-                AI Automation for Healthcare Practices
+                AI marketing and automation for clinics: fewer no-shows, shorter phone queues
               </h1>
             <div className="h-1 w-40 bg-brand-gradient rounded-full mb-8" />
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                Streamline patient care, reduce administrative burden, and improve patient satisfaction 
-                with intelligent automation designed specifically for healthcare providers.
+                Your front desk shouldn't spend the morning on hold music and reminder calls. We bring in
+                patients for the treatments you want to grow, help them choose you, and handle booking,
+                reminders and routine questions automatically.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/contact">
                   <Button className="px-8 py-4 text-lg">
-                    Improve Patient Experience
+                    Book an AI Growth Audit
                   </Button>
                 </Link>
                 <Link to="/services">
                   <Button variant="outline" className="px-8 py-4 text-lg">
-                    View Healthcare Solutions
+                    See our services
                   </Button>
                 </Link>
               </div>
@@ -149,7 +156,7 @@ const Healthcare = () => {
       <section className="specialties-section py-16 px-6 bg-secondary/20">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-light mb-12 text-center">
-            Specialized Solutions by Practice Type
+            Built around how your practice runs
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {specialties.map((specialty, index) => (
@@ -175,23 +182,23 @@ const Healthcare = () => {
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-light mb-12 text-center">
-            Common Healthcare Practice Challenges
+            Where clinics lose time and patients
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <Clock className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
-              <h3 className="text-xl font-medium mb-3">Administrative Overload</h3>
-              <p className="text-muted-foreground">Staff spending too much time on scheduling, paperwork, and phone calls</p>
+              <h3 className="text-xl font-medium mb-3">Phone queues</h3>
+              <p className="text-muted-foreground">Reception spends the day on calls about opening times, prices and rebooking, while patients wait on hold.</p>
             </div>
             <div className="text-center">
               <Phone className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
-              <h3 className="text-xl font-medium mb-3">Missed Appointments</h3>
-              <p className="text-muted-foreground">No-shows and last-minute cancellations affecting practice revenue</p>
+              <h3 className="text-xl font-medium mb-3">No-shows</h3>
+              <p className="text-muted-foreground">Missed and late-cancelled appointments leave gaps in the diary that nobody has time to fill.</p>
             </div>
             <div className="text-center">
               <Users className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
-              <h3 className="text-xl font-medium mb-3">Patient Acquisition</h3>
-              <p className="text-muted-foreground">Difficulty attracting new patients in competitive healthcare markets</p>
+              <h3 className="text-xl font-medium mb-3">Too few of the right patients</h3>
+              <p className="text-muted-foreground">Private treatments need steady new enquiries, and many of those arrive when the clinic is closed.</p>
             </div>
           </div>
         </div>
@@ -201,7 +208,7 @@ const Healthcare = () => {
       <section className="solutions-section py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-light mb-16 text-center">
-            AI-Powered Healthcare Solutions
+            Get found, get chosen, get it done
           </h2>
           <div className="grid md:grid-cols-2 gap-12">
             {healthcareSolutions.map((solution, index) => {
@@ -226,29 +233,30 @@ const Healthcare = () => {
         </div>
       </section>
 
-      {/* HIPAA Compliance */}
+      {/* Data Protection */}
       <section className="py-16 px-6 bg-secondary/30">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <Shield className="w-16 h-16 icon-gradient mb-6" />
-              <h2 className="text-4xl font-light mb-6">HIPAA Compliant & Secure</h2>
+              <h2 className="text-4xl font-light mb-6">Patient data handled with care</h2>
               <p className="text-lg text-muted-foreground mb-6">
-                All our healthcare AI solutions are built with HIPAA compliance at the core, ensuring 
-                patient data privacy and security while delivering exceptional automation capabilities.
+                Health data needs more care than most. We design every build around UK GDPR and your
+                clinic's own policies, and our AI never gives medical advice: it books, reminds and
+                passes clinical questions to your team.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-center gap-3">
                   <Shield className="w-5 h-5 icon-gradient" />
-                  <span>End-to-end encryption for all patient communications</span>
+                  <span>Only the data each task needs is collected</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Shield className="w-5 h-5 icon-gradient" />
-                  <span>Secure data storage with audit trails</span>
+                  <span>A clear record of every automated message</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Shield className="w-5 h-5 icon-gradient" />
-                  <span>Regular security assessments and compliance updates</span>
+                  <span>Private AI option: models deployed privately for strict data rules</span>
                 </li>
               </ul>
             </div>
@@ -264,23 +272,23 @@ const Healthcare = () => {
       {/* Results Section */}
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-light mb-12 text-center">Healthcare Practice Results</h2>
+          <h2 className="text-4xl font-light mb-12 text-center">What you can count on</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-light mb-4 text-gradient">40%</div>
-              <p className="text-lg text-muted-foreground">Faster Patient Processing</p>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl md:text-6xl font-light mb-4 text-gradient">30%</div>
-              <p className="text-lg text-muted-foreground">Reduction in No-Shows</p>
-            </div>
-            <div className="text-center">
               <div className="text-5xl md:text-6xl font-light mb-4 text-gradient">24/7</div>
-              <p className="text-lg text-muted-foreground">Patient Support Availability</p>
+              <p className="text-lg text-muted-foreground">Booking and enquiries answered, evenings and weekends included</p>
             </div>
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-light mb-4 text-gradient">95%</div>
-              <p className="text-lg text-muted-foreground">Patient Satisfaction Score</p>
+              <div className="text-5xl md:text-6xl font-light mb-4 text-gradient">&lt;1 min</div>
+              <p className="text-lg text-muted-foreground">First reply to a new patient enquiry</p>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl md:text-6xl font-light mb-4 text-gradient">4</div>
+              <p className="text-lg text-muted-foreground">Ad channels managed: Google, Meta, LinkedIn, TikTok</p>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl md:text-6xl font-light mb-4 text-gradient">1</div>
+              <p className="text-lg text-muted-foreground">Team running your ads, content and automation</p>
             </div>
           </div>
         </div>
@@ -290,21 +298,21 @@ const Healthcare = () => {
       <section className="py-24 px-6 bg-brand-gradient text-accent-foreground">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-light mb-8">
-            Transform Your Healthcare Practice
+            Free up your front desk
           </h2>
           <p className="text-xl mb-12 opacity-90">
-            Join healthcare providers who have improved patient satisfaction by 95% and 
-            reduced administrative overhead by 40% with our AI automation solutions.
+            Start with an AI Growth Audit. In two weeks we review how patients find you, book and turn up,
+            and give you a prioritised plan with quick wins.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
               <Button variant="secondary" className="px-8 py-4 text-lg">
-                Schedule Healthcare Consultation
+                Book an AI Growth Audit
               </Button>
             </Link>
             <Link to="/services/ai-dev-automation">
               <Button variant="outline" className="px-8 py-4 text-lg border-accent-foreground text-accent-foreground hover:bg-glow hover:text-[#0d0d26] hover:border-glow">
-                View AI Automation Services
+                See AI Agents & Automation
               </Button>
             </Link>
           </div>

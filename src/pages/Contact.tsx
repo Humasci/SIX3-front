@@ -265,8 +265,8 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <PageSEO
-        title="Contact SIX³ Agency — Get a Free Consultation"
-        description="Ready to transform your business with AI? Contact SIX³ Agency for a free consultation on AI marketing, automation, and ML solutions."
+        title="Contact Us & Book an AI Growth Audit | SIX³ Agency"
+        description="Tell us about your business and goals. Book a two-week AI Growth Audit or ask about search, AI content, AI agents and automation. London-based."
         canonical="https://six3.agency/contact"
       />
       <Header />

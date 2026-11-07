@@ -211,3 +211,18 @@ svg[class*="hover:text-gradient"]:hover,
     scroll-behavior: auto !important;
   }
 }
+
+/* Blog article text */
+.article-body { font-size: 1.125rem; line-height: 1.8; color: hsl(var(--muted-foreground)); }
+.article-body > * + * { margin-top: 1.25rem; }
+.article-body h2 { margin-top: 3rem; font-size: 1.875rem; line-height: 1.25; font-weight: 300; color: hsl(var(--foreground)); }
+.article-body h3 { margin-top: 2rem; font-size: 1.375rem; line-height: 1.35; font-weight: 500; color: hsl(var(--foreground)); }
+.article-body ul { padding-left: 1.25rem; list-style: none; }
+.article-body li { position: relative; padding-left: 0.5rem; }
+.article-body li + li { margin-top: 0.6rem; }
+.article-body li::before { content: ""; position: absolute; left: -0.9rem; top: 0.75em; width: 0.4rem; height: 0.4rem; border-radius: 9999px; background: linear-gradient(135deg, #7c3aed, #f97316); }
+
+/* Prerendered HTML stays hidden until the live app takes over (no flash of half-animated content).
+   If JavaScript fails, it appears after 3 seconds anyway */
+#root[data-prerendered] { opacity: 0; animation: prerender-reveal 0s linear 3s forwards; }
+@keyframes prerender-reveal { to { opacity: 1; } }

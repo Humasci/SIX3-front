@@ -1,3 +1,4 @@
+import { PageSEO } from "@/components/PageSEO";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { useEffect, useRef } from "react";
@@ -14,58 +15,58 @@ gsap.registerPlugin(ScrollTrigger);
 const professionalSolutions = [
   {
     icon: Calculator,
-    title: "Client Onboarding Automation",
-    description: "Streamlined client intake process with automated document collection and compliance checks",
-    benefits: ["Faster client setup", "Reduced paperwork errors", "Compliance automation"]
+    title: "Get it done: client onboarding",
+    description: "New clients complete their details, upload documents and pass your checks online, with reminders sent until everything is in.",
+    benefits: ["Onboarding without the email chase", "Missing documents requested automatically", "Details sent straight to your practice software"]
   },
   {
     icon: Phone,
-    title: "AI Lead Qualification",
-    description: "Intelligent screening system that qualifies prospects based on service needs and budget",
-    benefits: ["Higher quality leads", "Time savings on consultations", "Better client matching"]
+    title: "Get it done: AI receptionist and qualification",
+    description: "An AI receptionist answers calls, chat and email, asks what the prospect needs and books a call with the right person.",
+    benefits: ["Every enquiry answered, day and night", "Prospects qualified on service, size and timing", "Discovery calls booked into the right diary"]
   },
   {
     icon: FileText,
-    title: "Document Processing AI",
-    description: "Automated review and processing of financial documents, applications, and reports",
-    benefits: ["Faster document review", "Error reduction", "Improved accuracy"]
+    title: "Get chosen: AI Content Studio",
+    description: "Explainer videos, insight pieces and ads that show your expertise, produced every month so prospects know you before the first call.",
+    benefits: ["Short videos on the questions clients ask", "AI presenters and voiceovers in your firm's voice", "Content for LinkedIn, your site and ads"]
   },
   {
     icon: TrendingUp,
-    title: "Google Ads for Professionals",
-    description: "AI-optimized campaigns targeting high-value clients seeking professional services",
-    benefits: ["Premium client acquisition", "Local market targeting", "ROI optimization"]
+    title: "Get found: Search & Paid Media",
+    description: "Google Ads and LinkedIn campaigns aimed at the clients you want, with tracking from first click to signed engagement letter.",
+    benefits: ["Campaigns by service line and sector", "LinkedIn targeting by role and company size", "Monthly reporting on cost per qualified enquiry"]
   }
 ];
 
 const serviceTypes = [
   {
-    title: "Accounting Firms",
+    title: "Accountancy Practices",
     icon: "📊",
-    description: "Automated bookkeeping, tax preparation workflows, and client communication systems",
-    benefits: ["Streamlined tax season", "Automated client updates", "Document management"],
-    useCases: ["Tax preparation automation", "Bookkeeping client onboarding", "Compliance tracking"]
+    description: "Steady new-client enquiries, smooth onboarding and fewer chasers at year end and self-assessment deadlines",
+    benefits: ["Calmer deadline seasons", "Automatic client reminders", "Documents collected in one place"],
+    useCases: ["Self-assessment and year-end reminders", "New client onboarding and checks", "Ads for bookkeeping, payroll and tax services"]
   },
   {
-    title: "Financial Advisors", 
+    title: "Financial Advisers",
     icon: "💰",
-    description: "Investment portfolio management, client risk assessment, and advisory automation",
-    benefits: ["Portfolio optimization", "Risk analysis automation", "Client reporting"],
-    useCases: ["Investment advisory automation", "Retirement planning workflows", "Client risk profiling"]
+    description: "Better-fit enquiries, fact-find collection before the first meeting and regular client contact, with advice left to you",
+    benefits: ["Prospects qualified before the first meeting", "Fact-find details gathered in advance", "Review meetings booked automatically"],
+    useCases: ["Enquiry qualification and booking", "Pre-meeting fact-find collection", "Annual review reminders"]
   },
   {
     title: "Immigration Consultants",
-    icon: "🌍", 
-    description: "Visa application processing, document verification, and client status tracking",
-    benefits: ["Application tracking", "Document verification", "Status updates"],
-    useCases: ["Visa application automation", "Document checklist management", "Client communication"]
+    icon: "🌍",
+    description: "Enquiry handling in several languages, document checklists and case status updates for clients",
+    benefits: ["Enquiries answered in the client's language", "Document checklists sent automatically", "Status updates without the phone calls"],
+    useCases: ["Multilingual AI receptionist", "Document checklist management", "Case update messages"]
   },
   {
     title: "Business Consultants",
     icon: "💼",
-    description: "Client assessment automation, proposal generation, and project management",
-    benefits: ["Faster assessments", "Automated proposals", "Project tracking"],
-    useCases: ["Business analysis automation", "Client assessment workflows", "Proposal generation"]
+    description: "Content that builds authority, qualified discovery calls and faster proposals",
+    benefits: ["A steady flow of thought-leadership content", "Discovery calls with the right prospects", "Proposal drafts from your own templates"],
+    useCases: ["LinkedIn content and ads", "Discovery call qualification", "Proposal drafting"]
   }
 ];
 
@@ -109,6 +110,11 @@ const ProfessionalServices = () => {
 
   return (
     <div ref={contentRef} className="min-h-screen bg-background text-foreground">
+      <PageSEO
+        title="AI Marketing for Professional Services | SIX³ Agency"
+        description="AI marketing for professional services firms: ads and content that attract better-fit clients, and automation that answers, qualifies and onboards them."
+        canonical="https://six3.agency/industries/professional-services"
+      />
       <Header />
 
       {/* Hero Section */}
@@ -122,22 +128,23 @@ const ProfessionalServices = () => {
                 <span className="text-gradient font-medium">Professional Services</span>
               </div>
               <h1 className="text-3xl md:text-3xl lg:text-4xl font-light mb-6 text-gradient w-fit pb-1">
-                AI Automation for Professional Service Firms
+                AI marketing for professional services firms: better-fit clients, less admin
               </h1>
             <div className="h-1 w-40 bg-brand-gradient rounded-full mb-8" />
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                Streamline client operations, automate routine tasks, and focus on high-value advisory work 
-                with intelligent automation tailored for accounting, consulting, and financial advisory firms.
+                Your best people spend too long on enquiries that go nowhere and paperwork that should run itself.
+                We bring in the clients you want, show them why to choose you, and automate the answering,
+                qualifying and onboarding.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/contact">
                   <Button className="px-8 py-4 text-lg">
-                    Automate Your Practice
+                    Book an AI Growth Audit
                   </Button>
                 </Link>
                 <Link to="/services">
                   <Button variant="outline" className="px-8 py-4 text-lg">
-                    View Our Solutions
+                    See our services
                   </Button>
                 </Link>
               </div>
@@ -159,7 +166,7 @@ const ProfessionalServices = () => {
       <section className="service-types-section py-16 px-6 bg-secondary/20">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-light mb-12 text-center">
-            Specialized Solutions by Service Type
+            Built around how your firm works
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             {serviceTypes.map((serviceType, index) => (
@@ -169,9 +176,9 @@ const ProfessionalServices = () => {
                   <h3 className="text-2xl font-medium">{serviceType.title}</h3>
                 </div>
                 <p className="text-muted-foreground mb-6">{serviceType.description}</p>
-                
+
                 <div className="mb-6">
-                  <h4 className="font-medium mb-3">Key Benefits:</h4>
+                  <h4 className="font-medium mb-3">What changes:</h4>
                   <ul className="space-y-2">
                     {serviceType.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center gap-2">
@@ -183,7 +190,7 @@ const ProfessionalServices = () => {
                 </div>
 
                 <div>
-                  <h4 className="font-medium mb-3">Common Use Cases:</h4>
+                  <h4 className="font-medium mb-3">What we typically build:</h4>
                   <ul className="space-y-2">
                     {serviceType.useCases.map((useCase, idx) => (
                       <li key={idx} className="flex items-center gap-2">
@@ -203,23 +210,23 @@ const ProfessionalServices = () => {
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-light mb-12 text-center">
-            Common Professional Service Challenges
+            Where firms lose time and clients
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <FileText className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
-              <h3 className="text-xl font-medium mb-3">Manual Documentation</h3>
-              <p className="text-muted-foreground">Time-consuming document review, data entry, and client file management</p>
+              <h3 className="text-xl font-medium mb-3">Paperwork and chasing</h3>
+              <p className="text-muted-foreground">Collecting documents, re-keying details and chasing clients take hours that should be billed.</p>
             </div>
             <div className="text-center">
               <Phone className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
-              <h3 className="text-xl font-medium mb-3">Client Communication</h3>
-              <p className="text-muted-foreground">Constant status updates, appointment scheduling, and follow-up communications</p>
+              <h3 className="text-xl font-medium mb-3">Slow replies</h3>
+              <p className="text-muted-foreground">New enquiries wait until a partner is free, and good prospects sign with whoever answered first.</p>
             </div>
             <div className="text-center">
               <Users className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
-              <h3 className="text-xl font-medium mb-3">Lead Qualification</h3>
-              <p className="text-muted-foreground">Difficulty identifying high-value prospects and qualifying client needs</p>
+              <h3 className="text-xl font-medium mb-3">The wrong enquiries</h3>
+              <p className="text-muted-foreground">Too many calls from prospects who aren't a fit, and too few from the clients you want.</p>
             </div>
           </div>
         </div>
@@ -229,7 +236,7 @@ const ProfessionalServices = () => {
       <section className="solutions-section py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-light mb-16 text-center">
-            AI-Powered Professional Service Solutions
+            Get found, get chosen, get it done
           </h2>
           <div className="grid md:grid-cols-2 gap-12">
             {professionalSolutions.map((solution, index) => {
@@ -260,27 +267,27 @@ const ProfessionalServices = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <FileText className="w-16 h-16 icon-gradient mb-6" />
-              <h2 className="text-4xl font-light mb-6">Compliance & Security First</h2>
+              <h2 className="text-4xl font-light mb-6">Client confidentiality comes first</h2>
               <p className="text-lg text-muted-foreground mb-6">
-                Our professional service AI solutions are built with industry compliance standards in mind, 
-                ensuring your client data remains secure while automating complex workflows.
+                Your clients trust you with sensitive information. We design every build around UK GDPR and
+                your firm's own policies, and keep regulated advice with your people, not the AI.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-center gap-3">
                   <FileText className="w-5 h-5 icon-gradient" />
-                  <span>SOC 2 Type II compliant data handling</span>
+                  <span>Only the data each task needs is collected</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <FileText className="w-5 h-5 icon-gradient" />
-                  <span>Encrypted client communications and file storage</span>
+                  <span>Access limited to the people who need it</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <FileText className="w-5 h-5 icon-gradient" />
-                  <span>Audit trails for all automated processes</span>
+                  <span>A clear record of every automated step</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <FileText className="w-5 h-5 icon-gradient" />
-                  <span>Industry-specific compliance monitoring</span>
+                  <span>Private AI: models trained on your own knowledge and deployed privately</span>
                 </li>
               </ul>
             </div>
@@ -296,23 +303,23 @@ const ProfessionalServices = () => {
       {/* Results Section */}
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-light mb-12 text-center">Professional Service Results</h2>
+          <h2 className="text-4xl font-light mb-12 text-center">What you can count on</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-light mb-4 text-gradient">50%</div>
-              <p className="text-lg text-muted-foreground">Reduction in Admin Time</p>
+              <div className="text-5xl md:text-6xl font-light mb-4 text-gradient">24/7</div>
+              <p className="text-lg text-muted-foreground">Every enquiry answered, evenings and weekends included</p>
             </div>
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-light mb-4 text-gradient">35%</div>
-              <p className="text-lg text-muted-foreground">Increase in Billable Hours</p>
+              <div className="text-5xl md:text-6xl font-light mb-4 text-gradient">&lt;1 min</div>
+              <p className="text-lg text-muted-foreground">First reply to a new enquiry</p>
             </div>
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-light mb-4 text-gradient">80%</div>
-              <p className="text-lg text-muted-foreground">Faster Client Onboarding</p>
+              <div className="text-5xl md:text-6xl font-light mb-4 text-gradient">4</div>
+              <p className="text-lg text-muted-foreground">Ad channels managed: Google, Meta, LinkedIn, TikTok</p>
             </div>
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-light mb-4 text-gradient">90%</div>
-              <p className="text-lg text-muted-foreground">Client Satisfaction Score</p>
+              <div className="text-5xl md:text-6xl font-light mb-4 text-gradient">1</div>
+              <p className="text-lg text-muted-foreground">Team running your ads, content and automation</p>
             </div>
           </div>
         </div>
@@ -321,27 +328,27 @@ const ProfessionalServices = () => {
       {/* Industries We Serve */}
       <section className="py-16 px-6 bg-secondary/20">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-light mb-12 text-center">Industries We Serve</h2>
+          <h2 className="text-4xl font-light mb-12 text-center">Who we work with</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center p-6">
               <Calculator className="w-12 h-12 icon-gradient mx-auto mb-4" />
               <h3 className="font-medium mb-2">Tax & Accounting</h3>
-              <p className="text-sm text-muted-foreground">CPA firms, tax preparers, bookkeeping services</p>
+              <p className="text-sm text-muted-foreground">Accountancy practices, tax advisers, bookkeepers</p>
             </div>
             <div className="text-center p-6">
               <TrendingUp className="w-12 h-12 icon-gradient mx-auto mb-4" />
-              <h3 className="font-medium mb-2">Financial Advisory</h3>
-              <p className="text-sm text-muted-foreground">Investment advisors, wealth management, insurance</p>
+              <h3 className="font-medium mb-2">Financial Advice</h3>
+              <p className="text-sm text-muted-foreground">Financial advisers, wealth managers, insurance brokers</p>
             </div>
             <div className="text-center p-6">
               <Users className="w-12 h-12 icon-gradient mx-auto mb-4" />
               <h3 className="font-medium mb-2">Immigration Services</h3>
-              <p className="text-sm text-muted-foreground">Visa consultants, immigration lawyers, document services</p>
+              <p className="text-sm text-muted-foreground">Immigration advisers, immigration solicitors, document services</p>
             </div>
             <div className="text-center p-6">
               <Briefcase className="w-12 h-12 icon-gradient mx-auto mb-4" />
-              <h3 className="font-medium mb-2">Business Consulting</h3>
-              <p className="text-sm text-muted-foreground">Strategy consultants, management advisory, business coaches</p>
+              <h3 className="font-medium mb-2">Consulting</h3>
+              <p className="text-sm text-muted-foreground">Strategy consultants, management advisers, business coaches</p>
             </div>
           </div>
         </div>
@@ -351,21 +358,21 @@ const ProfessionalServices = () => {
       <section className="py-24 px-6 bg-brand-gradient text-accent-foreground">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-light mb-8">
-            Ready to Scale Your Professional Practice?
+            Spend your time on clients, not admin
           </h2>
           <p className="text-xl mb-12 opacity-90">
-            Join professional service firms who have reduced administrative time by 50% and 
-            increased billable hours by 35% with our AI automation solutions.
+            Start with an AI Growth Audit. In two weeks we review your search, ads, content and lead handling,
+            and give you a prioritised plan with quick wins.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
               <Button variant="secondary" className="px-8 py-4 text-lg">
-                Schedule Professional Services Consultation
+                Book an AI Growth Audit
               </Button>
             </Link>
             <Link to="/services/ai-dev-automation">
               <Button variant="outline" className="px-8 py-4 text-lg border-accent-foreground text-accent-foreground hover:bg-glow hover:text-[#0d0d26] hover:border-glow">
-                View Automation Services
+                See AI Agents & Automation
               </Button>
             </Link>
           </div>

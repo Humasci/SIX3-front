@@ -1,3 +1,4 @@
+import { PageSEO } from "@/components/PageSEO";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { useEffect, useRef } from "react";
@@ -50,6 +51,11 @@ const LawFirmAutomation = () => {
 
   return (
     <div ref={contentRef} className="min-h-screen bg-background text-foreground">
+      <PageSEO
+        title="Law Firm Intake Automation Case Study | SIX³ Agency"
+        description="How SIX³ built AI client intake automation for a UK law firm: every enquiry answered, qualified against the firm's criteria and booked, day and night."
+        canonical="https://six3.agency/use-cases/law-firm-automation"
+      />
       <Header />
 
       {/* Hero Section */}
@@ -58,32 +64,33 @@ const LawFirmAutomation = () => {
         <div className="max-w-7xl mx-auto">
           <div className="case-study-hero">
             <div className="flex items-center gap-2 mb-6">
-              <Link to="/industries/legal" className="text-gradient hover:underline">Legal Industry</Link>
+              <Link to="/industries/legal" className="text-gradient hover:underline">Law Firms</Link>
               <ArrowRight className="w-4 h-4" />
               <span>Case Study</span>
             </div>
             <h1 className="text-3xl md:text-3xl lg:text-4xl font-light mb-8 text-gradient w-fit pb-1">
-              Legal Firm AI Automation Case Study
+              Client intake automation for a UK law firm
             </h1>
             <div className="h-1 w-40 bg-brand-gradient rounded-full mb-8" />
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="text-xl text-muted-foreground mb-8">
-                  How a mid-sized personal injury and family law firm reduced administration time by 60% 
-                  and increased qualified leads by 40% through AI automation.
+                  A growing UK firm was losing potential clients between the first call and the first
+                  consultation. We built an AI intake system that answers every enquiry, asks the firm's own
+                  questions and books qualified clients in, day and night.
                 </p>
                 <div className="space-y-4">
                   <div>
                     <span className="text-sm text-muted-foreground">Client:</span>
-                    <p className="text-lg">Regional Law Firm (25 attorneys)</p>
+                    <p className="text-lg">UK law firm (under NDA)</p>
                   </div>
                   <div>
-                    <span className="text-sm text-muted-foreground">Practice Areas:</span>
-                    <p className="text-lg">Personal Injury, Family Law, Estate Planning</p>
+                    <span className="text-sm text-muted-foreground">Project:</span>
+                    <p className="text-lg">Client intake automation (Get It Done: AI Agents & Automation)</p>
                   </div>
                   <div>
-                    <span className="text-sm text-muted-foreground">Implementation Time:</span>
-                    <p className="text-lg">8 weeks</p>
+                    <span className="text-sm text-muted-foreground">Year:</span>
+                    <p className="text-lg">2024</p>
                   </div>
                 </div>
               </div>
@@ -104,27 +111,27 @@ const LawFirmAutomation = () => {
       {/* Key Results */}
       <section className="py-16 px-6 bg-secondary/20">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-light mb-12 text-center">Key Results</h2>
+          <h2 className="text-3xl md:text-4xl font-light mb-12 text-center">What the system does</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <Clock className="w-12 h-12 icon-gradient mx-auto mb-4" />
-              <div className="text-4xl font-light mb-2">60%</div>
-              <p className="text-muted-foreground">Reduction in intake administration time</p>
+              <div className="text-4xl font-light mb-2">24/7</div>
+              <p className="text-muted-foreground">Enquiries captured, evenings and weekends included</p>
             </div>
             <div className="text-center">
               <TrendingUp className="w-12 h-12 icon-gradient mx-auto mb-4" />
-              <div className="text-4xl font-light mb-2">40%</div>
-              <p className="text-muted-foreground">Increase in qualified leads</p>
+              <div className="text-4xl font-light mb-2">Same</div>
+              <p className="text-muted-foreground">Qualifying questions asked of every enquiry</p>
             </div>
             <div className="text-center">
               <Scale className="w-12 h-12 icon-gradient mx-auto mb-4" />
-              <div className="text-4xl font-light mb-2">$150K</div>
-              <p className="text-muted-foreground">Annual savings in staff costs</p>
+              <div className="text-4xl font-light mb-2">Direct</div>
+              <p className="text-muted-foreground">Consultations booked into fee earners' diaries</p>
             </div>
             <div className="text-center">
               <Users className="w-12 h-12 icon-gradient mx-auto mb-4" />
-              <div className="text-4xl font-light mb-2">25%</div>
-              <p className="text-muted-foreground">Improvement in client satisfaction</p>
+              <div className="text-4xl font-light mb-2">Once</div>
+              <p className="text-muted-foreground">Client details entered once and passed to case management</p>
             </div>
           </div>
         </div>
@@ -133,69 +140,69 @@ const LawFirmAutomation = () => {
       {/* The Challenge */}
       <section className="challenges-section py-24 px-6">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-light mb-12">The Challenge</h2>
+          <h2 className="text-4xl md:text-5xl font-light mb-12">The challenge</h2>
           <div className="grid md:grid-cols-2 gap-12">
             <div>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                The firm was experiencing rapid growth but struggling with operational efficiency. 
-                Their intake process was entirely manual, requiring attorneys and paralegals to spend 
-                significant time on initial client consultations that often didn't convert.
+                The firm was growing, but intake hadn't kept up. Every enquiry was handled by hand, so
+                solicitors and paralegals spent time on first conversations that often went nowhere,
+                and enquiries that came in after hours waited until the next day.
               </p>
               <div className="space-y-6">
                 <div className="challenge-item">
-                  <h3 className="text-xl font-medium mb-2">Manual Intake Bottleneck</h3>
-                  <p className="text-muted-foreground">Staff spent 3-4 hours daily on initial client screenings, reducing billable hour capacity.</p>
+                  <h3 className="text-xl font-medium mb-2">Manual intake</h3>
+                  <p className="text-muted-foreground">Initial screening calls took fee earners away from client work.</p>
                 </div>
                 <div className="challenge-item">
-                  <h3 className="text-xl font-medium mb-2">Inconsistent Lead Qualification</h3>
-                  <p className="text-muted-foreground">No standardized process for evaluating case viability led to time wasted on low-value prospects.</p>
+                  <h3 className="text-xl font-medium mb-2">Inconsistent qualification</h3>
+                  <p className="text-muted-foreground">There was no standard way to judge whether a matter was a fit, so time went on enquiries the firm couldn't take on.</p>
                 </div>
                 <div className="challenge-item">
-                  <h3 className="text-xl font-medium mb-2">After-Hours Lead Loss</h3>
-                  <p className="text-muted-foreground">Potential clients calling outside business hours had no way to provide case details or schedule consultations.</p>
+                  <h3 className="text-xl font-medium mb-2">After-hours enquiries lost</h3>
+                  <p className="text-muted-foreground">People who called in the evening or at weekends had no way to give their details or book a consultation.</p>
                 </div>
               </div>
             </div>
             <div className="space-y-6">
               <div className="bg-card border border-border p-6 rounded-lg">
-                <h3 className="text-lg font-medium mb-4">Before AI Implementation</h3>
+                <h3 className="text-lg font-medium mb-4">Before</h3>
                 <ul className="space-y-3">
                   <li className="flex justify-between">
-                    <span>Daily intake hours:</span>
-                    <span className="font-medium">3-4 hours</span>
+                    <span>Intake:</span>
+                    <span className="font-medium">By hand, staff-led</span>
                   </li>
                   <li className="flex justify-between">
-                    <span>Conversion rate:</span>
-                    <span className="font-medium">22%</span>
+                    <span>Qualification:</span>
+                    <span className="font-medium">Varied by who answered</span>
                   </li>
                   <li className="flex justify-between">
-                    <span>Response time:</span>
-                    <span className="font-medium">24-48 hours</span>
+                    <span>First response:</span>
+                    <span className="font-medium">When someone was free</span>
                   </li>
                   <li className="flex justify-between">
-                    <span>After-hours capture:</span>
-                    <span className="font-medium">0%</span>
+                    <span>After hours:</span>
+                    <span className="font-medium">Voicemail</span>
                   </li>
                 </ul>
               </div>
               <div className="bg-accent/10 border border-accent/20 p-6 rounded-lg">
-                <h3 className="text-lg font-medium mb-4">After AI Implementation</h3>
+                <h3 className="text-lg font-medium mb-4">After</h3>
                 <ul className="space-y-3">
                   <li className="flex justify-between">
-                    <span>Daily intake hours:</span>
-                    <span className="font-medium text-gradient">1-1.5 hours</span>
+                    <span>Intake:</span>
+                    <span className="font-medium text-gradient">Guided by an AI assistant</span>
                   </li>
                   <li className="flex justify-between">
-                    <span>Conversion rate:</span>
-                    <span className="font-medium text-gradient">31%</span>
+                    <span>Qualification:</span>
+                    <span className="font-medium text-gradient">The firm's criteria, every time</span>
                   </li>
                   <li className="flex justify-between">
-                    <span>Response time:</span>
+                    <span>First response:</span>
                     <span className="font-medium text-gradient">Immediate</span>
                   </li>
                   <li className="flex justify-between">
-                    <span>After-hours capture:</span>
-                    <span className="font-medium text-gradient">85%</span>
+                    <span>After hours:</span>
+                    <span className="font-medium text-gradient">Captured and booked</span>
                   </li>
                 </ul>
               </div>
@@ -207,37 +214,37 @@ const LawFirmAutomation = () => {
       {/* The Solution */}
       <section className="solution-section py-24 px-6 bg-secondary/20">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-light mb-12">The Solution</h2>
+          <h2 className="text-4xl md:text-5xl font-light mb-12">What we built</h2>
           <div className="space-y-12">
             <div className="solution-step grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-8 h-8 bg-brand-gradient rounded-full flex items-center justify-center text-accent-foreground font-medium">1</div>
-                  <h3 className="text-2xl font-medium">AI-Powered Client Intake System</h3>
+                  <h3 className="text-2xl font-medium">AI intake assistant</h3>
                 </div>
                 <p className="text-muted-foreground mb-4">
-                  Developed a conversational AI system that guides potential clients through an intelligent intake process, 
-                  collecting case details and determining viability based on the firm's criteria.
+                  A conversational assistant that guides potential clients through the firm's intake questions
+                  in plain English and collects the details a fee earner needs before the first call.
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
-                    <span className="text-sm">24/7 availability for client inquiries</span>
+                    <span className="text-sm">Open for enquiries day and night</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
-                    <span className="text-sm">Automated case evaluation and scoring</span>
+                    <span className="text-sm">Questions set by the firm for each practice area</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
-                    <span className="text-sm">Integration with existing case management system</span>
+                    <span className="text-sm">Connected to the firm's case management system</span>
                   </li>
                 </ul>
               </div>
               <div className="aspect-video bg-card border border-border rounded-lg flex items-center justify-center">
                 <div className="text-center">
                   <Scale className="w-16 h-16 text-accent/40 mx-auto mb-4" />
-                  <p className="text-muted-foreground">AI Intake System</p>
+                  <p className="text-muted-foreground">AI intake assistant</p>
                 </div>
               </div>
             </div>
@@ -247,31 +254,31 @@ const LawFirmAutomation = () => {
                 <div className="aspect-video bg-card border border-border rounded-lg flex items-center justify-center">
                   <div className="text-center">
                     <Users className="w-16 h-16 text-accent/40 mx-auto mb-4" />
-                    <p className="text-muted-foreground">Lead Scoring System</p>
+                    <p className="text-muted-foreground">Lead qualification</p>
                   </div>
                 </div>
               </div>
               <div className="order-1 md:order-2">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-8 h-8 bg-brand-gradient rounded-full flex items-center justify-center text-accent-foreground font-medium">2</div>
-                  <h3 className="text-2xl font-medium">Intelligent Lead Qualification</h3>
+                  <h3 className="text-2xl font-medium">Consistent qualification</h3>
                 </div>
                 <p className="text-muted-foreground mb-4">
-                  Implemented machine learning algorithms trained on the firm's historical case data 
-                  to automatically score and prioritize leads based on case strength and potential value.
+                  Each enquiry is checked against the firm's own criteria, so fee earners see the matters they
+                  can take on first, and the rest get a clear, polite answer.
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
-                    <span className="text-sm">Automatic lead scoring and prioritization</span>
+                    <span className="text-sm">Enquiries sorted by fit and urgency</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
-                    <span className="text-sm">Integration with CRM and calendar systems</span>
+                    <span className="text-sm">Urgent matters passed to a person straight away</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
-                    <span className="text-sm">Automated follow-up sequences</span>
+                    <span className="text-sm">Automatic follow-up for incomplete enquiries</span>
                   </li>
                 </ul>
               </div>
@@ -281,31 +288,31 @@ const LawFirmAutomation = () => {
               <div>
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-8 h-8 bg-brand-gradient rounded-full flex items-center justify-center text-accent-foreground font-medium">3</div>
-                  <h3 className="text-2xl font-medium">Automated Google Ads Optimization</h3>
+                  <h3 className="text-2xl font-medium">Booking and hand-off</h3>
                 </div>
                 <p className="text-muted-foreground mb-4">
-                  Deployed AI-driven Google Ads campaigns targeting high-intent legal keywords with 
-                  automatic bid optimization and ad copy testing for maximum ROI.
+                  Qualified clients book a consultation straight into the right fee earner's diary, and their
+                  details arrive in the case management system ready for the first meeting.
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
-                    <span className="text-sm">Real-time bid optimization based on lead quality</span>
+                    <span className="text-sm">Consultations booked without back-and-forth</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
-                    <span className="text-sm">A/B testing of ad copy and landing pages</span>
+                    <span className="text-sm">Confirmations and reminders sent automatically</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient" />
-                    <span className="text-sm">Compliance-focused legal advertising</span>
+                    <span className="text-sm">No re-keying of client details</span>
                   </li>
                 </ul>
               </div>
               <div className="aspect-video bg-card border border-border rounded-lg flex items-center justify-center">
                 <div className="text-center">
                   <TrendingUp className="w-16 h-16 text-accent/40 mx-auto mb-4" />
-                  <p className="text-muted-foreground">Google Ads AI</p>
+                  <p className="text-muted-foreground">Booking and hand-off</p>
                 </div>
               </div>
             </div>
@@ -316,34 +323,34 @@ const LawFirmAutomation = () => {
       {/* Implementation Timeline */}
       <section className="py-24 px-6">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-light mb-12">Implementation Timeline</h2>
+          <h2 className="text-4xl md:text-5xl font-light mb-12">How the project ran</h2>
           <div className="space-y-8">
             <div className="flex gap-6">
-              <div className="flex-shrink-0 w-24 text-sm text-muted-foreground">Weeks 1-2</div>
+              <div className="flex-shrink-0 w-24 text-sm text-muted-foreground">Discover</div>
               <div>
-                <h3 className="font-medium mb-2">Discovery & Planning</h3>
-                <p className="text-muted-foreground">Analyzed existing intake processes, interviewed staff, and designed custom AI workflows.</p>
+                <h3 className="font-medium mb-2">Mapping intake</h3>
+                <p className="text-muted-foreground">We reviewed how enquiries arrived and were handled, spoke to the team and agreed the qualifying questions.</p>
               </div>
             </div>
             <div className="flex gap-6">
-              <div className="flex-shrink-0 w-24 text-sm text-muted-foreground">Weeks 3-5</div>
+              <div className="flex-shrink-0 w-24 text-sm text-muted-foreground">Build</div>
               <div>
-                <h3 className="font-medium mb-2">AI Development & Training</h3>
-                <p className="text-muted-foreground">Built and trained the AI intake system using historical case data and firm-specific criteria.</p>
+                <h3 className="font-medium mb-2">Building the assistant</h3>
+                <p className="text-muted-foreground">We built the intake assistant and qualification rules around the firm's own criteria.</p>
               </div>
             </div>
             <div className="flex gap-6">
-              <div className="flex-shrink-0 w-24 text-sm text-muted-foreground">Weeks 6-7</div>
+              <div className="flex-shrink-0 w-24 text-sm text-muted-foreground">Connect</div>
               <div>
-                <h3 className="font-medium mb-2">Integration & Testing</h3>
-                <p className="text-muted-foreground">Integrated with existing case management system and conducted comprehensive testing.</p>
+                <h3 className="font-medium mb-2">Integration and testing</h3>
+                <p className="text-muted-foreground">We connected it to the case management system and diaries, then tested it with real scenarios.</p>
               </div>
             </div>
             <div className="flex gap-6">
-              <div className="flex-shrink-0 w-24 text-sm text-muted-foreground">Week 8</div>
+              <div className="flex-shrink-0 w-24 text-sm text-muted-foreground">Launch</div>
               <div>
-                <h3 className="font-medium mb-2">Launch & Training</h3>
-                <p className="text-muted-foreground">Went live with full staff training and 30-day optimization period.</p>
+                <h3 className="font-medium mb-2">Go-live and tuning</h3>
+                <p className="text-muted-foreground">We trained the team, went live and refined the questions based on the enquiries that came in.</p>
               </div>
             </div>
           </div>
@@ -354,20 +361,21 @@ const LawFirmAutomation = () => {
       <section className="py-24 px-6 bg-brand-gradient text-accent-foreground">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-light mb-8">
-            Transform Your Legal Practice
+            Is your firm losing enquiries at intake?
           </h2>
           <p className="text-xl mb-12 opacity-90">
-            Ready to achieve similar results? Let's discuss how AI automation can transform your firm's operations.
+            Start with an AI Growth Audit. In two weeks we review your search, ads, content and intake,
+            and show you where enquiries are slipping through.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
               <Button variant="secondary" className="px-8 py-4 text-lg">
-                Schedule Free Consultation
+                Book an AI Growth Audit
               </Button>
             </Link>
             <Link to="/industries/legal">
               <Button variant="outline" className="px-8 py-4 text-lg border-accent-foreground text-accent-foreground hover:bg-glow hover:text-[#0d0d26] hover:border-glow">
-                Legal Industry Solutions
+                AI for law firms
               </Button>
             </Link>
           </div>

@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { Scale, Stethoscope, Building, Store, ShoppingCart, Cloud } from "lucide-react";
+import { Scale, Stethoscope, Building, Store, ShoppingCart, Home } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -9,39 +9,39 @@ gsap.registerPlugin(ScrollTrigger);
 const industries = [
   {
     title: "Legal & Law Firms",
-    description: "Client intake automation, case management, and compliance tracking",
+    description: "Answer every enquiry, qualify new matters and take the admin out of intake",
     icon: Scale,
     path: "/industries/legal"
   },
   {
     title: "E-commerce",
-    description: "Product marketing automation, customer retention, and sales optimization",
+    description: "Ads and product content that sell, plus automated follow-ups that bring buyers back",
     icon: ShoppingCart,
     path: "/contact"
   },
   {
     title: "Healthcare",
-    description: "Patient scheduling, automated follow-ups, and communication",
+    description: "Fewer no-shows and phone queues, with booking and reminders that run themselves",
     icon: Stethoscope,
     path: "/industries/healthcare"
   },
   {
     title: "Professional Services",
-    description: "Consultation booking, client management, and service delivery",
+    description: "More qualified consultations, and onboarding that doesn't eat billable hours",
     icon: Building,
     path: "/industries/professional-services"
   },
   {
     title: "Local Businesses",
-    description: "Customer engagement, appointment booking, and local marketing",
+    description: "Get found locally, reply in seconds and fill the diary, even after hours",
     icon: Store,
     path: "/industries/local-business"
   },
   {
-    title: "B2B SaaS",
-    description: "Lead generation, product demos, onboarding automation, and customer success",
-    icon: Cloud,
-    path: "/contact"
+    title: "Real Estate",
+    description: "Reply to portal leads in under a minute and book more valuations and viewings",
+    icon: Home,
+    path: "/industries/real-estate"
   }
 ];
 
@@ -82,10 +82,10 @@ export const Industries = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="industries-title text-4xl md:text-5xl lg:text-6xl font-light mb-6">
-            Industries We Specialize In
+            Built for businesses that run on enquiries
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            We cater to all SMEs, with specialized expertise in these key industries
+            We work with UK small and mid-sized businesses, and know these sectors best
           </p>
         </div>
 

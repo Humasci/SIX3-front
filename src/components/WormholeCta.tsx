@@ -23,14 +23,14 @@ export const WormholeCta = ({ buttonLabel, to = "/contact" }: WormholeCtaProps) 
 
     <div className="max-w-4xl mx-auto text-center">
       <h2 className="text-5xl md:text-6xl font-light mb-6 leading-tight text-foreground">
-        Ready to{" "}
-        <span className="bg-gradient-to-r from-[#a855f7] via-[#f97316] to-glow bg-clip-text text-transparent">Transform</span>
-        <br />
-        Your Business?
+        Ready for growth,{" "}
+        <br className="md:hidden" />
+        <span className="bg-gradient-to-r from-[#a855f7] via-[#f97316] to-glow bg-clip-text text-transparent">cubed</span>?
       </h2>
       <div className="mx-auto mb-8 h-1 w-40 rounded-full bg-brand-gradient-glow" />
       <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-        Let's discuss how our AI-powered solutions can drive measurable results for your organization.
+        Start with a two-week AI Growth Audit: a clear plan for where growth is leaking and what to fix first,
+        whether or not you work with us afterwards.
       </p>
       <Link
         to={to}

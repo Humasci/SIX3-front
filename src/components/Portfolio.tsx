@@ -2,7 +2,6 @@ import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import icons from "@/utils/iconGenerator";
 import { HeroWormhole } from "@/components/HeroWormhole";
 import { reduceMotion } from "@/lib/motion";
 
@@ -12,12 +11,12 @@ const projects = [
   {
     id: "law-firm-automation",
     number: "01",
-    title: "Legal Firm AI Automation",
-    category: "AI Agent Development",
+    title: "Law Firm Intake Automation",
+    category: "AI Agents & Automation",
     year: "2024",
-    description: "60% reduction in intake administration time, 40% increase in qualified leads, $150K annual savings",
+    description: "AI intake for a UK law firm: every enquiry answered, new matters qualified and booked, and intake admin taken off fee earners",
     image: "/images/use-cases/law-firm-automation.webp",
-    metrics: "60% time reduction, $150K savings"
+    metrics: "Client under NDA"
   },
   {
     id: "media-publisher-directory",
@@ -33,51 +32,21 @@ const projects = [
     id: "ecommerce-ai-campaign",
     number: "03",
     title: "E-commerce AI Marketing Campaign",
-    category: "Search Marketing & Paid Media",
+    category: "Search & Paid Media",
     year: "2026",
-    description: "Multi-platform campaign with AI optimization delivering 300% ROAS improvement",
+    description: "Paid media across search and social, consolidated into one budget with AI-assisted bidding and sales tracking back to every ad",
     image: "/images/use-cases/ecommerce-noovit.webp",
-    metrics: "300% ROAS improvement"
-  },
-  {
-    id: "healthcare-patient-system",
-    number: "04",
-    title: "Healthcare Patient Management",
-    category: "AI Agent Creation",
-    year: "2024",
-    description: "24/7 AI scheduling system with 40% faster patient processing and improved satisfaction",
-    image: icons.healthcare,
-    metrics: "40% faster processing, 24/7 availability"
-  },
-  {
-    id: "fintech-ai-video-content",
-    number: "05",
-    title: "FinTech AI Video Campaign",
-    category: "Generative AI Video & Audio",
-    year: "2024",
-    description: "AI avatars and voice cloning for personalized customer onboarding videos",
-    image: icons.fintech,
-    metrics: "75% engagement increase"
-  },
-  {
-    id: "manufacturing-ml-optimization",
-    number: "06",
-    title: "Manufacturing ML Optimization",
-    category: "AI Development & Automation",
-    year: "2024",
-    description: "Custom predictive analytics model for supply chain optimization and quality control",
-    image: icons.manufacturing,
-    metrics: "30% cost reduction, 95% accuracy"
+    metrics: "Search, social and attribution"
   },
   {
     id: "dui-guide",
-    number: "07",
+    number: "04",
     title: "dui.guide — Legal Guidance Platform",
-    category: "AI Agent Creation & Workflow Automation",
+    category: "AI Agents & Automation",
     year: "2025–2026",
-    description: "AI-powered DUI procedural guidance platform with 24/7 automated support across all 50 states and intelligent attorney matching",
+    description: "Our own AI legal guidance platform: state and county-specific DUI guidance, deadline tracking and attorney matching, available 24/7",
     image: "/images/use-cases/media-publisher-directory-dui-guide.webp",
-    metrics: "AI guidance across all 50 states"
+    metrics: "Our own platform"
   },
 ];
 
@@ -217,10 +186,16 @@ export const Portfolio = ({ lightHeader = false }: { lightHeader?: boolean }) =>
             Our Work <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" />
           </p>
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
-            <h2 className={`text-5xl md:text-6xl lg:text-7xl font-light ${lightHeader ? "text-gradient w-fit pb-1" : ""}`}>
-              Featured Projects<br />
-              & Case Studies
-            </h2>
+            {/* On the portfolio page this is the page's main heading */}
+            {(() => {
+              const Heading = lightHeader ? "h1" : "h2";
+              return (
+                <Heading className={`text-5xl md:text-6xl lg:text-7xl font-light ${lightHeader ? "text-gradient w-fit pb-1" : ""}`}>
+                  Featured Projects<br />
+                  & Case Studies
+                </Heading>
+              );
+            })()}
             {!lightHeader && (
               <Link
                 to="/portfolio"

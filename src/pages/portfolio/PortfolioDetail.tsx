@@ -5,73 +5,19 @@ import { useEffect, useRef } from "react";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import gsap from "gsap";
-import icons from "@/utils/iconGenerator";
 import { HeroWormhole } from "@/components/HeroWormhole";
+import { PageSEO } from "@/components/PageSEO";
+import NotFound from "@/pages/NotFound";
 
 const projects = {
-  "brand-refresh-2024": {
-    title: "Brand Refresh 2024",
-    category: "Branding",
-    year: "2024",
-    client: "TechStart Inc.",
-    duration: "3 months",
-    description: "Complete brand identity redesign for a leading tech startup, including logo, color palette, typography, and brand guidelines.",
-    challenge: "The client needed a modern brand identity that would appeal to both enterprise clients and individual users while maintaining trust and professionalism.",
-    solution: "We created a flexible brand system with a bold, contemporary aesthetic that scales across all touchpoints. The new identity increased brand recognition by 85%.",
-    results: ["85% increase in brand recognition", "150% growth in social media engagement", "40% increase in conversion rates"],
-    image: icons.contentCreation,
-  },
-  "mobile-banking-app": {
-    title: "Mobile Banking App",
-    category: "App Design",
-    year: "2024",
-    client: "FinFlow Bank",
-    duration: "6 months",
-    description: "Revolutionary fintech app with seamless user experience, biometric authentication, and real-time transaction tracking.",
-    challenge: "Create a secure yet intuitive banking experience that would increase user adoption and daily active usage.",
-    solution: "We designed a clean, minimal interface with focus on core banking tasks and implemented advanced security features without compromising usability.",
-    results: ["200K+ downloads in first month", "4.8 star rating on app stores", "60% daily active user rate"],
-    image: icons.fintech,
-  },
-  "ecommerce-platform": {
-    title: "E-Commerce Platform",
-    category: "Web Design",
-    year: "2023",
-    client: "ShopHub",
-    duration: "4 months",
-    description: "Modern e-commerce solution with advanced filtering, personalized recommendations, and seamless checkout experience.",
-    challenge: "Build a scalable platform that could handle high traffic while providing personalized shopping experiences.",
-    solution: "We implemented a modular design system with AI-powered recommendations and optimized the checkout flow to reduce cart abandonment.",
-    results: ["45% reduction in cart abandonment", "2M+ monthly visitors", "35% increase in average order value"],
-    image: icons.ecommerce,
-  },
-  "ai-saas-platform": {
-    title: "AI SaaS Platform",
-    category: "Development",
-    year: "2024",
-    client: "DataWise AI",
-    duration: "8 months",
-    description: "Full-stack AI-powered business intelligence platform with real-time analytics and predictive insights.",
-    challenge: "Develop a scalable platform that could process massive datasets in real-time while maintaining an intuitive interface.",
-    solution: "Built a microservices architecture with advanced caching and implemented a drag-and-drop dashboard builder for custom analytics.",
-    results: ["1000+ enterprise clients", "99.9% uptime", "50% reduction in data analysis time"],
-    image: icons.ai,
-  },
-  "fitness-tracking-app": {
-    title: "Fitness Tracking App",
-    category: "App Design",
-    year: "2023",
-    client: "FitLife",
-    duration: "5 months",
-    description: "Health and wellness app with personalized workout plans, nutrition tracking, and social features.",
-    challenge: "Create an engaging fitness app that motivates users to maintain consistent exercise habits.",
-    solution: "Designed a gamified experience with achievement systems, social challenges, and AI-powered personalized recommendations.",
-    results: ["500K+ active users", "4.7 star rating", "75% user retention rate"],
-    image: icons.healthcare,
-  },
+
+
+
+
+
   "dui-guide": {
     title: "dui.guide — Legal Guidance Platform",
-    category: "AI Agent Creation & Workflow Automation",
+    category: "AI Agents & Automation",
     year: "2025–2026",
     client: "dui.guide — Media Law Group LLC",
     duration: "10 weeks",
@@ -95,28 +41,17 @@ const projects = {
   },
   "ecommerce-ai-campaign": {
     title: "E-commerce AI Marketing Campaign",
-    category: "Search Marketing & Paid Media",
+    category: "Search & Paid Media",
     year: "2026",
     client: "Online retailer",
     duration: "Ongoing",
-    description: "Multi-platform paid media campaign with AI-driven bid and audience optimization across search and social.",
+    description: "Paid media across search and social for an online retailer, consolidated into one budget with AI-assisted bidding, audience targeting and sales tracking.",
     challenge: "Spend was spread across several ad platforms with manual bidding and no shared view of which campaigns actually drove sales.",
     solution: "We consolidated the campaigns, introduced AI bid optimization and audience segmentation on each platform, and set up attribution reporting with automated performance alerts.",
-    results: ["300% ROAS improvement", "One reporting view across every ad platform", "Automated alerts on campaign performance"],
+    results: ["One budget and one reporting view across every ad platform", "Sales tracked back to the ad that drove them", "Automated alerts on campaign performance"],
     image: "/images/use-cases/ecommerce-noovit.webp",
   },
-  "corporate-website": {
-    title: "Corporate Website",
-    category: "Web Design",
-    year: "2024",
-    client: "Global Ventures",
-    duration: "3 months",
-    description: "Professional corporate presence with modern design, interactive elements, and comprehensive portfolio showcase.",
-    challenge: "Develop a professional website that reflects the company's values while standing out from competitors.",
-    solution: "Created a bold, minimalist design with innovative interactions and smooth animations that enhance user engagement.",
-    results: ["300% increase in leads", "65% longer session duration", "Award-winning design"],
-    image: icons.professionalServices,
-  },
+
 };
 
 const PortfolioDetail = () => {
@@ -159,23 +94,15 @@ const PortfolioDetail = () => {
     return () => ctx.revert();
   }, [id]);
 
-  if (!project) {
-    return (
-      <div className="min-h-screen bg-background text-foreground">
-        <Header />
-        <div className="pt-32 pb-24 px-6 text-center">
-          <h1 className="text-4xl font-light mb-4">Project Not Found</h1>
-          <Link to="/portfolio">
-            <Button variant="outline">Back to Portfolio</Button>
-          </Link>
-        </div>
-        <Footer />
-      </div>
-    );
-  }
+  if (!project) return <NotFound />;
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <PageSEO
+        title={`${project.title} | SIX³ Agency`}
+        description={project.description.length > 160 ? `${project.description.slice(0, 157).trimEnd()}…` : project.description}
+        canonical={`https://six3.agency/portfolio/${id}`}
+      />
       <Header />
       
       <div ref={contentRef}>
@@ -273,5 +200,8 @@ const PortfolioDetail = () => {
     </div>
   );
 };
+
+// Used by the prerender to build a page for each project
+export const portfolioIds = Object.keys(projects);
 
 export default PortfolioDetail;

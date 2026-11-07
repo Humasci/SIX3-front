@@ -7,15 +7,33 @@ import { HeroWormhole } from "@/components/HeroWormhole";
 import { ServiceVisual } from "@/components/ServiceVisual";
 import { BlogCard } from "@/components/BlogCard";
 import { WormholeCta } from "@/components/WormholeCta";
-import { blogPosts } from "@/data/blogPosts";
+import { formatPostDate, publishedPosts } from "@/data/blogPosts";
 import NotFound from "@/pages/NotFound";
+
+// Renders article blocks: "## " and "### " headings, runs of "- " lines as a list, anything else as a paragraph
+const ArticleBody = ({ blocks }: { blocks: string[] }) => {
+  const out: JSX.Element[] = [];
+  for (let i = 0; i < blocks.length; i++) {
+    const b = blocks[i];
+    if (b.startsWith("## ")) out.push(<h2 key={i}>{b.slice(3)}</h2>);
+    else if (b.startsWith("### ")) out.push(<h3 key={i}>{b.slice(4)}</h3>);
+    else if (b.startsWith("- ")) {
+      const items: string[] = [];
+      while (i < blocks.length && blocks[i].startsWith("- ")) items.push(blocks[i++].slice(2));
+      i--;
+      out.push(<ul key={i}>{items.map((it, k) => <li key={k}>{it}</li>)}</ul>);
+    } else out.push(<p key={i}>{b}</p>);
+  }
+  return <>{out}</>;
+};
 
 const BlogPost = () => {
   const { slug } = useParams();
-  const post = blogPosts.find((p) => p.slug === slug);
+  const posts = publishedPosts();
+  const post = posts.find((p) => p.slug === slug);
   if (!post) return <NotFound />;
 
-  const related = blogPosts
+  const related = posts
     .filter((p) => p.slug !== post.slug)
     .sort((a, b) => Number(b.category === post.category) - Number(a.category === post.category))
     .slice(0, 3);
@@ -23,9 +41,22 @@ const BlogPost = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <PageSEO
-        title={`${post.title} | SIX³ Agency Blog`}
+        title={post.title.length > 46 ? post.title : `${post.title} | SIX³ Agency`}
         description={post.excerpt}
         canonical={`https://six3.agency/blog/${post.slug}`}
+        type="article"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          headline: post.title,
+          description: post.excerpt,
+          datePublished: post.date,
+          author: { "@type": "Organization", name: "SIX³ Agency", url: "https://six3.agency" },
+          publisher: { "@id": "https://six3.agency/#organization" },
+          mainEntityOfPage: `https://six3.agency/blog/${post.slug}`,
+          image: "https://six3.agency/og-image.jpg",
+          articleSection: post.category,
+        }}
       />
       <Header />
 
@@ -44,7 +75,7 @@ const BlogPost = () => {
           <div className="h-1 w-32 bg-brand-gradient rounded-full mb-8 mx-auto" />
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
             <span className="flex items-center gap-2"><User className="w-4 h-4" />{post.author}</span>
-            <span className="flex items-center gap-2"><Calendar className="w-4 h-4" />{post.date}</span>
+            <span className="flex items-center gap-2"><Calendar className="w-4 h-4" />{formatPostDate(post.date)}</span>
             <span className="flex items-center gap-2"><Clock className="w-4 h-4" />{post.readTime}</span>
           </div>
         </div>
@@ -59,8 +90,8 @@ const BlogPost = () => {
           <div className="max-w-2xl mx-auto">
             <p className="text-xl md:text-2xl leading-relaxed text-foreground/90 mb-10">{post.excerpt}</p>
             {post.body?.length ? (
-              <div className="prose prose-invert prose-lg max-w-none prose-p:text-muted-foreground prose-headings:font-light prose-a:text-[#c084fc]">
-                {post.body.map((para, i) => <p key={i}>{para}</p>)}
+              <div className="article-body">
+                <ArticleBody blocks={post.body} />
               </div>
             ) : (
               <div className="rounded-2xl border border-border bg-card p-8 text-center">
@@ -89,7 +120,7 @@ const BlogPost = () => {
         </div>
       </section>
 
-      <WormholeCta buttonLabel="Start Your AI Journey" />
+      <WormholeCta buttonLabel="Book an AI Growth Audit" />
       <Footer />
     </div>
   );

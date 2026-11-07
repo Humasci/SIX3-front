@@ -54,8 +54,8 @@ const MLFineTuning = () => {
   return (
     <div ref={contentRef} className="min-h-screen bg-background text-foreground">
       <PageSEO
-        title="ML Model Fine-Tuning — SIX³ Agency"
-        description="Custom fine-tuning of GPT, LLaMA, and Mistral models on your proprietary data. Domain-specific NLP, RLHF, and full model ownership. SIX³ Agency, London."
+        title="Custom AI Models & Fine-Tuning | SIX³ Agency"
+        description="Language models fine-tuned on your documents and data, tested on your real tasks and deployed privately, for UK firms with specialist knowledge or data rules."
         canonical="https://six3.agency/services/ml-fine-tuning"
       />
       <Header />
@@ -66,28 +66,32 @@ const MLFineTuning = () => {
         <div className="max-w-7xl mx-auto">
           <div className="hero-content mb-12 grid lg:grid-cols-[minmax(0,1fr)_400px] gap-x-12 gap-y-8 items-center">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-light mb-8 text-gradient w-fit pb-1 lg:col-start-1">
-              ML Model Fine-Tuning
+              Private AI: Custom Models
             </h1>
             <div className="h-1 w-40 bg-brand-gradient rounded-full lg:col-start-1 -mt-4" />
             <div className="media-frame aspect-[4/3] w-full max-w-md lg:max-w-none lg:col-start-2 lg:row-start-1 lg:row-span-3">
-              <ServiceVisual kind="ml" label="ML Fine-Tuning" className="w-full h-full" />
+              <ServiceVisual kind="ml" label="Private AI: Custom Models" className="w-full h-full" />
             </div>
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl lg:col-start-1">
+              AI trained on your own knowledge, deployed privately. Language models fine-tuned on your documents and
+              data, tested against your real tasks, and run where your data stays under your control.
+            </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm lg:col-start-1">
               <div>
-                <p className="text-muted-foreground mb-1">Location</p>
-                <p>London</p>
+                <p className="text-muted-foreground mb-1">Format</p>
+                <p>By enquiry</p>
               </div>
               <div>
-                <p className="text-muted-foreground mb-1">Year</p>
-                <p>2025</p>
+                <p className="text-muted-foreground mb-1">Built for</p>
+                <p>Specialist and regulated firms</p>
               </div>
               <div>
-                <p className="text-muted-foreground mb-1">Lead</p>
-                <p>ML Team</p>
+                <p className="text-muted-foreground mb-1">Your data</p>
+                <p>Stays under your control</p>
               </div>
               <div>
-                <p className="text-muted-foreground mb-1">Category</p>
-                <p>Machine Learning</p>
+                <p className="text-muted-foreground mb-1">Start with</p>
+                <p>AI Growth Audit</p>
               </div>
             </div>
           </div>
@@ -98,42 +102,48 @@ const MLFineTuning = () => {
       <section className="steps-section py-24 px-6 bg-secondary/30">
         <div className="max-w-7xl mx-auto">
           <p className="text-sm text-muted-foreground mb-8 tracking-wider">
-            Simple process <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" />
+            How it works <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" />
           </p>
           <h2 className="text-4xl md:text-5xl font-light mb-16">
-            Clear, & Effective Workflow
+            Tested on your work before it goes live
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="step-card border border-border p-8 bg-background">
               <p className="text-sm text-muted-foreground mb-4">Step -01</p>
-              <h3 className="text-2xl font-light mb-4">Data Audit & Preparation</h3>
+              <h3 className="text-2xl font-light mb-4">Scope & data review</h3>
               <p className="text-muted-foreground">
-                Review and clean your proprietary datasets, define training objectives, assess data quality and volume, and establish labelling guidelines for supervised fine-tuning.
+                We agree the job the model needs to do, such as drafting, summarising, sorting or answering
+                questions. Then we review your documents and data: what you have, how usable it is and what must stay
+                confidential.
               </p>
             </div>
 
             <div className="step-card border border-border p-8 bg-background">
               <p className="text-sm text-muted-foreground mb-4">Step -02</p>
-              <h3 className="text-2xl font-light mb-4">Model Selection & Training</h3>
+              <h3 className="text-2xl font-light mb-4">Choose & fine-tune</h3>
               <p className="text-muted-foreground">
-                Select the optimal foundation model (GPT, LLaMA, Mistral, or domain-specific), configure training hyperparameters, run fine-tuning pipelines, and apply RLHF where required.
+                We pick the right starting point from open and commercial language models, then fine-tune it on your
+                documents, data and house style. Where it helps, your experts rate sample answers and we train the
+                model on their feedback.
               </p>
             </div>
 
             <div className="step-card border border-border p-8 bg-background">
               <p className="text-sm text-muted-foreground mb-4">Step -03</p>
-              <h3 className="text-2xl font-light mb-4">Evaluation & Benchmarking</h3>
+              <h3 className="text-2xl font-light mb-4">Test on real tasks</h3>
               <p className="text-muted-foreground">
-                Rigorous performance benchmarking against baseline models, red-teaming for safety and bias, accuracy and latency testing, and iterative refinement cycles.
+                Before anything goes live, we test the model on a set of your real tasks and compare it with
+                off-the-shelf options for accuracy, tone, safety and running cost. You see the results and decide.
               </p>
             </div>
 
             <div className="step-card border border-border p-8 bg-background">
               <p className="text-sm text-muted-foreground mb-4">Step -04</p>
-              <h3 className="text-2xl font-light mb-4">Deployment & Monitoring</h3>
+              <h3 className="text-2xl font-light mb-4">Deploy privately & retrain</h3>
               <p className="text-muted-foreground">
-                Scalable API deployment, integration with existing systems, continuous performance monitoring, and scheduled re-training as new data becomes available.
+                We deploy it in your own cloud or on infrastructure you control, connect it to your systems, and
+                retrain it as your knowledge, products and rules change.
               </p>
             </div>
           </div>
@@ -147,17 +157,20 @@ const MLFineTuning = () => {
             Overview <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" />
           </p>
           <h2 className="text-4xl md:text-5xl font-light mb-8 max-w-3xl">
-            Custom Model Training Tailored to Your Business Data
+            AI that knows your field and keeps your data private
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mb-8">
-            Off-the-shelf AI models are generic. Fine-tuned models are yours. We adapt state-of-the-art foundation models to your proprietary data, domain language, and business objectives — delivering dramatically higher accuracy and relevance for your specific use case.
+            For firms with specialist knowledge or strict data rules, off-the-shelf AI isn't always enough. It
+            doesn't know your precedents, products or house style, and sending client data to a public tool may not
+            be an option. We fine-tune open and commercial language models on your documents and data, test them
+            properly against your real tasks, and deploy them where your data stays under your control.
           </p>
           <ul className="space-y-4 text-lg text-muted-foreground max-w-3xl">
-            <li>• Fine-tuning of GPT, LLaMA, Mistral, and other foundation models</li>
-            <li>• Domain-specific NLP for legal, healthcare, finance, and retail</li>
-            <li>• Reinforcement Learning from Human Feedback (RLHF)</li>
-            <li>• Custom classification, extraction, and generation pipelines</li>
-            <li>• Ongoing retraining and model versioning</li>
+            <li>• Fine-tuning on your documents, data and house style</li>
+            <li>• Evaluation against your real tasks before anything goes live</li>
+            <li>• Private deployment that keeps your data under your control</li>
+            <li>• Ongoing retraining as your knowledge changes</li>
+            <li>• Drafting, summarising and sorting tools built on your model</li>
           </ul>
         </div>
       </section>
@@ -166,8 +179,12 @@ const MLFineTuning = () => {
       <section className="py-16 px-6 bg-secondary/30">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
           <div>
-            <div className="text-7xl md:text-8xl font-light mb-4">Ongoing</div>
-            <p className="text-xl text-muted-foreground">Retraining Available</p>
+            <div className="text-7xl md:text-8xl font-light mb-4">Private</div>
+            <p className="text-xl text-muted-foreground">Deployed where your data stays under your control</p>
+          </div>
+          <div>
+            <div className="text-7xl md:text-8xl font-light mb-4">Tested</div>
+            <p className="text-xl text-muted-foreground">Against your real tasks before go-live</p>
           </div>
         </div>
       </section>
@@ -176,34 +193,39 @@ const MLFineTuning = () => {
       <section className="advantages-section py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <p className="text-sm text-muted-foreground mb-8 tracking-wider">
-            Our Advantage <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" />
+            Why it works <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" />
           </p>
           <h2 className="text-5xl md:text-6xl font-light mb-16 max-w-2xl">
-            Where Precision<br />Meets Performance
+            Your knowledge.<br />Your model.
           </h2>
 
           <div className="space-y-12">
             <div className="advantage-card border-t-gradient pt-8">
               <div className="text-5xl font-light text-muted-foreground/50 mb-4">01</div>
-              <h3 className="text-3xl font-light mb-4">Domain Expertise</h3>
+              <h3 className="text-3xl font-light mb-4">Built for specialist firms</h3>
               <p className="text-lg text-muted-foreground max-w-2xl">
-                We fine-tune models across legal, healthcare, finance, e-commerce, and professional services — with deep understanding of each domain's vocabulary, compliance requirements, and edge cases.
+                Law firms, healthcare practices, financial and professional services. We work with your field's
+                vocabulary, compliance rules and edge cases, and keep a person in the loop wherever the stakes are
+                high.
               </p>
             </div>
 
             <div className="advantage-card border-t-gradient pt-8">
               <div className="text-5xl font-light text-muted-foreground/50 mb-4">02</div>
-              <h3 className="text-3xl font-light mb-4">Proven Accuracy Gains</h3>
+              <h3 className="text-3xl font-light mb-4">Measured before it's trusted</h3>
               <p className="text-lg text-muted-foreground max-w-2xl">
-                Clients typically see 40-70% improvements in task-specific accuracy over base models, reduced hallucination rates, and significantly lower inference costs through model distillation techniques.
+                We don't promise accuracy gains up front. We build a test from your real work, measure the model
+                against it and only recommend going live when it's good enough for the job.
               </p>
             </div>
 
             <div className="advantage-card border-t-gradient pt-8">
               <div className="text-5xl font-light text-muted-foreground/50 mb-4">03</div>
-              <h3 className="text-3xl font-light mb-4">Full Ownership</h3>
+              <h3 className="text-3xl font-light mb-4">Yours, and part of the system</h3>
               <p className="text-lg text-muted-foreground max-w-2xl">
-                Your fine-tuned model weights are yours. We deliver complete model artifacts, training scripts, evaluation reports, and deployment infrastructure so you maintain full control and portability.
+                Your fine-tuned model, training data and test results belong to you. The model can also power the
+                rest of your system, for example giving your Get It Done AI receptionist accurate answers in your own
+                words.
               </p>
             </div>
           </div>
@@ -214,11 +236,11 @@ const MLFineTuning = () => {
       <section className="py-24 px-6 bg-secondary/30">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-5xl md:text-6xl font-light mb-12">
-            Let's work Together
+            Not sure you need a custom model? The audit will tell you.
           </h2>
           <Link to="/contact">
             <Button variant="outline" className="rounded-full px-12 py-6 text-lg border-foreground hover:bg-brand-gradient-button hover:text-white hover:border-transparent hover:shadow-[0_0_32px_-10px_rgba(249,115,22,0.6)]">
-              Start Fine-Tuning
+              Book an AI Growth Audit
             </Button>
           </Link>
         </div>

@@ -53,28 +53,29 @@ export const AboutPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="about-hero text-center">
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-light mb-8 text-gradient w-fit pb-1 mx-auto">
-              About SIX³ Agency
+              About SIX³
             </h1>
             <div className="h-1 w-40 bg-brand-gradient rounded-full mb-8 mx-auto" />
             <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto">
-              We are a cutting-edge AI marketing agency specializing in intelligent automation, 
-              generative content creation, and custom AI solutions that drive measurable business results.
+              A London agency that brings search, content and AI automation together, so service businesses get
+              found, get chosen and never miss an enquiry.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Mission Section */}
+      {/* Why we exist */}
       <section className="py-20 px-6 bg-secondary/30">
         <div className="about-content max-w-3xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-light mb-6">Our Mission</h2>
+          <h2 className="text-4xl md:text-5xl font-light mb-6">Why SIX³</h2>
           <p className="text-lg text-muted-foreground mb-6">
-            To revolutionize digital marketing through advanced AI technology, delivering automated solutions
-            that maximize ROI while reducing operational complexity for businesses of all sizes.
+            Most small and mid-sized businesses buy ads from one supplier, content from another and software from a
+            third. Nobody owns the whole journey, so value leaks between the click and the customer: the ad works but
+            nobody answers the enquiry, or the reply is fast but the content doesn't convince.
           </p>
           <p className="text-lg text-muted-foreground">
-            We believe in the power of artificial intelligence to transform how businesses connect with
-            their audiences, optimize their operations, and scale their success.
+            We started SIX³ to fix that. One team plans, builds and measures the whole system, and each part makes the
+            others work harder. That's the ³ in our name: growth that compounds instead of adding up.
           </p>
         </div>
       </section>
@@ -82,51 +83,46 @@ export const AboutPage = () => {
       {/* What We Do */}
       <section className="py-24 px-6">
         <div className="max-w-7xl mx-auto">
-          <h2 className="about-content text-4xl md:text-5xl font-light mb-12 text-center">What We Do</h2>
+          <h2 className="about-content text-4xl md:text-5xl font-light mb-12 text-center">What we do</h2>
           <div className="grid md:grid-cols-3 gap-8 text-center max-w-6xl mx-auto">
             <div className="about-content">
-              <h3 className="text-xl font-medium mb-4">AI-Driven Marketing</h3>
+              <h3 className="text-xl font-medium mb-4">Get found</h3>
               <p className="text-muted-foreground">
-                Advanced search marketing with real-time optimization across Google Ads, Meta, LinkedIn, and TikTok platforms.
+                Search and paid media across Google, Meta, LinkedIn and TikTok that bring in the right enquiries, tracked back to the ad.
               </p>
             </div>
             <div className="about-content">
-              <h3 className="text-xl font-medium mb-4">Generative Content</h3>
+              <h3 className="text-xl font-medium mb-4">Get chosen</h3>
               <p className="text-muted-foreground">
-                AI avatars, voice cloning, and automated UGC creation for compelling video and audio content at scale.
+                AI-produced video, voice and ad content that gives people a reason to pick you, made on a monthly plan.
               </p>
             </div>
             <div className="about-content">
-              <h3 className="text-xl font-medium mb-4">Workflow Automation</h3>
+              <h3 className="text-xl font-medium mb-4">Get it done</h3>
               <p className="text-muted-foreground">
-                AI agents for call screening, lead qualification, customer support, and business process optimization.
+                AI agents that answer, qualify and book every enquiry, and automations that take the admin off your team.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* How we work */}
       <section className="stats-section py-16 px-6 bg-secondary/20">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-light mb-12 text-center">Our Impact</h2>
+          <h2 className="text-4xl md:text-5xl font-light mb-12 text-center">How we work</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="stat-item text-center">
-              <div className="text-5xl md:text-6xl font-light mb-4">200-500%</div>
-              <p className="text-lg text-muted-foreground">Average ROI Increase</p>
-            </div>
-            <div className="stat-item text-center">
-              <div className="text-5xl md:text-6xl font-light mb-4">30-60%</div>
-              <p className="text-lg text-muted-foreground">Process Time Reduction</p>
-            </div>
-            <div className="stat-item text-center">
-              <div className="text-5xl md:text-6xl font-light mb-4">40-80%</div>
-              <p className="text-lg text-muted-foreground">Response Time Improvement</p>
-            </div>
-            <div className="stat-item text-center">
-              <div className="text-5xl md:text-6xl font-light mb-4">25-50%</div>
-              <p className="text-lg text-muted-foreground">Lead Conversion Increase</p>
-            </div>
+            {[
+              ["Senior people", "The people you meet are the people who do the work."],
+              ["Operators, not theorists", "We run our own digital properties, like dui.guide, so we build what we'd use ourselves."],
+              ["Practical AI", "We use AI where it saves time or wins customers, and every build has a clear job to do."],
+              ["Plain-English reporting", "One monthly report covering ads, content and automation, in language your whole team understands."],
+            ].map(([title, text]) => (
+              <div key={title} className="stat-item text-center">
+                <div className="text-2xl md:text-3xl font-light mb-4">{title}</div>
+                <p className="text-lg text-muted-foreground">{text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -134,55 +130,26 @@ export const AboutPage = () => {
       {/* Industries */}
       <section className="py-24 px-6">
         <div className="max-w-7xl mx-auto">
-          <h2 className="about-content text-4xl md:text-5xl font-light mb-12 text-center">Industries We Serve</h2>
+          <h2 className="about-content text-4xl md:text-5xl font-light mb-12 text-center">Who we work with</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="about-content border border-border p-6">
-              <h3 className="text-xl font-medium mb-3">Legal Firms</h3>
-              <p className="text-muted-foreground mb-4">
-                Client intake automation, case management, and billing systems with 60% reduction in administration time.
-              </p>
-              <p className="text-sm text-gradient">$150K+ annual savings achieved</p>
-            </div>
-            <div className="about-content border border-border p-6">
-              <h3 className="text-xl font-medium mb-3">Healthcare</h3>
-              <p className="text-muted-foreground mb-4">
-                Patient scheduling, insurance verification, and care plan coordination with improved efficiency.
-              </p>
-              <p className="text-sm text-gradient">40% faster patient processing</p>
-            </div>
-            <div className="about-content border border-border p-6">
-              <h3 className="text-xl font-medium mb-3">Real Estate</h3>
-              <p className="text-muted-foreground mb-4">
-                Lead nurturing, property matching, and transaction management with 45% conversion increase.
-              </p>
-              <p className="text-sm text-gradient">$200K+ revenue increase</p>
-            </div>
-            <div className="about-content border border-border p-6">
-              <h3 className="text-xl font-medium mb-3">E-commerce</h3>
-              <p className="text-muted-foreground mb-4">
-                Customer service automation, inventory management, and order fulfillment optimization.
-              </p>
-              <p className="text-sm text-gradient">24/7 automated support</p>
-            </div>
-            <div className="about-content border border-border p-6">
-              <h3 className="text-xl font-medium mb-3">Manufacturing</h3>
-              <p className="text-muted-foreground mb-4">
-                Supply chain optimization, quality control automation, and maintenance scheduling systems.
-              </p>
-              <p className="text-sm text-gradient">20-40% cost reduction</p>
-            </div>
-            <div className="about-content border border-border p-6">
-              <h3 className="text-xl font-medium mb-3">Financial Services</h3>
-              <p className="text-muted-foreground mb-4">
-                Risk assessment automation, customer onboarding, and compliance monitoring solutions.
-              </p>
-              <p className="text-sm text-gradient">90%+ accuracy rates</p>
-            </div>
+            {[
+              ["Law firms", "Every enquiry answered, new matters qualified, and intake admin taken off fee earners."],
+              ["Healthcare practices", "Booking and reminders that run themselves, fewer no-shows and shorter phone queues."],
+              ["Estate agents", "Portal leads answered in under a minute, and more valuations and viewings booked."],
+              ["Professional services", "More qualified consultations, and client onboarding that doesn't eat billable hours."],
+              ["Local businesses", "Found in local search, replying in seconds and filling the diary, even after hours."],
+              ["E-commerce brands", "Ads and product content that sell, and automated follow-ups that bring buyers back."],
+            ].map(([title, text]) => (
+              <div key={title} className="about-content border border-border p-6">
+                <h3 className="text-xl font-medium mb-3">{title}</h3>
+                <p className="text-muted-foreground">{text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <WormholeCta buttonLabel="Start Your AI Journey" />
+      <WormholeCta buttonLabel="Book an AI Growth Audit" />
     </div>
   );
 };

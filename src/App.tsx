@@ -1,33 +1,71 @@
-import { lazy, Suspense } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Suspense } from "react";
+import { BrowserRouter, Routes, Route, matchPath } from "react-router-dom";
 import "./i18n";
 import { ScrollToTop } from "./components/ScrollToTop";
+import { lazyPage } from "./lib/lazyPage";
 import Index from "./pages/Index";
-const NotFound = lazy(() => import("./pages/NotFound"));
-const SearchMarketingPPC = lazy(() => import("./pages/services/SearchMarketingPPC"));
-const ContentCreation = lazy(() => import("./pages/services/ContentCreation"));
-const AIDevAutomation = lazy(() => import("./pages/services/AIDevAutomation"));
-const MLFineTuning = lazy(() => import("./pages/services/MLFineTuning"));
-const About = lazy(() => import("./pages/About"));
-const Contact = lazy(() => import("./pages/Contact"));
-const Portfolio = lazy(() => import("./pages/Portfolio"));
-const PortfolioDetail = lazy(() => import("./pages/portfolio/PortfolioDetail"));
-const Services = lazy(() => import("./pages/Services"));
-const Legal = lazy(() => import("./pages/industries/Legal"));
-const RealEstate = lazy(() => import("./pages/industries/RealEstate"));
-const Healthcare = lazy(() => import("./pages/industries/Healthcare"));
-const ProfessionalServices = lazy(() => import("./pages/industries/ProfessionalServices"));
-const LocalBusiness = lazy(() => import("./pages/industries/LocalBusiness"));
-const LawFirmAutomation = lazy(() => import("./pages/use-cases/LawFirmAutomation"));
-const RealEstateLeadSystem = lazy(() => import("./pages/use-cases/RealEstateLeadSystem"));
-const DuiGuide = lazy(() => import("./pages/use-cases/DuiGuide"));
-const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
-const Terms = lazy(() => import("./pages/Terms"));
-const CookiePolicy = lazy(() => import("./pages/CookiePolicy"));
-const Blog = lazy(() => import("./pages/Blog"));
-const BlogPost = lazy(() => import("./pages/BlogPost"));
 
-const App = () => (
+// Each page's code loads only when it's visited; the homepage ships in the main bundle
+const NotFound = lazyPage(() => import("./pages/NotFound"));
+const SearchMarketingPPC = lazyPage(() => import("./pages/services/SearchMarketingPPC"));
+const ContentCreation = lazyPage(() => import("./pages/services/ContentCreation"));
+const AIDevAutomation = lazyPage(() => import("./pages/services/AIDevAutomation"));
+const MLFineTuning = lazyPage(() => import("./pages/services/MLFineTuning"));
+const About = lazyPage(() => import("./pages/About"));
+const Contact = lazyPage(() => import("./pages/Contact"));
+const Portfolio = lazyPage(() => import("./pages/Portfolio"));
+const PortfolioDetail = lazyPage(() => import("./pages/portfolio/PortfolioDetail"));
+const Services = lazyPage(() => import("./pages/Services"));
+const Legal = lazyPage(() => import("./pages/industries/Legal"));
+const RealEstate = lazyPage(() => import("./pages/industries/RealEstate"));
+const Healthcare = lazyPage(() => import("./pages/industries/Healthcare"));
+const ProfessionalServices = lazyPage(() => import("./pages/industries/ProfessionalServices"));
+const LocalBusiness = lazyPage(() => import("./pages/industries/LocalBusiness"));
+const LawFirmAutomation = lazyPage(() => import("./pages/use-cases/LawFirmAutomation"));
+const RealEstateLeadSystem = lazyPage(() => import("./pages/use-cases/RealEstateLeadSystem"));
+const DuiGuide = lazyPage(() => import("./pages/use-cases/DuiGuide"));
+const PrivacyPolicy = lazyPage(() => import("./pages/PrivacyPolicy"));
+const Terms = lazyPage(() => import("./pages/Terms"));
+const CookiePolicy = lazyPage(() => import("./pages/CookiePolicy"));
+const Blog = lazyPage(() => import("./pages/Blog"));
+const BlogPost = lazyPage(() => import("./pages/BlogPost"));
+
+// Add new pages above the catch-all "*" route. The prerender and the sitemap read this list too
+export const routes = [
+  { path: "/", Page: Index },
+  { path: "/about", Page: About },
+  { path: "/services", Page: Services },
+  { path: "/contact", Page: Contact },
+  { path: "/portfolio", Page: Portfolio },
+  { path: "/portfolio/:id", Page: PortfolioDetail },
+  { path: "/services/search-marketing-ppc", Page: SearchMarketingPPC },
+  { path: "/services/content-creation", Page: ContentCreation },
+  { path: "/services/ai-dev-automation", Page: AIDevAutomation },
+  { path: "/services/ml-fine-tuning", Page: MLFineTuning },
+  { path: "/industries/legal", Page: Legal },
+  { path: "/industries/real-estate", Page: RealEstate },
+  { path: "/industries/healthcare", Page: Healthcare },
+  { path: "/industries/professional-services", Page: ProfessionalServices },
+  { path: "/industries/local-business", Page: LocalBusiness },
+  { path: "/use-cases/law-firm-automation", Page: LawFirmAutomation },
+  { path: "/use-cases/real-estate-lead-system", Page: RealEstateLeadSystem },
+  { path: "/use-cases/dui-guide", Page: DuiGuide },
+  { path: "/privacy-policy", Page: PrivacyPolicy },
+  { path: "/terms", Page: Terms },
+  { path: "/cookie-policy", Page: CookiePolicy },
+  { path: "/blog", Page: Blog },
+  { path: "/blog/:slug", Page: BlogPost },
+  { path: "*", Page: NotFound },
+];
+
+// Loads the page for a URL before the first render, so it appears without a loading flash
+export const preloadRoute = async (pathname: string) => {
+  const route = routes.find((r) => r.path !== "*" && matchPath(r.path, pathname)) ?? routes[routes.length - 1];
+  if ("preload" in route.Page) await route.Page.preload();
+};
+
+// Everything inside the router: the browser wraps it in BrowserRouter, the prerender in StaticRouter
+export const AppShell = () => (
   <>
     <svg width="0" height="0" className="absolute" aria-hidden="true">
       <defs>
@@ -38,40 +76,21 @@ const App = () => (
         </linearGradient>
       </defs>
     </svg>
-    <BrowserRouter>
-      <ScrollToTop />
-      {/* Each page's code loads only when it's visited; the homepage ships in the main bundle */}
-      <Suspense fallback={<div className="min-h-screen bg-background" />}>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/portfolio/:id" element={<PortfolioDetail />} />
-          <Route path="/services/search-marketing-ppc" element={<SearchMarketingPPC />} />
-          <Route path="/services/content-creation" element={<ContentCreation />} />
-          <Route path="/services/ai-dev-automation" element={<AIDevAutomation />} />
-          <Route path="/services/ml-fine-tuning" element={<MLFineTuning />} />
-          <Route path="/industries/legal" element={<Legal />} />
-          <Route path="/industries/real-estate" element={<RealEstate />} />
-          <Route path="/industries/healthcare" element={<Healthcare />} />
-          <Route path="/industries/professional-services" element={<ProfessionalServices />} />
-          <Route path="/industries/local-business" element={<LocalBusiness />} />
-          <Route path="/use-cases/law-firm-automation" element={<LawFirmAutomation />} />
-          <Route path="/use-cases/real-estate-lead-system" element={<RealEstateLeadSystem />} />
-          <Route path="/use-cases/dui-guide" element={<DuiGuide />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/terms" element={<Terms />} />
-          <Route path="/cookie-policy" element={<CookiePolicy />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:slug" element={<BlogPost />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Suspense>
-    </BrowserRouter>
+    <ScrollToTop />
+    <Suspense fallback={<div className="min-h-screen bg-background" />}>
+      <Routes>
+        {routes.map(({ path, Page }) => (
+          <Route key={path} path={path} element={<Page />} />
+        ))}
+      </Routes>
+    </Suspense>
   </>
+);
+
+const App = () => (
+  <BrowserRouter>
+    <AppShell />
+  </BrowserRouter>
 );
 
 export default App;

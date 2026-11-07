@@ -8,17 +8,17 @@
     "blog": "Blog"
   },
   "hero": {
-    "title1": "AI-POWERED",
-    "title2": "MARKETING",
-    "title3": "AGENCY",
-    "subtitle": "AI-driven search marketing, generative content creation, and custom automation solutions",
-    "cta": "Contact Us",
+    "title1": "Get found.",
+    "title2": "Get chosen.",
+    "title3": "Get it done.",
+    "subtitle": "Search and paid media that bring in enquiries, AI content that wins them, and AI agents that answer every one. One team, one system.",
+    "cta": "Book an AI Growth Audit",
     "location": "London",
     "scrollDown": "Scroll Down"
   },
   "services": {
     "title": "Our Services",
-    "subtitle": "Comprehensive AI-powered solutions that transform your business operations, maximize ROI, and drive sustainable growth through intelligent automation.",
+    "subtitle": "Get found, get chosen, get it done. Buy one part or all three: they're built to work together.",
     "searchMarketing": {
       "title": "Search Marketing & Paid Media",
       "subtitle": "AI-driven search marketing with advanced algorithm optimization",
@@ -92,11 +92,11 @@
   "contact": {
     "steps": {
       "step1": {
-        "title": "Let's Work Together",
+        "title": "Let's find your growth leaks",
         "subtitle": "Tell us about yourself"
       },
       "step2": {
-        "title": "What services do you need?",
+        "title": "What are you interested in?",
         "subtitle": "Select all that apply"
       },
       "step3": {
@@ -122,18 +122,19 @@
       "sending": "Sending..."
     },
     "services": [
-      "Search Marketing & PPC",
-      "Content Creation",
-      "AI Development & Automation",
-      "Lead Generation",
-      "Website Development"
+      "AI Growth Audit",
+      "Search & Paid Media",
+      "AI Content Studio (video, voice, ads)",
+      "AI Agents & Automation",
+      "Private AI / custom models",
+      "Not sure yet"
     ],
-    "success": "✅ Thank you! Your message has been sent successfully. We'll get back to you soon.",
-    "error": "❌ Sorry, there was an error sending your message. Please try again or email us directly at form@six3.agency",
+    "success": "Thank you, your message is on its way. We'll be in touch soon.",
+    "error": "Sorry, something went wrong sending your message. Please try again or email us at hello@six3.agency.",
     "emailValidation": "Please enter a valid email address"
   },
   "footer": {
-    "description": "AI-powered marketing and automation agency.",
+    "description": "AI marketing and automation for UK businesses. Get found, get chosen, get it done.",
     "services": "Services",
     "company": "Company",
     "legal": "Legal",
@@ -145,7 +146,7 @@
     "privacyPolicy": "Privacy Policy",
     "terms": "Terms",
     "cookiePolicy": "Cookie Policy",
-    "copyright": "© 2018 - 2025 FKA WEB Limited Registered in England and Wales No. 11642660. All rights reserved."
+    "copyright": "© 2018 - 2026 FKA WEB Limited Registered in England and Wales No. 11642660. All rights reserved."
   },
   "blog": {
     "title": "Blog",
@@ -171,14 +172,14 @@
   },
   "about": {
     "title": "About Us",
-    "subtitle": "We are SIX³ Agency, a cutting-edge AI-powered marketing and automation agency."
+    "subtitle": "SIX³ is a London AI marketing and automation agency for service businesses."
   },
   "cta": {
     "letsWorkTogether": "Let's work Together",
     "getStartedToday": "Get Started Today",
     "startAIAutomation": "Start AI Automation",
-    "readyToTransform": "Ready to Transform Your Business?",
-    "readyToTransformSubtitle": "Let's discuss how our AI-powered solutions can drive measurable results for your organization."
+    "readyToTransform": "Ready for growth, cubed?",
+    "readyToTransformSubtitle": "Start with a two-week AI Growth Audit: a clear plan for where growth is leaking and what to fix first."
   },
   "common": {
     "loading": "Loading...",

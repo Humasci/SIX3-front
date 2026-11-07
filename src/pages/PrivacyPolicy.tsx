@@ -1,4 +1,5 @@
 import { Header } from "@/components/Header";
+import { PageSEO } from "@/components/PageSEO";
 import { Footer } from "@/components/Footer";
 import { useEffect } from "react";
 import gsap from "gsap";
@@ -16,6 +17,7 @@ const PrivacyPolicy = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <PageSEO title="Privacy Policy | SIX³ Agency" description="How SIX³ Agency (FKA WEB Limited) collects, uses and protects your personal data, and the rights you have under UK GDPR." canonical="https://six3.agency/privacy-policy" />
       <Header />
       
       <section className="theme-light relative isolate overflow-hidden pt-40 pb-16 px-6">
