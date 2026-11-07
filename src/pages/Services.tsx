@@ -17,13 +17,13 @@ const services = [
   {
     number: "01",
     title: "Search & Paid Media",
-    subtitle: "Campaigns that bring in the right enquiries, not just more clicks",
-    description: "We plan Google Ads, Meta, LinkedIn and TikTok as one budget, build landing pages that turn visits into enquiries, and track every lead back to the ad that brought it in. You get monthly optimisation and a plain-English report on what your spend is buying.",
+    subtitle: "Campaigns that bring in the right customers, not just more clicks",
+    description: "We plan Google Ads, Meta, LinkedIn and TikTok as one budget, build landing pages that turn visits into leads and sales, and track every result back to the ad that brought it in. You get monthly optimisation and a plain-English report on what your spend is buying.",
     format: "Monthly",
     features: [
       "Campaign strategy, build and management across four channels",
       "Landing pages and offers designed to convert",
-      "Conversion and call tracking so you can see cost per enquiry",
+      "Conversion and call tracking so you can see cost per lead or sale",
       "Monthly optimisation, testing and reporting"
     ],
     visual: "search" as const,
@@ -47,7 +47,7 @@ const services = [
   {
     number: "03",
     title: "AI Agents & Automation",
-    subtitle: "AI that answers, qualifies and books every enquiry, day and night",
+    subtitle: "AI that answers every customer and qualifies every lead, day and night",
     description: "Missed calls and slow replies quietly lose you customers. We build AI receptionists for phone, chat and email that answer straight away, ask the right questions, book qualified people into your calendar and update your CRM. Then we look after them on a monthly care plan.",
     format: "Build, then monthly care plan",
     features: [
@@ -64,7 +64,7 @@ const services = [
     title: "Private AI",
     subtitle: "AI trained on your own knowledge, deployed privately",
     description: "For firms with specialist knowledge or strict data rules, off-the-shelf AI isn't always enough. We fine-tune open and commercial language models on your documents and data, test them properly against your real tasks, and deploy them where your data stays under your control.",
-    format: "By enquiry",
+    format: "On request",
     features: [
       "Fine-tuning on your documents, data and house style",
       "Evaluation against your real tasks before anything goes live",
@@ -137,7 +137,7 @@ const Services = () => {
               </div>
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-light mb-2">24/7</div>
-                <p className="text-sm text-muted-foreground">Every enquiry answered</p>
+                <p className="text-sm text-muted-foreground">Every customer answered</p>
               </div>
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-light mb-2">1</div>
@@ -158,7 +158,7 @@ const Services = () => {
                 <p className="mb-4 text-sm font-medium tracking-[0.25em] uppercase text-gradient w-fit">Start here</p>
                 <h2 className="text-4xl md:text-5xl font-light mb-4">AI Growth Audit</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  In two weeks we review your search, ads, content and how you handle enquiries. You get a prioritised
+                  In two weeks we review your search, ads, content and how you handle leads and customers. You get a prioritised
                   plan showing where growth is leaking, what to fix first and what it's worth, plus quick wins you can
                   act on straight away, whether or not you work with us afterwards.
                 </p>

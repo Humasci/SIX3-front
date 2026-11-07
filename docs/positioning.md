@@ -4,7 +4,7 @@ The single source for how SIX³ describes itself. Website copy, blog posts, Link
 
 ## Who we're for
 
-UK small and mid-sized businesses that sell a service and live or die by enquiries: law firms, clinics and healthcare practices, estate agents, professional services firms, local businesses and growing e-commerce brands. They usually already spend on marketing but lose value between the click and the customer: slow replies, missed calls, thin content, ads nobody optimises.
+UK small and mid-sized businesses that grow through leads and online sales: growing e-commerce brands, law firms, clinics and healthcare practices, estate agents, professional services firms and local businesses. They usually already spend on marketing but lose value between the click and the customer: slow replies, missed calls, abandoned baskets, thin content, ads nobody optimises.
 
 ## The proposition
 
@@ -14,7 +14,7 @@ Supporting line: More leads in, every lead answered.
 
 SIX³ is a Brighton AI marketing and automation agency. We combine three things most businesses buy from three different suppliers, and make them work as one system:
 
-1. **Get found:** search and paid media that bring in the right enquiries.
+1. **Get found:** search and paid media that bring in the right customers.
 2. **Get chosen:** AI-produced video, voice and ad content that makes people pick you.
 3. **Get it done:** AI agents and automations that answer, qualify and book every lead, day and night.
 
@@ -40,12 +40,12 @@ Plain, confident, specific. Short sentences. Talk about the customer's outcome b
 | **Get Found:** Search & Paid Media | Google Ads, Meta, LinkedIn and TikTok campaigns, landing pages and conversion tracking, managed and reported monthly. | Monthly |
 | **Get Chosen:** AI Content Studio | AI video ads, avatar presenters, voiceovers and translations, produced on a monthly content plan. | Monthly content packs |
 | **Get It Done:** AI Agents & Automation | AI receptionists for phone, chat and email, lead qualification and booking, client intake and CRM workflows. | Build, then a monthly care plan |
-| **Private AI:** Custom models | Language models fine-tuned on your own data and deployed privately, for firms with specialist knowledge or strict data rules. | By enquiry |
+| **Private AI:** Custom models | Language models fine-tuned on your own data and deployed privately, for firms with specialist knowledge or strict data rules. | On request |
 
 Prices aren't on the website yet. Suggested next step: add "from £…" prices for the audit and the three monthly offers once they're set, because published prices pre-qualify leads.
 
 ### How we work
-1. **Audit:** we find where enquiries and revenue are leaking.
+1. **Audit:** we find where leads, sales and revenue are leaking.
 2. **Build:** we launch the campaigns, content and automations that fix it.
 3. **Compound:** we optimise every month, and each part makes the others work harder.
 

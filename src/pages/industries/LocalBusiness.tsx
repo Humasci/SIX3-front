@@ -15,25 +15,25 @@ gsap.registerPlugin(ScrollTrigger);
 const localBusinessSolutions = [
   {
     icon: Phone,
-    title: "Get it done: AI receptionist",
+    title: "AI receptionist",
     description: "An AI receptionist answers every call, message and web enquiry while you're on a job, takes the details and books the work in.",
     benefits: ["Out-of-hours emergencies captured", "Job details and photos collected up front", "Bookings and callbacks logged automatically"]
   },
   {
     icon: Calendar,
-    title: "Get it done: booking and reminders",
+    title: "Booking and reminders",
     description: "Jobs booked into your team's calendars with confirmations, reminders and follow-ups sent automatically.",
     benefits: ["Fewer wasted trips and no-shows", "Confirmations and reminders by SMS", "Review requests sent after every job"]
   },
   {
     icon: TrendingUp,
-    title: "Get found: Search & Paid Media",
+    title: "Search & Paid Media",
     description: "Local Google Ads and Meta campaigns for the jobs you want, shown to people in your service area when they need help.",
     benefits: ["Emergency and planned-work campaigns", "Ads shown only in the areas you cover", "Monthly reporting on cost per booked job"]
   },
   {
     icon: MapPin,
-    title: "Get chosen: AI Content Studio",
+    title: "AI Content Studio",
     description: "Short videos, before-and-after content and local ads produced every month, so people trust you before they pick up the phone.",
     benefits: ["Video ads that show your team and your work", "Content for Google, Facebook and Instagram", "AI voiceovers without a studio day"]
   }

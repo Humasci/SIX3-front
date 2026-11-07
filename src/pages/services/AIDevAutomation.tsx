@@ -56,7 +56,7 @@ const AIDevAutomation = () => {
     <div ref={contentRef} className="min-h-screen bg-background text-foreground">
       <PageSEO
         title="AI Receptionist & Business Automation | SIX³ Agency"
-        description="AI receptionists for phone, chat and email that answer, qualify and book every enquiry 24/7, plus CRM workflows for UK firms. Start with an AI Growth Audit."
+        description="AI receptionists for phone, chat and email that answer every customer, qualify every lead and book them in 24/7, plus CRM workflows for UK firms. Start with an AI Growth Audit."
         canonical="https://six3.agency/services/ai-dev-automation"
       />
       <Header />
@@ -74,7 +74,7 @@ const AIDevAutomation = () => {
               <ServiceVisual kind="agents" label="AI Agents & Automation" className="w-full h-full" />
             </div>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl lg:col-start-1">
-              AI that answers, qualifies and books every enquiry, day and night. AI receptionists for phone, chat
+              AI that answers every customer and qualifies every lead, day and night. AI receptionists for phone, chat
               and email that reply straight away, book qualified people into your calendar and update your CRM.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm lg:col-start-1">
@@ -112,9 +112,9 @@ const AIDevAutomation = () => {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="step-card border border-border p-8 bg-background">
               <p className="text-sm text-muted-foreground mb-4">Step -01</p>
-              <h3 className="text-2xl font-light mb-4">Map your enquiries</h3>
+              <h3 className="text-2xl font-light mb-4">Map your leads and customer questions</h3>
               <p className="text-muted-foreground">
-                We map how enquiries reach you today, by phone, website and email, what happens next, and where they
+                We map how leads and customer questions reach you today, by phone, website and email, what happens next, and where they
                 stall or go unanswered. This is usually part of your AI Growth Audit.
               </p>
             </div>
@@ -156,11 +156,11 @@ const AIDevAutomation = () => {
             Overview <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" />
           </p>
           <h2 className="text-4xl md:text-5xl font-light mb-8 max-w-3xl">
-            Every enquiry answered, qualified and booked
+            Every lead answered, qualified and booked
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mb-8">
             Missed calls and slow replies quietly lose you customers. If nobody picks up, people ring the next firm
-            on the list, and web enquiries go cold while they wait. We build AI receptionists that answer straight
+            on the list, and web leads go cold while they wait. We build AI receptionists that answer straight
             away, ask the right questions, book qualified people into your calendar and keep your CRM up to date,
             so your team spends its time on the work, not the admin.
           </p>
@@ -179,7 +179,7 @@ const AIDevAutomation = () => {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
           <div>
             <div className="text-7xl md:text-8xl font-light mb-4">24/7</div>
-            <p className="text-xl text-muted-foreground">Every enquiry answered</p>
+            <p className="text-xl text-muted-foreground">Every customer answered</p>
           </div>
           <div>
             <div className="text-7xl md:text-8xl font-light mb-4">{"<1 min"}</div>
@@ -213,7 +213,8 @@ const AIDevAutomation = () => {
               <div className="text-5xl font-light text-muted-foreground/50 mb-4">02</div>
               <h3 className="text-3xl font-light mb-4">Part of one system</h3>
               <p className="text-lg text-muted-foreground max-w-2xl">
-                Get Found brings the enquiries in and Get Chosen's content makes people pick you. Get It Done makes
+                Search &amp; Paid Media brings the leads in and AI Content Studio makes people pick you. AI Agents &amp;
+                Automation makes
                 sure none are lost: every lead from your ads gets a reply in under a minute, and what happens next
                 shows up in the same monthly report.
               </p>
@@ -256,7 +257,7 @@ const AIDevAutomation = () => {
       <section className="py-24 px-6 bg-secondary/30">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-5xl md:text-6xl font-light mb-12">
-            Find out how many enquiries you're missing
+            Find out how many leads you're missing
           </h2>
           <Link to="/contact">
             <Button variant="outline" className="rounded-full px-12 py-6 text-lg border-foreground hover:bg-brand-gradient-button hover:text-white hover:border-transparent hover:shadow-[0_0_32px_-10px_rgba(249,115,22,0.6)]">

@@ -221,10 +221,10 @@ const ContentCreation = () => {
 
             <div className="advantage-card border-t-gradient pt-8">
               <div className="text-5xl font-light text-muted-foreground/50 mb-4">03</div>
-              <h3 className="text-3xl font-light mb-4">Linked to your ads and enquiries</h3>
+              <h3 className="text-3xl font-light mb-4">Linked to your ads and results</h3>
               <p className="text-lg text-muted-foreground max-w-2xl">
-                With Get Found, every piece is tested in your campaigns and the winners get the budget. With Get It
-                Done, the people your content wins over are answered and booked straight away.
+                Every piece is tested in your Search &amp; Paid Media campaigns and the winners get the budget. With AI
+                Agents &amp; Automation, the people your content wins over get an answer straight away.
               </p>
             </div>
           </div>

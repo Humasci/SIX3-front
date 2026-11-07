@@ -15,25 +15,25 @@ gsap.registerPlugin(ScrollTrigger);
 const realEstateSolutions = [
   {
     icon: Phone,
-    title: "Get it done: instant lead follow-up",
+    title: "Instant lead follow-up",
     description: "An AI agent replies to every Rightmove, Zoopla and website enquiry within a minute, asks the right questions and books the viewing or valuation.",
     benefits: ["First reply in under a minute, day and night", "Buyer, seller and landlord questions asked every time", "Hot leads passed to the right negotiator"]
   },
   {
     icon: MessageSquare,
-    title: "Get chosen: AI Content Studio",
+    title: "AI Content Studio",
     description: "Property videos, area guides and valuation ads produced every month, so vendors and landlords see why they should list with you.",
     benefits: ["Video walk-throughs and voiceovers for listings", "Valuation and instruction-winning ads", "Local area content for your site and social"]
   },
   {
     icon: Calendar,
-    title: "Get it done: viewings and valuations booked",
+    title: "Viewings and valuations booked",
     description: "Viewings and valuation appointments booked straight into negotiators' diaries, with confirmations and reminders sent automatically.",
     benefits: ["No back-and-forth to find a time", "Reminders that cut wasted trips", "Every lead and booking logged in your CRM"]
   },
   {
     icon: TrendingUp,
-    title: "Get found: Search & Paid Media",
+    title: "Search & Paid Media",
     description: "Google Ads and Meta campaigns aimed at vendors and landlords in your patch, with tracking from click to instruction.",
     benefits: ["Valuation campaigns by postcode", "Google, Meta, LinkedIn and TikTok managed in one place", "Monthly reporting on cost per valuation"]
   }

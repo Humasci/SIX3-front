@@ -307,7 +307,7 @@ const RealEstateLeadSystem = () => {
           <h2 className="text-4xl font-light mb-12">How the three parts work together</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-card border border-border p-6 rounded-lg">
-              <h3 className="text-xl font-medium mb-4">Get found</h3>
+              <h3 className="text-xl font-medium mb-4">Bring leads in</h3>
               <ul className="space-y-3">
                 <li><span className="font-medium">Search & Paid Media:</span> local ads for vendors and landlords</li>
                 <li><span className="font-medium">Landing pages</span> built to book valuations</li>
@@ -315,7 +315,7 @@ const RealEstateLeadSystem = () => {
               </ul>
             </div>
             <div className="bg-card border border-border p-6 rounded-lg">
-              <h3 className="text-xl font-medium mb-4">Get chosen</h3>
+              <h3 className="text-xl font-medium mb-4">Win the instruction</h3>
               <ul className="space-y-3">
                 <li><span className="font-medium">AI Content Studio:</span> property and area videos</li>
                 <li><span className="font-medium">Valuation ads</span> that show why to list with you</li>
@@ -323,7 +323,7 @@ const RealEstateLeadSystem = () => {
               </ul>
             </div>
             <div className="bg-card border border-border p-6 rounded-lg">
-              <h3 className="text-xl font-medium mb-4">Get it done</h3>
+              <h3 className="text-xl font-medium mb-4">Answer every lead</h3>
               <ul className="space-y-3">
                 <li><span className="font-medium">AI Agents & Automation:</span> instant replies to every lead</li>
                 <li><span className="font-medium">Qualification</span> and booking without the phone tag</li>

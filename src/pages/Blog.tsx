@@ -58,8 +58,8 @@ const Blog = () => {
             Practical guides on getting found, getting chosen and getting more done with AI.
           </p>
           <p className="text-lg text-muted-foreground">
-            Written for owners and managers of UK service businesses by the team that builds these systems: paid media
-            that brings in the right enquiries, AI video and voice content, AI receptionists, and using AI safely with
+            Written for owners and managers of UK service businesses and e-commerce brands by the team that builds these systems: paid media
+            that brings in the right customers, AI video and voice content, AI receptionists, and using AI safely with
             customer data. New articles every Tuesday.
           </p>
         </div>

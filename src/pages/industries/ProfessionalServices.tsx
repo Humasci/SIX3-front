@@ -15,25 +15,25 @@ gsap.registerPlugin(ScrollTrigger);
 const professionalSolutions = [
   {
     icon: Calculator,
-    title: "Get it done: client onboarding",
+    title: "Client onboarding",
     description: "New clients complete their details, upload documents and pass your checks online, with reminders sent until everything is in.",
     benefits: ["Onboarding without the email chase", "Missing documents requested automatically", "Details sent straight to your practice software"]
   },
   {
     icon: Phone,
-    title: "Get it done: AI receptionist and qualification",
+    title: "AI receptionist and qualification",
     description: "An AI receptionist answers calls, chat and email, asks what the prospect needs and books a call with the right person.",
     benefits: ["Every enquiry answered, day and night", "Prospects qualified on service, size and timing", "Discovery calls booked into the right diary"]
   },
   {
     icon: FileText,
-    title: "Get chosen: AI Content Studio",
+    title: "AI Content Studio",
     description: "Explainer videos, insight pieces and ads that show your expertise, produced every month so prospects know you before the first call.",
     benefits: ["Short videos on the questions clients ask", "AI presenters and voiceovers in your firm's voice", "Content for LinkedIn, your site and ads"]
   },
   {
     icon: TrendingUp,
-    title: "Get found: Search & Paid Media",
+    title: "Search & Paid Media",
     description: "Google Ads and LinkedIn campaigns aimed at the clients you want, with tracking from first click to signed engagement letter.",
     benefits: ["Campaigns by service line and sector", "LinkedIn targeting by role and company size", "Monthly reporting on cost per qualified enquiry"]
   }
