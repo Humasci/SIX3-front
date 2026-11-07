@@ -242,7 +242,7 @@ const AIDevAutomation = () => {
             dui.guide: our own AI legal guidance platform
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mb-8">
-            We build what we'd use ourselves. dui.guide is our own AI legal guidance and directory platform, where
+            dui.guide is our own AI legal guidance and directory platform, where
             AI agents help people understand the DUI process and find the right legal help. See how we built it.
           </p>
           <Link to="/use-cases/dui-guide">

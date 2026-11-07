@@ -16,7 +16,7 @@ const services = [
 
 const principles = [
   ["Senior people", "The people you meet are the people who do the work."],
-  ["Operators, not theorists", "We run our own digital properties, like dui.guide, so we build what we'd use ourselves."],
+  ["Hands-on, not hands-off", "We plan, build and run everything ourselves, so nothing gets lost between suppliers."],
   ["Practical AI", "We use AI where it saves time or wins customers, and every build has a clear job to do."],
   ["Plain-English reporting", "One monthly report covering ads, content and automation, in language your whole team understands."],
 ];
