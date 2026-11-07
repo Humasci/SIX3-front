@@ -13,8 +13,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <PageSEO
-        title="SIX³ Agency | AI Marketing & Automation Agency, Brighton"
-        description="Brighton AI marketing and automation agency. Search and paid media, AI video content and AI agents that answer every enquiry, as one growth system."
+        title="SIX³ Agency | AI Marketing & Automation Agency, Brighton, UK"
+        description="AI marketing and automation agency in Brighton, UK. Search and paid media, AI video content and AI agents that answer every enquiry, as one system."
         canonical="https://six3.agency/"
         jsonLd={organizationJsonLd}
       />

@@ -167,7 +167,7 @@ export const Hero = () => {
         <div className="max-w-7xl w-full">
           <div className="mb-12">
             <h1 className="hero-subtitle mb-6 text-sm md:text-base font-medium tracking-[0.25em] uppercase text-gradient w-fit">
-              AI marketing &amp; automation agency · Brighton
+              AI marketing &amp; automation agency · Brighton, UK
             </h1>
             <div
               ref={(el) => (titleRefs.current[0] = el)}
@@ -204,7 +204,7 @@ export const Hero = () => {
       <div className="hero-footer relative flex items-center justify-between px-6 pb-8">
         <div className="flex items-center gap-2">
           <div className="w-2 h-2 rounded-full bg-brand-gradient animate-pulse" />
-          <span className="text-sm text-muted-foreground">Brighton, {time}</span>
+          <span className="text-sm text-muted-foreground">Brighton, UK · {time}</span>
         </div>
         
         <div className="scroll-indicator flex items-center gap-2 text-sm text-muted-foreground">
