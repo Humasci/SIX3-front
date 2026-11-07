@@ -170,7 +170,7 @@ export const AboutPage = () => {
                 key={title}
                 className="about-content group relative overflow-hidden rounded-2xl border border-border bg-card/40 p-6 transition-colors duration-300 hover:border-[#a855f7]/50"
               >
-                <div className="absolute inset-y-0 left-0 w-0.5 bg-gradient-to-b from-[#7c3aed] via-[#a855f7] to-[#f97316] opacity-50 transition-opacity group-hover:opacity-100" />
+                <div className="absolute inset-y-0 left-0 w-0.5 bg-gradient-to-b from-[#7c3aed] via-[#f97316] to-glow opacity-50 transition-opacity group-hover:opacity-100" />
                 <div className="mb-4 flex items-center gap-3">
                   <Icon className="icon-gradient h-6 w-6" />
                   <h3 className="text-xl font-medium">{title}</h3>
