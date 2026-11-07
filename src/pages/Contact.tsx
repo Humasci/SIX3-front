@@ -266,7 +266,7 @@ const Contact = () => {
     <div className="min-h-screen bg-background text-foreground">
       <PageSEO
         title="Contact Us & Book an AI Growth Audit | SIX³ Agency"
-        description="Tell us about your business and goals. Book a two-week AI Growth Audit or ask about search, AI content, AI agents and automation. London-based."
+        description="Tell us about your business and goals. Book a two-week AI Growth Audit or ask about search, AI content, AI agents and automation. Brighton-based."
         canonical="https://six3.agency/contact"
       />
       <Header />

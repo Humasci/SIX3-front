@@ -68,11 +68,11 @@ const ContentCreation = () => {
         <div className="max-w-7xl mx-auto">
           <div className="hero-content mb-12 grid lg:grid-cols-[minmax(0,1fr)_400px] gap-x-12 gap-y-8 items-center">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-light mb-8 text-gradient w-fit pb-1 lg:col-start-1">
-              Get Chosen: AI Content Studio
+              AI Content Studio
             </h1>
             <div className="h-1 w-40 bg-brand-gradient rounded-full lg:col-start-1 -mt-4" />
             <div className="media-frame aspect-[4/3] w-full max-w-md lg:max-w-none lg:col-start-2 lg:row-start-1 lg:row-span-3">
-              <ServiceVisual kind="video" label="Get Chosen: AI Content Studio" className="w-full h-full" />
+              <ServiceVisual kind="video" label="AI Content Studio" className="w-full h-full" />
             </div>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl lg:col-start-1">
               Video, voice and ad content that makes people pick you. Ads, explainers and social clips with AI

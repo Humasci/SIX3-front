@@ -157,7 +157,7 @@ const RealEstate = () => {
       <section className="solutions-section py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-light mb-16 text-center">
-            Get found, get chosen, get it done
+            More leads in, every lead answered
           </h2>
           <div className="grid md:grid-cols-2 gap-12">
             {realEstateSolutions.map((solution, index) => {
@@ -214,7 +214,7 @@ const RealEstate = () => {
                 Win more valuations in your patch
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
-                Get Found: Search & Paid Media puts your agency in front of local vendors and landlords
+                Search & Paid Media puts your agency in front of local vendors and landlords
                 when they're deciding who to call, and tracks which campaigns lead to instructions.
               </p>
               <div className="space-y-6">

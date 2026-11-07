@@ -236,7 +236,7 @@ const LocalBusiness = () => {
       <section className="solutions-section py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-light mb-16 text-center">
-            Get found, get chosen, get it done
+            More leads in, every lead answered
           </h2>
           <div className="grid md:grid-cols-2 gap-12">
             {localBusinessSolutions.map((solution, index) => {
@@ -315,7 +315,7 @@ const LocalBusiness = () => {
             <div>
               <h2 className="text-4xl font-light mb-6">Get found by local customers</h2>
               <p className="text-lg text-muted-foreground mb-6">
-                Get Found: Search & Paid Media puts you in front of people in your service area at the moment
+                Search & Paid Media puts you in front of people in your service area at the moment
                 they need help, and tracks which ads turn into booked jobs.
               </p>
               <div className="space-y-4">

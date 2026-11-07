@@ -16,7 +16,7 @@ gsap.registerPlugin(ScrollTrigger);
 const services = [
   {
     number: "01",
-    title: "Get Found: Search & Paid Media",
+    title: "Search & Paid Media",
     subtitle: "Campaigns that bring in the right enquiries, not just more clicks",
     description: "We plan Google Ads, Meta, LinkedIn and TikTok as one budget, build landing pages that turn visits into enquiries, and track every lead back to the ad that brought it in. You get monthly optimisation and a plain-English report on what your spend is buying.",
     format: "Monthly",
@@ -31,7 +31,7 @@ const services = [
   },
   {
     number: "02",
-    title: "Get Chosen: AI Content Studio",
+    title: "AI Content Studio",
     subtitle: "Video, voice and ad content that makes people pick you",
     description: "Most businesses know they need more video but never have the time to film it. We produce ads, explainers and social content with AI presenters, voiceovers and translations, on a monthly plan, in your brand's look and voice. Creative is tested in your ads, so the winners get the budget.",
     format: "Monthly content packs",
@@ -46,7 +46,7 @@ const services = [
   },
   {
     number: "03",
-    title: "Get It Done: AI Agents & Automation",
+    title: "AI Agents & Automation",
     subtitle: "AI that answers, qualifies and books every enquiry, day and night",
     description: "Missed calls and slow replies quietly lose you customers. We build AI receptionists for phone, chat and email that answer straight away, ask the right questions, book qualified people into your calendar and update your CRM. Then we look after them on a monthly care plan.",
     format: "Build, then monthly care plan",
@@ -61,7 +61,7 @@ const services = [
   },
   {
     number: "04",
-    title: "Private AI: Custom Models",
+    title: "Private AI",
     subtitle: "AI trained on your own knowledge, deployed privately",
     description: "For firms with specialist knowledge or strict data rules, off-the-shelf AI isn't always enough. We fine-tune open and commercial language models on your documents and data, test them properly against your real tasks, and deploy them where your data stays under your control.",
     format: "By enquiry",
@@ -123,7 +123,7 @@ const Services = () => {
             </h1>
             <div className="h-1 w-40 bg-brand-gradient rounded-full mb-8 mx-auto" />
             <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto mb-12">
-              Get found, get chosen, get it done. Buy one part or all three: they're built to work together,
+              Bring more leads in, and make sure every one gets answered. Buy one part or all three: they're built to work together,
               so each one makes the others work harder.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">

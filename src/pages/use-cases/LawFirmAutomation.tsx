@@ -86,7 +86,7 @@ const LawFirmAutomation = () => {
                   </div>
                   <div>
                     <span className="text-sm text-muted-foreground">Project:</span>
-                    <p className="text-lg">Client intake automation (Get It Done: AI Agents & Automation)</p>
+                    <p className="text-lg">Client intake automation (AI Agents & Automation)</p>
                   </div>
                   <div>
                     <span className="text-sm text-muted-foreground">Year:</span>

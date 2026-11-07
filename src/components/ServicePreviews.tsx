@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 const servicePreviews = [
   {
     number: "01",
-    title: "Get Found: Search & Paid Media",
+    title: "Search & Paid Media",
     shortDescription: "Campaigns that bring in the right enquiries, not just more clicks",
     features: [
       "Google Ads, Meta, LinkedIn and TikTok, planned as one budget",
@@ -24,7 +24,7 @@ const servicePreviews = [
   },
   {
     number: "02",
-    title: "Get Chosen: AI Content Studio",
+    title: "AI Content Studio",
     shortDescription: "Video, voice and ad content that makes people pick you",
     features: [
       "AI video ads and social content on a monthly plan",
@@ -37,7 +37,7 @@ const servicePreviews = [
   },
   {
     number: "03",
-    title: "Get It Done: AI Agents & Automation",
+    title: "AI Agents & Automation",
     shortDescription: "AI that answers, qualifies and books every enquiry, day and night",
     features: [
       "AI receptionists for phone, chat and email",
