@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { openCookieSettings } from "@/components/CookieConsent";
 import { Linkedin, Mail } from "lucide-react";
 import { Logo } from "@/components/Logo";
 
@@ -10,7 +11,7 @@ export const Footer = () => {
           <div>
             <Logo className="mb-4" />
             <p className="text-sm text-muted-foreground">
-              Growth, cubed. The AI marketing agency for businesses that run on enquiries.
+              Growth, cubed. AI marketing and automation for UK businesses.
             </p>
           </div>
           
@@ -73,6 +74,9 @@ export const Footer = () => {
               </li>
               <li className="hover:text-foreground transition-colors cursor-pointer">
                 <Link to="/cookie-policy">Cookie Policy</Link>
+              </li>
+              <li className="hover:text-foreground transition-colors cursor-pointer">
+                <button type="button" onClick={openCookieSettings}>Cookie settings</button>
               </li>
             </ul>
           </div>

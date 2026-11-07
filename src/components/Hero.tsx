@@ -187,7 +187,7 @@ export const Hero = () => {
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 max-w-5xl">
             <div>
               <p className="hero-subtitle text-xl md:text-2xl font-medium text-foreground max-w-xl">
-                The AI marketing agency for businesses that run on enquiries. We bring more leads in, and make sure every one gets answered.
+                AI marketing and automation that brings more leads in, and makes sure every one gets answered.
               </p>
             </div>
             

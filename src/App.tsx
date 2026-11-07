@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import { BrowserRouter, Routes, Route, matchPath } from "react-router-dom";
 import "./i18n";
 import { ScrollToTop } from "./components/ScrollToTop";
+import { CookieConsent } from "./components/CookieConsent";
 import { lazyPage } from "./lib/lazyPage";
 import Index from "./pages/Index";
 
@@ -77,6 +78,7 @@ export const AppShell = () => (
       </defs>
     </svg>
     <ScrollToTop />
+    <CookieConsent />
     <Suspense fallback={<div className="min-h-screen bg-background" />}>
       <Routes>
         {routes.map(({ path, Page }) => (
