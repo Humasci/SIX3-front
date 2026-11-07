@@ -10,8 +10,6 @@ UK small and mid-sized businesses that sell a service and live or die by enquiri
 
 **Tagline: Growth, cubed.**
 
-Descriptor: **The AI marketing agency for businesses that run on enquiries.**
-
 Supporting line: More leads in, every lead answered.
 
 SIX³ is a Brighton AI marketing and automation agency. We combine three things most businesses buy from three different suppliers, and make them work as one system:

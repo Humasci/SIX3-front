@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { PageSEO } from "@/components/PageSEO";
+import { openCookieSettings } from "@/components/CookieConsent";
 import { Footer } from "@/components/Footer";
 import { useEffect } from "react";
 import gsap from "gsap";
@@ -151,6 +152,14 @@ const CookiePolicy = () => {
                 <li>Customize your cookie preferences</li>
                 <li>Learn more about our cookie usage</li>
               </ul>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Analytics and marketing cookies stay off until you accept them. You can change or withdraw your choice
+                at any time using the{" "}
+                <button type="button" onClick={openCookieSettings} className="text-gradient hover:underline">
+                  Cookie settings
+                </button>{" "}
+                link in the footer of every page.
+              </p>
 
               <h3 className="text-xl font-medium mb-3">5.3 Opt-Out Links</h3>
               <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">

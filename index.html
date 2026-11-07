@@ -35,6 +35,28 @@
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() { dataLayer.push(arguments); }
+      // Consent Mode: nothing that sets analytics or ad cookies runs until the visitor accepts.
+      // A choice saved by the cookie banner (localStorage "six3-consent") is applied before GTM loads
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
+        functionality_storage: "granted",
+        security_storage: "granted",
+        wait_for_update: 500,
+      });
+      try {
+        var saved = JSON.parse(localStorage.getItem("six3-consent") || "null");
+        if (saved) {
+          gtag("consent", "update", {
+            analytics_storage: saved.analytics ? "granted" : "denied",
+            ad_storage: saved.marketing ? "granted" : "denied",
+            ad_user_data: saved.marketing ? "granted" : "denied",
+            ad_personalization: saved.marketing ? "granted" : "denied",
+          });
+        }
+      } catch (e) {}
       gtag("js", new Date());
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
