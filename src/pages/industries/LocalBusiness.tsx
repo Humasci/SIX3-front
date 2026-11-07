@@ -315,7 +315,7 @@ const LocalBusiness = () => {
             <div>
               <h2 className="text-4xl font-light mb-6">Get found by local customers</h2>
               <p className="text-lg text-muted-foreground mb-6">
-                Get Found: Search & Paid Media puts you in front of people in your service area at the moment
+                Search & Paid Media puts you in front of people in your service area at the moment
                 they need help, and tracks which ads turn into booked jobs.
               </p>
               <div className="space-y-4">

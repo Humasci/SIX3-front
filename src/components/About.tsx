@@ -90,7 +90,7 @@ export const About = () => {
             Most businesses buy ads, content and automation from three suppliers. We make them one system.
           </h2>
           <p className="about-description text-lg text-muted-foreground max-w-2xl mb-12">
-            SIX³ is a London agency for service businesses that run on enquiries. We bring in the right leads, give
+            SIX³ is a Brighton agency for service businesses that run on enquiries. We bring in the right leads, give
             people a reason to choose you, and make sure every enquiry gets an answer, so each part makes the others
             work harder. That's the ³: growth that compounds instead of adding up.
           </p>

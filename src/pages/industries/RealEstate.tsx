@@ -214,7 +214,7 @@ const RealEstate = () => {
                 Win more valuations in your patch
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
-                Get Found: Search & Paid Media puts your agency in front of local vendors and landlords
+                Search & Paid Media puts your agency in front of local vendors and landlords
                 when they're deciding who to call, and tracks which campaigns lead to instructions.
               </p>
               <div className="space-y-6">

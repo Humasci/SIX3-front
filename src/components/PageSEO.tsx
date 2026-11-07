@@ -54,9 +54,9 @@ export const organizationJsonLd = {
   image: DEFAULT_IMAGE,
   email: "hello@six3.agency",
   description:
-    "London AI marketing and automation agency: search and paid media, AI video content and AI agents that answer every enquiry, as one growth system.",
+    "Brighton AI marketing and automation agency: search and paid media, AI video content and AI agents that answer every enquiry, as one growth system.",
   foundingDate: "2018",
-  address: { "@type": "PostalAddress", addressLocality: "London", addressCountry: "GB" },
+  address: { "@type": "PostalAddress", addressLocality: "Brighton", addressCountry: "GB" },
   areaServed: { "@type": "Country", name: "United Kingdom" },
   sameAs: ["https://linkedin.com/company/six3-agency"],
   knowsAbout: ["AI marketing", "Paid media", "Google Ads", "AI video production", "AI receptionists", "Marketing automation"],

@@ -57,7 +57,7 @@ export const AboutPage = () => {
             </h1>
             <div className="h-1 w-40 bg-brand-gradient rounded-full mb-8 mx-auto" />
             <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto">
-              A London agency that brings search, content and AI automation together, so service businesses get
+              A Brighton agency that brings search, content and AI automation together, so service businesses get
               found, get chosen and never miss an enquiry.
             </p>
           </div>

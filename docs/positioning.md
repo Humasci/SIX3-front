@@ -14,7 +14,7 @@ Descriptor: **The AI marketing agency for businesses that run on enquiries.**
 
 Supporting line: More leads in, every lead answered.
 
-SIX³ is a London AI marketing and automation agency. We combine three things most businesses buy from three different suppliers, and make them work as one system:
+SIX³ is a Brighton AI marketing and automation agency. We combine three things most businesses buy from three different suppliers, and make them work as one system:
 
 1. **Get found:** search and paid media that bring in the right enquiries.
 2. **Get chosen:** AI-produced video, voice and ad content that makes people pick you.
@@ -29,7 +29,7 @@ We help service businesses get found, get chosen and get more done, with AI mark
 - **One team, one system.** Ads, content and automation are planned together, measured together and reported together.
 - **Built by operators.** We run our own digital properties (like dui.guide), so we build what we'd use ourselves.
 - **Practical AI.** We use AI where it saves time or wins customers, not as a buzzword. Every build has a clear job and a number attached.
-- **London-based, since 2018.** Senior people on every account.
+- **Brighton-based, since 2018.** Senior people on every account.
 
 ### Tone of voice
 Plain, confident, specific. Short sentences. Talk about the customer's outcome before the technology. No hype words ("revolutionise", "cutting-edge", "unprecedented"). Never invent statistics: only use numbers we can back up, or describe what a system does (for example "answers every enquiry in under a minute").
