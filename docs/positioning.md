@@ -25,7 +25,7 @@ We help service businesses get found, get chosen and get more done, with AI mark
 
 ### Why us
 - **One team, one system.** Ads, content and automation are planned together, measured together and reported together.
-- **Built by operators.** We run our own digital properties (like dui.guide), so we build what we'd use ourselves.
+- **Built by operators.** We plan, build and run everything ourselves, so nothing gets lost between suppliers.
 - **Practical AI.** We use AI where it saves time or wins customers, not as a buzzword. Every build has a clear job and a number attached.
 - **Brighton-based, since 2018.** Senior people on every account.
 

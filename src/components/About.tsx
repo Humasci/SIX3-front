@@ -104,7 +104,7 @@ export const About = () => {
 
         <div className="border-t-gradient pt-16">
           <p className="text-lg text-muted-foreground mb-12">
-            Senior people on every account, and we run our own digital properties too, so we build what we'd use ourselves.
+            Senior people on every account, from the first call to the monthly report.
           </p>
           <div className="flex flex-col items-start gap-4">
             <AnimatedCounter end={2018} />
