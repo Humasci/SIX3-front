@@ -25,7 +25,6 @@ const ProfessionalServices = lazyPage(() => import("./pages/industries/Professio
 const LocalBusiness = lazyPage(() => import("./pages/industries/LocalBusiness"));
 const LawFirmAutomation = lazyPage(() => import("./pages/use-cases/LawFirmAutomation"));
 const RealEstateLeadSystem = lazyPage(() => import("./pages/use-cases/RealEstateLeadSystem"));
-const DuiGuide = lazyPage(() => import("./pages/use-cases/DuiGuide"));
 const PrivacyPolicy = lazyPage(() => import("./pages/PrivacyPolicy"));
 const Terms = lazyPage(() => import("./pages/Terms"));
 const CookiePolicy = lazyPage(() => import("./pages/CookiePolicy"));
@@ -51,7 +50,6 @@ export const routes = [
   { path: "/industries/local-business", Page: LocalBusiness },
   { path: "/use-cases/law-firm-automation", Page: LawFirmAutomation },
   { path: "/use-cases/real-estate-lead-system", Page: RealEstateLeadSystem },
-  { path: "/use-cases/dui-guide", Page: DuiGuide },
   { path: "/privacy-policy", Page: PrivacyPolicy },
   { path: "/terms", Page: Terms },
   { path: "/cookie-policy", Page: CookiePolicy },

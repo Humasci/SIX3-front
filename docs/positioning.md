@@ -50,7 +50,6 @@ Prices aren't on the website yet. Suggested next step: add "from £…" prices f
 3. **Compound:** we optimise every month, and each part makes the others work harder.
 
 ## Proof we can use
-- **dui.guide:** AI legal guidance and directory platform (our own property, 2025–2026).
 - **Noovit:** e-commerce growth (2026).
 - **A UK law firm:** intake automation (2024, under NDA).
 

@@ -37,9 +37,6 @@ export const Footer = () => {
             <h4 className="text-sm font-medium mb-4 tracking-wider">Case Studies</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li className="hover:text-foreground transition-colors cursor-pointer">
-                <Link to="/use-cases/dui-guide">dui.guide — AI Legal Platform</Link>
-              </li>
-              <li className="hover:text-foreground transition-colors cursor-pointer">
                 <Link to="/use-cases/law-firm-automation">Law Firm Intake Automation</Link>
               </li>
             </ul>

@@ -313,35 +313,6 @@ export const icons = {
     </svg>
   `),
 
-  // dui.guide / Legal navigation compass
-  duiGuide: encodeDataUri(`
-    <svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-      <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="-200" y1="-160" x2="200" y2="160"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#a855f7"/><stop offset="100%" stop-color="#f97316"/></linearGradient><radialGradient id="glowA" cx="12%" cy="8%" r="65%"><stop offset="0%" stop-color="#7c3aed" stop-opacity="0.55"/><stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/></radialGradient><radialGradient id="glowB" cx="92%" cy="96%" r="60%"><stop offset="0%" stop-color="#f97316" stop-opacity="0.35"/><stop offset="100%" stop-color="#f97316" stop-opacity="0"/></radialGradient><radialGradient id="halo" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#a855f7" stop-opacity="0.28"/><stop offset="70%" stop-color="#a855f7" stop-opacity="0.06"/><stop offset="100%" stop-color="#a855f7" stop-opacity="0"/></radialGradient><linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#a855f7"/><stop offset="100%" stop-color="#f97316"/></linearGradient><pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.3" fill="#ffffff" fill-opacity="0.07"/></pattern></defs>
-      <rect width="800" height="600" fill="#0e0e2a"/><rect width="800" height="600" fill="url(#glowA)"/><rect width="800" height="600" fill="url(#glowB)"/><rect width="800" height="600" fill="url(#dots)"/><circle cx="400" cy="300" r="250" fill="url(#halo)"/><circle cx="400" cy="300" r="215" fill="none" stroke="url(#ring)" stroke-width="1.5" stroke-opacity="0.35"/><circle cx="400" cy="300" r="160" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1.4"/>
-      <g transform="translate(400, 300)" stroke-linecap="round" stroke-linejoin="round">
-        <!-- Outer compass ring -->
-        <circle cx="0" cy="0" r="140" fill="none" stroke="url(#g)" stroke-width="4.2"/>
-        <circle cx="0" cy="0" r="120" fill="none" stroke="url(#g)" stroke-width="1.4" opacity="0.3"/>
-        <!-- Compass needle North -->
-        <path d="M 0 -110 L -18 0 L 0 -20 Z" fill="url(#g)"/>
-        <!-- Compass needle South -->
-        <path d="M 0 110 L 18 0 L 0 20 Z" fill="url(#g)" opacity="0.4"/>
-        <!-- Center dot -->
-        <circle cx="0" cy="0" r="8" fill="url(#g)"/>
-        <!-- Cardinal marks -->
-        <line x1="0" y1="-140" x2="0" y2="-128" stroke="url(#g)" stroke-width="4.2"/>
-        <line x1="0" y1="128" x2="0" y2="140" stroke="url(#g)" stroke-width="4.2"/>
-        <line x1="-140" y1="0" x2="-128" y2="0" stroke="url(#g)" stroke-width="4.2"/>
-        <line x1="128" y1="0" x2="140" y2="0" stroke="url(#g)" stroke-width="4.2"/>
-        <!-- Scale / gavel at bottom -->
-        <line x1="-50" y1="155" x2="50" y2="155" stroke="url(#g)" stroke-width="4.2" opacity="0.7"/>
-        <circle cx="-50" cy="155" r="5" fill="url(#g)" opacity="0.7"/>
-        <circle cx="50" cy="155" r="5" fill="url(#g)" opacity="0.7"/>
-        <line x1="0" y1="155" x2="0" y2="175" stroke="url(#g)" stroke-width="4.2" opacity="0.7"/>
-      </g>
-    </svg>
-  `),
-
   // ML Fine-Tuning / Training curve with neural nodes
   mlFineTuning: encodeDataUri(`
     <svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
