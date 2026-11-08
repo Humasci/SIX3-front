@@ -15,30 +15,8 @@ const projects = {
 
 
 
-  "dui-guide": {
-    title: "dui.guide — Legal Guidance Platform",
-    category: "AI Agents & Automation",
-    year: "2025–2026",
-    client: "dui.guide — Media Law Group LLC",
-    duration: "10 weeks",
-    description: "AI-powered DUI procedural guidance platform delivering state and county-specific legal navigation, automated deadline tracking, and intelligent attorney matching across all 50 states.",
-    challenge: "DUI cases are intensely jurisdiction-specific. Users had to navigate fragmented government websites, could easily miss critical deadlines, and had no way to identify the right attorney for their specific charge and county.",
-    solution: "We built a conversational AI guidance agent with county-level jurisdiction detection, an automated deadline tracking and alert system synced to court calendars, and an AI-powered attorney and service provider matching layer over their existing directory.",
-    results: [],
-    image: "/images/use-cases/media-publisher-directory-dui-guide.webp",
-  },
-  "media-publisher-directory": {
-    title: "Media Publisher & Directory Platform",
-    category: "AI Content & SEO Automation",
-    year: "2025–2026",
-    client: "Digital media publisher",
-    duration: "12 weeks",
-    description: "An AI-assisted publishing pipeline for a media publisher running a large online directory: listing pages generated from structured data, editorial content refreshed on a schedule, and every page built to be found in search.",
-    challenge: "Thousands of directory listings and editorial pages were created and updated by hand. Content went stale, new categories took weeks to launch, and internal linking and structured data were inconsistent across the site.",
-    solution: "We built a content pipeline that generates and refreshes listing pages from the publisher's data, an editorial workflow with human review before anything goes live, and a technical SEO layer that adds schema markup and internal links to every page automatically.",
-    results: ["Listing pages generated and refreshed automatically from source data", "Human editorial review built into every publish", "Consistent schema markup and internal linking across the directory"],
-    image: "/images/use-cases/media-publisher-directory-dui-guide.webp",
-  },
+
+
   "ecommerce-ai-campaign": {
     title: "E-commerce AI Marketing Campaign",
     category: "Search & Paid Media",

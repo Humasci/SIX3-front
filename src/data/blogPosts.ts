@@ -67,7 +67,7 @@ export const blogPosts: BlogPost[] = [
       "Fine-tune an open-weight model on your data and compare it with the baseline on the test set. Have your specialists review outputs side by side, not just automated scores, because they will spot the errors that matter.",
       "### Deployment and monitoring",
       "Deploy in your chosen environment with access controls, logging and a clear route for people to flag poor answers. Monitor quality over time, collect feedback and plan periodic retraining as your work evolves.",
-      "We build and run AI products of our own, including dui.guide, an AI legal guidance and directory platform. That experience shapes how we approach private AI: start with the job, measure it, and only add complexity when it earns its place.",
+      "Our approach to private AI is simple: start with the job, measure it, and only add complexity when it earns its place.",
       "## Talk to us about private AI",
       "If you have specialist knowledge or strict data rules and are wondering whether a private model is right for you, get in touch to discuss it. Private AI projects are scoped by enquiry. If you are not yet sure where AI fits in your business, our AI Growth Audit is a good place to start: it shows where AI can save time or win customers across your marketing and lead handling. Book an AI Growth Audit from our contact page.",
     ],

@@ -43,6 +43,21 @@
       ],
       "destination": "https://six3.agency/:path*",
       "permanent": true
+    },
+    {
+      "source": "/use-cases/dui-guide",
+      "destination": "/portfolio",
+      "permanent": false
+    },
+    {
+      "source": "/portfolio/dui-guide",
+      "destination": "/portfolio",
+      "permanent": false
+    },
+    {
+      "source": "/portfolio/media-publisher-directory",
+      "destination": "/portfolio",
+      "permanent": false
     }
   ]
 }

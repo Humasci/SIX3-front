@@ -19,18 +19,8 @@ const projects = [
     metrics: "Client under NDA"
   },
   {
-    id: "media-publisher-directory",
-    number: "02",
-    title: "Media Publisher & Directory Platform",
-    category: "AI Content & SEO Automation",
-    year: "2025–2026",
-    description: "AI-assisted publishing pipeline that generates, refreshes and interlinks directory listings and editorial pages at scale",
-    image: "/images/use-cases/media-publisher-directory-dui-guide.webp",
-    metrics: "Programmatic SEO with editorial review"
-  },
-  {
     id: "ecommerce-ai-campaign",
-    number: "03",
+    number: "02",
     title: "E-commerce AI Marketing Campaign",
     category: "Search & Paid Media",
     year: "2026",
@@ -38,21 +28,10 @@ const projects = [
     image: "/images/use-cases/ecommerce-noovit.webp",
     metrics: "Search, social and attribution"
   },
-  {
-    id: "dui-guide",
-    number: "04",
-    title: "dui.guide — Legal Guidance Platform",
-    category: "AI Agents & Automation",
-    year: "2025–2026",
-    description: "Our own AI legal guidance platform: state and county-specific DUI guidance, deadline tracking and attorney matching, available 24/7",
-    image: "/images/use-cases/media-publisher-directory-dui-guide.webp",
-    metrics: "Our own platform"
-  },
 ];
 
 const caseStudyPages: Record<string, string> = {
   "law-firm-automation": "/use-cases/law-firm-automation",
-  "dui-guide": "/use-cases/dui-guide",
 };
 
 export const Portfolio = ({ lightHeader = false }: { lightHeader?: boolean }) => {
@@ -209,7 +188,7 @@ export const Portfolio = ({ lightHeader = false }: { lightHeader?: boolean }) =>
       </div>
 
       <div className={`px-6 pb-24 max-w-7xl mx-auto ${lightHeader ? "pt-16" : ""}`}>
-        <div className="portfolio-grid grid md:grid-cols-2 lg:grid-cols-3 gap-8 perspective-1000">
+        <div className="portfolio-grid grid md:grid-cols-2 gap-8 perspective-1000">
           {projects.slice(0, 3).map((project) => (
             <Link
               key={project.id}

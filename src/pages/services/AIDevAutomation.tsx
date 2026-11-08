@@ -239,13 +239,13 @@ const AIDevAutomation = () => {
             Case Study <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" />
           </p>
           <h2 className="text-4xl md:text-5xl font-light mb-6">
-            dui.guide: our own AI legal guidance platform
+            Client intake automation for a UK law firm
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mb-8">
-            dui.guide is our own AI legal guidance and directory platform, where
-            AI agents help people understand the DUI process and find the right legal help. See how we built it.
+            How we gave a UK law firm an AI receptionist that answers every new enquiry, qualifies new matters and
+            books consultations, taking the intake admin off fee earners.
           </p>
-          <Link to="/use-cases/dui-guide">
+          <Link to="/use-cases/law-firm-automation">
             <Button variant="outline" className="rounded-full px-8 py-4 border-foreground hover:bg-brand-gradient-button hover:text-white hover:border-transparent hover:shadow-[0_0_32px_-10px_rgba(249,115,22,0.6)]">
               Read the case study
             </Button>
