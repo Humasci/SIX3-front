@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import { BrowserRouter, Routes, Route, matchPath } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 import "./i18n";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { CookieConsent } from "./components/CookieConsent";
@@ -93,6 +94,7 @@ export const AppShell = () => (
 const App = () => (
   <BrowserRouter>
     <AppShell />
+    <Analytics />
   </BrowserRouter>
 );
 
