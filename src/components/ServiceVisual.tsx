@@ -1,6 +1,9 @@
 import { useEffect, useRef } from "react";
 
-export type ServiceVisualKind = "search" | "video" | "agents" | "ml";
+export type ServiceVisualKind =
+  | "search" | "video" | "agents" | "ml"
+  // Topic drawings for blog posts
+  | "chat" | "lock" | "triad" | "audit" | "shield" | "scales" | "phone" | "clock" | "voice" | "flow" | "house" | "calendar";
 
 const STOPS: [number, [number, number, number]][] = [
   [0, [124, 58, 237]],
@@ -46,7 +49,109 @@ const build = (kind: ServiceVisualKind) => {
     }
   };
 
-  if (kind === "search") {
+  // Dots along a circular arc (angles in radians, y pointing down)
+  const arc = (cx: number, cy: number, rad: number, a0: number, a1: number, n: number, jitter = 0.35) => {
+    for (let i = 0; i < n; i++) {
+      const a = a0 + (a1 - a0) * rnd(), d = rad + (rnd() - 0.5) * jitter;
+      ps.push({ x: cx + Math.cos(a) * d, y: cy + Math.sin(a) * d, r: 0.25 + rnd() * 0.25, seed: rnd() * 100, group: 0, f: 0, kind: "dot" });
+    }
+  };
+  const box = (x0: number, y0: number, x1: number, y1: number, n: number) => {
+    const w = x1 - x0, h = y1 - y0, k = n / (2 * (w + h));
+    line([x0, y0], [x1, y0], w * k); line([x0, y1], [x1, y1], w * k); line([x0, y0], [x0, y1], h * k); line([x1, y0], [x1, y1], h * k);
+  };
+  const fill = (x0: number, y0: number, x1: number, y1: number, n: number) => {
+    for (let i = 0; i < n; i++) ps.push({ x: x0 + rnd() * (x1 - x0), y: y0 + rnd() * (y1 - y0), r: 0.25 + rnd() * 0.25, seed: rnd() * 100, group: 0, f: 0, kind: "dot" });
+  };
+  const signal = (a: [number, number], b: [number, number]) => {
+    line(a, b, 60, 0.3);
+    edges.push({ a, b, speed: 0.2 + rnd() * 0.15, offset: rnd() });
+  };
+  const PI = Math.PI;
+
+  if (kind === "chat") {
+    // A chat bubble with typing dots, answered by a smaller bubble
+    box(16, 10, 66, 44, 360);
+    line([28, 44], [24, 54], 40); line([24, 54], [38, 44], 40);
+    [32, 41, 50].forEach((x, i) => disc(x, 27, 2.6, 110, i));
+    box(54, 40, 86, 62, 240);
+    line([58, 51], [80, 51], 60, 0.5);
+  } else if (kind === "lock") {
+    // A padlock: shackle, body and keyhole
+    arc(50, 28, 13, PI, 2 * PI, 260, 0.6);
+    line([37, 28], [37, 36], 50, 0.6); line([63, 28], [63, 36], 50, 0.6);
+    box(30, 36, 70, 64, 360);
+    fill(31, 37, 69, 63, 260);
+    disc(50, 47, 3.2, 120); line([50, 49], [50, 57], 70, 1.2);
+  } else if (kind === "triad") {
+    // Three linked parts sending signals to each other: ads, content, automation
+    const n: [number, number][] = [[50, 17], [27, 56], [73, 56]];
+    n.forEach(([x, y], i) => { disc(x, y, 6.5, 240, i); arc(x, y, 10, 0, 2 * PI, 200, 0.5); });
+    signal(n[0], n[1]); signal(n[1], n[2]); signal(n[2], n[0]);
+  } else if (kind === "audit") {
+    // Rising bars under a magnifier
+    [[20, 12], [30, 20], [40, 16], [50, 28], [60, 36]].forEach(([x, h], gi) => {
+      for (let i = 0; i < 200; i++) {
+        const f = rnd();
+        ps.push({ x: x - 3 + rnd() * 6, y: 62 - f * h, r: 0.3 + rnd() * 0.3, seed: rnd() * 100, group: gi, f, kind: "bar" });
+      }
+    });
+    arc(70, 28, 12, 0, 2 * PI, 420, 1.2);
+    line([78, 37], [90, 50], 160, 2);
+  } else if (kind === "shield") {
+    // A shield with a tick: data kept safe
+    line([30, 16], [50, 10], 80); line([50, 10], [70, 16], 80);
+    line([30, 16], [30, 38], 80); line([70, 16], [70, 38], 80);
+    for (let i = 0; i < 260; i++) {
+      const t = rnd(), side = rnd() < 0.5 ? 30 : 70;
+      const x = side + (50 - side) * t, y = 38 + 26 * Math.pow(t, 1.4);
+      ps.push({ x, y, r: 0.25 + rnd() * 0.25, seed: rnd() * 100, group: 0, f: 0, kind: "dot" });
+    }
+    line([39, 36], [47, 45], 120, 1.6); line([47, 45], [62, 28], 180, 1.6);
+  } else if (kind === "scales") {
+    // Scales of justice
+    line([50, 15], [50, 62], 160, 0.6); line([38, 64], [62, 64], 90, 0.8);
+    line([22, 22], [78, 22], 200, 0.6); disc(50, 14, 2.4, 70);
+    [22, 78].forEach((x) => {
+      line([x, 22], [x - 8, 40], 50); line([x, 22], [x + 8, 40], 50);
+      arc(x, 40, 9, 0, PI, 160, 0.6); line([x - 9, 40], [x + 9, 40], 60);
+    });
+  } else if (kind === "phone") {
+    // A phone with a live voice wave on screen
+    box(36, 8, 64, 68, 300); line([46, 13], [54, 13], 30); disc(50, 63, 1.8, 50);
+    for (let i = 0; i < 600; i++) ps.push({ x: 39 + rnd() * 22, y: 38, r: 0.3 + rnd() * 0.3, seed: rnd() * 100, group: 0, f: (rnd() - 0.5) * 2, kind: "wave" });
+  } else if (kind === "clock") {
+    // A stopwatch: speed matters
+    arc(50, 41, 22, 0, 2 * PI, 620, 0.9);
+    fill(45, 11, 55, 15, 90); line([50, 15], [50, 19], 30);
+    for (let k = 0; k < 12; k++) { const a = (k / 12) * 2 * PI; line([50 + Math.cos(a) * 17, 41 + Math.sin(a) * 17], [50 + Math.cos(a) * 19.5, 41 + Math.sin(a) * 19.5], 10, 0.2); }
+    line([50, 41], [50, 25], 130, 0.6); line([50, 41], [62, 48], 110, 0.6); disc(50, 41, 2, 60);
+  } else if (kind === "voice") {
+    // A microphone with sound waves
+    arc(50, 22, 9, PI, 2 * PI, 120); arc(50, 40, 9, 0, PI, 120);
+    line([41, 22], [41, 40], 70); line([59, 22], [59, 40], 70); fill(43, 17, 57, 43, 220);
+    arc(50, 40, 14, 0, PI, 150); line([50, 54], [50, 62], 40); line([41, 63], [59, 63], 60);
+    [20, 26].forEach((rad) => { arc(50, 32, rad, -0.5, 0.5, 70); arc(50, 32, rad, PI - 0.5, PI + 0.5, 70); });
+  } else if (kind === "flow") {
+    // A workflow: steps connected, with work passing between them
+    const b: [number, number, number, number][] = [[10, 31, 28, 45], [41, 12, 59, 26], [41, 49, 59, 63], [72, 31, 90, 45]];
+    b.forEach(([x0, y0, x1, y1]) => { box(x0, y0, x1, y1, 200); fill(x0 + 1, y0 + 1, x1 - 1, y1 - 1, 60); });
+    signal([28, 38], [41, 19]); signal([28, 38], [41, 56]); signal([59, 19], [72, 38]); signal([59, 56], [72, 38]);
+  } else if (kind === "house") {
+    // A house sending replies out to new leads
+    line([22, 36], [48, 14], 140); line([48, 14], [74, 36], 140);
+    line([28, 34], [28, 64], 110); line([68, 34], [68, 64], 110); line([26, 64], [70, 64], 140);
+    box(43, 48, 53, 64, 90); fill(33, 42, 40, 49, 70);
+    [[88, 22], [90, 50]].forEach(([x, y], i) => { disc(x, y, 3.4, 110, i + 1); signal([68, 42], [x, y]); });
+  } else if (kind === "calendar") {
+    // A calendar with a booked slot
+    box(20, 14, 80, 64, 360); fill(20, 14, 80, 22, 320);
+    line([33, 9], [33, 17], 30, 0.6); line([67, 9], [67, 17], 30, 0.6);
+    for (let i = 0; i < 5; i++) for (let j = 0; j < 4; j++) {
+      if (i === 3 && j === 1) disc(28 + i * 11, 30 + j * 9, 3.2, 130, 1);
+      else disc(28 + i * 11, 30 + j * 9, 1.4, 22);
+    }
+  } else if (kind === "search") {
     // Bars that rise and fall, framed by a slowly turning magnifier ring and handle
     const bars = [[30, 22], [40, 32], [50, 26], [60, 40]];
     bars.forEach(([x, h], gi) => {
@@ -166,7 +271,7 @@ export const ServiceVisual = ({ kind, className = "", label }: { kind: ServiceVi
           a = 0.45 + 0.35 * Math.sin(ang * 3 + time);
         } else if (p.kind === "wave") {
           const amp = 9 * Math.sin((x - 14) / 72 * Math.PI) * (0.6 + 0.4 * Math.sin(time * 1.7));
-          y = 62 + Math.sin(x * 0.45 - time * 3) * amp * Math.cos(x * 0.13 + time) + p.f * 0.6;
+          y = p.y + Math.sin(x * 0.45 - time * 3) * amp * Math.cos(x * 0.13 + time) + p.f * 0.6;
         } else if (p.kind === "dust") {
           x = (p.x + time * 1.2) % 100; y = p.y + Math.sin(time * 0.5 + p.seed) * 1.5;
           a = 0.25;

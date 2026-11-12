@@ -28,7 +28,7 @@ export const blogPosts: BlogPost[] = [
     "date": "2026-11-12",
     "readTime": "4 min read",
     "category": "AI Marketing",
-    "visual": "search",
+    "visual": "chat",
     "shareImage": "/images/blog/chatgpt-business-hub-share.jpg",
     "body": [
       "On 10 November, OpenAI opened a new beta called Businesses in ChatGPT. For the first time, companies can claim an official presence inside ChatGPT, manage how they are described, and see how often the assistant mentions them. If your customers already use ChatGPT to research suppliers, compare products or find someone local, this matters: it is the first real control you have over how you show up there.",
@@ -69,7 +69,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-12-29",
     readTime: "4 min read",
     category: "Private AI",
-    visual: "ml",
+    visual: "lock",
     body: [
       "## Off-the-shelf AI is good enough for many jobs",
       "Before talking about custom models, it is worth saying plainly: for many business tasks, a well-configured off-the-shelf model is the right choice. Leading general-purpose models are capable at drafting, summarising, answering questions and handling conversations. Paired with your own documents through retrieval, they can answer accurately from your information without any training at all.",
@@ -124,7 +124,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-12-22",
     readTime: "4 min read",
     category: "Strategy",
-    visual: "agents",
+    visual: "triad",
     body: [
       "## The three-supplier problem",
       "A typical service business buys its marketing in pieces. An agency runs Google Ads. A freelancer or another agency makes content. Someone else built the website and set up the CRM, and the phones are answered by whoever happens to be free. Each supplier reports on its own numbers: clicks, views, form fills. Nobody owns the whole journey from search to signed client.",
@@ -178,7 +178,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-12-15",
     readTime: "5 min read",
     category: "Strategy",
-    visual: "search",
+    visual: "audit",
     body: [
       "## Why start with an audit",
       "Most service businesses already spend money on marketing. The question is rarely whether to spend, but where the current spend is leaking. An enquiry might be lost because the ad matched the wrong search, because the landing page did not answer the question, because the reply came the next day or because nobody followed up. Fixing the wrong one wastes time and budget.",
@@ -304,7 +304,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-12-01",
     readTime: "5 min read",
     category: "Data & Privacy",
-    visual: "ml",
+    visual: "shield",
     body: [
       "## The short answer",
       "Yes, you can use AI chatbots and receptionists with customer data in the UK. UK GDPR and the Data Protection Act 2018 do not ban AI. They require you to process personal data lawfully, fairly and transparently, to keep it secure, to use only what you need and to keep it no longer than necessary. An AI tool is another way of processing data, and the same principles apply.",
@@ -363,7 +363,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-11-24",
     readTime: "5 min read",
     category: "Paid Media",
-    visual: "search",
+    visual: "scales",
     body: [
       "## Why legal Google Ads go wrong",
       "Legal search terms are among the most competitive in paid search. Clicks can be expensive, and a poorly set-up account can spend a month's budget on people looking for free advice, legal jobs or a firm in another city. The firms that do well treat Google Ads as a system: tight targeting, landing pages that answer the question, fast follow-up and tracking that shows which clicks become instructed clients.",
@@ -422,7 +422,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-11-17",
     readTime: "5 min read",
     category: "Automation",
-    visual: "agents",
+    visual: "phone",
     body: [
       "## What an AI receptionist is, and what it is not",
       "An AI receptionist is software that answers your phone, website chat, email or messaging, holds a natural conversation and takes a useful action: answering a question, capturing details, qualifying the enquiry or booking an appointment. Current systems combine speech recognition, a language model and a natural-sounding voice, and they connect to your calendar and CRM.",
@@ -486,7 +486,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-11-10",
     readTime: "5 min read",
     category: "Lead Generation",
-    visual: "agents",
+    visual: "clock",
     body: [
       "## Why speed matters more than you think",
       "When someone fills in a form on a solicitor's website or rings a clinic, they are rarely contacting only you. Most people looking for a service open a few tabs, send two or three enquiries and go with whoever comes back first with a clear answer. The first reply sets the frame. It shows you are organised, available and interested in their problem.",
@@ -607,7 +607,7 @@ export const blogPosts: BlogPost[] = [
     date: "2025-11-22",
     readTime: "4 min read",
     category: "Content Creation",
-    visual: "video",
+    visual: "voice",
     body: [
       "## What voice cloning is",
       "Voice cloning uses AI to create a digital version of a real person's voice. You provide recordings, and the system learns the tone, pace, accent and character of that voice. Once it is trained, you type a script and get audio that sounds like that person reading it.",
@@ -666,7 +666,7 @@ export const blogPosts: BlogPost[] = [
     date: "2025-11-20",
     readTime: "4 min read",
     category: "Automation",
-    visual: "agents",
+    visual: "flow",
     body: [
       "## Start with the work, not the tool",
       "Law firms are full of repeated tasks that follow a pattern: answering the same questions, collecting the same information, chasing the same documents. These are ideal for automation. The aim is not to replace fee earners but to remove the admin around their work, so clients get faster responses and lawyers spend more of their time on legal judgement.",
@@ -713,7 +713,7 @@ export const blogPosts: BlogPost[] = [
     date: "2025-11-18",
     readTime: "4 min read",
     category: "Lead Generation",
-    visual: "search",
+    visual: "house",
     body: [
       "## The leads that matter",
       "For most estate and letting agents, a few kinds of lead drive the business: vendors and landlords looking for a valuation, buyers and tenants enquiring about properties, and referrals from past clients. Valuation leads are usually the most valuable, because they become instructions and fees. Applicant leads matter too, both to sell and let your stock and because today's buyer is often tomorrow's vendor.",
@@ -770,7 +770,7 @@ export const blogPosts: BlogPost[] = [
     date: "2025-11-12",
     readTime: "4 min read",
     category: "Healthcare AI",
-    visual: "ml",
+    visual: "calendar",
     body: [
       "## The pressure on clinic front desks",
       "Reception teams in clinics and private practices handle a constant flow of calls, emails and messages: new patients asking about treatments, existing patients rescheduling, questions about prices, parking and preparation. When the phones are busy, calls go unanswered. When the clinic is closed, enquiries wait. Every missed contact is a patient who may book elsewhere, and every no-show is an empty slot that cannot be resold.",
