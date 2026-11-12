@@ -266,7 +266,7 @@ const Contact = () => {
     <div className="min-h-screen bg-background text-foreground">
       <PageSEO
         title="Contact Us & Book an AI Growth Audit | SIX³ Agency"
-        description="Tell us about your business and goals. Book a two-week AI Growth Audit or ask about search, AI content, AI agents and automation. Based in Brighton, UK."
+        description="Let's plug your growth leaks. Tell us about your business and we'll map out your AI strategy, or book a two-week AI Growth Audit. Brighton-based."
         canonical="https://six3.agency/contact"
       />
       <Header />
@@ -274,8 +274,16 @@ const Contact = () => {
       <section className="relative isolate overflow-hidden pt-32 pb-24 px-6 mt-5">
         <WormholeBackdrop />
         <div className="max-w-4xl mx-auto">
+          <div className="mb-14">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-light leading-tight mb-6 text-gradient w-fit pb-1">
+              Let's plug your growth leaks.
+            </h1>
+            <h2 className="text-lg sm:text-xl text-muted-foreground max-w-3xl font-normal">
+              Stop losing leads to competitors who are already automating. Tell us a bit about your business, and let's
+              map out your custom AI strategy.
+            </h2>
+          </div>
           <div className="contact-title mb-16">
-            <h1 className="sr-only">Contact SIX³ Agency</h1>
             <div className="flex items-center gap-2 mb-4">
               <span className="text-sm text-muted-foreground">
                 Step {currentStep + 1} of {steps.length}
@@ -287,9 +295,9 @@ const Contact = () => {
                 style={{ width: `${((currentStep + 1) / steps.length) * 100}%` }}
               />
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light mb-4 text-gradient w-fit pb-1">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-light mb-4 text-foreground">
               {steps[currentStep].title}
-            </h2>
+            </h3>
             <p className="text-lg sm:text-xl text-muted-foreground">
               {steps[currentStep].subtitle}
             </p>
@@ -454,6 +462,16 @@ const Contact = () => {
               )}
             </div>
           </form>
+
+          {/* Secondary note under the form */}
+          <div className="mt-16 relative overflow-hidden rounded-2xl border border-[#a855f7]/30 bg-card/60 p-6 md:p-8">
+            <div className="absolute inset-x-0 top-0 h-0.5 bg-brand-gradient-glow" />
+            <p className="text-lg text-muted-foreground">
+              <span className="text-foreground font-medium">Not ready for a full build?</span> Ask us about our two-week AI
+              Growth Audit: a low-risk, high-reward deep dive into your current systems to find immediate revenue
+              opportunities.
+            </p>
+          </div>
         </div>
       </section>
 

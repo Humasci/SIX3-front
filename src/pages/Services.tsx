@@ -17,14 +17,14 @@ const services = [
   {
     number: "01",
     title: "Search & Paid Media",
-    subtitle: "Campaigns that bring in the right customers, not just more clicks",
+    subtitle: "Campaigns that bring in buyers, not just browsers.",
     description: "We plan Google Ads, Meta, LinkedIn and TikTok as one budget, build landing pages that turn visits into leads and sales, and track every result back to the ad that brought it in. You get monthly optimisation and a plain-English report on what your spend is buying.",
     format: "Monthly",
     features: [
-      "Campaign strategy, build and management across four channels",
-      "Landing pages and offers designed to convert",
-      "Conversion and call tracking so you can see cost per lead or sale",
-      "Monthly optimisation, testing and reporting"
+      "Unified campaign management (Google Ads, Meta, LinkedIn, TikTok)",
+      "Custom landing pages and offer design",
+      "Advanced conversion and call tracking",
+      "Automated reporting and continuous AI optimisation"
     ],
     visual: "search" as const,
     path: "/services/search-marketing-ppc"
@@ -32,9 +32,9 @@ const services = [
   {
     number: "02",
     title: "AI Content Studio",
-    subtitle: "Video, voice and ad content that makes people pick you",
+    subtitle: "Video, voice, and ad creative that makes your brand the obvious choice.",
     description: "Most businesses know they need more video but never have the time to film it. We produce ads, explainers and social content with AI presenters, voiceovers and translations, on a monthly plan, in your brand's look and voice. Creative is tested in your ads, so the winners get the budget.",
-    format: "Monthly content packs",
+    format: "Monthly",
     features: [
       "AI video ads, explainers and social clips",
       "Avatar presenters and voiceovers, with your consent and branding",
@@ -47,14 +47,14 @@ const services = [
   {
     number: "03",
     title: "AI Agents & Automation",
-    subtitle: "AI that answers every customer and qualifies every lead, day and night",
+    subtitle: "24/7 AI receptionists that qualify leads and update your CRM.",
     description: "Missed calls and slow replies quietly lose you customers. We build AI receptionists for phone, chat and email that answer straight away, ask the right questions, book qualified people into your calendar and update your CRM. Then we look after them on a monthly care plan.",
-    format: "Build, then monthly care plan",
+    format: "Build + Care Plan",
     features: [
-      "AI receptionists for phone, website chat and email",
-      "Lead qualification, booking and reminders",
-      "Client intake, follow-ups and CRM workflows",
-      "Integrations with the tools you already use"
+      "Omnichannel AI receptionists (phone, chat, email)",
+      "Automated lead qualification and calendar booking",
+      "Seamless CRM integration",
+      "Smart human-handoff protocols"
     ],
     visual: "agents" as const,
     path: "/services/ai-dev-automation"
@@ -62,9 +62,9 @@ const services = [
   {
     number: "04",
     title: "Private AI",
-    subtitle: "AI trained on your own knowledge, deployed privately",
+    subtitle: "AI trained securely on your proprietary knowledge and deployed privately.",
     description: "For firms with specialist knowledge or strict data rules, off-the-shelf AI isn't always enough. We fine-tune open and commercial language models on your documents and data, test them properly against your real tasks, and deploy them where your data stays under your control.",
-    format: "On request",
+    format: "On Request",
     features: [
       "Fine-tuning on your documents, data and house style",
       "Evaluation against your real tasks before anything goes live",
@@ -108,7 +108,7 @@ const Services = () => {
     <div ref={contentRef} className="min-h-screen bg-background text-foreground">
       <PageSEO
         title="AI Marketing & Automation Services | SIX³ Agency"
-        description="Search and paid media, AI video content, AI receptionists and automation, and private AI models for UK businesses. Start with a two-week AI Growth Audit."
+        description="Build a marketing engine that never sleeps: paid media, AI content, 24/7 AI receptionists and private AI. Start with a two-week, fixed-fee AI Growth Audit."
         canonical="https://six3.agency/services"
       />
       <Header />
@@ -118,13 +118,13 @@ const Services = () => {
         <HeroWormhole centered />
         <div className="max-w-7xl mx-auto">
           <div className="services-hero text-center mb-16">
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-light mb-8 text-gradient w-fit pb-1 mx-auto">
-              Services
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-light leading-tight mb-8 text-gradient w-fit max-w-5xl pb-1 mx-auto">
+              Build a Marketing Engine That Never Sleeps.
             </h1>
             <div className="h-1 w-40 bg-brand-gradient rounded-full mb-8 mx-auto" />
             <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto mb-12">
-              Bring more leads in, and make sure every one gets answered. Buy one part or all three: they're built to work together,
-              so each one makes the others work harder.
+              Bring more leads in, and make sure every single one is answered. Buy one service or all four: they're built to
+              integrate seamlessly and multiply your results.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
               <div className="text-center">
@@ -156,16 +156,17 @@ const Services = () => {
             <div className="grid lg:grid-cols-[1.4fr_1fr] gap-10 items-center">
               <div>
                 <p className="mb-4 text-sm font-medium tracking-[0.25em] uppercase text-gradient w-fit">Start here</p>
-                <h2 className="text-4xl md:text-5xl font-light mb-4">AI Growth Audit</h2>
+                <h2 className="text-4xl md:text-5xl font-light mb-4">The AI Growth Audit</h2>
+                <p className="text-2xl font-light text-foreground mb-4">Stop guessing. Start scaling.</p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  In two weeks we review your search, ads, content and how you handle leads and customers. You get a prioritised
-                  plan showing where growth is leaking, what to fix first and what it's worth, plus quick wins you can
-                  act on straight away, whether or not you work with us afterwards.
+                  In two weeks, we review your search, ads, content, and lead-handling processes. You get a prioritised
+                  roadmap showing exactly where revenue is leaking, what to fix first, and the immediate quick wins you can
+                  implement today, whether you hire us or not.
                 </p>
               </div>
               <div className="space-y-4">
                 <ul className="space-y-3">
-                  {["Fixed fee, two weeks", "Ads, search, content and lead handling reviewed", "Prioritised plan and quick wins", "Walk-through call with your team"].map((item) => (
+                  {["Fixed fee, two-week turnaround.", "Comprehensive review of ads, search, content, and sales workflows.", "Prioritised action plan with a team walk-through."].map((item) => (
                     <li key={item} className="flex items-start gap-3">
                       <div className="w-1.5 h-1.5 rounded-full bg-brand-gradient mt-2 flex-shrink-0" />
                       <span className="text-muted-foreground">{item}</span>
@@ -174,7 +175,7 @@ const Services = () => {
                 </ul>
                 <Link to="/contact" className="inline-block pt-2">
                   <Button className="group px-8 py-4">
-                    Book your audit
+                    Book Your Audit
                     <ArrowUpRight className="w-4 h-4 ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                   </Button>
                 </Link>
@@ -187,6 +188,10 @@ const Services = () => {
       {/* Services Grid */}
       <section className="py-16 px-6 bg-secondary/20">
         <div className="max-w-7xl mx-auto">
+          <div className="mb-16 text-center">
+            <h2 className="text-4xl md:text-5xl font-light mb-4">Our Services at a Glance</h2>
+            <div className="h-1 w-24 rounded-full bg-brand-gradient mx-auto" />
+          </div>
           <div className="services-grid space-y-16">
             {services.map((service, index) => {
               return (

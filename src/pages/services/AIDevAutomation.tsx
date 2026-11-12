@@ -56,7 +56,7 @@ const AIDevAutomation = () => {
     <div ref={contentRef} className="min-h-screen bg-background text-foreground">
       <PageSEO
         title="AI Receptionist & Business Automation | SIX³ Agency"
-        description="AI receptionists for phone, chat and email that answer every customer, qualify every lead and book them in 24/7, plus CRM workflows for UK firms. Start with an AI Growth Audit."
+        description="Custom AI receptionists for phone, chat and email that answer instantly, qualify leads and book meetings round the clock, so no lead goes unanswered."
         canonical="https://six3.agency/services/ai-dev-automation"
       />
       <Header />
@@ -67,15 +67,15 @@ const AIDevAutomation = () => {
         <div className="max-w-7xl mx-auto">
           <div className="hero-content mb-12 grid lg:grid-cols-[minmax(0,1fr)_400px] gap-x-12 gap-y-8 items-center">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-light mb-8 text-gradient w-fit pb-1 lg:col-start-1">
-              AI Agents & Automation
+              Meet Your New 24/7 Workforce.
             </h1>
             <div className="h-1 w-40 bg-brand-gradient rounded-full lg:col-start-1 -mt-4" />
             <div className="media-frame aspect-[4/3] w-full max-w-md lg:max-w-none lg:col-start-2 lg:row-start-1 lg:row-span-3">
               <ServiceVisual kind="agents" label="AI Agents & Automation" className="w-full h-full" />
             </div>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl lg:col-start-1">
-              AI that answers every customer and qualifies every lead, day and night. AI receptionists for phone, chat
-              and email that reply straight away, book qualified people into your calendar and update your CRM.
+              Missed calls and slow replies quietly kill your business. We build custom AI receptionists that answer
+              instantly, qualify leads, and book meetings round the clock.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm lg:col-start-1">
               <div>
@@ -112,37 +112,33 @@ const AIDevAutomation = () => {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="step-card border border-border p-8 bg-background">
               <p className="text-sm text-muted-foreground mb-4">Step -01</p>
-              <h3 className="text-2xl font-light mb-4">Map your leads and customer questions</h3>
+              <h3 className="text-2xl font-light mb-4">Workflow Mapping</h3>
               <p className="text-muted-foreground">
-                We map how leads and customer questions reach you today, by phone, website and email, what happens next, and where they
-                stall or go unanswered. This is usually part of your AI Growth Audit.
+                We identify exactly how leads reach you and where they currently slip through the cracks.
               </p>
             </div>
 
             <div className="step-card border border-border p-8 bg-background">
               <p className="text-sm text-muted-foreground mb-4">Step -02</p>
-              <h3 className="text-2xl font-light mb-4">Design your receptionist</h3>
+              <h3 className="text-2xl font-light mb-4">Agent Design</h3>
               <p className="text-muted-foreground">
-                We write the questions your AI receptionist asks, the answers it can give, the rules for who gets
-                booked in and when it hands over to a person, all in your tone of voice.
+                We program the questions your AI should ask, the answers it can give, and exactly when it should hand a complex query over to a human.
               </p>
             </div>
 
             <div className="step-card border border-border p-8 bg-background">
               <p className="text-sm text-muted-foreground mb-4">Step -03</p>
-              <h3 className="text-2xl font-light mb-4">Connect & test</h3>
+              <h3 className="text-2xl font-light mb-4">Connect & Test</h3>
               <p className="text-muted-foreground">
-                We connect it to your phone line, website, inbox, calendar and CRM, then test it with your team on
-                real scenarios before it talks to a single customer.
+                We integrate the AI with your CRM, calendar, and phone systems, rigorously testing it with your team before it ever speaks to a client.
               </p>
             </div>
 
             <div className="step-card border border-border p-8 bg-background">
               <p className="text-sm text-muted-foreground mb-4">Step -04</p>
-              <h3 className="text-2xl font-light mb-4">Go live, then care plan</h3>
+              <h3 className="text-2xl font-light mb-4">Go-Live & Care Plan</h3>
               <p className="text-muted-foreground">
-                Once it's live, your monthly care plan covers monitoring, updates to answers and workflows, new
-                integrations, and a monthly review of what it handled and what to improve.
+                We don't just launch and leave. Your monthly care plan includes continuous monitoring, workflow updates, and performance reviews.
               </p>
             </div>
           </div>
@@ -156,20 +152,18 @@ const AIDevAutomation = () => {
             Overview <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" />
           </p>
           <h2 className="text-4xl md:text-5xl font-light mb-8 max-w-3xl">
-            Every lead answered, qualified and booked
+            Why It Works
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mb-8">
-            Missed calls and slow replies quietly lose you customers. If nobody picks up, people ring the next firm
-            on the list, and web leads go cold while they wait. We build AI receptionists that answer straight
-            away, ask the right questions, book qualified people into your calendar and keep your CRM up to date,
-            so your team spends its time on the work, not the admin.
+            If you don't pick up, your prospect calls the next firm on Google. We build intelligent agents for your
+            phone lines, website chat, and inbox that handle the heavy lifting so your human team can focus on
+            billable work.
           </p>
           <ul className="space-y-4 text-lg text-muted-foreground max-w-3xl">
-            <li>• AI receptionists for phone, website chat and email</li>
-            <li>• Lead qualification, booking and reminders</li>
-            <li>• Client intake, follow-ups and CRM workflows</li>
-            <li>• Integrations with the tools you already use</li>
-            <li>• A clear handover to your team whenever a person is needed</li>
+            <li>• Omnichannel AI receptionists (Phone, Chat, Email).</li>
+            <li>• Automated lead qualification and calendar booking.</li>
+            <li>• Seamless CRM integration.</li>
+            <li>• Smart human-handoff protocols.</li>
           </ul>
         </div>
       </section>
@@ -192,7 +186,7 @@ const AIDevAutomation = () => {
       <section className="advantages-section py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <p className="text-sm text-muted-foreground mb-8 tracking-wider">
-            Why it works <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" />
+            The SIX³ difference <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" />
           </p>
           <h2 className="text-5xl md:text-6xl font-light mb-16 max-w-2xl">
             Practical AI<br />with a clear job
