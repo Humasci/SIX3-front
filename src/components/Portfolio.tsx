@@ -25,7 +25,7 @@ const projects = [
     title: "E-Commerce Marketing Campaign",
     category: "Search & Paid Media",
     year: "2026",
-    result: "300% ROAS (Return on Ad Spend) improvement.",
+    result: "Stronger return on ad spend from one budget across search and social.",
     description: "AI-optimised, multi-platform search and paid media.",
     image: "/images/use-cases/ecommerce-noovit.webp",
     metrics: "Search, social and attribution"
