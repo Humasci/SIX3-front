@@ -276,7 +276,7 @@ const Contact = () => {
         <div className="max-w-4xl mx-auto">
           <div className="mb-14">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-light leading-tight mb-6 text-gradient w-fit pb-1">
-              Let's plug your growth leaks.
+              Get In Touch
             </h1>
             <h2 className="text-lg sm:text-xl text-muted-foreground max-w-3xl font-normal">
               Stop losing leads to competitors who are already automating. Tell us a bit about your business, and let's
