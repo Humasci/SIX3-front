@@ -365,7 +365,7 @@ const LawFirmAutomation = () => {
           </h2>
           <p className="text-xl mb-12 opacity-90">
             Start with an AI Growth Audit. In two weeks we review your search, ads, content and intake,
-            and show you where enquiries are slipping through.
+            and show you where you can win more enquiries.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">

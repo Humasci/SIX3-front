@@ -245,7 +245,7 @@ const RealEstate = () => {
       <section className="py-24 px-6 bg-brand-gradient text-accent-foreground">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-light mb-8">
-            Stop losing leads to the agent who replied first
+            Be the agent who replies first
           </h2>
           <p className="text-xl mb-12 opacity-90">
             Start with an AI Growth Audit. In two weeks we review your ads, content and lead handling,

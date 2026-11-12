@@ -160,7 +160,7 @@ const Services = () => {
                 <p className="text-2xl font-light text-foreground mb-4">Stop guessing. Start scaling.</p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   In two weeks, we review your search, ads, content, and lead-handling processes. You get a prioritised
-                  roadmap showing exactly where revenue is leaking, what to fix first, and the immediate quick wins you can
+                  roadmap showing your biggest revenue opportunities, what to tackle first, and the immediate quick wins you can
                   implement today, whether you hire us or not.
                 </p>
               </div>
