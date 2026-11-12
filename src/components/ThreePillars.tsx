@@ -7,21 +7,21 @@ gsap.registerPlugin(ScrollTrigger);
 
 const pillars = [
   {
-    title: "Audit",
-    subtitle: "Find where growth is leaking",
-    description: "In two weeks we review your search, ads, content and lead handling, and hand you a prioritised plan with quick wins.",
+    title: "The Blueprint",
+    subtitle: "Step 1 · Discover",
+    description: "We analyse your market, map your bottlenecks, and design a custom AI roadmap tailored for immediate, measurable growth.",
     gradient: "linear-gradient(90deg, #7c3aed 0%, #a855f7 45%, #f97316 85%, #fde7b0 100%)"
   },
   {
-    title: "Build",
-    subtitle: "Launch the system that fixes it",
-    description: "Campaigns that bring in the right customers, content that wins them, and AI agents that answer and book every one.",
+    title: "The Engine",
+    subtitle: "Step 2 · Transform",
+    description: "We deploy systems that work while you sleep. We turn your marketing into an automated machine that generates leads, creates content, and engages customers 24/7.",
     gradient: "linear-gradient(90deg, #a855f7 0%, #f97316 55%, #fde7b0 100%)"
   },
   {
-    title: "Compound",
-    subtitle: "Every month, each part lifts the others",
-    description: "We optimise ads, content and automations together, so better leads meet faster replies and results build on each other.",
+    title: "The Edge",
+    subtitle: "Step 3 · Optimise",
+    description: "Our systems don't just run; they learn. Real-time data and AI-driven analytics ensure your campaign performance gets sharper and more profitable every single day.",
     gradient: "linear-gradient(90deg, #fde7b0 0%, #f97316 25%, #a855f7 65%, #7c3aed 100%)"
   }
 ];
@@ -61,7 +61,7 @@ export const ThreePillars = () => {
       <div className="relative max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-light mb-4 text-white">
-            How growth gets cubed.
+            How We Work
           </h2>
         </div>
 

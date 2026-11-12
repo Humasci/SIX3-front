@@ -9,37 +9,37 @@ gsap.registerPlugin(ScrollTrigger);
 const industries = [
   {
     title: "Legal & Law Firms",
-    description: "Answer every enquiry, qualify new matters and take the admin out of intake",
+    description: "Automate client intake, streamline case management, and ensure compliance.",
     icon: Scale,
     path: "/industries/legal"
   },
   {
-    title: "E-commerce",
-    description: "Ads and product content that sell, plus automated follow-ups that bring buyers back",
+    title: "E-Commerce",
+    description: "Drive retention, optimise sales, and scale product marketing automatically.",
     icon: ShoppingCart,
     path: "/contact"
   },
   {
     title: "Healthcare",
-    description: "Fewer no-shows and phone queues, with booking and reminders that run themselves",
+    description: "Modernise patient scheduling and manage automated, secure follow-ups.",
     icon: Stethoscope,
     path: "/industries/healthcare"
   },
   {
     title: "Professional Services",
-    description: "More qualified consultations, and onboarding that doesn't eat billable hours",
+    description: "Eliminate no-shows with automated booking and client management.",
     icon: Building,
     path: "/industries/professional-services"
   },
   {
     title: "Local Businesses",
-    description: "Get found locally, reply in seconds and fill the diary, even after hours",
+    description: "Dominate local search, drive engagement, and manage appointments.",
     icon: Store,
     path: "/industries/local-business"
   },
   {
     title: "Real Estate",
-    description: "Reply to portal leads in under a minute and book more valuations and viewings",
+    description: "Reply to portal leads in under a minute and book more valuations and viewings.",
     icon: Home,
     path: "/industries/real-estate"
   }
@@ -82,7 +82,7 @@ export const Industries = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="industries-title text-4xl md:text-5xl lg:text-6xl font-light mb-6">
-            Industries we know best
+            Built for Ambitious SMEs
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             We work with UK small and mid-sized businesses, and know these sectors best

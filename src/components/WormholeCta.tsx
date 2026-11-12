@@ -5,12 +5,13 @@ import { WormholeCanvas } from "@/components/WormholeCanvas";
 type WormholeCtaProps = {
   buttonLabel: string;
   to?: string;
-  // Optional heading to replace the default "Ready for growth, cubed?"
+  // Optional heading and line underneath, replacing the defaults
   title?: string;
+  subtitle?: string;
 };
 
 // Closing call to action with a vertical wormhole running behind the copy
-export const WormholeCta = ({ buttonLabel, to = "/contact", title }: WormholeCtaProps) => (
+export const WormholeCta = ({ buttonLabel, to = "/contact", title, subtitle }: WormholeCtaProps) => (
   <section className="relative isolate overflow-hidden py-32 md:py-40 px-6 bg-background">
     <div className="absolute inset-0 -z-10 pointer-events-none" aria-hidden="true">
       <WormholeCanvas orientation="vertical" className="w-full h-full opacity-90" />
@@ -35,8 +36,12 @@ export const WormholeCta = ({ buttonLabel, to = "/contact", title }: WormholeCta
       </h2>
       <div className="mx-auto mb-8 h-1 w-40 rounded-full bg-brand-gradient-glow" />
       <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-        Start with a two-week AI Growth Audit: a clear plan for where growth is leaking and what to fix first,
-        whether or not you work with us afterwards.
+        {subtitle ?? (
+          <>
+            Start with a two-week AI Growth Audit: a clear plan for where growth is leaking and what to fix first,
+            whether or not you work with us afterwards.
+          </>
+        )}
       </p>
       <Link
         to={to}
