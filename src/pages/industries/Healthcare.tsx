@@ -241,7 +241,7 @@ const Healthcare = () => {
               <Shield className="w-16 h-16 icon-gradient mb-6" />
               <h2 className="text-4xl font-light mb-6">Patient data handled with care</h2>
               <p className="text-lg text-muted-foreground mb-6">
-                Health data needs more care than most. We design every build around UK GDPR and your
+                Health data needs more care than most. We design every build around data protection law (such as GDPR) and your
                 clinic's own policies, and our AI never gives medical advice: it books, reminds and
                 passes clinical questions to your team.
               </p>

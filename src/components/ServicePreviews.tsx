@@ -12,7 +12,7 @@ const servicePreviews = [
   {
     number: "01",
     title: "AI-Driven Search & Paid Media",
-    shortDescription: "Stop wasting ad spend on manual guesswork.",
+    shortDescription: "Get more from every ad budget.",
     description: "We deploy advanced machine learning algorithms to optimise bids in real time, pinpoint high-value audiences, and dominate your market across Google, Meta, LinkedIn, and TikTok.",
     features: [
       "Google Ads, Meta, LinkedIn and TikTok, planned as one budget",

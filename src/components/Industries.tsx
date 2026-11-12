@@ -85,7 +85,7 @@ export const Industries = () => {
             Built for Ambitious SMEs
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            We work with UK small and mid-sized businesses, and know these sectors best
+            We work with small and mid-sized businesses everywhere, and know these sectors best
           </p>
         </div>
 

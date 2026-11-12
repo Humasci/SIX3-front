@@ -74,7 +74,7 @@ const SearchMarketingPPC = () => {
               <ServiceVisual kind="search" label="Search & Paid Media" className="w-full h-full" />
             </div>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl lg:col-start-1">
-              Stop wasting ad spend on manual guesswork. We deploy AI-driven campaigns across Google, Meta, LinkedIn,
+              Get more from every ad budget. We deploy AI-driven campaigns across Google, Meta, LinkedIn,
               and TikTok that turn clicks into qualified leads.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm lg:col-start-1">

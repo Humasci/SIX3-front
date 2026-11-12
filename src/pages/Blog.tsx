@@ -42,7 +42,7 @@ const Blog = () => {
     <div ref={contentRef} className="min-h-screen bg-background text-foreground">
       <PageSEO
         title="AI Marketing & Automation Blog | SIX³ Agency"
-        description="Practical guides on AI marketing and automation for UK businesses: paid media, AI video, AI receptionists, speed to lead and using AI safely."
+        description="Practical guides on AI marketing and automation for growing businesses: paid media, AI video, AI receptionists, speed to lead and using AI safely."
         canonical="https://six3.agency/blog"
       />
       <Header />
@@ -58,7 +58,7 @@ const Blog = () => {
             Practical guides on getting found, getting chosen and getting more done with AI.
           </p>
           <p className="text-lg text-muted-foreground">
-            Written for owners and managers of UK service businesses and e-commerce brands by the team that builds these systems: paid media
+            Written for owners and managers of service businesses and e-commerce brands by the team that builds these systems: paid media
             that brings in the right customers, AI video and voice content, AI receptionists, and using AI safely with
             customer data. New articles every Tuesday.
           </p>

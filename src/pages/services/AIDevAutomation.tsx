@@ -199,7 +199,7 @@ const AIDevAutomation = () => {
               <p className="text-lg text-muted-foreground max-w-2xl">
                 Law firms, clinics, estate agents, professional services and local businesses. We build intake,
                 booking and follow-up around how your sector takes on clients, including the questions you must ask
-                and the ones the AI should leave to a person. Recent work includes intake automation for a UK law firm.
+                and the ones the AI should leave to a person. Recent work includes intake automation for a law firm.
               </p>
             </div>
 
@@ -233,10 +233,10 @@ const AIDevAutomation = () => {
             Case Study <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" />
           </p>
           <h2 className="text-4xl md:text-5xl font-light mb-6">
-            Client intake automation for a UK law firm
+            Client intake automation for a law firm
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mb-8">
-            How we gave a UK law firm an AI receptionist that answers every new enquiry, qualifies new matters and
+            How we gave a law firm an AI receptionist that answers every new enquiry, qualifies new matters and
             books consultations, taking the intake admin off fee earners.
           </p>
           <Link to="/use-cases/law-firm-automation">

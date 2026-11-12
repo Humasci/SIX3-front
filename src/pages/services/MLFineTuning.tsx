@@ -55,7 +55,7 @@ const MLFineTuning = () => {
     <div ref={contentRef} className="min-h-screen bg-background text-foreground">
       <PageSEO
         title="Custom AI Models & Fine-Tuning | SIX³ Agency"
-        description="Advanced language models fine-tuned on your proprietary data and deployed where you retain 100% control. Private AI for specialist and regulated UK firms."
+        description="Advanced language models fine-tuned on your proprietary data and deployed where you retain 100% control. Private AI for specialist and regulated firms."
         canonical="https://six3.agency/services/ml-fine-tuning"
       />
       <Header />
