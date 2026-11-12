@@ -10,6 +10,9 @@ export type BlogPost = {
   readTime: string;
   category: string;
   visual: ServiceVisualKind;
+  // Optional header image (shown instead of the animated visual) and a 1200×630 image for link previews
+  image?: string;
+  shareImage?: string;
   featured?: boolean;
   // Article blocks: "## Heading", "### Subheading", "- list item" or a plain paragraph.
   // Posts without a body show their summary and a "coming soon" note
@@ -26,6 +29,8 @@ export const blogPosts: BlogPost[] = [
     "readTime": "4 min read",
     "category": "AI Marketing",
     "visual": "search",
+    "image": "/images/blog/chatgpt-business-hub.webp",
+    "shareImage": "/images/blog/chatgpt-business-hub-share.jpg",
     "body": [
       "On 10 November, OpenAI opened a new beta called Businesses in ChatGPT. For the first time, companies can claim an official presence inside ChatGPT, manage how they are described, and see how often the assistant mentions them. If your customers already use ChatGPT to research suppliers, compare products or find someone local, this matters: it is the first real control you have over how you show up there.",
       "Here is what has launched, what UK businesses can and cannot use yet, and the practical steps worth taking now.",

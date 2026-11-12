@@ -45,6 +45,7 @@ const BlogPost = () => {
         description={post.excerpt}
         canonical={`https://six3.agency/blog/${post.slug}`}
         type="article"
+        image={post.shareImage ? `https://six3.agency${post.shareImage}` : undefined}
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "BlogPosting",
@@ -54,7 +55,7 @@ const BlogPost = () => {
           author: { "@type": "Organization", name: "SIX³ Agency", url: "https://six3.agency" },
           publisher: { "@id": "https://six3.agency/#organization" },
           mainEntityOfPage: `https://six3.agency/blog/${post.slug}`,
-          image: "https://six3.agency/og-image.jpg",
+          image: `https://six3.agency${post.shareImage ?? "/og-image.jpg"}`,
           articleSection: post.category,
         }}
       />
@@ -85,7 +86,11 @@ const BlogPost = () => {
       <article className="px-6 py-20">
         <div className="max-w-4xl mx-auto">
           <div className="media-frame aspect-[16/8] mb-16 bg-[#0e0e2a]">
-            <ServiceVisual kind={post.visual} label={post.title} className="w-full h-full" />
+            {post.image ? (
+                  <img src={post.image} alt={post.title} decoding="async" className="w-full h-full object-cover" />
+                ) : (
+                  <ServiceVisual kind={post.visual} label={post.title} className="w-full h-full" />
+                )}
           </div>
           <div className="max-w-2xl mx-auto">
             <p className="text-xl md:text-2xl leading-relaxed text-foreground/90 mb-10">{post.excerpt}</p>

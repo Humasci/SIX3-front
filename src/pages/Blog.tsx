@@ -74,7 +74,11 @@ const Blog = () => {
               className="group grid lg:grid-cols-2 overflow-hidden rounded-3xl border border-border bg-card transition-all duration-300 hover:border-[#a855f7]/50 hover:shadow-[0_30px_80px_-35px_rgba(124,58,237,0.7)]"
             >
               <div className="aspect-[4/3] lg:aspect-auto lg:min-h-[420px] bg-[#0e0e2a]">
-                <ServiceVisual kind={featured.visual} label={featured.title} className="w-full h-full" />
+                {featured.image ? (
+                  <img src={featured.image} alt={featured.title} loading="lazy" decoding="async" className="w-full h-full object-contain" />
+                ) : (
+                  <ServiceVisual kind={featured.visual} label={featured.title} className="w-full h-full" />
+                )}
               </div>
               <div className="flex flex-col justify-center gap-6 p-8 md:p-12">
                 <div className="flex flex-wrap items-center gap-3 text-sm">
