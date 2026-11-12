@@ -38,7 +38,7 @@ export const WormholeCta = ({ buttonLabel, to = "/contact", title, subtitle }: W
       <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
         {subtitle ?? (
           <>
-            Start with a two-week AI Growth Audit: a clear plan for where growth is leaking and what to fix first,
+            Start with a two-week AI Growth Audit: a clear plan for your biggest growth opportunities and what to tackle first,
             whether or not you work with us afterwards.
           </>
         )}

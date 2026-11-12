@@ -266,7 +266,7 @@ const Contact = () => {
     <div className="min-h-screen bg-background text-foreground">
       <PageSEO
         title="Contact Us & Book an AI Growth Audit | SIX³ Agency"
-        description="Let's plug your growth leaks. Tell us about your business and we'll map out your AI strategy, or book a two-week AI Growth Audit. Brighton-based."
+        description="Tell us about your business and we'll map out your AI strategy, or book a two-week AI Growth Audit. Brighton-based."
         canonical="https://six3.agency/contact"
       />
       <Header />
@@ -279,7 +279,7 @@ const Contact = () => {
               Get In Touch
             </h1>
             <h2 className="text-lg sm:text-xl text-muted-foreground max-w-3xl font-normal">
-              Stop losing leads to competitors who are already automating. Tell us a bit about your business, and let's
+              Get ahead of competitors who are already automating. Tell us a bit about your business, and let's
               map out your custom AI strategy.
             </h2>
           </div>

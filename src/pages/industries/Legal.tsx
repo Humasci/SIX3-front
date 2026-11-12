@@ -220,7 +220,7 @@ const Legal = () => {
                 <span className="text-2xl font-light text-gradient">1</span>
               </div>
               <h3 className="text-lg font-medium mb-2">AI Growth Audit</h3>
-              <p className="text-muted-foreground text-sm">Two weeks reviewing your search, ads, content and intake to find where enquiries leak</p>
+              <p className="text-muted-foreground text-sm">Two weeks reviewing your search, ads, content and intake to find where you can win more enquiries</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">

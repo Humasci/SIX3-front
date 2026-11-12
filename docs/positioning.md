@@ -45,7 +45,7 @@ Plain, confident, specific. Short sentences. Talk about the customer's outcome b
 Prices aren't on the website yet. Suggested next step: add "from £…" prices for the audit and the three monthly offers once they're set, because published prices pre-qualify leads.
 
 ### How we work
-1. **Audit:** we find where leads, sales and revenue are leaking.
+1. **Audit:** we find your biggest opportunities across leads, sales and revenue.
 2. **Build:** we launch the campaigns, content and automations that fix it.
 3. **Compound:** we optimise every month, and each part makes the others work harder.
 

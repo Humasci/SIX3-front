@@ -366,7 +366,7 @@ const LocalBusiness = () => {
       <section className="py-24 px-6 bg-brand-gradient text-accent-foreground">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-light mb-8">
-            Stop losing jobs to missed calls
+            Every call answered, more jobs booked
           </h2>
           <p className="text-xl mb-12 opacity-90">
             Start with an AI Growth Audit. In two weeks we review your ads, online presence and how you handle

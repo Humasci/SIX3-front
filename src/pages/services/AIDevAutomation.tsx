@@ -114,7 +114,7 @@ const AIDevAutomation = () => {
               <p className="text-sm text-muted-foreground mb-4">Step -01</p>
               <h3 className="text-2xl font-light mb-4">Workflow Mapping</h3>
               <p className="text-muted-foreground">
-                We identify exactly how leads reach you and where they currently slip through the cracks.
+                We identify exactly how leads reach you and where faster, smarter replies will win you more of them.
               </p>
             </div>
 

@@ -9,7 +9,7 @@ One caption per image. Post them a few days apart, starting with the launch post
 
 Introducing SIX³: growth, cubed.
 
-Most businesses buy ads from one supplier, content from another and software from a third. Nobody owns the whole journey, so customers slip through the gaps: the ad works but nobody follows up, or the reply is quick but the content doesn't convince.
+Most businesses buy ads from one supplier, content from another and software from a third. Nobody owns the whole journey, so the journey breaks down: the ad works but nobody follows up, or the reply is quick but the content doesn't convince.
 
 We're a Brighton-based agency that brings it all together:
 → Search & Paid Media that brings in the right customers
@@ -72,7 +72,7 @@ six3.agency/services/ai-dev-automation
 ## 05 · AI Growth Audit
 **Image:** `05-ai-growth-audit.png`
 
-Where is your growth leaking?
+Find your next growth win.
 
 Our AI Growth Audit is the easiest way to find out. In two weeks we review your search, ads, content and how you handle leads, then hand you a prioritised plan: what to fix first, and what it's worth.
 

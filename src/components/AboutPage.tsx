@@ -102,7 +102,7 @@ export const AboutPage = () => {
           <SectionHeading eyebrow="Our story" title="The SIX³ Story" />
           <p className="text-lg text-muted-foreground mb-6">
             Most businesses buy ads from one agency, content from a freelancer, and software from a vendor. Nobody owns
-            the whole journey. Value leaks between the click and the customer: the ad works, but nobody follows up. The
+            the whole journey. Things break down between the click and the customer: the ad works, but nobody follows up. The
             reply is fast, but the content doesn't convert.
           </p>
           <p className="text-lg text-muted-foreground">
@@ -180,7 +180,7 @@ export const AboutPage = () => {
         </div>
       </section>
 
-      <WormholeCta title="Stop leaking leads." buttonLabel="Book Your AI Growth Audit" />
+      <WormholeCta title="Let's build your growth engine." buttonLabel="Book Your AI Growth Audit" />
     </div>
   );
 };
