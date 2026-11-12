@@ -29,7 +29,6 @@ export const blogPosts: BlogPost[] = [
     "readTime": "4 min read",
     "category": "AI Marketing",
     "visual": "search",
-    "image": "/images/blog/chatgpt-business-hub.webp",
     "shareImage": "/images/blog/chatgpt-business-hub-share.jpg",
     "body": [
       "On 10 November, OpenAI opened a new beta called Businesses in ChatGPT. For the first time, companies can claim an official presence inside ChatGPT, manage how they are described, and see how often the assistant mentions them. If your customers already use ChatGPT to research suppliers, compare products or find someone local, this matters: it is the first real control you have over how you show up there.",
