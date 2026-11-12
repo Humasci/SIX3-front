@@ -15,7 +15,10 @@ interface FormData {
 // RESEND_API_KEY      required, from resend.com/api-keys
 // CONTACT_TO_EMAIL    optional, defaults to hello@six3.agency
 // CONTACT_FROM_EMAIL  optional, defaults to Resend's test sender until six3.agency is verified
-// ATTIO_API_KEY       optional
+// ATTIO_API_KEY       optional; saves each enquiry as a person + note in Attio (needs record and note
+//                     read/write scopes). Leave unset to use email only.
+// The thank-you email to the enquirer is only sent once CONTACT_FROM_EMAIL is set, because Resend's
+// test sender can only deliver to the account owner's own address.
 
 const DEFAULT_TO = 'hello@six3.agency';
 const DEFAULT_FROM = 'SIX³ Agency <onboarding@resend.dev>';
@@ -101,6 +104,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       });
     }
 
+    // Thank-you email to the enquirer. Never fails the request: their enquiry already reached us
+    try {
+      await sendConfirmationEmail(formData);
+    } catch (confirmError) {
+      console.error('Confirmation email error:', confirmError);
+    }
+
     res.status(200).json({ success: true, message: 'Form submitted successfully' });
   } catch (error) {
     // Log error in development only
@@ -159,83 +169,92 @@ const safeUrl = (value: string) => {
   }
 };
 
-async function createAttioContact(formData: FormData) {
-  const attioApiKey = process.env.ATTIO_API_KEY;
+const ATTIO_API = 'https://api.attio.com/v2';
 
-  if (!attioApiKey) {
-    throw new Error('Attio API key missing');
-  }
-
-  const contactData = {
-    data: {
-      values: {
-        'first-name': [{ value: formData.name.split(' ')[0] }],
-        'last-name': [{ value: formData.name.split(' ').slice(1).join(' ') || '' }],
-        'email-addresses': [{ 
-          email_address: formData.email,
-          is_primary: true
-        }],
-        ...(formData.company && {
-          'primary-company': [{ target_object: 'companies', target_record_id: null }]
-        }),
-        ...(formData.phone && {
-          'phone-numbers': [{ 
-            phone_number: formData.phone,
-            is_primary: true
-          }]
-        }),
-        ...(formData.website && {
-          'website': [{ url: formData.website }]
-        }),
-      }
-    }
-  };
-
-  // Also create a note with the form details
-  const noteData = {
-    data: {
-      values: {
-        'title': [{ value: 'Contact Form Submission' }],
-        'content': [{ 
-          value: `Services Interested In: ${formData.services.join(', ')}\n\nPain Points:\n${formData.painPoints}\n\nGoals:\n${formData.goals}`
-        }],
-        'linked-records': [] // Will be populated after contact is created
-      }
-    }
-  };
-
-  const response = await fetch('https://api.attio.com/v2/objects/people/records', {
-    method: 'POST',
+async function attioRequest(path: string, method: 'POST' | 'PUT', body: unknown) {
+  const response = await fetch(`${ATTIO_API}${path}`, {
+    method,
     headers: {
-      'Authorization': `Bearer ${attioApiKey}`,
+      Authorization: `Bearer ${process.env.ATTIO_API_KEY}`,
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(contactData),
+    body: JSON.stringify(body),
+  });
+  if (!response.ok) {
+    throw new Error(`Attio ${method} ${path} failed ${response.status}: ${await response.text()}`);
+  }
+  return response.json();
+}
+
+const domainOf = (website?: string) => {
+  if (!website) return '';
+  try {
+    return new URL(safeUrl(website)).hostname.replace(/^www\./, '');
+  } catch {
+    return '';
+  }
+};
+
+// Saves the enquiry in Attio: finds or creates the person by email (so repeat enquiries update the
+// same record), links their company when they gave a website, and attaches the answers as a note.
+async function createAttioContact(formData: FormData) {
+  if (!process.env.ATTIO_API_KEY) {
+    throw new Error('ATTIO_API_KEY is not set');
+  }
+
+  const fullName = formData.name.trim();
+  const [firstName, ...rest] = fullName.split(/\s+/);
+
+  // Company is optional: if it fails (e.g. no domain), still save the person
+  let companyId: string | undefined;
+  const domain = domainOf(formData.website);
+  if (domain) {
+    try {
+      const company = await attioRequest('/objects/companies/records?matching_attribute=domains', 'PUT', {
+        data: {
+          values: {
+            domains: [{ domain }],
+            ...(formData.company && { name: [{ value: formData.company }] }),
+          },
+        },
+      });
+      companyId = company.data?.id?.record_id;
+    } catch (companyError) {
+      console.error('Attio company error:', companyError);
+    }
+  }
+
+  const person = await attioRequest('/objects/people/records?matching_attribute=email_addresses', 'PUT', {
+    data: {
+      values: {
+        email_addresses: [{ email_address: formData.email }],
+        name: [{ first_name: firstName, last_name: rest.join(' '), full_name: fullName }],
+        ...(formData.phone && { phone_numbers: [{ original_phone_number: formData.phone }] }),
+        ...(companyId && { company: [{ target_object: 'companies', target_record_id: companyId }] }),
+      },
+    },
   });
 
-  if (!response.ok) {
-    const errorText = await response.text();
-    throw new Error(`Attio error: ${response.statusText} - ${errorText}`);
-  }
+  const personId = person.data?.id?.record_id;
+  if (!personId) throw new Error('Attio did not return a person record id');
 
-  const contact = await response.json();
+  const details = [
+    `Services: ${formData.services.join(', ')}`,
+    ...(formData.company ? [`Company: ${formData.company}`] : []),
+    ...(formData.website ? [`Website: ${formData.website}`] : []),
+    ...(formData.phone ? [`Phone: ${formData.phone}`] : []),
+  ];
+  const lines = [...details, '', 'Pain points:', formData.painPoints, '', 'Goals:', formData.goals];
 
-  // Create note linked to the contact
-  if (contact.data?.id?.record_id) {
-    noteData.data.values['linked-records'] = [{
-      target_object: 'people',
-      target_record_id: contact.data.id.record_id
-    }];
-
-    await fetch('https://api.attio.com/v2/objects/notes/records', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${attioApiKey}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(noteData),
-    });
-  }
+  await attioRequest('/notes', 'POST', {
+    data: {
+      parent_object: 'people',
+      parent_record_id: personId,
+      title: `Website enquiry · ${new Date().toISOString().slice(0, 10)}`,
+      format: 'plaintext',
+      content: lines.join('\n'),
+    },
+  });
 }
 
 function generateEmailHTML(raw: FormData): string {
@@ -331,4 +350,90 @@ function generateEmailHTML(raw: FormData): string {
     </body>
     </html>
   `;
+}
+const SITE = 'https://six3.agency';
+
+async function sendConfirmationEmail(formData: FormData) {
+  const apiKey = process.env.RESEND_API_KEY;
+  const from = process.env.CONTACT_FROM_EMAIL;
+  // Needs a verified sending domain: skip quietly until six3.agency is verified in Resend
+  if (!apiKey || !from) return;
+
+  const response = await fetch('https://api.resend.com/emails', {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${apiKey}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      from,
+      to: [formData.email],
+      reply_to: process.env.CONTACT_TO_EMAIL || DEFAULT_TO,
+      subject: 'Thanks, we’ve got your enquiry | SIX³ Agency',
+      html: generateConfirmationHTML(formData),
+      text: generateConfirmationText(formData),
+    }),
+  });
+
+  if (!response.ok) {
+    throw new Error(`Resend confirmation error ${response.status}: ${await response.text()}`);
+  }
+}
+
+const firstNameOf = (name: string) => name.trim().split(/\s+/)[0] || 'there';
+
+function generateConfirmationText(formData: FormData): string {
+  return [
+    `Hi ${firstNameOf(formData.name)},`,
+    '',
+    'Thanks for getting in touch with SIX³. We’ve received your enquiry and a senior member of the team will read it personally and reply within one working day.',
+    '',
+    `You asked about: ${formData.services.join(', ')}`,
+    '',
+    'If there’s anything you’d like to add in the meantime, just reply to this email.',
+    '',
+    'The SIX³ team',
+    'Growth, cubed.',
+    SITE,
+  ].join('\n');
+}
+
+function generateConfirmationHTML(raw: FormData): string {
+  const firstName = escapeHtml(firstNameOf(raw.name));
+  const services = raw.services.map((s) => `<li style="margin:0 0 4px;">${escapeHtml(String(s))}</li>`).join('');
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thanks for your enquiry</title>
+</head>
+<body style="margin:0;padding:0;background:#f4f2fa;font-family:'DM Sans',Arial,Helvetica,sans-serif;color:#1f1b2e;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f4f2fa;">
+    <tr><td align="center" style="padding:32px 16px;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;background:#ffffff;border-radius:16px;overflow:hidden;">
+        <tr><td style="background:#0b0a1f;padding:24px 32px 24px 4px;">
+          <img src="${SITE}/brand/email/six3-logo-dark.png" alt="SIX³ Agency" width="150" style="display:block;border:0;height:auto;">
+        </td></tr>
+        <tr><td style="height:4px;line-height:4px;font-size:0;background:#7c3aed;background-image:linear-gradient(90deg,#7c3aed,#a855f7 40%,#f97316 78%,#fde7b0);">&nbsp;</td></tr>
+        <tr><td style="padding:32px;">
+          <h1 style="margin:0 0 16px;font-size:24px;line-height:1.3;color:#0b0a1f;">Thanks, ${firstName}. We’ve got it.</h1>
+          <p style="margin:0 0 16px;font-size:16px;line-height:1.6;">We’ve received your enquiry. A senior member of the team will read it personally and reply within one working day.</p>
+          <p style="margin:0 0 8px;font-size:14px;font-weight:bold;color:#7c3aed;text-transform:uppercase;letter-spacing:0.06em;">You asked about</p>
+          <ul style="margin:0 0 20px;padding-left:20px;font-size:16px;line-height:1.5;">${services}</ul>
+          <p style="margin:0 0 24px;font-size:16px;line-height:1.6;">If there’s anything you’d like to add in the meantime, just reply to this email.</p>
+          <table role="presentation" cellpadding="0" cellspacing="0"><tr><td style="border-radius:999px;background:#f97316;">
+            <a href="${SITE}/blog" style="display:inline-block;padding:12px 24px;font-size:15px;font-weight:bold;color:#ffffff;text-decoration:none;">Read our latest insights</a>
+          </td></tr></table>
+        </td></tr>
+        <tr><td style="padding:20px 32px;background:#faf8ff;border-top:1px solid #ece8f7;font-size:13px;line-height:1.6;color:#6b6585;">
+          <strong style="color:#0b0a1f;">The SIX³ team</strong> · Growth, cubed.<br>
+          Brighton-based AI marketing &amp; automation · <a href="${SITE}" style="color:#7c3aed;text-decoration:none;">six3.agency</a>
+        </td></tr>
+      </table>
+      <p style="margin:16px 0 0;font-size:12px;color:#8a85a0;">You’re receiving this because you sent an enquiry through six3.agency.</p>
+    </td></tr>
+  </table>
+</body>
+</html>`;
 }
