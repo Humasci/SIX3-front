@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { Scale, Stethoscope, Building, Store, ShoppingCart, Home } from "lucide-react";
+import { Scale, Stethoscope, Building, Store, ShoppingCart, Cloud } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -38,10 +38,10 @@ const industries = [
     path: "/industries/local-business"
   },
   {
-    title: "Real Estate",
-    description: "Reply to portal leads in under a minute and book more valuations and viewings.",
-    icon: Home,
-    path: "/industries/real-estate"
+    title: "B2B SaaS",
+    description: "Scale lead generation, automate onboarding, and drive customer success.",
+    icon: Cloud,
+    path: "/contact"
   }
 ];
 
