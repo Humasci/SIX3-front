@@ -11,8 +11,9 @@ gsap.registerPlugin(ScrollTrigger);
 const servicePreviews = [
   {
     number: "01",
-    title: "Search & Paid Media",
-    shortDescription: "Campaigns that bring in the right customers, not just more clicks",
+    title: "AI-Driven Search & Paid Media",
+    shortDescription: "Stop wasting ad spend on manual guesswork.",
+    description: "We deploy advanced machine learning algorithms to optimise bids in real time, pinpoint high-value audiences, and dominate your market across Google, Meta, LinkedIn, and TikTok.",
     features: [
       "Google Ads, Meta, LinkedIn and TikTok, planned as one budget",
       "Landing pages built to turn visits into leads and sales",
@@ -24,8 +25,9 @@ const servicePreviews = [
   },
   {
     number: "02",
-    title: "AI Content Studio",
-    shortDescription: "Video, voice and ad content that makes people pick you",
+    title: "Generative Video & Audio",
+    shortDescription: "High-production multimedia, at a fraction of the cost.",
+    description: "From ultra-realistic AI avatars to localised voice cloning, we generate hyper-engaging video ads and UGC campaigns designed to stop the scroll and drive conversions.",
     features: [
       "AI video ads and social content on a monthly plan",
       "Avatar presenters and voiceovers in your brand's voice",
@@ -37,8 +39,9 @@ const servicePreviews = [
   },
   {
     number: "03",
-    title: "AI Agents & Automation",
-    shortDescription: "AI that answers every customer and qualifies every lead, day and night",
+    title: "Custom AI Agents & Workflow Automation",
+    shortDescription: "Meet your new 24/7 autonomous workforce.",
+    description: "We build bespoke AI systems that handle the heavy lifting so your team doesn't have to, including call centre automation, instant lead follow-ups, and complex, industry-specific workflows.",
     features: [
       "AI receptionists for phone, chat and email",
       "Lead qualification and booking straight into your calendar",
@@ -78,14 +81,10 @@ export const ServicePreviews = () => {
       <div className="max-w-7xl mx-auto">
         <div className="service-preview-header mb-16">
           <p className="text-sm text-muted-foreground mb-8 tracking-wider">What we do <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" /></p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light mb-8">
-            Three parts.<br />
-            One growth system.
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light">
+            AI Solutions That Actually<br />
+            Move the Needle
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl">
-            Each part works on its own, but they're built to work together: better ads bring more leads,
-            better content converts more of them, and automation makes sure none slip through.
-          </p>
         </div>
 
         <div className="service-previews-grid space-y-12">
@@ -101,7 +100,8 @@ export const ServicePreviews = () => {
                   </div>
                   
                   <h3 className="text-3xl md:text-4xl font-light mb-4">{service.title}</h3>
-                  <p className="text-lg text-muted-foreground mb-6">{service.shortDescription}</p>
+                  <p className="text-xl font-medium text-foreground mb-3">{service.shortDescription}</p>
+                  <p className="text-lg text-muted-foreground mb-6">{service.description}</p>
                   
                   <div className="mb-8">
                     <p className="text-sm font-medium text-muted-foreground mb-4 uppercase tracking-wider">Key Features</p>

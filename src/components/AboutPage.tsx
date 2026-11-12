@@ -15,10 +15,10 @@ const services = [
 ];
 
 const principles = [
-  ["Senior people", "The people you meet are the people who do the work."],
-  ["Hands-on, not hands-off", "We plan, build and run everything ourselves, so nothing gets lost between suppliers."],
-  ["Practical AI", "We use AI where it saves time or wins customers, and every build has a clear job to do."],
-  ["Plain-English reporting", "One monthly report covering ads, content and automation, in language your whole team understands."],
+  ["Senior Talent Only", "The experts you meet are the ones doing the actual work. No bait-and-switch."],
+  ["Total Ownership", "We plan, build, and run everything in-house. Nothing gets lost in translation between suppliers."],
+  ["Practical AI", "We don't use AI as a gimmick. We use it where it saves you time, cuts costs, or wins customers. Every tool we build has a job to do."],
+  ["Plain-English Reporting", "One monthly report covering ads, content, and automation, in language your whole team actually understands."],
 ];
 
 const sectors = [
@@ -85,13 +85,12 @@ export const AboutPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="about-hero text-center">
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-light mb-8 text-gradient w-fit pb-1 mx-auto">
-              About SIX³
+              Growth, Cubed.
             </h1>
             <div className="h-1 w-40 bg-brand-gradient rounded-full mb-8 mx-auto" />
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto">
-              A Brighton-based agency bringing search, content and AI automation together, so service businesses and
-              e-commerce brands win more customers and never let a lead go cold.
-            </p>
+            <h2 className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto font-normal">
+              We connect search, content, and automation so you win more customers and never let a lead go cold.
+            </h2>
           </div>
         </div>
       </section>
@@ -100,19 +99,18 @@ export const AboutPage = () => {
       <section className="relative overflow-hidden py-24 px-6">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_15%_20%,rgba(124,58,237,0.22),transparent_55%),radial-gradient(ellipse_at_85%_90%,rgba(249,115,22,0.14),transparent_55%)]" aria-hidden="true" />
         <div className="about-content relative max-w-3xl mx-auto text-center">
-          <SectionHeading eyebrow="Our story" title="Why SIX³" />
+          <SectionHeading eyebrow="Our story" title="The SIX³ Story" />
           <p className="text-lg text-muted-foreground mb-6">
-            Most small and mid-sized businesses buy ads from one supplier, content from another and software from a
-            third. Nobody owns the whole journey, so value leaks between the click and the customer: the ad works but
-            nobody follows up the lead, or the reply is fast but the content doesn't convince.
+            Most businesses buy ads from one agency, content from a freelancer, and software from a vendor. Nobody owns
+            the whole journey. Value leaks between the click and the customer: the ad works, but nobody follows up. The
+            reply is fast, but the content doesn't convert.
           </p>
           <p className="text-lg text-muted-foreground">
-            We started SIX³ to fix that. One team plans, builds and measures the whole system, and each part makes the
-            others work harder.
+            We started SIX³ to fix that broken model. One team plans, builds, and measures the entire ecosystem.
           </p>
           <p className="mt-10 text-3xl md:text-4xl font-light leading-snug text-foreground">
-            That's the <span className="text-gradient">cubed</span> in our name: growth that compounds instead of
-            adding up.
+            That's the <span className="text-gradient">cubed</span> in our name. When your ads, content, and automations
+            are designed to work together, your growth doesn't just add up. It compounds.
           </p>
         </div>
       </section>
@@ -147,7 +145,7 @@ export const AboutPage = () => {
       <section className="stats-section relative overflow-hidden py-24 px-6">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_80%_10%,rgba(249,115,22,0.14),transparent_50%),radial-gradient(ellipse_at_10%_90%,rgba(168,85,247,0.2),transparent_55%)]" aria-hidden="true" />
         <div className="relative max-w-7xl mx-auto">
-          <SectionHeading eyebrow="Principles" title="How we work" />
+          <SectionHeading eyebrow="Principles" title="Our Core Principles" />
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {principles.map(([title, text], i) => (
               <div key={title} className="stat-item rounded-2xl border border-border bg-background/40 p-7 backdrop-blur-sm">
@@ -182,7 +180,7 @@ export const AboutPage = () => {
         </div>
       </section>
 
-      <WormholeCta buttonLabel="Book an AI Growth Audit" />
+      <WormholeCta title="Stop leaking leads." buttonLabel="Book Your AI Growth Audit" />
     </div>
   );
 };

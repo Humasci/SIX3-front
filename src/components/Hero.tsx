@@ -166,37 +166,45 @@ export const Hero = () => {
       <div className="relative flex-1 flex flex-col items-center justify-center px-6 pt-24">
         <div className="max-w-7xl w-full">
           <div className="mb-12">
-            <h1 className="hero-subtitle mb-6 text-sm md:text-base font-medium tracking-[0.25em] uppercase text-gradient w-fit">
+            <p className="hero-subtitle mb-6 text-sm md:text-base font-medium tracking-[0.25em] uppercase text-gradient w-fit">
               AI marketing &amp; automation agency · Brighton, UK
+            </p>
+            <h1>
+              <span
+                ref={(el) => (titleRefs.current[0] = el)}
+                className="hero-title block text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-none mb-2"
+              >
+                Scale Your Business,
+              </span>
+              <span
+                ref={(el) => (titleRefs.current[1] = el)}
+                className="hero-title hero-title-gradient block text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-none pb-2"
+              >
+                Not Your Headcount.
+              </span>
             </h1>
-            <div
-              ref={(el) => (titleRefs.current[0] = el)}
-              className="hero-title text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight leading-none mb-2"
-            >
-              Growth,
-            </div>
-            <div
-              ref={(el) => (titleRefs.current[1] = el)}
-              className="hero-title hero-title-gradient text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight leading-none pb-2"
-            >
-              cubed.
-            </div>
             <div className="hero-subtitle h-1 w-full max-w-3xl bg-brand-gradient-glow rounded-full mt-10" />
           </div>
 
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 max-w-5xl">
             <div>
-              <p className="hero-subtitle text-xl md:text-2xl font-medium text-foreground max-w-xl">
-                AI marketing and automation that brings more leads in, and makes sure every one gets answered.
-              </p>
+              <h2 className="hero-subtitle text-xl md:text-2xl font-medium text-foreground max-w-xl">
+                We build AI-powered marketing engines, custom AI agents, and automated workflows that generate leads and
+                cut operational costs 24/7.
+              </h2>
             </div>
-            
-            <Link to="/contact">
-              <Button variant="outline" className="hero-cta rounded-full px-8 py-6 text-base border-foreground hover:bg-brand-gradient-button hover:text-white hover:border-transparent hover:shadow-[0_0_32px_-10px_rgba(249,115,22,0.6)] group">
-                <ArrowDown className="w-5 h-5 mr-2 group-hover:translate-y-1 transition-transform" />
-                Book an AI Growth Audit
-              </Button>
-            </Link>
+
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+              <Link to="/contact">
+                <Button variant="outline" className="hero-cta rounded-full px-8 py-6 text-base border-foreground hover:bg-brand-gradient-button hover:text-white hover:border-transparent hover:shadow-[0_0_32px_-10px_rgba(249,115,22,0.6)] group">
+                  <ArrowDown className="w-5 h-5 mr-2 group-hover:translate-y-1 transition-transform" />
+                  Get Your Custom AI Strategy
+                </Button>
+              </Link>
+              <Link to="/portfolio" className="hero-cta whitespace-nowrap text-base font-medium text-muted-foreground underline-offset-4 hover:text-foreground hover:underline">
+                See Our Case Studies
+              </Link>
+            </div>
           </div>
         </div>
       </div>

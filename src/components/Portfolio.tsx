@@ -11,20 +11,22 @@ const projects = [
   {
     id: "law-firm-automation",
     number: "01",
-    title: "Law Firm Intake Automation",
+    title: "Legal Firm AI Automation",
     category: "AI Agents & Automation",
     year: "2024",
-    description: "AI intake for a UK law firm: every enquiry answered, new matters qualified and booked, and intake admin taken off fee earners",
+    result: "60% reduction in admin time and £150K in annual savings.",
+    description: "Custom AI Agent Development for streamlined client intake.",
     image: "/images/use-cases/law-firm-automation.webp",
     metrics: "Client under NDA"
   },
   {
     id: "ecommerce-ai-campaign",
     number: "02",
-    title: "E-commerce AI Marketing Campaign",
+    title: "E-Commerce Marketing Campaign",
     category: "Search & Paid Media",
     year: "2026",
-    description: "Paid media across search and social, consolidated into one budget with AI-assisted bidding and sales tracking back to every ad",
+    result: "300% ROAS (Return on Ad Spend) improvement.",
+    description: "AI-optimised, multi-platform search and paid media.",
     image: "/images/use-cases/ecommerce-noovit.webp",
     metrics: "Search, social and attribution"
   },
@@ -217,7 +219,8 @@ export const Portfolio = ({ lightHeader = false }: { lightHeader?: boolean }) =>
               </div>
               <h3 className="project-title text-2xl font-light mb-2 transition-all duration-300">{project.title}</h3>
               <p className="text-sm text-gradient mb-2 transition-colors duration-300">{project.category}</p>
-              <p className="text-muted-foreground text-sm mb-3 leading-relaxed">{project.description}</p>
+              <p className="text-foreground text-sm mb-1 leading-relaxed"><span className="font-medium text-gradient">The Result:</span> {project.result}</p>
+              <p className="text-muted-foreground text-sm mb-3 leading-relaxed"><span className="font-medium text-foreground">The Solution:</span> {project.description}</p>
               <div className="project-metrics bg-accent/10 border border-accent/20 rounded-full px-4 py-2 transition-all duration-300 hover:bg-accent/20 hover:border-accent/40">
                 <p className="text-xs font-medium text-gradient">{project.metrics}</p>
               </div>

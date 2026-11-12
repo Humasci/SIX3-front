@@ -56,7 +56,7 @@ const SearchMarketingPPC = () => {
     <div ref={contentRef} className="min-h-screen bg-background text-foreground">
       <PageSEO
         title="Google Ads & Paid Media Management | SIX³ Agency"
-        description="Google Ads, Meta, LinkedIn and TikTok run as one budget, with landing pages and call tracking for UK service businesses. Start with an AI Growth Audit."
+        description="AI-driven paid media across Google, Meta, LinkedIn and TikTok that turns clicks into qualified leads, not wasted ad spend. Start with an AI Growth Audit."
         canonical="https://six3.agency/services/search-marketing-ppc"
       />
       <Header />
@@ -67,15 +67,15 @@ const SearchMarketingPPC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="hero-content mb-12 grid lg:grid-cols-[minmax(0,1fr)_400px] gap-x-12 gap-y-8 items-center">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-light mb-8 text-gradient w-fit pb-1 lg:col-start-1">
-              Search & Paid Media
+              Paid Media That Actually Pays Off.
             </h1>
             <div className="h-1 w-40 bg-brand-gradient rounded-full lg:col-start-1 -mt-4" />
             <div className="media-frame aspect-[4/3] w-full max-w-md lg:max-w-none lg:col-start-2 lg:row-start-1 lg:row-span-3">
               <ServiceVisual kind="search" label="Search & Paid Media" className="w-full h-full" />
             </div>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl lg:col-start-1">
-              Campaigns that bring in the right customers, not just more clicks. Google Ads, Meta, LinkedIn and
-              TikTok run as one budget, with landing pages and tracking that show what every lead or sale costs.
+              Stop wasting ad spend on manual guesswork. We deploy AI-driven campaigns across Google, Meta, LinkedIn,
+              and TikTok that turn clicks into qualified leads.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm lg:col-start-1">
               <div>
@@ -106,44 +106,39 @@ const SearchMarketingPPC = () => {
             How it works <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" />
           </p>
           <h2 className="text-4xl md:text-5xl font-light mb-16">
-            Audit, build, then improve every month
+            Plan, launch, then scale every month
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="step-card border border-border p-8 bg-background">
               <p className="text-sm text-muted-foreground mb-4">Step -01</p>
-              <h3 className="text-2xl font-light mb-4">Audit & plan</h3>
+              <h3 className="text-2xl font-light mb-4">Strategy & Architecture</h3>
               <p className="text-muted-foreground">
-                We start with your AI Growth Audit: what you spend, what it brings in, where leads and sales leak and which
-                searches your competitors are winning. You get a channel plan and a budget split you can see the
-                reasoning behind.
+                We map your audience, analyse competitors, and build a campaign structure designed for scale.
               </p>
             </div>
 
             <div className="step-card border border-border p-8 bg-background">
               <p className="text-sm text-muted-foreground mb-4">Step -02</p>
-              <h3 className="text-2xl font-light mb-4">Build & track</h3>
+              <h3 className="text-2xl font-light mb-4">Setup & Launch</h3>
               <p className="text-muted-foreground">
-                We set up or rebuild your campaigns, write the ads, build landing pages around one clear offer, and
-                install conversion and call tracking so every lead and sale traces back to the ad that brought it in.
+                We build high-converting landing pages, configure multi-platform accounts, and implement air-tight conversion tracking.
               </p>
             </div>
 
             <div className="step-card border border-border p-8 bg-background">
               <p className="text-sm text-muted-foreground mb-4">Step -03</p>
-              <h3 className="text-2xl font-light mb-4">Launch & test</h3>
+              <h3 className="text-2xl font-light mb-4">AI-Driven Optimisation</h3>
               <p className="text-muted-foreground">
-                Campaigns go live with tests built in: headlines, offers, audiences and creative. Search terms and
-                placements that waste money are cut early, before they eat the budget.
+                Algorithms monitor performance daily, tweaking bids and reallocating budget to maximise your Return on Ad Spend (ROAS).
               </p>
             </div>
 
             <div className="step-card border border-border p-8 bg-background">
               <p className="text-sm text-muted-foreground mb-4">Step -04</p>
-              <h3 className="text-2xl font-light mb-4">Optimise & report</h3>
+              <h3 className="text-2xl font-light mb-4">Ongoing Scale</h3>
               <p className="text-muted-foreground">
-                Every month we move budget towards what produces leads and sales, refresh the creative and send a
-                plain-English report: what you spent, what it bought and what we're changing next.
+                Monthly strategy reviews, continuous A/B testing, and plain-English reporting so you always know your exact cost-per-acquisition.
               </p>
             </div>
           </div>
@@ -157,19 +152,17 @@ const SearchMarketingPPC = () => {
             Overview <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" />
           </p>
           <h2 className="text-4xl md:text-5xl font-light mb-8 max-w-3xl">
-            Know what your ad spend is buying
+            How We Work
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mb-8">
-            Most service businesses already spend on ads. The money leaks after the click: campaigns nobody
-            optimises, landing pages that don't convert, and no clear line from spend to results. We plan Google
-            Ads, Meta, LinkedIn and TikTok as one budget, fix the path from the search to the enquiry form or checkout, and
-            track every lead back to the ad that brought it in.
+            We treat your channels as one unified budget. Our systems analyse real-time data to find where your
+            next best customer is coming from, automatically shifting spend to the highest-performing platforms.
           </p>
           <ul className="space-y-4 text-lg text-muted-foreground max-w-3xl">
-            <li>• Campaign strategy, build and management across Google Ads, Meta, LinkedIn and TikTok</li>
-            <li>• Landing pages and offers designed to convert</li>
-            <li>• Conversion and call tracking so you can see cost per lead or sale</li>
-            <li>• Monthly optimisation, testing and reporting</li>
+            <li>• Unified campaign management (Google Ads, Meta, LinkedIn, TikTok).</li>
+            <li>• Custom landing pages and offer design.</li>
+            <li>• Advanced conversion and call tracking.</li>
+            <li>• Automated reporting and continuous AI optimisation.</li>
           </ul>
         </div>
       </section>
@@ -178,7 +171,7 @@ const SearchMarketingPPC = () => {
       <section className="advantages-section py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <p className="text-sm text-muted-foreground mb-8 tracking-wider">
-            Why it works <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" />
+            The SIX³ difference <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" />
           </p>
           <h2 className="text-5xl md:text-6xl font-light mb-16 max-w-2xl">
             One budget.<br />One system.
