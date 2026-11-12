@@ -64,7 +64,7 @@ write(
 const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 write(
   path.join(dist, "rss.xml"),
-  `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel>\n<title>SIX³ Agency Blog</title>\n<link>${SITE}/blog</link>\n<description>Practical guides on AI marketing and automation for UK businesses.</description>\n<language>en-gb</language>\n${posts
+  `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel>\n<title>SIX³ Agency Blog</title>\n<link>${SITE}/blog</link>\n<description>Practical guides on AI marketing and automation for growing businesses.</description>\n<language>en-gb</language>\n${posts
     .map(
       (p) =>
         `<item><title>${esc(p.title)}</title><link>${SITE}/blog/${p.slug}</link><guid>${SITE}/blog/${p.slug}</guid><pubDate>${new Date(`${p.date}T08:00:00Z`).toUTCString()}</pubDate><description>${esc(p.excerpt)}</description></item>`

@@ -53,7 +53,7 @@ const LawFirmAutomation = () => {
     <div ref={contentRef} className="min-h-screen bg-background text-foreground">
       <PageSEO
         title="Law Firm Intake Automation Case Study | SIX³ Agency"
-        description="How SIX³ built AI client intake automation for a UK law firm: every enquiry answered, qualified against the firm's criteria and booked, day and night."
+        description="How SIX³ built AI client intake automation for a law firm: every enquiry answered, qualified against the firm's criteria and booked, day and night."
         canonical="https://six3.agency/use-cases/law-firm-automation"
       />
       <Header />
@@ -69,20 +69,20 @@ const LawFirmAutomation = () => {
               <span>Case Study</span>
             </div>
             <h1 className="text-3xl md:text-3xl lg:text-4xl font-light mb-8 text-gradient w-fit pb-1">
-              Client intake automation for a UK law firm
+              Client intake automation for a law firm
             </h1>
             <div className="h-1 w-40 bg-brand-gradient rounded-full mb-8" />
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="text-xl text-muted-foreground mb-8">
-                  A growing UK firm was losing potential clients between the first call and the first
+                  A growing law firm was losing potential clients between the first call and the first
                   consultation. We built an AI intake system that answers every enquiry, asks the firm's own
                   questions and books qualified clients in, day and night.
                 </p>
                 <div className="space-y-4">
                   <div>
                     <span className="text-sm text-muted-foreground">Client:</span>
-                    <p className="text-lg">UK law firm (under NDA)</p>
+                    <p className="text-lg">Law firm (under NDA)</p>
                   </div>
                   <div>
                     <span className="text-sm text-muted-foreground">Project:</span>

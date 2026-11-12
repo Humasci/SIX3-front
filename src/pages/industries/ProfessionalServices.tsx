@@ -269,7 +269,7 @@ const ProfessionalServices = () => {
               <FileText className="w-16 h-16 icon-gradient mb-6" />
               <h2 className="text-4xl font-light mb-6">Client confidentiality comes first</h2>
               <p className="text-lg text-muted-foreground mb-6">
-                Your clients trust you with sensitive information. We design every build around UK GDPR and
+                Your clients trust you with sensitive information. We design every build around data protection law (such as GDPR) and
                 your firm's own policies, and keep regulated advice with your people, not the AI.
               </p>
               <ul className="space-y-3">

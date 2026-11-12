@@ -8,7 +8,7 @@ const About = () => {
     <div className="min-h-screen bg-background text-foreground">
       <PageSEO
         title="About Us: Brighton-Based AI Marketing Agency | SIX³"
-        description="SIX³ is a Brighton-based AI marketing and automation agency. One team for search, AI content and AI agents, helping UK businesses and e-commerce brands grow."
+        description="SIX³ is a Brighton-based AI marketing and automation agency. One team for search, AI content and AI agents, helping service businesses and e-commerce brands grow, wherever they are."
         canonical="https://six3.agency/about"
       />
       <Header />

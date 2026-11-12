@@ -202,7 +202,7 @@ const Legal = () => {
           </div>
           <div className="text-center mt-12">
             <p className="text-lg text-muted-foreground">
-              We built client intake automation for a UK law firm in 2024. They're under NDA, so we don't name them or publish their figures.
+              We built client intake automation for a law firm in 2024. They're under NDA, so we don't name them or publish their figures.
             </p>
           </div>
         </div>

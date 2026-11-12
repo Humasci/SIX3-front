@@ -4,7 +4,7 @@ The single source for how SIX³ describes itself. Website copy, blog posts, Link
 
 ## Who we're for
 
-UK small and mid-sized businesses that grow through leads and online sales: growing e-commerce brands, law firms, clinics and healthcare practices, estate agents, professional services firms and local businesses. They usually already spend on marketing but lose value between the click and the customer: slow replies, missed calls, abandoned baskets, thin content, ads nobody optimises.
+Small and mid-sized businesses, in the UK and internationally, that grow through leads and online sales: growing e-commerce brands, law firms, clinics and healthcare practices, estate agents, professional services firms and local businesses. They usually already spend on marketing but lose value between the click and the customer: slow replies, missed calls, abandoned baskets, thin content, ads nobody optimises.
 
 ## The proposition
 
@@ -51,6 +51,6 @@ Prices aren't on the website yet. Suggested next step: add "from £…" prices f
 
 ## Proof we can use
 - **Noovit:** e-commerce growth (2026).
-- **A UK law firm:** intake automation (2024, under NDA).
+- **A law firm:** intake automation (2024, under NDA).
 
 Keep claims to what these projects really achieved. Add real results here as they're confirmed.

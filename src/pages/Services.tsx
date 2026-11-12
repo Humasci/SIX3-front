@@ -157,7 +157,7 @@ const Services = () => {
               <div>
                 <p className="mb-4 text-sm font-medium tracking-[0.25em] uppercase text-gradient w-fit">Start here</p>
                 <h2 className="text-4xl md:text-5xl font-light mb-4">The AI Growth Audit</h2>
-                <p className="text-2xl font-light text-foreground mb-4">Stop guessing. Start scaling.</p>
+                <p className="text-2xl font-light text-foreground mb-4">Know what to fix. Then scale.</p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   In two weeks, we review your search, ads, content, and lead-handling processes. You get a prioritised
                   roadmap showing your biggest revenue opportunities, what to tackle first, and the immediate quick wins you can
