@@ -3,6 +3,7 @@ import { createPortal } from "react-dom";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { Logo } from "@/components/Logo";
+import { SHOW_CASE_STUDIES } from "@/config/features";
 
 const links = [
   { to: "/", label: "Home" },
@@ -17,7 +18,7 @@ const services = [
 ];
 
 const moreLinks = [
-  { to: "/portfolio", label: "Our Work" },
+  ...(SHOW_CASE_STUDIES ? [{ to: "/portfolio", label: "Our Work" }] : []),
   { to: "/blog", label: "Blog" },
   { to: "/contact", label: "Contact" },
 ];

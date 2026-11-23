@@ -9,6 +9,7 @@ import { Portfolio } from "@/components/Portfolio";
 import { Footer } from "@/components/Footer";
 import { WormholeCta } from "@/components/WormholeCta";
 import { CursorEffect } from "@/components/CursorEffect";
+import { SHOW_CASE_STUDIES } from "@/config/features";
 
 const Index = () => {
   return (
@@ -26,7 +27,7 @@ const Index = () => {
       <ThreePillars />
       <ServicePreviews />
       <Industries />
-      <Portfolio />
+      {SHOW_CASE_STUDIES && <Portfolio />}
       <WormholeCta
         title="Ready to automate your growth?"
         subtitle="Stop doing manual work your competitors are already automating. Let's build your AI engine."

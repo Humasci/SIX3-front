@@ -8,6 +8,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Scale, Users, Phone, FileText, TrendingUp, Clock } from "lucide-react";
 import { HeroWormhole } from "@/components/HeroWormhole";
+import { SHOW_CASE_STUDIES } from "@/config/features";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -200,11 +201,11 @@ const Legal = () => {
               </div>
             ))}
           </div>
-          <div className="text-center mt-12">
+          {SHOW_CASE_STUDIES && <div className="text-center mt-12">
             <p className="text-lg text-muted-foreground">
               We built client intake automation for a law firm in 2024. They're under NDA, so we don't name them or publish their figures.
             </p>
-          </div>
+          </div>}
         </div>
       </section>
 
@@ -251,7 +252,7 @@ const Legal = () => {
       <section className="py-24 px-6 bg-brand-gradient text-accent-foreground">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-light mb-8">
-            Find out where your firm is losing enquiries
+            Find out where your firm can win more enquiries
           </h2>
           <p className="text-xl mb-12 opacity-90">
             Start with an AI Growth Audit. In two weeks you get a clear view of your ads, content and intake, and a prioritised plan to fix the gaps.
@@ -262,11 +263,11 @@ const Legal = () => {
                 Book an AI Growth Audit
               </Button>
             </Link>
-            <Link to="/use-cases/law-firm-automation">
+            {SHOW_CASE_STUDIES && <Link to="/use-cases/law-firm-automation">
               <Button variant="outline" className="px-8 py-4 text-lg border-accent-foreground text-accent-foreground hover:bg-glow hover:text-[#0d0d26] hover:border-glow">
                 See the law firm project
               </Button>
-            </Link>
+            </Link>}
           </div>
         </div>
       </section>

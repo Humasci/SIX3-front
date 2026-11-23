@@ -8,6 +8,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { HeroWormhole } from "@/components/HeroWormhole";
 import { ServiceVisual } from "@/components/ServiceVisual";
+import { SHOW_CASE_STUDIES } from "@/config/features";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -199,7 +200,7 @@ const AIDevAutomation = () => {
               <p className="text-lg text-muted-foreground max-w-2xl">
                 Law firms, clinics, estate agents, professional services and local businesses. We build intake,
                 booking and follow-up around how your sector takes on clients, including the questions you must ask
-                and the ones the AI should leave to a person. Recent work includes intake automation for a law firm.
+                and the ones the AI should leave to a person.{SHOW_CASE_STUDIES && " Recent work includes intake automation for a law firm."}
               </p>
             </div>
 
@@ -227,7 +228,7 @@ const AIDevAutomation = () => {
       </section>
 
       {/* Case Study */}
-      <section className="py-24 px-6">
+      {SHOW_CASE_STUDIES && <section className="py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <p className="text-sm text-muted-foreground mb-8 tracking-wider">
             Case Study <span className="inline-block align-middle ml-3 h-0.5 w-12 bg-brand-gradient" />
@@ -245,7 +246,7 @@ const AIDevAutomation = () => {
             </Button>
           </Link>
         </div>
-      </section>
+      </section>}
 
       {/* CTA */}
       <section className="py-24 px-6 bg-secondary/30">

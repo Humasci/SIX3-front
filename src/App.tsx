@@ -7,6 +7,7 @@ import { CookieConsent } from "./components/CookieConsent";
 import { LineReveal } from "./components/LineReveal";
 import { lazyPage } from "./lib/lazyPage";
 import Index from "./pages/Index";
+import { SHOW_CASE_STUDIES, CASE_STUDY_PATHS } from "./config/features";
 
 // Each page's code loads only when it's visited; the homepage ships in the main bundle
 const NotFound = lazyPage(() => import("./pages/NotFound"));
@@ -33,7 +34,7 @@ const Blog = lazyPage(() => import("./pages/Blog"));
 const BlogPost = lazyPage(() => import("./pages/BlogPost"));
 
 // Add new pages above the catch-all "*" route. The prerender and the sitemap read this list too
-export const routes = [
+const allRoutes = [
   { path: "/", Page: Index },
   { path: "/about", Page: About },
   { path: "/services", Page: Services },
@@ -58,6 +59,9 @@ export const routes = [
   { path: "/blog/:slug", Page: BlogPost },
   { path: "*", Page: NotFound },
 ];
+
+// Hidden case-study pages are left out of the router, the prerender and the sitemap
+export const routes = SHOW_CASE_STUDIES ? allRoutes : allRoutes.filter((r) => !CASE_STUDY_PATHS.test(r.path));
 
 // Loads the page for a URL before the first render, so it appears without a loading flash
 export const preloadRoute = async (pathname: string) => {
