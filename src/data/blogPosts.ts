@@ -22,8 +22,8 @@ export type BlogPost = {
 export const blogPosts: BlogPost[] = [
   {
     "slug": "chatgpt-business-profiles-what-uk-businesses-should-do",
-    "title": "ChatGPT Now Has Business Profiles: What UK Businesses Should Do This Week",
-    "excerpt": "OpenAI has launched Businesses in ChatGPT. Here is what the new profiles and agents are, what works in the UK today, and how to get ready.",
+    "title": "ChatGPT Now Has Business Profiles: What Your Business Should Do This Week",
+    "excerpt": "OpenAI has launched Businesses in ChatGPT. Here is what the new profiles and agents are, what is available today, and how to get ready.",
     "author": "SIX³ Team",
     "date": "2026-11-12",
     "readTime": "4 min read",
