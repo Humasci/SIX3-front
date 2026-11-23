@@ -20,8 +20,12 @@ const Inline = ({ text }: { text: string }) => {
     const [whole, label, href] = m;
     const at = m.index ?? 0;
     if (at > last) parts.push(text.slice(last, at));
+    // A link to a post that is still scheduled shows as plain text until that post goes live
+    const scheduled = href.startsWith("/blog/") && !publishedPosts().some((p) => `/blog/${p.slug}` === href);
     parts.push(
-      href.startsWith("/") ? (
+      scheduled ? (
+        label
+      ) : href.startsWith("/") ? (
         <Link key={at} to={href}>{label}</Link>
       ) : (
         <a key={at} href={href} target="_blank" rel="noopener noreferrer">{label}</a>
