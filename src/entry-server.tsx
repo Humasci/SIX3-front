@@ -6,7 +6,9 @@ import { AppShell, preloadRoute, routes } from "./App";
 import { publishedPosts } from "./data/blogPosts";
 import { portfolioIds } from "./pages/portfolio/PortfolioDetail";
 
-export { routes, publishedPosts, portfolioIds };
+import { SHOW_CASE_STUDIES } from "./config/features";
+const visiblePortfolioIds = SHOW_CASE_STUDIES ? portfolioIds : [];
+export { routes, publishedPosts, visiblePortfolioIds as portfolioIds };
 
 export const render = async (url: string) => {
   await preloadRoute(url);

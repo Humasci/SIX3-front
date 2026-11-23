@@ -441,7 +441,7 @@ export const blogPosts: BlogPost[] = [
       "- Explain your fees and process using wording you have approved, consistent with your published price information.",
       "- Book a consultation with the right fee earner, or pass urgent matters straight to an on-call solicitor.",
       "- Create the enquiry in your case management system with a summary, ready for conflict checks.",
-      "It must not give legal advice. You set the boundaries: it can explain what you do and how you work, but questions about the person's own case go to a qualified person. We have built intake automation for a law firm along these lines, and the principle holds everywhere: the system gathers and routes, and solicitors advise.",
+      "It must not give legal advice. You set the boundaries: it can explain what you do and how you work, but questions about the person's own case go to a qualified person. The principle holds everywhere: the system gathers and routes, and solicitors advise.",
       "## How it works for clinics and healthcare practices",
       "Clinics handle a steady stream of routine contact: new patient enquiries, appointment changes, questions about treatments and prices. An AI receptionist can:",
       "- Book, move and cancel appointments directly in your practice management system.",

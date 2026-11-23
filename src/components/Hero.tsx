@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ParticleCloud } from "@/components/ParticleCloud";
 import { reduceMotion } from "@/lib/motion";
+import { SHOW_CASE_STUDIES } from "@/config/features";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -201,8 +202,8 @@ export const Hero = () => {
                   Get Your Custom AI Strategy
                 </Button>
               </Link>
-              <Link to="/portfolio" className="hero-cta whitespace-nowrap text-base font-medium text-muted-foreground underline-offset-4 hover:text-foreground hover:underline">
-                See Our Case Studies
+              <Link to={SHOW_CASE_STUDIES ? "/portfolio" : "/services"} className="hero-cta whitespace-nowrap text-base font-medium text-muted-foreground underline-offset-4 hover:text-foreground hover:underline">
+                {SHOW_CASE_STUDIES ? "See Our Case Studies" : "Explore Our Services"}
               </Link>
             </div>
           </div>

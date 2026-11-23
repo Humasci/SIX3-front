@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { SHOW_CASE_STUDIES } from "@/config/features";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -85,10 +86,12 @@ export const Header = () => {
           <div className="nav-item">
             <ServiceDropdown />
           </div>
-          <Link to="/portfolio" className="nav-item text-base hover:text-gradient transition-colors relative group">
-            {t('nav.ourWork')}
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-gradient transition-all duration-300 group-hover:w-full" />
-          </Link>
+          {SHOW_CASE_STUDIES && (
+            <Link to="/portfolio" className="nav-item text-base hover:text-gradient transition-colors relative group">
+              {t('nav.ourWork')}
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-gradient transition-all duration-300 group-hover:w-full" />
+            </Link>
+          )}
           <Link to="/blog" className="nav-item text-base hover:text-gradient transition-colors relative group">
             {t('nav.blog')}
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-gradient transition-all duration-300 group-hover:w-full" />

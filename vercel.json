@@ -45,18 +45,23 @@
       "permanent": true
     },
     {
+      "source": "/portfolio",
+      "destination": "/services",
+      "permanent": false
+    },
+    {
+      "source": "/portfolio/:path*",
+      "destination": "/services",
+      "permanent": false
+    },
+    {
+      "source": "/use-cases/law-firm-automation",
+      "destination": "/services/ai-dev-automation",
+      "permanent": false
+    },
+    {
       "source": "/use-cases/dui-guide",
-      "destination": "/portfolio",
-      "permanent": false
-    },
-    {
-      "source": "/portfolio/dui-guide",
-      "destination": "/portfolio",
-      "permanent": false
-    },
-    {
-      "source": "/portfolio/media-publisher-directory",
-      "destination": "/portfolio",
+      "destination": "/services",
       "permanent": false
     }
   ]

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { openCookieSettings } from "@/components/CookieConsent";
 import { Linkedin, Mail } from "lucide-react";
 import { Logo } from "@/components/Logo";
+import { SHOW_CASE_STUDIES } from "@/config/features";
 
 export const Footer = () => {
   return (
@@ -33,6 +34,7 @@ export const Footer = () => {
             </ul>
           </div>
           
+          {SHOW_CASE_STUDIES && (
           <div>
             <h4 className="text-sm font-medium mb-4 tracking-wider">Case Studies</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
@@ -41,6 +43,7 @@ export const Footer = () => {
               </li>
             </ul>
           </div>
+          )}
 
           <div>
             <h4 className="text-sm font-medium mb-4 tracking-wider">Company</h4>
@@ -48,9 +51,11 @@ export const Footer = () => {
               <li className="hover:text-foreground transition-colors cursor-pointer">
                 <Link to="/about">About Us</Link>
               </li>
-              <li className="hover:text-foreground transition-colors cursor-pointer">
-                <Link to="/portfolio">Our Work</Link>
-              </li>
+              {SHOW_CASE_STUDIES && (
+                <li className="hover:text-foreground transition-colors cursor-pointer">
+                  <Link to="/portfolio">Our Work</Link>
+                </li>
+              )}
               <li className="hover:text-foreground transition-colors cursor-pointer">
                 <Link to="/blog">Blog</Link>
               </li>
