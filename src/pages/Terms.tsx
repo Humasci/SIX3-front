@@ -17,7 +17,7 @@ const Terms = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <PageSEO title="Terms of Service | SIX³ Agency" description="The terms that apply when you use the SIX³ Agency website and services, provided by FKA WEB Limited, registered in England and Wales." canonical="https://six3.agency/terms" />
+      <PageSEO title="Terms of Service | SIX³ Agency" description="The terms that apply when you use the SIX³ Agency website and services, provided by SIX3 Agency Limited, registered in England and Wales." canonical="https://six3.agency/terms" />
       <Header />
       
       <section className="theme-light relative isolate overflow-hidden pt-40 pb-16 px-6">
@@ -36,11 +36,11 @@ const Terms = () => {
             <section>
               <h2 className="text-2xl font-medium mb-4">1. Agreement to Terms</h2>
               <p className="text-muted-foreground leading-relaxed">
-                By accessing and using the services of FKA WEB Limited trading as SIX³ Agency ("we", "us", or "our"), you accept and agree to be bound by the terms and provision of this agreement.
+                By accessing and using the services of SIX3 Agency Limited ("SIX³ Agency", "we", "us", or "our"), you accept and agree to be bound by the terms and provision of this agreement.
               </p>
               <p className="text-muted-foreground leading-relaxed mt-4">
                 Company Details:<br />
-                FKA WEB Limited<br />
+                SIX3 Agency Limited<br />
                 Registered in England and Wales<br />
                 Company Number: 11642660
               </p>
@@ -139,7 +139,7 @@ const Terms = () => {
             <section>
               <h2 className="text-2xl font-medium mb-4">9. Limitation of Liability</h2>
               <p className="text-muted-foreground leading-relaxed">
-                In no event shall FKA WEB Limited or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use our services, even if we have been notified orally or in writing of the possibility of such damage. Our total liability shall not exceed the total amount paid for services in the preceding 12 months.
+                In no event shall SIX3 Agency Limited or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use our services, even if we have been notified orally or in writing of the possibility of such damage. Our total liability shall not exceed the total amount paid for services in the preceding 12 months.
               </p>
             </section>
 
@@ -193,7 +193,7 @@ const Terms = () => {
               </p>
               <div className="mt-4 text-muted-foreground">
                 <p>Email: hello@six3.agency</p>
-                <p>Company: FKA WEB Limited</p>
+                <p>Company: SIX3 Agency Limited</p>
                 <p>Registration: England and Wales No. 11642660</p>
               </div>
             </section>

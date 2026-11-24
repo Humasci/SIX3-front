@@ -17,7 +17,7 @@ const PrivacyPolicy = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <PageSEO title="Privacy Policy | SIX³ Agency" description="How SIX³ Agency (FKA WEB Limited) collects, uses and protects your personal data, and the rights you have under UK GDPR." canonical="https://six3.agency/privacy-policy" />
+      <PageSEO title="Privacy Policy | SIX³ Agency" description="How SIX3 Agency Limited collects, uses and protects your personal data, and the rights you have under UK GDPR." canonical="https://six3.agency/privacy-policy" />
       <Header />
       
       <section className="theme-light relative isolate overflow-hidden pt-40 pb-16 px-6">
@@ -36,11 +36,11 @@ const PrivacyPolicy = () => {
             <section>
               <h2 className="text-2xl font-medium mb-4">1. Introduction</h2>
               <p className="text-muted-foreground leading-relaxed">
-                FKA WEB Limited trading as SIX³ Agency ("we", "us", or "our") is committed to protecting and respecting your privacy. This Privacy Policy explains how we collect, use, and protect your personal information when you visit our website or use our services.
+                SIX3 Agency Limited ("SIX³ Agency", "we", "us", or "our") is committed to protecting and respecting your privacy. This Privacy Policy explains how we collect, use, and protect your personal information when you visit our website or use our services.
               </p>
               <p className="text-muted-foreground leading-relaxed mt-4">
                 Company Details:<br />
-                FKA WEB Limited<br />
+                SIX3 Agency Limited<br />
                 Registered in England and Wales<br />
                 Company Number: 11642660
               </p>
@@ -156,7 +156,7 @@ const PrivacyPolicy = () => {
               </p>
               <div className="mt-4 text-muted-foreground">
                 <p>Email: hello@six3.agency</p>
-                <p>Company: FKA WEB Limited</p>
+                <p>Company: SIX3 Agency Limited</p>
                 <p>Registration: England and Wales No. 11642660</p>
               </div>
               <p className="text-muted-foreground leading-relaxed mt-4">

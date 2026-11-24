@@ -48,7 +48,7 @@ export const organizationJsonLd = {
   "@type": "ProfessionalService",
   "@id": `${SITE}/#organization`,
   name: "SIX³ Agency",
-  legalName: "FKA WEB Limited",
+  legalName: "SIX3 Agency Limited",
   url: SITE,
   logo: `${SITE}/icon-512.png`,
   image: DEFAULT_IMAGE,

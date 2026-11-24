@@ -37,11 +37,11 @@ const CookiePolicy = () => {
             <section>
               <h2 className="text-2xl font-medium mb-4">1. Introduction</h2>
               <p className="text-muted-foreground leading-relaxed">
-                FKA WEB Limited trading as SIX³ Agency ("we", "us", or "our") uses cookies and similar technologies on our website. This Cookie Policy explains what cookies are, how we use them, and your choices regarding their use.
+                SIX3 Agency Limited ("SIX³ Agency", "we", "us", or "our") uses cookies and similar technologies on our website. This Cookie Policy explains what cookies are, how we use them, and your choices regarding their use.
               </p>
               <p className="text-muted-foreground leading-relaxed mt-4">
                 Company Details:<br />
-                FKA WEB Limited<br />
+                SIX3 Agency Limited<br />
                 Registered in England and Wales<br />
                 Company Number: 11642660<br />
                 Email: hello@six3.agency
@@ -214,7 +214,7 @@ const CookiePolicy = () => {
               </p>
               <div className="mt-4 text-muted-foreground">
                 <p>Email: hello@six3.agency</p>
-                <p>Company: FKA WEB Limited</p>
+                <p>Company: SIX3 Agency Limited</p>
                 <p>Registration: England and Wales No. 11642660</p>
               </div>
               <p className="text-muted-foreground leading-relaxed mt-4">
