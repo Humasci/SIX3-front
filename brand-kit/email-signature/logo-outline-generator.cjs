@@ -19,7 +19,7 @@ const [,, src, out, dbg] = process.argv;
     sg.drawImage(img, 0, 0, cut, H, 0, 0, cut, H);
     sg.globalCompositeOperation = 'source-in'; sg.fillStyle = '#fff'; sg.fillRect(0, 0, W, H);
     const o = document.createElement('canvas'); o.width = W; o.height = H; const og = o.getContext('2d');
-    const r = Math.round(H * 0.022);
+    const r = Math.max(2, Math.round(H * 0.01));
     for (let k = 0; k < 48; k++) { const t = (k / 48) * Math.PI * 2; og.drawImage(s, Math.cos(t) * r, Math.sin(t) * r); }
     og.drawImage(img, 0, 0);
     // trim to the visible logo (plus a small margin), then scale to 2x email size (180px wide)
