@@ -9,6 +9,6 @@ export const CASE_STUDY_PATHS = /^\/(portfolio(\/|$)|use-cases\/law-firm-automat
 // details instead of the short SIX3 Agency Limited line.
 export const SHOW_REGISTERED_COMPANY_FOOTER = false;
 export const FOOTER_COPYRIGHT = {
-  registered: "© 2018 - 2026 SIX3 Agency Limited Registered in England and Wales No. 11642660. All rights reserved.",
+  registered: "© 2018 - 2026 SIX3 Agency Limited Registered in England and Wales. All rights reserved.",
   short: "© SIX3 Agency Limited. All rights reserved.",
 };

@@ -41,8 +41,7 @@ const PrivacyPolicy = () => {
               <p className="text-muted-foreground leading-relaxed mt-4">
                 Company Details:<br />
                 SIX3 Agency Limited<br />
-                Registered in England and Wales<br />
-                Company Number: 11642660
+                Registered in England and Wales
               </p>
             </section>
 
@@ -157,7 +156,7 @@ const PrivacyPolicy = () => {
               <div className="mt-4 text-muted-foreground">
                 <p>Email: hello@six3.agency</p>
                 <p>Company: SIX3 Agency Limited</p>
-                <p>Registration: England and Wales No. 11642660</p>
+                <p>Registered in England and Wales</p>
               </div>
               <p className="text-muted-foreground leading-relaxed mt-4">
                 You also have the right to lodge a complaint with the Information Commissioner's Office (ICO) if you believe we have not handled your personal data appropriately.

@@ -43,7 +43,6 @@ const CookiePolicy = () => {
                 Company Details:<br />
                 SIX3 Agency Limited<br />
                 Registered in England and Wales<br />
-                Company Number: 11642660<br />
                 Email: hello@six3.agency
               </p>
             </section>
@@ -215,7 +214,7 @@ const CookiePolicy = () => {
               <div className="mt-4 text-muted-foreground">
                 <p>Email: hello@six3.agency</p>
                 <p>Company: SIX3 Agency Limited</p>
-                <p>Registration: England and Wales No. 11642660</p>
+                <p>Registered in England and Wales</p>
               </div>
               <p className="text-muted-foreground leading-relaxed mt-4">
                 For data protection concerns, you can also contact the Information Commissioner's Office (ICO) at <a href="https://ico.org.uk" className="text-gradient hover:underline" target="_blank" rel="noopener noreferrer">ico.org.uk</a>.

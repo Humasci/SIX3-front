@@ -41,8 +41,7 @@ const Terms = () => {
               <p className="text-muted-foreground leading-relaxed mt-4">
                 Company Details:<br />
                 SIX3 Agency Limited<br />
-                Registered in England and Wales<br />
-                Company Number: 11642660
+                Registered in England and Wales
               </p>
             </section>
 
@@ -194,7 +193,7 @@ const Terms = () => {
               <div className="mt-4 text-muted-foreground">
                 <p>Email: hello@six3.agency</p>
                 <p>Company: SIX3 Agency Limited</p>
-                <p>Registration: England and Wales No. 11642660</p>
+                <p>Registered in England and Wales</p>
               </div>
             </section>
           </div>
