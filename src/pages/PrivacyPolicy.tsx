@@ -87,7 +87,7 @@ const PrivacyPolicy = () => {
               <p className="text-muted-foreground leading-relaxed mb-4">We may share your information with:</p>
               <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
                 <li>Third-party service providers who assist in delivering our services</li>
-                <li>Analytics providers (such as Google Analytics)</li>
+                <li>Analytics providers (such as Google Analytics and Microsoft Clarity)</li>
                 <li>Email marketing platforms (such as Mailgun)</li>
                 <li>CRM systems (such as Attio)</li>
                 <li>Law enforcement agencies when required by law</li>

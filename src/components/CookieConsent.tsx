@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
-// Cookie consent banner wired to Google Consent Mode (defaults are set to "denied" in index.html).
+// Cookie consent banner wired to Google Consent Mode and Microsoft Clarity (defaults are set to "denied" in index.html).
 // The choice is saved in localStorage and applied on every page load before Google Tag Manager runs.
 // The footer's "Cookie settings" link reopens it via the "six3:cookie-settings" event.
 
@@ -13,6 +13,8 @@ declare global {
   interface Window {
     dataLayer?: unknown[];
     gtag?: (...args: unknown[]) => void;
+    clarity?: (...args: unknown[]) => void;
+    six3LoadClarity?: () => void;
   }
 }
 
@@ -37,6 +39,9 @@ const applyChoice = (c: Choice) => {
     ad_user_data: g(c.marketing),
     ad_personalization: g(c.marketing),
   });
+  // Microsoft Clarity runs only with analytics consent; withdrawing consent tells it to stop and clear its cookies
+  if (c.analytics) window.six3LoadClarity?.();
+  else window.clarity?.("consentv2", { ad_Storage: "denied", analytics_Storage: "denied" });
   window.dataLayer?.push({ event: "consent_update", consent_analytics: c.analytics, consent_marketing: c.marketing });
 };
 

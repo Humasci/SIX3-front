@@ -79,6 +79,7 @@ const CookiePolicy = () => {
               </p>
               <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4 mb-6">
                 <li>Google Analytics for website traffic analysis</li>
+                <li>Microsoft Clarity heatmaps and session recordings, to see how visitors use our pages</li>
                 <li>Page view tracking and user journey mapping</li>
                 <li>Performance monitoring and error tracking</li>
                 <li>A/B testing for website optimization</li>
@@ -114,6 +115,7 @@ const CookiePolicy = () => {
               </p>
               <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
                 <li><strong>Google Analytics:</strong> Website traffic analysis and user behavior tracking</li>
+                <li><strong>Microsoft Clarity:</strong> Heatmaps and session recordings, only after you accept analytics cookies</li>
                 <li><strong>Google Ads:</strong> Advertising campaign tracking and conversion measurement</li>
                 <li><strong>Meta Pixel:</strong> Facebook and Instagram advertising optimization</li>
                 <li><strong>LinkedIn Insight Tag:</strong> LinkedIn advertising and professional targeting</li>
