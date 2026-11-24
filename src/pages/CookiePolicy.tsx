@@ -37,13 +37,12 @@ const CookiePolicy = () => {
             <section>
               <h2 className="text-2xl font-medium mb-4">1. Introduction</h2>
               <p className="text-muted-foreground leading-relaxed">
-                FKA WEB Limited trading as SIX³ Agency ("we", "us", or "our") uses cookies and similar technologies on our website. This Cookie Policy explains what cookies are, how we use them, and your choices regarding their use.
+                SIX3 Agency Limited ("SIX³ Agency", "we", "us", or "our") uses cookies and similar technologies on our website. This Cookie Policy explains what cookies are, how we use them, and your choices regarding their use.
               </p>
               <p className="text-muted-foreground leading-relaxed mt-4">
                 Company Details:<br />
-                FKA WEB Limited<br />
+                SIX3 Agency Limited<br />
                 Registered in England and Wales<br />
-                Company Number: 11642660<br />
                 Email: hello@six3.agency
               </p>
             </section>
@@ -79,6 +78,7 @@ const CookiePolicy = () => {
               </p>
               <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4 mb-6">
                 <li>Google Analytics for website traffic analysis</li>
+                <li>Microsoft Clarity heatmaps and session recordings, to see how visitors use our pages</li>
                 <li>Page view tracking and user journey mapping</li>
                 <li>Performance monitoring and error tracking</li>
                 <li>A/B testing for website optimization</li>
@@ -114,6 +114,7 @@ const CookiePolicy = () => {
               </p>
               <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
                 <li><strong>Google Analytics:</strong> Website traffic analysis and user behavior tracking</li>
+                <li><strong>Microsoft Clarity:</strong> Heatmaps and session recordings, only after you accept analytics cookies</li>
                 <li><strong>Google Ads:</strong> Advertising campaign tracking and conversion measurement</li>
                 <li><strong>Meta Pixel:</strong> Facebook and Instagram advertising optimization</li>
                 <li><strong>LinkedIn Insight Tag:</strong> LinkedIn advertising and professional targeting</li>
@@ -212,8 +213,8 @@ const CookiePolicy = () => {
               </p>
               <div className="mt-4 text-muted-foreground">
                 <p>Email: hello@six3.agency</p>
-                <p>Company: FKA WEB Limited</p>
-                <p>Registration: England and Wales No. 11642660</p>
+                <p>Company: SIX3 Agency Limited</p>
+                <p>Registered in England and Wales</p>
               </div>
               <p className="text-muted-foreground leading-relaxed mt-4">
                 For data protection concerns, you can also contact the Information Commissioner's Office (ICO) at <a href="https://ico.org.uk" className="text-gradient hover:underline" target="_blank" rel="noopener noreferrer">ico.org.uk</a>.

@@ -235,6 +235,8 @@ svg[class*="hover:text-gradient"]:hover,
 .article-body li { position: relative; padding-left: 0.5rem; }
 .article-body li + li { margin-top: 0.6rem; }
 .article-body li::before { content: ""; position: absolute; left: -0.9rem; top: 0.75em; width: 0.4rem; height: 0.4rem; border-radius: 9999px; background: linear-gradient(135deg, #7c3aed, #f97316); }
+.article-body a { color: hsl(var(--foreground)); text-decoration: underline; text-decoration-color: #a855f7; text-underline-offset: 0.2em; transition: color 0.2s; }
+.article-body a:hover { color: #f97316; }
 
 /* Prerendered HTML stays hidden until the live app takes over (no flash of half-animated content).
    If JavaScript fails, it appears after 3 seconds anyway */

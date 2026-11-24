@@ -10,19 +10,49 @@ import { WormholeCta } from "@/components/WormholeCta";
 import { formatPostDate, publishedPosts } from "@/data/blogPosts";
 import NotFound from "@/pages/NotFound";
 
+// Turns [text](/path) and [text](https://…) inside a block into links: internal ones use the router,
+// external ones (sources) open in a new tab
+const LINK = /\[([^\]]+)\]\(([^)\s]+)\)/g;
+const Inline = ({ text }: { text: string }) => {
+  const parts: (string | JSX.Element)[] = [];
+  let last = 0;
+  for (const m of text.matchAll(LINK)) {
+    const [whole, label, href] = m;
+    const at = m.index ?? 0;
+    if (at > last) parts.push(text.slice(last, at));
+    // A link to a post that is still scheduled shows as plain text until that post goes live
+    const scheduled = href.startsWith("/blog/") && !publishedPosts().some((p) => `/blog/${p.slug}` === href);
+    parts.push(
+      scheduled ? (
+        label
+      ) : href.startsWith("/") ? (
+        <Link key={at} to={href}>{label}</Link>
+      ) : (
+        <a key={at} href={href} target="_blank" rel="noopener noreferrer">{label}</a>
+      )
+    );
+    last = at + whole.length;
+  }
+  if (last < text.length) parts.push(text.slice(last));
+  return <>{parts}</>;
+};
+
+// Plain text for structured data: [text](url) becomes text
+const plain = (text: string) => text.replace(LINK, "$1");
+
 // Renders article blocks: "## " and "### " headings, runs of "- " lines as a list, anything else as a paragraph
 const ArticleBody = ({ blocks }: { blocks: string[] }) => {
   const out: JSX.Element[] = [];
   for (let i = 0; i < blocks.length; i++) {
     const b = blocks[i];
-    if (b.startsWith("## ")) out.push(<h2 key={i}>{b.slice(3)}</h2>);
-    else if (b.startsWith("### ")) out.push(<h3 key={i}>{b.slice(4)}</h3>);
+    if (b.startsWith("## ")) out.push(<h2 key={i}><Inline text={b.slice(3)} /></h2>);
+    else if (b.startsWith("### ")) out.push(<h3 key={i}><Inline text={b.slice(4)} /></h3>);
     else if (b.startsWith("- ")) {
       const items: string[] = [];
       while (i < blocks.length && blocks[i].startsWith("- ")) items.push(blocks[i++].slice(2));
       i--;
-      out.push(<ul key={i}>{items.map((it, k) => <li key={k}>{it}</li>)}</ul>);
-    } else out.push(<p key={i}>{b}</p>);
+      out.push(<ul key={i}>{items.map((it, k) => <li key={k}><Inline text={it} /></li>)}</ul>);
+    } else out.push(<p key={i}><Inline text={b} /></p>);
   }
   return <>{out}</>;
 };
@@ -46,7 +76,7 @@ const BlogPost = () => {
         canonical={`https://six3.agency/blog/${post.slug}`}
         type="article"
         image={post.shareImage ? `https://six3.agency${post.shareImage}` : undefined}
-        jsonLd={{
+        jsonLd={[{
           "@context": "https://schema.org",
           "@type": "BlogPosting",
           headline: post.title,
@@ -57,7 +87,20 @@ const BlogPost = () => {
           mainEntityOfPage: `https://six3.agency/blog/${post.slug}`,
           image: `https://six3.agency${post.shareImage ?? "/og-image.jpg"}`,
           articleSection: post.category,
-        }}
+          ...(post.updated && { dateModified: post.updated }),
+        },
+          ...(post.faqs?.length
+            ? [{
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                mainEntity: post.faqs.map((f) => ({
+                  "@type": "Question",
+                  name: f.q,
+                  acceptedAnswer: { "@type": "Answer", text: plain(f.a) },
+                })),
+              }]
+            : []),
+        ]}
       />
       <Header />
 
@@ -97,6 +140,17 @@ const BlogPost = () => {
             {post.body?.length ? (
               <div className="article-body">
                 <ArticleBody blocks={post.body} />
+                {post.faqs?.length ? (
+                  <>
+                    <h2>Frequently asked questions</h2>
+                    {post.faqs.map((f) => (
+                      <div key={f.q}>
+                        <h3>{f.q}</h3>
+                        <p className="mt-3"><Inline text={f.a} /></p>
+                      </div>
+                    ))}
+                  </>
+                ) : null}
               </div>
             ) : (
               <div className="rounded-2xl border border-border bg-card p-8 text-center">

@@ -17,7 +17,7 @@ const PrivacyPolicy = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <PageSEO title="Privacy Policy | SIX³ Agency" description="How SIX³ Agency (FKA WEB Limited) collects, uses and protects your personal data, and the rights you have under UK GDPR." canonical="https://six3.agency/privacy-policy" />
+      <PageSEO title="Privacy Policy | SIX³ Agency" description="How SIX3 Agency Limited collects, uses and protects your personal data, and the rights you have under UK GDPR." canonical="https://six3.agency/privacy-policy" />
       <Header />
       
       <section className="theme-light relative isolate overflow-hidden pt-40 pb-16 px-6">
@@ -36,13 +36,12 @@ const PrivacyPolicy = () => {
             <section>
               <h2 className="text-2xl font-medium mb-4">1. Introduction</h2>
               <p className="text-muted-foreground leading-relaxed">
-                FKA WEB Limited trading as SIX³ Agency ("we", "us", or "our") is committed to protecting and respecting your privacy. This Privacy Policy explains how we collect, use, and protect your personal information when you visit our website or use our services.
+                SIX3 Agency Limited ("SIX³ Agency", "we", "us", or "our") is committed to protecting and respecting your privacy. This Privacy Policy explains how we collect, use, and protect your personal information when you visit our website or use our services.
               </p>
               <p className="text-muted-foreground leading-relaxed mt-4">
                 Company Details:<br />
-                FKA WEB Limited<br />
-                Registered in England and Wales<br />
-                Company Number: 11642660
+                SIX3 Agency Limited<br />
+                Registered in England and Wales
               </p>
             </section>
 
@@ -87,7 +86,7 @@ const PrivacyPolicy = () => {
               <p className="text-muted-foreground leading-relaxed mb-4">We may share your information with:</p>
               <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
                 <li>Third-party service providers who assist in delivering our services</li>
-                <li>Analytics providers (such as Google Analytics)</li>
+                <li>Analytics providers (such as Google Analytics and Microsoft Clarity)</li>
                 <li>Email marketing platforms (such as Mailgun)</li>
                 <li>CRM systems (such as Attio)</li>
                 <li>Law enforcement agencies when required by law</li>
@@ -156,8 +155,8 @@ const PrivacyPolicy = () => {
               </p>
               <div className="mt-4 text-muted-foreground">
                 <p>Email: hello@six3.agency</p>
-                <p>Company: FKA WEB Limited</p>
-                <p>Registration: England and Wales No. 11642660</p>
+                <p>Company: SIX3 Agency Limited</p>
+                <p>Registered in England and Wales</p>
               </div>
               <p className="text-muted-foreground leading-relaxed mt-4">
                 You also have the right to lodge a complaint with the Information Commissioner's Office (ICO) if you believe we have not handled your personal data appropriately.

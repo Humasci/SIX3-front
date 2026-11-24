@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { openCookieSettings } from "@/components/CookieConsent";
 import { Linkedin, Mail } from "lucide-react";
 import { Logo } from "@/components/Logo";
-import { SHOW_CASE_STUDIES } from "@/config/features";
+import { SHOW_CASE_STUDIES, SHOW_REGISTERED_COMPANY_FOOTER, FOOTER_COPYRIGHT } from "@/config/features";
 
 export const Footer = () => {
   return (
@@ -103,7 +103,7 @@ export const Footer = () => {
         
         <div className="pt-8 border-t border-border flex flex-col-reverse md:flex-row items-center md:justify-between gap-6">
           <p className="text-sm text-muted-foreground text-center md:text-left">
-            © 2018 - 2026 FKA WEB Limited Registered in England and Wales No. 11642660. All rights reserved.
+            {SHOW_REGISTERED_COMPANY_FOOTER ? FOOTER_COPYRIGHT.registered : FOOTER_COPYRIGHT.short}
           </p>
           <Logo />
         </div>
