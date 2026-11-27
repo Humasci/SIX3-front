@@ -95,3 +95,55 @@ Yet many leads wait hours, or days, for an answer. In our new article we look at
 Read it: six3.agency/blog/speed-to-lead-cost-of-slow-replies
 
 #SpeedToLead #LeadGeneration #SalesAndMarketing #AIAutomation
+
+---
+
+## 07 · Blog: ChatGPT Ads updates, November 2026
+**Image:** the article's link preview (`/images/blog/chatgpt-ads-november-2026-share.jpg`), shown automatically when you paste the link
+**Post on or after Monday 23 November**
+
+ChatGPT Ads changed a lot this month, and one change has a deadline.
+
+On 1 January 2027, the manual Max Bid and Max CPC settings stop working. Any campaign still using them moves to OpenAI's new bidding options:
+
+→ Target CPA: set the average you want to pay for a lead or a sale
+→ Target CPC: set the average you want to pay for a click
+
+Also new:
+→ Self-serve buying is open in 89 countries, including the UK, every EU country and Switzerland
+→ Shopping ads can now target regions within a country, with sharper product filters
+→ A long list of measurement partners, so results can be tracked properly
+
+ChatGPT Ads is no longer a small test. CNBC reports more than 100,000 advertisers have already run campaigns.
+
+Our advice: set up conversion tracking before you spend anything, base your Target CPA on what a lead costs you in Google Ads today, and switch your bidding before January rather than after.
+
+We've written up what changed, with sources, and what to do next:
+six3.agency/blog/chatgpt-ads-updates-november-2026
+
+#ChatGPTAds #PaidMedia #PPC #DigitalMarketing #AIMarketing
+
+---
+
+## 08 · Blog: How to advertise on ChatGPT
+**Image:** the article's link preview (`/images/blog/how-to-advertise-on-chatgpt-share.jpg`), shown automatically when you paste the link
+**Post on or after Thursday 26 November** (when the guide goes live). Also comment under post 07: "New to ChatGPT Ads? Our practical guide is now live" with the link.
+
+Thinking about advertising on ChatGPT? Here's what you need to know before you spend a penny.
+
+People now use ChatGPT to research products, compare suppliers and decide what to buy. Since February, businesses have been able to advertise in those conversations.
+
+The basics:
+→ Ads appear below ChatGPT's answer, clearly labelled. They don't change what ChatGPT says.
+→ Only adults on the Free and Go plans see them, and never next to health or political topics.
+→ Self-serve buying is open in 89 countries, including the UK and across Europe.
+→ OpenAI publishes no rate card and no minimum spend. You control cost through your budget and bidding.
+
+It's most worth testing if your customers research before they buy: online shops, considered purchases, and service and B2B businesses that shortlist suppliers.
+
+Our practical guide covers who sees the ads, how to buy them, how bidding and measurement work, the rules to know and a step-by-step checklist for your first test:
+six3.agency/blog/how-to-advertise-on-chatgpt
+
+Want us to run a ChatGPT Ads test for you? Send us a message.
+
+#ChatGPTAds #PaidMedia #DigitalMarketing #AIMarketing #SmallBusiness
